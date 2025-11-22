@@ -1,11 +1,53 @@
 export const cities = [
-  { name: "Fort Payne", slug: "fort-payne" },
-  { name: "Rainsville", slug: "rainsville" },
-  { name: "Centre", slug: "centre" },
-  { name: "Henagar", slug: "henagar" },
-  { name: "Fyffe", slug: "fyffe" },
-  { name: "Pisgah", slug: "pisgah" },
-  { name: "Valley Head", slug: "valley-head" }
+  { 
+    name: "Fort Payne", 
+    slug: "fort-payne",
+    state: "AL",
+    zipCodes: ["35967", "35968"],
+    county: "DeKalb"
+  },
+  { 
+    name: "Rainsville", 
+    slug: "rainsville",
+    state: "AL",
+    zipCodes: ["35986"],
+    county: "DeKalb"
+  },
+  { 
+    name: "Henagar", 
+    slug: "henagar",
+    state: "AL",
+    zipCodes: ["35978"],
+    county: "DeKalb"
+  },
+  { 
+    name: "Fyffe", 
+    slug: "fyffe",
+    state: "AL",
+    zipCodes: ["35971"],
+    county: "DeKalb"
+  },
+  { 
+    name: "Pisgah", 
+    slug: "pisgah",
+    state: "AL",
+    zipCodes: ["35765"],
+    county: "DeKalb"
+  },
+  { 
+    name: "Valley Head", 
+    slug: "valley-head",
+    state: "AL",
+    zipCodes: ["35989"],
+    county: "DeKalb"
+  },
+  { 
+    name: "Centre", 
+    slug: "centre",
+    state: "AL",
+    zipCodes: ["35960"],
+    county: "Cherokee"
+  }
 ];
 
 export const getCityUrl = (cityName: string) => {
