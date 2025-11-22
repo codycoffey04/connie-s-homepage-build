@@ -5,6 +5,7 @@ import { Section } from "@/components/Section";
 import { TestimonialCard } from "@/components/TestimonialCard";
 import { FAQList } from "@/components/FAQItem";
 import { Card, CardContent } from "@/components/ui/card";
+import { StickyCallButton } from "@/components/StickyCallButton";
 import { 
   Clock, 
   Zap, 
@@ -20,12 +21,17 @@ import { phoneNumbers, cities } from "@/lib/cityUtils";
 
 const Index = () => {
 
-  const trustSignals = [
-    { icon: Star, text: "Five-Star Google Reviews" },
-    { icon: Shield, text: "Licensed Alabama Agents" },
-    { icon: DollarSign, text: "No Hidden Fees" },
-    { icon: Clock, text: "Available 24/7" },
-    { icon: CreditCard, text: "Payment Plans Accepted" },
+  const whyChooseList = [
+    "Available 24/7 - We Answer Every Call Personally",
+    "Licensed Alabama Bail Bond Agents",
+    "Family-Owned & Operated Since 2019",
+    "Located Next to DeKalb County Detention Center",
+    "Fast Release - Usually 2-8 Hours",
+    "Transparent Pricing - Only State-Required 10%",
+    "No Hidden Fees - Ever",
+    "Payment Plans Available",
+    "Credit Cards Accepted",
+    "Five-Star Google Reviews"
   ];
 
   const whyChooseFeatures = [
@@ -153,43 +159,49 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
+      <StickyCallButton />
 
       {/* Hero Section */}
       <section className="relative bg-white py-20 md:py-28">
         <div className="container mx-auto px-4 md:px-6 max-w-6xl">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-navy-deep">
-              24/7 Bail Bonds You Can Trust
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight text-navy-deep uppercase tracking-tight">
+              Fast & Affordable Bail Bonds
             </h1>
-            <p className="text-xl md:text-2xl mb-12 text-foreground/70 font-light">
-              Fast, Transparent, Compassionate Service
+            <p className="text-2xl md:text-3xl mb-8 text-teal font-bold">
+              24/7 Emergency Service
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <p className="text-lg md:text-xl mb-10 text-foreground/70">
+              Family-Owned • Licensed Alabama Agents • Serving DeKalb & Cherokee Counties Since 2019
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
               <PhoneButton name={phoneNumbers.richard.name} number={phoneNumbers.richard.number} />
               <PhoneButton name={phoneNumbers.connie.name} number={phoneNumbers.connie.number} />
               <PhoneButton name={phoneNumbers.toni.name} number={phoneNumbers.toni.number} />
             </div>
-            <p className="text-base text-foreground/60">
-              Family-owned • Licensed Alabama Agents • Serving DeKalb & Cherokee Counties
+            <p className="text-lg font-bold text-navy-deep uppercase tracking-wide">
+              ☝️ Click to Call for Immediate 24/7 Help
             </p>
           </div>
         </div>
       </section>
 
-      {/* Trust Signals */}
-      <Section className="bg-muted py-16">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-8 max-w-6xl mx-auto">
-          {trustSignals.map((signal, index) => (
-            <div 
-              key={index} 
-              className="bg-white rounded-lg border border-border/50 p-6 flex flex-col items-center text-center gap-3 shadow-sm hover:shadow-md transition-shadow"
-            >
-              <signal.icon className="w-7 h-7 text-navy-deep stroke-[2]" />
-              <p className="text-sm md:text-base font-semibold text-foreground leading-snug">
-                {signal.text}
-              </p>
+      {/* Why Choose Us - Bullet List */}
+      <Section className="bg-white py-16">
+        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-navy-deep">
+          Why Families Choose Connie's Bail Bonding:
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+          {whyChooseList.map((item, index) => (
+            <div key={index} className="flex items-start gap-3">
+              <Check className="w-6 h-6 text-teal flex-shrink-0 mt-1" />
+              <span className="text-base md:text-lg font-medium text-foreground">{item}</span>
             </div>
           ))}
+        </div>
+        <div className="text-center mt-10">
+          <p className="text-base text-foreground/70 mb-4">Need help right now?</p>
+          <PhoneButton name="Call Richard" number={phoneNumbers.richard.number} className="max-w-md mx-auto" />
         </div>
       </Section>
 
@@ -273,6 +285,7 @@ const Index = () => {
           ))}
         </div>
         <div className="text-center mt-16">
+          <p className="text-lg text-foreground/80 mb-4">Questions? Call Us Anytime:</p>
           <PhoneButton name="Call Richard Now" number={phoneNumbers.richard.number} className="max-w-md mx-auto" />
         </div>
       </Section>
@@ -410,9 +423,12 @@ const Index = () => {
 
       {/* FAQ */}
       <Section className="bg-muted py-16">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-navy-deep">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-navy-deep">
           Frequently Asked Questions
         </h2>
+        <p className="text-center text-base text-foreground/60 mb-8">
+          Or call us 24/7: <a href="tel:2566012041" className="font-bold text-teal hover:underline">256-601-2041</a>
+        </p>
         <div className="max-w-4xl mx-auto">
           <FAQList faqs={faqs} />
         </div>
