@@ -18,22 +18,22 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 215 20% 20%;
 
-    /* Primary - Deep Navy Blue for trust/stability */
-    --primary: 211 50% 24%;  /* #1e3a5f Deep Navy */
-    --primary-light: 211 45% 35%;  /* Lighter navy for gradients */
+    /* Primary - Brand Navy from logo */
+    --primary: 218 32% 15%;  /* #1a2332 Brand Navy */
+    --primary-light: 218 30% 25%;  /* Lighter navy */
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary - Warm Teal for compassion */
-    --secondary: 180 35% 32%;  /* #2c7a7b Warm Teal */
-    --secondary-light: 180 30% 45%;
+    /* Secondary - Brand Teal from logo */
+    --secondary: 180 56% 39%;  /* #2c9b9b Brand Teal */
+    --secondary-light: 180 50% 50%;
     --secondary-foreground: 0 0% 100%;
 
-    /* Accent - Soft Gold for credibility (use sparingly) */
-    --accent: 43 60% 53%;  /* #d4af37 Soft Gold */
-    --accent-foreground: 215 20% 20%;
+    /* Accent - Brand Teal (same as secondary for consistency) */
+    --accent: 180 56% 39%;  /* #2c9b9b Brand Teal */
+    --accent-foreground: 0 0% 100%;
 
     /* Muted backgrounds for sections */
-    --muted: 210 20% 97%;  /* Very light gray-blue */
+    --muted: 210 36% 98%;  /* #f7fafc Light gray from brand */
     --muted-foreground: 215 15% 45%;
 
     --destructive: 0 84% 60%;

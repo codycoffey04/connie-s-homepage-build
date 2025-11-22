@@ -124,12 +124,12 @@ const FortPayne = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <Section className="bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-primary-foreground py-16 md:py-24">
+      <Section className="bg-white py-16 md:py-24">
         <div className="text-center space-y-6">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-navy-deep">
             Fort Payne Bail Bonds — 24/7 DeKalb County Service
           </h1>
-          <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-foreground/70 max-w-3xl mx-auto">
             Fast, Licensed Bail Bond Agents Serving Fort Payne and DeKalb County
           </p>
           
@@ -151,16 +151,16 @@ const FortPayne = () => {
             />
           </div>
 
-          <p className="text-lg text-primary-foreground/80 pt-4">
+          <p className="text-lg text-foreground/60 pt-4">
             Available 24 hours a day, 7 days a week
           </p>
         </div>
       </Section>
 
       {/* Trust Section */}
-      <Section>
+      <Section className="bg-muted py-16">
         <div className="max-w-4xl mx-auto text-center space-y-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+          <h2 className="text-3xl md:text-4xl font-bold text-navy-deep">
             Fort Payne's Trusted Bail Bond Agency
           </h2>
           <div className="text-lg text-foreground/80 space-y-4 text-left md:text-center">
@@ -175,9 +175,9 @@ const FortPayne = () => {
       </Section>
 
       {/* Why Choose Us */}
-      <Section variant="muted">
+      <Section className="bg-white py-16">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-navy-deep mb-4">
             Why Choose Connie's for Fort Payne Bail Bonds?
           </h2>
         </div>
@@ -187,9 +187,7 @@ const FortPayne = () => {
             <Card key={index} className="border-border/50 shadow-sm hover:shadow-md transition-shadow">
               <CardHeader>
                 <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-lg bg-accent/10">
-                    <feature.icon className="w-6 h-6 text-accent" />
-                  </div>
+                  <feature.icon className="w-6 h-6 text-teal mt-1" />
                   <CardTitle className="text-xl">{feature.title}</CardTitle>
                 </div>
               </CardHeader>
@@ -204,9 +202,9 @@ const FortPayne = () => {
       </Section>
 
       {/* How Bail Works in Fort Payne */}
-      <Section>
+      <Section className="bg-muted py-16">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-navy-deep mb-4">
             How Bail Works in Fort Payne
           </h2>
         </div>
@@ -216,7 +214,7 @@ const FortPayne = () => {
             <Card key={index} className="border-border/50">
               <CardHeader>
                 <CardTitle className="text-lg flex items-center gap-2">
-                  <MapPin className="w-5 h-5 text-accent" />
+                  <MapPin className="w-5 h-5 text-teal" />
                   {item.title}
                 </CardTitle>
               </CardHeader>
@@ -231,9 +229,9 @@ const FortPayne = () => {
       </Section>
 
       {/* Services */}
-      <Section variant="muted">
+      <Section className="bg-white py-16">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-navy-deep mb-4">
             Services for Fort Payne Residents
           </h2>
         </div>
@@ -244,7 +242,7 @@ const FortPayne = () => {
               <ul className="grid md:grid-cols-2 gap-4">
                 {services.map((service, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                    <CheckCircle2 className="w-5 h-5 text-teal mt-0.5 flex-shrink-0" />
                     <span className="text-foreground/90">{service}</span>
                   </li>
                 ))}
@@ -267,9 +265,9 @@ const FortPayne = () => {
       </Section>
 
       {/* Neighborhoods */}
-      <Section>
+      <Section className="bg-muted py-16">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-navy-deep mb-4">
             Fort Payne Neighborhoods We Serve
           </h2>
           <p className="text-lg text-foreground/80 max-w-3xl mx-auto">
@@ -299,9 +297,9 @@ const FortPayne = () => {
       </Section>
 
       {/* Nearby Cities */}
-      <Section variant="muted">
+      <Section className="bg-white py-16">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-navy-deep mb-4">
             We Also Serve Nearby Areas
           </h2>
           <p className="text-lg text-foreground/80">
@@ -312,12 +310,12 @@ const FortPayne = () => {
         <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
           {nearbyCities.map((city) => (
             <Link key={city.slug} to={`/${city.slug}`}>
-              <Card className="border-border/50 hover:shadow-lg transition-all hover:border-accent/50 cursor-pointer h-full">
+              <Card className="border-border/50 hover:shadow-lg transition-all hover:border-teal cursor-pointer h-full">
                 <CardContent className="p-6 flex items-center justify-between">
                   <span className="text-lg font-semibold text-foreground">
                     {city.name} Bail Bonds
                   </span>
-                  <ChevronRight className="w-5 h-5 text-accent" />
+                  <ChevronRight className="w-5 h-5 text-teal" />
                 </CardContent>
               </Card>
             </Link>
@@ -326,9 +324,9 @@ const FortPayne = () => {
       </Section>
 
       {/* Process Steps */}
-      <Section>
+      <Section className="bg-muted py-16">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-navy-deep mb-4">
             What to Expect When You Call Us
           </h2>
         </div>
@@ -337,7 +335,7 @@ const FortPayne = () => {
           {processSteps.map((step, index) => (
             <Card key={index} className="border-border/50 text-center hover:shadow-md transition-shadow">
               <CardContent className="p-6">
-                <div className="w-12 h-12 rounded-full bg-accent/10 text-accent font-bold text-xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 rounded-full bg-navy-deep text-white font-bold text-xl flex items-center justify-center mx-auto mb-4">
                   {step.number}
                 </div>
                 <h3 className="font-bold text-lg mb-2 text-foreground">{step.title}</h3>
@@ -349,10 +347,10 @@ const FortPayne = () => {
 
         {/* Pricing */}
         <div className="max-w-3xl mx-auto">
-          <Card className="border-accent/30 shadow-md">
+          <Card className="border-border/50 shadow-md">
             <CardHeader className="text-center">
               <CardTitle className="text-2xl flex items-center justify-center gap-2">
-                <DollarSign className="w-6 h-6 text-accent" />
+                <DollarSign className="w-6 h-6 text-teal" />
                 How Much Does It Cost?
               </CardTitle>
             </CardHeader>
@@ -362,15 +360,15 @@ const FortPayne = () => {
               </p>
               <ul className="space-y-2 text-foreground/80">
                 <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-accent" />
+                  <CheckCircle2 className="w-4 h-4 text-teal" />
                   $1,000 bail = $100 fee
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-accent" />
+                  <CheckCircle2 className="w-4 h-4 text-teal" />
                   $5,000 bail = $500 fee
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-accent" />
+                  <CheckCircle2 className="w-4 h-4 text-teal" />
                   $10,000 bail = $1,000 fee
                 </li>
               </ul>
@@ -383,9 +381,9 @@ const FortPayne = () => {
       </Section>
 
       {/* Testimonials */}
-      <Section variant="muted">
+      <Section className="bg-white py-16">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-navy-deep mb-4">
             What Fort Payne Families Are Saying
           </h2>
         </div>
@@ -398,13 +396,13 @@ const FortPayne = () => {
       </Section>
 
       {/* Final CTA */}
-      <Section className="bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-primary-foreground">
+      <Section className="bg-muted py-16">
         <div className="text-center space-y-8">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-navy-deep">
               Need Fort Payne Bail Bonds Now?
             </h2>
-            <p className="text-xl text-primary-foreground/90">
+            <p className="text-xl text-foreground/70">
               Call immediately for 24/7 service
             </p>
           </div>
@@ -428,7 +426,7 @@ const FortPayne = () => {
           </div>
 
           <div className="pt-8 text-center">
-            <p className="text-lg font-semibold text-primary-foreground/90">
+            <p className="text-lg font-semibold text-foreground/80">
               We can be at the DeKalb County Detention Center within minutes.
             </p>
           </div>
@@ -436,13 +434,13 @@ const FortPayne = () => {
       </Section>
 
       {/* Footer */}
-      <footer className="bg-muted/30 border-t border-border py-12">
+      <footer className="bg-navy-deep text-white py-12">
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
-              <h3 className="font-bold text-lg mb-4 text-foreground">Contact Us</h3>
-              <div className="space-y-2 text-foreground/80">
-                <p className="font-semibold text-foreground">Connie's Bail Bonding, LLC</p>
+              <h3 className="font-bold text-lg mb-4">Contact Us</h3>
+              <div className="space-y-2 text-white/80">
+                <p className="font-semibold text-white">Connie's Bail Bonding, LLC</p>
                 <p>2700 Jordan Rd SW</p>
                 <p>Fort Payne, AL 35967</p>
                 <div className="space-y-1 mt-4">
@@ -454,27 +452,27 @@ const FortPayne = () => {
             </div>
             
             <div>
-              <h3 className="font-bold text-lg mb-4 text-foreground">Quick Links</h3>
-              <ul className="space-y-2 text-foreground/80">
-                <li><Link to="/" className="hover:text-primary transition-colors">Home</Link></li>
-                <li><Link to="/about" className="hover:text-primary transition-colors">About</Link></li>
-                <li><Link to="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
-                <li><Link to="/faq" className="hover:text-primary transition-colors">FAQ</Link></li>
+              <h3 className="font-bold text-lg mb-4">Quick Links</h3>
+              <ul className="space-y-2 text-white/80">
+                <li><Link to="/" className="hover:text-teal transition-colors">Home</Link></li>
+                <li><Link to="/about" className="hover:text-teal transition-colors">About</Link></li>
+                <li><Link to="/contact" className="hover:text-teal transition-colors">Contact</Link></li>
+                <li><Link to="/faq" className="hover:text-teal transition-colors">FAQ</Link></li>
               </ul>
             </div>
             
             <div>
-              <h3 className="font-bold text-lg mb-4 text-foreground">Service Areas</h3>
-              <ul className="space-y-2 text-foreground/80">
-                <li><Link to="/fort-payne" className="hover:text-primary transition-colors">Fort Payne</Link></li>
-                <li><Link to="/rainsville" className="hover:text-primary transition-colors">Rainsville</Link></li>
-                <li><Link to="/centre" className="hover:text-primary transition-colors">Centre</Link></li>
-                <li><Link to="/henagar" className="hover:text-primary transition-colors">Henagar</Link></li>
+              <h3 className="font-bold text-lg mb-4">Service Areas</h3>
+              <ul className="space-y-2 text-white/80">
+                <li><Link to="/fort-payne" className="hover:text-teal transition-colors">Fort Payne</Link></li>
+                <li><Link to="/rainsville" className="hover:text-teal transition-colors">Rainsville</Link></li>
+                <li><Link to="/centre" className="hover:text-teal transition-colors">Centre</Link></li>
+                <li><Link to="/henagar" className="hover:text-teal transition-colors">Henagar</Link></li>
               </ul>
             </div>
           </div>
           
-          <div className="border-t border-border pt-8 text-center text-sm text-foreground/60">
+          <div className="border-t border-white/20 pt-8 text-center text-sm text-white/70">
             <p className="mb-2">
               Licensed Alabama Bail Bond Agents | Family-Owned Since 2019 | Serving DeKalb & Cherokee Counties
             </p>

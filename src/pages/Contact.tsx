@@ -278,15 +278,15 @@ const Contact = () => {
       </Section>
 
       {/* Footer */}
-      <footer className="bg-muted py-8 mt-auto">
+      <footer className="bg-navy-deep text-white py-8">
         <div className="container mx-auto px-4 text-center space-y-4">
-          <p className="text-sm text-foreground/70">
+          <p className="text-sm text-white/80">
             Licensed Alabama Bail Bond Agents | Family-Owned Since 2019 | Serving DeKalb & Cherokee Counties
           </p>
-          <p className="text-xs text-foreground/60">
+          <p className="text-xs text-white/70">
             <strong>Disclaimer:</strong> This website does not constitute legal advice. Bail bond approval is subject to court discretion.
           </p>
-          <p className="text-xs text-foreground/60">
+          <p className="text-xs text-white/70">
             © 2025 Connie's Bail Bonding, LLC. All rights reserved.
           </p>
         </div>
