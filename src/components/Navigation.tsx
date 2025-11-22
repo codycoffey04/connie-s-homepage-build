@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, Phone, ChevronDown } from "lucide-react";
-import logo from "@/assets/logo.jpg";
+import logo from "@/assets/logo.png";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import {
