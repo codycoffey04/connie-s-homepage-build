@@ -18,26 +18,26 @@ export const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-white/95 backdrop-blur-md shadow-sm">
       <div className="container mx-auto px-4 md:px-6 max-w-7xl">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-20 items-center justify-between">
           <Link to="/" className="flex items-center">
             <img 
               src={logo} 
               alt="Connie's Bail Bonding - Available 24/7" 
-              className="h-12 w-auto hover:opacity-80 transition-opacity"
+              className="h-14 w-auto hover:opacity-90 transition-opacity"
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-6">
-            <Link to="/" className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors">
+          <nav className="hidden md:flex items-center gap-8">
+            <Link to="/" className="text-sm font-medium text-foreground/70 hover:text-navy-deep transition-colors">
               Home
             </Link>
-            <a href="/#about" className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors">
+            <a href="/#about" className="text-sm font-medium text-foreground/70 hover:text-navy-deep transition-colors">
               About
             </a>
-            <a href="/#contact" className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors">
+            <a href="/#contact" className="text-sm font-medium text-foreground/70 hover:text-navy-deep transition-colors">
               Contact
             </a>
             
@@ -66,7 +66,7 @@ export const Navigation = () => {
 
             <a 
               href={`tel:${phoneNumbers.richard.number.replace(/[^0-9]/g, "")}`}
-              className="flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary/80 transition-colors"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-teal/10 text-teal font-semibold hover:bg-teal/20 transition-colors"
             >
               <Phone className="w-4 h-4" />
               {phoneNumbers.richard.number}

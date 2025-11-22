@@ -155,34 +155,39 @@ const Index = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary via-primary to-primary/90 text-primary-foreground py-16 md:py-24">
-        <div className="container mx-auto px-4 md:px-6 max-w-7xl">
+      <section className="relative bg-gradient-to-br from-navy-light via-navy-deep to-teal py-20 md:py-28">
+        <div className="container mx-auto px-4 md:px-6 max-w-6xl">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
-              Fort Payne Bail Bonds — 24/7 Family-Owned Service
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white">
+              24/7 Bail Bonds You Can Trust
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90">
-              Fast, Transparent, Compassionate. Licensed Alabama Bail Bond Agents.
+            <p className="text-xl md:text-2xl mb-12 text-white/90 font-light">
+              Fast, Transparent, Compassionate Service
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <PhoneButton name={phoneNumbers.richard.name} number={phoneNumbers.richard.number} />
               <PhoneButton name={phoneNumbers.connie.name} number={phoneNumbers.connie.number} />
               <PhoneButton name={phoneNumbers.toni.name} number={phoneNumbers.toni.number} />
             </div>
-            <p className="text-lg text-primary-foreground/80 italic">
-              Family-owned and operated since 2019, serving DeKalb and Cherokee Counties
+            <p className="text-base text-white/70">
+              Family-owned • Licensed Alabama Agents • Serving DeKalb & Cherokee Counties
             </p>
           </div>
         </div>
       </section>
 
       {/* Trust Signals */}
-      <Section variant="muted">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
+      <Section className="bg-muted/50 py-16">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-8 max-w-6xl mx-auto">
           {trustSignals.map((signal, index) => (
-            <div key={index} className="flex flex-col items-center text-center gap-2">
-              <signal.icon className="w-8 h-8 text-accent" />
-              <p className="text-sm md:text-base font-medium text-foreground">
+            <div 
+              key={index} 
+              className="bg-white rounded-lg border border-border/50 p-6 flex flex-col items-center text-center gap-3 shadow-sm hover:shadow-md transition-shadow"
+            >
+              <div className="w-14 h-14 rounded-full bg-navy-deep/5 flex items-center justify-center">
+                <signal.icon className="w-7 h-7 text-navy-deep stroke-[2]" />
+              </div>
+              <p className="text-sm md:text-base font-semibold text-foreground leading-snug">
                 {signal.text}
               </p>
             </div>
@@ -227,22 +232,26 @@ const Index = () => {
       </Section>
 
       {/* Why Choose Connie's */}
-      <Section variant="primary">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-foreground">
+      <Section className="bg-white py-16 md:py-24">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-16 text-center text-foreground">
           Why Choose Connie's Bail Bonding?
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {whyChooseFeatures.map((feature, index) => (
-            <Card key={index} className="border-border/50 hover:border-accent/50 transition-all hover:shadow-lg">
-              <CardContent className="p-6">
-                <feature.icon className="w-12 h-12 text-accent mb-4" />
-                <h3 className="text-xl font-bold mb-3 text-foreground">{feature.title}</h3>
-                <p className="text-base leading-relaxed text-foreground/80">{feature.description}</p>
+            <Card key={index} className="border-border/30 hover:border-teal/50 shadow-md hover:shadow-xl transition-all duration-300 rounded-xl overflow-hidden group">
+              <CardContent className="p-8">
+                <div className="w-16 h-16 rounded-full bg-teal/10 flex items-center justify-center mb-6 group-hover:bg-teal/20 transition-colors">
+                  <feature.icon className="w-8 h-8 text-teal" />
+                </div>
+                <h3 className="text-xl md:text-2xl font-bold mb-4 text-foreground">{feature.title}</h3>
+                <p className="text-base leading-relaxed text-foreground/70">{feature.description}</p>
                 {feature.title === "Transparent Pricing" && (
-                  <div className="mt-4 p-4 bg-muted/50 rounded-md text-sm">
-                    <p className="font-semibold">Example:</p>
-                    <p>$5,000 bail = $500 fee</p>
-                    <p>$10,000 bail = $1,000 fee</p>
+                  <div className="mt-6 p-5 bg-muted/30 rounded-lg border border-border/50">
+                    <p className="font-semibold mb-2 text-navy-deep">Example:</p>
+                    <div className="space-y-1 text-sm text-foreground/80">
+                      <p>$5,000 bail = $500 fee</p>
+                      <p>$10,000 bail = $1,000 fee</p>
+                    </div>
                   </div>
                 )}
               </CardContent>
@@ -252,23 +261,23 @@ const Index = () => {
       </Section>
 
       {/* How Our Bail Process Works */}
-      <Section>
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-foreground">
+      <Section className="bg-white py-16 md:py-24">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-16 text-center text-foreground">
           How Our Bail Process Works
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
           {processSteps.map((step, index) => (
             <div key={index} className="text-center">
-              <div className="w-16 h-16 rounded-full bg-accent text-accent-foreground font-bold text-2xl flex items-center justify-center mx-auto mb-4">
+              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-navy-deep to-teal text-white font-bold text-3xl flex items-center justify-center mx-auto mb-6 shadow-lg">
                 {step.number}
               </div>
-              <h3 className="text-xl font-bold mb-3 text-foreground">{step.title}</h3>
-              <p className="text-base leading-relaxed text-foreground/80">{step.description}</p>
+              <h3 className="text-xl md:text-2xl font-bold mb-4 text-foreground">{step.title}</h3>
+              <p className="text-base leading-relaxed text-foreground/70">{step.description}</p>
             </div>
           ))}
         </div>
-        <div className="text-center mt-12">
-          <PhoneButton name="Call Richard Now" number={phoneNumbers.richard.number} variant="primary" className="max-w-md mx-auto" />
+        <div className="text-center mt-16">
+          <PhoneButton name="Call Richard Now" number={phoneNumbers.richard.number} className="max-w-md mx-auto" />
         </div>
       </Section>
 
@@ -382,11 +391,11 @@ const Index = () => {
       </Section>
 
       {/* Testimonials */}
-      <Section variant="primary">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-foreground">
+      <Section className="bg-muted/30 py-16 md:py-24">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-16 text-center text-foreground">
           What Our Clients Say
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 max-w-6xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <TestimonialCard key={index} quote={testimonial} />
           ))}
@@ -396,7 +405,7 @@ const Index = () => {
             href="https://www.google.com/maps/search/Connie's+Bail+Bonding" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-block px-6 py-3 bg-accent text-accent-foreground rounded-md hover:bg-accent/90 transition-colors font-medium"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-teal text-white rounded-lg hover:bg-teal-light transition-colors font-semibold shadow-lg hover:shadow-xl"
           >
             Read All Reviews on Google →
           </a>
@@ -457,24 +466,24 @@ const Index = () => {
       </Section>
 
       {/* Footer */}
-      <footer className="bg-primary text-primary-foreground py-12">
+      <footer className="bg-gradient-to-br from-navy-deep to-navy-light text-white py-16">
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
             <div>
-              <h3 className="text-xl font-bold mb-4">Contact Us</h3>
-              <div className="space-y-2">
+              <h3 className="text-2xl font-bold mb-6">Contact Us</h3>
+              <div className="space-y-3">
                 <p>
-                  <a href={`tel:${phoneNumbers.richard.number.replace(/[^0-9]/g, "")}`} className="hover:text-accent transition-colors">
+                  <a href={`tel:${phoneNumbers.richard.number.replace(/[^0-9]/g, "")}`} className="hover:text-teal-light transition-colors text-lg">
                     Richard: {phoneNumbers.richard.number}
                   </a>
                 </p>
                 <p>
-                  <a href={`tel:${phoneNumbers.connie.number.replace(/[^0-9]/g, "")}`} className="hover:text-accent transition-colors">
+                  <a href={`tel:${phoneNumbers.connie.number.replace(/[^0-9]/g, "")}`} className="hover:text-teal-light transition-colors text-lg">
                     Connie: {phoneNumbers.connie.number}
                   </a>
                 </p>
                 <p>
-                  <a href={`tel:${phoneNumbers.toni.number.replace(/[^0-9]/g, "")}`} className="hover:text-accent transition-colors">
+                  <a href={`tel:${phoneNumbers.toni.number.replace(/[^0-9]/g, "")}`} className="hover:text-teal-light transition-colors text-lg">
                     Toni: {phoneNumbers.toni.number}
                   </a>
                 </p>
@@ -485,26 +494,26 @@ const Index = () => {
               </div>
             </div>
             <div>
-              <h3 className="text-xl font-bold mb-4">Quick Links</h3>
-              <nav className="flex flex-col gap-2">
-                <Link to="/" className="hover:text-accent transition-colors">Home</Link>
-                <Link to="/about" className="hover:text-accent transition-colors">About</Link>
-                <Link to="/contact" className="hover:text-accent transition-colors">Contact</Link>
-                <Link to="/faq" className="hover:text-accent transition-colors">FAQ</Link>
+              <h3 className="text-2xl font-bold mb-6">Quick Links</h3>
+              <nav className="flex flex-col gap-3">
+                <Link to="/" className="hover:text-teal-light transition-colors">Home</Link>
+                <Link to="/about" className="hover:text-teal-light transition-colors">About</Link>
+                <Link to="/contact" className="hover:text-teal-light transition-colors">Contact</Link>
+                <Link to="/faq" className="hover:text-teal-light transition-colors">FAQ</Link>
               </nav>
             </div>
             <div>
-              <h3 className="text-xl font-bold mb-4">Legal</h3>
+              <h3 className="text-2xl font-bold mb-6">Legal</h3>
               <p className="text-sm mb-4">Licensed Alabama Bail Bond Agents</p>
               <p className="text-sm mb-4">Family-Owned Since 2019</p>
               <p className="text-sm mb-4">Available 24/7/365</p>
             </div>
           </div>
-          <div className="border-t border-primary-foreground/20 pt-8 text-center text-sm space-y-2">
-            <p className="text-primary-foreground/80 italic">
+          <div className="border-t border-white/20 pt-8 text-center text-sm space-y-3">
+            <p className="text-white/70 italic">
               This website does not constitute legal advice. Bail bond approval is subject to court discretion.
             </p>
-            <p className="font-semibold">
+            <p className="font-semibold text-white">
               © 2025 Connie's Bail Bonding, LLC. All rights reserved.
             </p>
           </div>

@@ -1,5 +1,4 @@
 import { Star, Quote } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
 
 interface TestimonialCardProps {
   quote: string;
@@ -7,18 +6,28 @@ interface TestimonialCardProps {
 
 export const TestimonialCard = ({ quote }: TestimonialCardProps) => {
   return (
-    <Card className="h-full border-border/50 shadow-sm hover:shadow-md transition-shadow">
-      <CardContent className="p-6">
-        <div className="flex gap-1 mb-4">
-          {[...Array(5)].map((_, i) => (
-            <Star key={i} className="w-5 h-5 fill-accent text-accent" />
-          ))}
-        </div>
-        <Quote className="w-8 h-8 text-muted-foreground/30 mb-2" />
-        <p className="text-base leading-relaxed text-foreground/90 italic">
-          "{quote}"
-        </p>
-      </CardContent>
-    </Card>
+    <div className="bg-white rounded-xl border border-border/30 shadow-md p-8 relative">
+      {/* Large quote mark */}
+      <div className="absolute top-6 left-6 text-teal/20">
+        <Quote className="w-12 h-12" />
+      </div>
+      
+      {/* Stars */}
+      <div className="flex gap-1 mb-4 pl-16">
+        {[...Array(5)].map((_, i) => (
+          <Star key={i} className="w-5 h-5 fill-gold-soft text-gold-soft" />
+        ))}
+      </div>
+      
+      {/* Quote text */}
+      <p className="text-base md:text-lg leading-relaxed text-foreground/80 italic pl-16">
+        "{quote}"
+      </p>
+      
+      {/* Attribution */}
+      <div className="mt-6 pt-4 border-t border-border/30 pl-16">
+        <p className="text-sm font-semibold text-teal">Verified Google Review</p>
+      </div>
+    </div>
   );
 };
