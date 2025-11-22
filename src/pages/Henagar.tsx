@@ -410,13 +410,18 @@ const Henagar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/#about" className="text-foreground/80 hover:text-primary transition-colors">
-                    About Us
+                  <Link to="/about" className="text-foreground/80 hover:text-primary transition-colors">
+                    About
                   </Link>
                 </li>
                 <li>
-                  <Link to="/#contact" className="text-foreground/80 hover:text-primary transition-colors">
+                  <Link to="/contact" className="text-foreground/80 hover:text-primary transition-colors">
                     Contact
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/faq" className="text-foreground/80 hover:text-primary transition-colors">
+                    FAQ
                   </Link>
                 </li>
               </ul>
