@@ -69,7 +69,7 @@ export const Navigation = () => {
               className="flex items-center gap-2 px-4 py-2 rounded-lg bg-teal/10 text-teal font-semibold hover:bg-teal/20 transition-colors"
             >
               <Phone className="w-4 h-4" />
-              {phoneNumbers.richard.number}
+              <span className="text-xs font-bold uppercase">24/7 HELP:</span> {phoneNumbers.richard.number}
             </a>
           </nav>
 
