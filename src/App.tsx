@@ -11,6 +11,7 @@ import Henagar from "./pages/Henagar";
 import Rainsville from "./pages/Rainsville";
 import Pisgah from "./pages/Pisgah";
 import ValleyHead from "./pages/ValleyHead";
+import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/rainsville" element={<Rainsville />} />
           <Route path="/pisgah" element={<Pisgah />} />
           <Route path="/valley-head" element={<ValleyHead />} />
+          <Route path="/about" element={<About />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
