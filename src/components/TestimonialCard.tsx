@@ -15,7 +15,7 @@ export const TestimonialCard = ({ quote }: TestimonialCardProps) => {
       {/* Stars */}
       <div className="flex gap-1 mb-4 pl-16">
         {[...Array(5)].map((_, i) => (
-          <Star key={i} className="w-5 h-5 fill-gold-soft text-gold-soft" />
+          <Star key={i} className="w-5 h-5 fill-teal text-teal" />
         ))}
       </div>
       

@@ -155,13 +155,13 @@ const Index = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-navy-light via-navy-deep to-teal py-20 md:py-28">
+      <section className="relative bg-white py-20 md:py-28">
         <div className="container mx-auto px-4 md:px-6 max-w-6xl">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-navy-deep">
               24/7 Bail Bonds You Can Trust
             </h1>
-            <p className="text-xl md:text-2xl mb-12 text-white/90 font-light">
+            <p className="text-xl md:text-2xl mb-12 text-foreground/70 font-light">
               Fast, Transparent, Compassionate Service
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -169,7 +169,7 @@ const Index = () => {
               <PhoneButton name={phoneNumbers.connie.name} number={phoneNumbers.connie.number} />
               <PhoneButton name={phoneNumbers.toni.name} number={phoneNumbers.toni.number} />
             </div>
-            <p className="text-base text-white/70">
+            <p className="text-base text-foreground/60">
               Family-owned • Licensed Alabama Agents • Serving DeKalb & Cherokee Counties
             </p>
           </div>
@@ -177,16 +177,14 @@ const Index = () => {
       </section>
 
       {/* Trust Signals */}
-      <Section className="bg-muted/50 py-16">
+      <Section className="bg-muted py-16">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-8 max-w-6xl mx-auto">
           {trustSignals.map((signal, index) => (
             <div 
               key={index} 
               className="bg-white rounded-lg border border-border/50 p-6 flex flex-col items-center text-center gap-3 shadow-sm hover:shadow-md transition-shadow"
             >
-              <div className="w-14 h-14 rounded-full bg-navy-deep/5 flex items-center justify-center">
-                <signal.icon className="w-7 h-7 text-navy-deep stroke-[2]" />
-              </div>
+              <signal.icon className="w-7 h-7 text-navy-deep stroke-[2]" />
               <p className="text-sm md:text-base font-semibold text-foreground leading-snug">
                 {signal.text}
               </p>
@@ -208,23 +206,23 @@ const Index = () => {
           </div>
           <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-left">
             <div className="flex items-start gap-2">
-              <Star className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
+              <Star className="w-5 h-5 text-teal flex-shrink-0 mt-1" />
               <span className="text-sm">Five-Star Google Reviews</span>
             </div>
             <div className="flex items-start gap-2">
-              <Check className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
+              <Check className="w-5 h-5 text-teal flex-shrink-0 mt-1" />
               <span className="text-sm">Licensed Alabama Bail Bond Agents</span>
             </div>
             <div className="flex items-start gap-2">
-              <Check className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
+              <Check className="w-5 h-5 text-teal flex-shrink-0 mt-1" />
               <span className="text-sm">No Hidden Fees—Only the State-Required 10%</span>
             </div>
             <div className="flex items-start gap-2">
-              <Check className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
+              <Check className="w-5 h-5 text-teal flex-shrink-0 mt-1" />
               <span className="text-sm">Available 24 Hours a Day, 7 Days a Week</span>
             </div>
             <div className="flex items-start gap-2">
-              <Check className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
+              <Check className="w-5 h-5 text-teal flex-shrink-0 mt-1" />
               <span className="text-sm">Payment Plans & Credit Cards Accepted</span>
             </div>
           </div>
@@ -233,16 +231,14 @@ const Index = () => {
 
       {/* Why Choose Connie's */}
       <Section className="bg-white py-16 md:py-24">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-16 text-center text-foreground">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-16 text-center text-navy-deep">
           Why Choose Connie's Bail Bonding?
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {whyChooseFeatures.map((feature, index) => (
-            <Card key={index} className="border-border/30 hover:border-teal/50 shadow-md hover:shadow-xl transition-all duration-300 rounded-xl overflow-hidden group">
+            <Card key={index} className="border-border/50 hover:shadow-lg transition-all duration-300 rounded-xl overflow-hidden">
               <CardContent className="p-8">
-                <div className="w-16 h-16 rounded-full bg-teal/10 flex items-center justify-center mb-6 group-hover:bg-teal/20 transition-colors">
-                  <feature.icon className="w-8 h-8 text-teal" />
-                </div>
+                <feature.icon className="w-8 h-8 text-teal mb-6" />
                 <h3 className="text-xl md:text-2xl font-bold mb-4 text-foreground">{feature.title}</h3>
                 <p className="text-base leading-relaxed text-foreground/70">{feature.description}</p>
                 {feature.title === "Transparent Pricing" && (
@@ -261,14 +257,14 @@ const Index = () => {
       </Section>
 
       {/* How Our Bail Process Works */}
-      <Section className="bg-white py-16 md:py-24">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-16 text-center text-foreground">
+      <Section className="bg-muted py-16 md:py-24">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-16 text-center text-navy-deep">
           How Our Bail Process Works
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
           {processSteps.map((step, index) => (
             <div key={index} className="text-center">
-              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-navy-deep to-teal text-white font-bold text-3xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+              <div className="w-20 h-20 rounded-full bg-navy-deep text-white font-bold text-3xl flex items-center justify-center mx-auto mb-6 shadow-lg">
                 {step.number}
               </div>
               <h3 className="text-xl md:text-2xl font-bold mb-4 text-foreground">{step.title}</h3>
@@ -282,14 +278,14 @@ const Index = () => {
       </Section>
 
       {/* Services */}
-      <Section variant="muted">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-foreground">
+      <Section className="bg-white py-16">
+        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-navy-deep">
           Services We Offer Across DeKalb & Cherokee Counties
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
           {services.map((service, index) => (
             <div key={index} className="flex items-start gap-3">
-              <Check className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
+              <Check className="w-6 h-6 text-teal flex-shrink-0 mt-1" />
               <span className="text-base text-foreground/90">{service}</span>
             </div>
           ))}
@@ -305,8 +301,8 @@ const Index = () => {
       </Section>
 
       {/* Areas We Serve */}
-      <Section>
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-foreground">
+      <Section className="bg-muted py-16">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-navy-deep">
           Areas We Serve in Northeast Alabama
         </h2>
         <p className="text-center text-lg text-foreground/80 mb-12 max-w-3xl mx-auto">
@@ -331,7 +327,7 @@ const Index = () => {
                   <Card className="h-full border-border hover:border-primary hover:shadow-lg transition-all duration-200 cursor-pointer">
                     <CardContent className="p-6">
                       <div className="flex items-start gap-3">
-                        <MapPin className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
+                        <MapPin className="w-5 h-5 text-teal flex-shrink-0 mt-1" />
                         <div className="flex-1">
                           <h4 className="text-xl font-bold text-foreground mb-1 group-hover:text-primary transition-colors">
                             {city.name}
@@ -369,7 +365,7 @@ const Index = () => {
                   <Card className="h-full border-border hover:border-primary hover:shadow-lg transition-all duration-200 cursor-pointer">
                     <CardContent className="p-6">
                       <div className="flex items-start gap-3">
-                        <MapPin className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
+                        <MapPin className="w-5 h-5 text-teal flex-shrink-0 mt-1" />
                         <div className="flex-1">
                           <h4 className="text-xl font-bold text-foreground mb-1 group-hover:text-primary transition-colors">
                             {city.name}
@@ -391,8 +387,8 @@ const Index = () => {
       </Section>
 
       {/* Testimonials */}
-      <Section className="bg-muted/30 py-16 md:py-24">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-16 text-center text-foreground">
+      <Section className="bg-white py-16 md:py-24">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-16 text-center text-navy-deep">
           What Our Clients Say
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 max-w-6xl mx-auto">
@@ -413,8 +409,8 @@ const Index = () => {
       </Section>
 
       {/* FAQ */}
-      <Section>
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-foreground">
+      <Section className="bg-muted py-16">
+        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-navy-deep">
           Frequently Asked Questions
         </h2>
         <div className="max-w-4xl mx-auto">
@@ -423,9 +419,9 @@ const Index = () => {
       </Section>
 
       {/* Final CTA */}
-      <Section variant="primary" id="contact">
+      <Section className="bg-white py-16" id="contact">
         <div className="text-center max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-navy-deep">
             Need Fort Payne Bail Bonds Now?
           </h2>
           <p className="text-xl mb-8 text-foreground/90">Call immediately for 24/7 service:</p>
@@ -448,14 +444,14 @@ const Index = () => {
       </Section>
 
       {/* Key Locations */}
-      <Section variant="muted">
-        <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center text-foreground">
+      <Section className="bg-muted py-16">
+        <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center text-navy-deep">
           Key Locations We Serve
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {keyLocations.map((location, index) => (
             <div key={index} className="flex items-start gap-3 p-4 bg-card rounded-lg border border-border">
-              <MapPin className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
+              <MapPin className="w-5 h-5 text-teal flex-shrink-0 mt-1" />
               <div>
                 <h3 className="font-bold text-foreground mb-1">{location.name}</h3>
                 <p className="text-sm text-foreground/70">{location.address}</p>
@@ -466,24 +462,24 @@ const Index = () => {
       </Section>
 
       {/* Footer */}
-      <footer className="bg-gradient-to-br from-navy-deep to-navy-light text-white py-16">
+      <footer className="bg-navy-deep text-white py-16">
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
             <div>
               <h3 className="text-2xl font-bold mb-6">Contact Us</h3>
               <div className="space-y-3">
                 <p>
-                  <a href={`tel:${phoneNumbers.richard.number.replace(/[^0-9]/g, "")}`} className="hover:text-teal-light transition-colors text-lg">
+                  <a href={`tel:${phoneNumbers.richard.number.replace(/[^0-9]/g, "")}`} className="hover:text-teal transition-colors text-lg">
                     Richard: {phoneNumbers.richard.number}
                   </a>
                 </p>
                 <p>
-                  <a href={`tel:${phoneNumbers.connie.number.replace(/[^0-9]/g, "")}`} className="hover:text-teal-light transition-colors text-lg">
+                  <a href={`tel:${phoneNumbers.connie.number.replace(/[^0-9]/g, "")}`} className="hover:text-teal transition-colors text-lg">
                     Connie: {phoneNumbers.connie.number}
                   </a>
                 </p>
                 <p>
-                  <a href={`tel:${phoneNumbers.toni.number.replace(/[^0-9]/g, "")}`} className="hover:text-teal-light transition-colors text-lg">
+                  <a href={`tel:${phoneNumbers.toni.number.replace(/[^0-9]/g, "")}`} className="hover:text-teal transition-colors text-lg">
                     Toni: {phoneNumbers.toni.number}
                   </a>
                 </p>
@@ -496,10 +492,10 @@ const Index = () => {
             <div>
               <h3 className="text-2xl font-bold mb-6">Quick Links</h3>
               <nav className="flex flex-col gap-3">
-                <Link to="/" className="hover:text-teal-light transition-colors">Home</Link>
-                <Link to="/about" className="hover:text-teal-light transition-colors">About</Link>
-                <Link to="/contact" className="hover:text-teal-light transition-colors">Contact</Link>
-                <Link to="/faq" className="hover:text-teal-light transition-colors">FAQ</Link>
+                <Link to="/" className="hover:text-teal transition-colors">Home</Link>
+                <Link to="/about" className="hover:text-teal transition-colors">About</Link>
+                <Link to="/contact" className="hover:text-teal transition-colors">Contact</Link>
+                <Link to="/faq" className="hover:text-teal transition-colors">FAQ</Link>
               </nav>
             </div>
             <div>
