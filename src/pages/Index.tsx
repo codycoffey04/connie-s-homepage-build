@@ -1,18 +1,9 @@
-import { useState } from "react";
+import { Navigation } from "@/components/Navigation";
 import { PhoneButton } from "@/components/PhoneButton";
 import { Section } from "@/components/Section";
 import { TestimonialCard } from "@/components/TestimonialCard";
 import { FAQList } from "@/components/FAQItem";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
 import { 
   Clock, 
   Zap, 
@@ -20,27 +11,13 @@ import {
   Users, 
   CreditCard, 
   Shield, 
-  Phone, 
   MapPin,
   Star,
-  Check,
-  Menu,
-  X
+  Check
 } from "lucide-react";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { phoneNumbers } from "@/lib/cityUtils";
 
 const Index = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const cities = [
-    "Fort Payne",
-    "Rainsville", 
-    "Centre",
-    "Henagar",
-    "Fyffe",
-    "Pisgah",
-    "Valley Head"
-  ];
 
   const trustSignals = [
     { icon: Star, text: "Five-Star Google Reviews" },
@@ -174,93 +151,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Navigation */}
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
-        <div className="container mx-auto px-4 md:px-6 max-w-7xl">
-          <div className="flex h-16 items-center justify-between">
-            <div className="flex items-center gap-6">
-              <a href="#" className="font-bold text-xl text-primary">
-                Connie's Bail Bonding
-              </a>
-              <nav className="hidden md:flex items-center gap-6">
-                <a href="#" className="text-sm font-medium hover:text-primary transition-colors">
-                  Home
-                </a>
-                <a href="#about" className="text-sm font-medium hover:text-primary transition-colors">
-                  About
-                </a>
-                <a href="#contact" className="text-sm font-medium hover:text-primary transition-colors">
-                  Contact
-                </a>
-                <NavigationMenu>
-                  <NavigationMenuList>
-                    <NavigationMenuItem>
-                      <NavigationMenuTrigger className="text-sm font-medium">
-                        Cities
-                      </NavigationMenuTrigger>
-                      <NavigationMenuContent>
-                        <ul className="grid w-[200px] gap-3 p-4 bg-popover">
-                          {cities.map((city) => (
-                            <li key={city}>
-                              <NavigationMenuLink asChild>
-                                <a
-                                  href={`#${city.toLowerCase().replace(/\s+/g, '-')}`}
-                                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                                >
-                                  {city}
-                                </a>
-                              </NavigationMenuLink>
-                            </li>
-                          ))}
-                        </ul>
-                      </NavigationMenuContent>
-                    </NavigationMenuItem>
-                  </NavigationMenuList>
-                </NavigationMenu>
-              </nav>
-            </div>
-            <div className="flex items-center gap-4">
-              <a href="tel:2566012041" className="hidden lg:flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary/80 transition-colors">
-                <Phone className="w-4 h-4" />
-                256-601-2041
-              </a>
-              <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
-                <SheetTrigger asChild className="md:hidden">
-                  <Button variant="ghost" size="icon">
-                    <Menu className="h-6 w-6" />
-                  </Button>
-                </SheetTrigger>
-                <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-                  <nav className="flex flex-col gap-4 mt-8">
-                    <a href="#" className="text-lg font-medium hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>
-                      Home
-                    </a>
-                    <a href="#about" className="text-lg font-medium hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>
-                      About
-                    </a>
-                    <a href="#contact" className="text-lg font-medium hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>
-                      Contact
-                    </a>
-                    <div className="border-t pt-4">
-                      <p className="text-sm font-semibold text-muted-foreground mb-2">Cities We Serve</p>
-                      {cities.map((city) => (
-                        <a
-                          key={city}
-                          href={`#${city.toLowerCase().replace(/\s+/g, '-')}`}
-                          className="block py-2 text-base hover:text-primary transition-colors"
-                          onClick={() => setMobileMenuOpen(false)}
-                        >
-                          {city}
-                        </a>
-                      ))}
-                    </div>
-                  </nav>
-                </SheetContent>
-              </Sheet>
-            </div>
-          </div>
-        </div>
-      </header>
+      <Navigation />
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary via-primary to-primary/90 text-primary-foreground py-16 md:py-24">
@@ -273,9 +164,9 @@ const Index = () => {
               Fast, Transparent, Compassionate. Licensed Alabama Bail Bond Agents.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-              <PhoneButton name="Richard" number="256-601-2041" />
-              <PhoneButton name="Connie" number="256-630-2824" />
-              <PhoneButton name="Toni" number="256-440-0822" />
+              <PhoneButton name={phoneNumbers.richard.name} number={phoneNumbers.richard.number} />
+              <PhoneButton name={phoneNumbers.connie.name} number={phoneNumbers.connie.number} />
+              <PhoneButton name={phoneNumbers.toni.name} number={phoneNumbers.toni.number} />
             </div>
             <p className="text-lg text-primary-foreground/80 italic">
               Family-owned and operated since 2019, serving DeKalb and Cherokee Counties
@@ -376,7 +267,7 @@ const Index = () => {
           ))}
         </div>
         <div className="text-center mt-12">
-          <PhoneButton name="Call Richard Now" number="256-601-2041" variant="primary" className="max-w-md mx-auto" />
+          <PhoneButton name="Call Richard Now" number={phoneNumbers.richard.number} variant="primary" className="max-w-md mx-auto" />
         </div>
       </Section>
 
@@ -441,11 +332,14 @@ const Index = () => {
           ))}
         </div>
         <div className="text-center">
-          <Button variant="outline" size="lg" asChild>
-            <a href="https://www.google.com/maps/search/Connie's+Bail+Bonding" target="_blank" rel="noopener noreferrer">
-              Read All Reviews on Google →
-            </a>
-          </Button>
+          <a 
+            href="https://www.google.com/maps/search/Connie's+Bail+Bonding" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-block px-6 py-3 bg-accent text-accent-foreground rounded-md hover:bg-accent/90 transition-colors font-medium"
+          >
+            Read All Reviews on Google →
+          </a>
         </div>
       </Section>
 
@@ -467,9 +361,9 @@ const Index = () => {
           </h2>
           <p className="text-xl mb-8 text-foreground/90">Call immediately for 24/7 service:</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-            <PhoneButton name="Richard" number="256-601-2041" />
-            <PhoneButton name="Connie" number="256-630-2824" />
-            <PhoneButton name="Toni" number="256-440-0822" />
+            <PhoneButton name={phoneNumbers.richard.name} number={phoneNumbers.richard.number} />
+            <PhoneButton name={phoneNumbers.connie.name} number={phoneNumbers.connie.number} />
+            <PhoneButton name={phoneNumbers.toni.name} number={phoneNumbers.toni.number} />
           </div>
           <div className="bg-card p-6 rounded-lg border border-border shadow-sm">
             <h3 className="text-xl font-bold mb-3 text-foreground">Connie's Bail Bonding, LLC</h3>
@@ -509,17 +403,20 @@ const Index = () => {
             <div>
               <h3 className="text-xl font-bold mb-4">Contact Us</h3>
               <div className="space-y-2">
-                <p className="flex items-center gap-2">
-                  <Phone className="w-4 h-4" />
-                  <a href="tel:2566012041" className="hover:text-accent transition-colors">Richard: 256-601-2041</a>
+                <p>
+                  <a href={`tel:${phoneNumbers.richard.number.replace(/[^0-9]/g, "")}`} className="hover:text-accent transition-colors">
+                    Richard: {phoneNumbers.richard.number}
+                  </a>
                 </p>
-                <p className="flex items-center gap-2">
-                  <Phone className="w-4 h-4" />
-                  <a href="tel:2566302824" className="hover:text-accent transition-colors">Connie: 256-630-2824</a>
+                <p>
+                  <a href={`tel:${phoneNumbers.connie.number.replace(/[^0-9]/g, "")}`} className="hover:text-accent transition-colors">
+                    Connie: {phoneNumbers.connie.number}
+                  </a>
                 </p>
-                <p className="flex items-center gap-2">
-                  <Phone className="w-4 h-4" />
-                  <a href="tel:2564400822" className="hover:text-accent transition-colors">Toni: 256-440-0822</a>
+                <p>
+                  <a href={`tel:${phoneNumbers.toni.number.replace(/[^0-9]/g, "")}`} className="hover:text-accent transition-colors">
+                    Toni: {phoneNumbers.toni.number}
+                  </a>
                 </p>
                 <p className="flex items-start gap-2 mt-4">
                   <MapPin className="w-4 h-4 flex-shrink-0 mt-1" />
