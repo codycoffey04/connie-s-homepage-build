@@ -16,21 +16,21 @@ export const PhoneButton = ({ name, number, variant = "primary", className }: Ph
       <div
         className={cn(
           "w-full h-auto min-h-[88px] py-6 px-6 rounded-xl",
-          "bg-teal text-white",
-          "shadow-lg hover:shadow-2xl",
+          "bg-white border-2 border-teal",
+          "shadow-sm",
           "transition-all duration-300",
-          "hover:bg-teal/90 hover:-translate-y-1 active:translate-y-0",
+          "hover:bg-teal/5 hover:border-teal/80",
           "flex flex-col sm:flex-row gap-4 items-center justify-center",
           "cursor-pointer",
           className
         )}
       >
-        <Phone className="w-8 h-8 text-white shrink-0" />
+        <Phone className="w-8 h-8 text-teal shrink-0" />
         <div className="flex flex-col text-center sm:text-left">
-          <span className="text-xs sm:text-sm font-semibold text-white/80 uppercase tracking-wider">
+          <span className="text-xs sm:text-sm font-semibold text-muted-foreground uppercase tracking-wider">
             {name}
           </span>
-          <span className="text-2xl sm:text-3xl font-bold text-white leading-none">
+          <span className="text-2xl sm:text-3xl font-bold text-navy-deep leading-none">
             {number}
           </span>
         </div>
