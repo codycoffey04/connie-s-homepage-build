@@ -1,12 +1,558 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from "react";
+import { PhoneButton } from "@/components/PhoneButton";
+import { Section } from "@/components/Section";
+import { TestimonialCard } from "@/components/TestimonialCard";
+import { FAQList } from "@/components/FAQItem";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
+import { 
+  Clock, 
+  Zap, 
+  DollarSign, 
+  Users, 
+  CreditCard, 
+  Shield, 
+  Phone, 
+  MapPin,
+  Star,
+  Check,
+  Menu,
+  X
+} from "lucide-react";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const Index = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const cities = [
+    "Fort Payne",
+    "Rainsville", 
+    "Centre",
+    "Henagar",
+    "Fyffe",
+    "Pisgah",
+    "Valley Head"
+  ];
+
+  const trustSignals = [
+    { icon: Star, text: "Five-Star Google Reviews" },
+    { icon: Shield, text: "Licensed Alabama Agents" },
+    { icon: DollarSign, text: "No Hidden Fees" },
+    { icon: Clock, text: "Available 24/7" },
+    { icon: CreditCard, text: "Payment Plans Accepted" },
+  ];
+
+  const whyChooseFeatures = [
+    {
+      icon: Clock,
+      title: "Available 24/7",
+      description: "Arrests don't follow business hours, and neither do we. Our family team answers calls personally at any hour—no answering services, no waiting."
+    },
+    {
+      icon: Zap,
+      title: "Fast Service",
+      description: "We're located right next to the DeKalb County Detention Center. We know the staff, the procedures, and how to get your loved one released quickly."
+    },
+    {
+      icon: DollarSign,
+      title: "Transparent Pricing",
+      description: "Alabama law requires a 10% bail bond fee. That's all we charge—no administrative fees, no surprise costs. Ever."
+    },
+    {
+      icon: Users,
+      title: "Family Owned & Operated",
+      description: "You'll talk directly to Connie, Toni, or Richard. We treat every client with dignity and professionalism because we're your neighbors, not a corporation."
+    },
+    {
+      icon: CreditCard,
+      title: "Payment Plans Available",
+      description: "We understand that coming up with 10% can be challenging. We work with families to create flexible payment arrangements. Credit cards accepted."
+    },
+    {
+      icon: Shield,
+      title: "Respectful & Discreet",
+      description: "We know this is stressful. We'll guide you through every step without judgment, keeping everything confidential."
+    }
+  ];
+
+  const processSteps = [
+    {
+      number: "1",
+      title: "Call Us Immediately",
+      description: "The moment you know someone's been arrested, call Richard, Connie, or Toni. We answer 24/7—even at 2 AM."
+    },
+    {
+      number: "2",
+      title: "We Gather Information",
+      description: "We'll ask for the defendant's name, which jail they're in, and the charge (if you know it). We'll explain all costs upfront."
+    },
+    {
+      number: "3",
+      title: "We Meet You at the Jail or Courthouse",
+      description: "We come to you—whether that's the DeKalb County Detention Center, Cherokee County Jail, or the courthouse. We'll handle all the paperwork."
+    },
+    {
+      number: "4",
+      title: "Your Loved One Is Released",
+      description: "Typical release time is 2–8 hours, depending on jail workload. We stay in touch throughout the process so you're never left wondering."
+    }
+  ];
+
+  const services = [
+    "24/7 Bail Bond Service for all charge types",
+    "Felony Bonds",
+    "Misdemeanor Bonds",
+    "DUI Bonds",
+    "Traffic Bonds",
+    "Probation Violation Bonds",
+    "Speedy Jail Release Assistance",
+    "Payment Plans",
+    "Warrant Advice & Support",
+    "Guidance Through the Bail Process"
+  ];
+
+  const testimonials = [
+    "Connie answered immediately at 2 AM and had my son out within 4 hours. Professional, kind, and transparent about all costs. Highly recommend.",
+    "Connie's Bail Bonding went above and beyond to make sure I could make bail and get out of jail. After spending 5 days in there…it was a horrific and life altering experience. Connie's Bail Bonding is the only place I will ever use should I need a bonding agency… I can't thank them enough. 5 stars from me.",
+    "Toni is awesome. She was able to explain the process easily and she handled everything in a professional way. I highly recommend this bail bonds. Thank you for being understanding and professional. ❤️",
+    "I literally felt like family in the way they treated me."
+  ];
+
+  const faqs = [
+    {
+      question: "How much does a bail bond cost in Alabama?",
+      answer: "Alabama law sets bail bond fees at 10% of the total bail amount. This is non-negotiable by law—every licensed bondsman charges the same rate. For example, if bail is set at $5,000, the bond fee is $500. We charge no additional administrative fees."
+    },
+    {
+      question: "How long does it take to get released?",
+      answer: "Typical release time is 2–8 hours after we post the bond, depending on how busy the jail is. Weekend and holiday releases may take slightly longer due to reduced staff. We stay in communication with you throughout the process."
+    },
+    {
+      question: "Do you really answer calls 24/7?",
+      answer: "Yes. Connie, Toni, or Richard will answer your call at any time—even at 3 AM on Christmas morning. We're a family business, and we answer our own phones. No call centers."
+    },
+    {
+      question: "What if I can't afford the full 10% upfront?",
+      answer: "We offer flexible payment plans for families who need help. We accept credit cards and can work out arrangements that fit your budget. Call us and we'll discuss your options—there's no pressure, just honest guidance."
+    },
+    {
+      question: "Where are you located?",
+      answer: "Our office is at 2700 Jordan Rd SW, Fort Payne, AL 35967—right next to the DeKalb County Detention Center. This allows us to meet clients quickly and post bonds immediately."
+    },
+    {
+      question: "What counties do you serve?",
+      answer: "We serve DeKalb County (Fort Payne, Rainsville, Henagar, Fyffe, Valley Head, Pisgah) and Cherokee County (Centre). If your loved one is arrested anywhere in these counties, we can help."
+    }
+  ];
+
+  const keyLocations = [
+    {
+      name: "DeKalb County Detention Center",
+      address: "2801 Jordan Rd SW, Fort Payne, AL 35967"
+    },
+    {
+      name: "DeKalb County Courthouse",
+      address: "300 Grand Ave SW, Fort Payne, AL 35967"
+    },
+    {
+      name: "Cherokee County Detention Center",
+      address: "110 Cedar Bluff Rd, Centre, AL 35960"
+    },
+    {
+      name: "Cherokee County Courthouse",
+      address: "100 Main St, Centre, AL 35960"
+    }
+  ];
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      {/* Navigation */}
+      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
+        <div className="container mx-auto px-4 md:px-6 max-w-7xl">
+          <div className="flex h-16 items-center justify-between">
+            <div className="flex items-center gap-6">
+              <a href="#" className="font-bold text-xl text-primary">
+                Connie's Bail Bonding
+              </a>
+              <nav className="hidden md:flex items-center gap-6">
+                <a href="#" className="text-sm font-medium hover:text-primary transition-colors">
+                  Home
+                </a>
+                <a href="#about" className="text-sm font-medium hover:text-primary transition-colors">
+                  About
+                </a>
+                <a href="#contact" className="text-sm font-medium hover:text-primary transition-colors">
+                  Contact
+                </a>
+                <NavigationMenu>
+                  <NavigationMenuList>
+                    <NavigationMenuItem>
+                      <NavigationMenuTrigger className="text-sm font-medium">
+                        Cities
+                      </NavigationMenuTrigger>
+                      <NavigationMenuContent>
+                        <ul className="grid w-[200px] gap-3 p-4 bg-popover">
+                          {cities.map((city) => (
+                            <li key={city}>
+                              <NavigationMenuLink asChild>
+                                <a
+                                  href={`#${city.toLowerCase().replace(/\s+/g, '-')}`}
+                                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                                >
+                                  {city}
+                                </a>
+                              </NavigationMenuLink>
+                            </li>
+                          ))}
+                        </ul>
+                      </NavigationMenuContent>
+                    </NavigationMenuItem>
+                  </NavigationMenuList>
+                </NavigationMenu>
+              </nav>
+            </div>
+            <div className="flex items-center gap-4">
+              <a href="tel:2566012041" className="hidden lg:flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary/80 transition-colors">
+                <Phone className="w-4 h-4" />
+                256-601-2041
+              </a>
+              <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+                <SheetTrigger asChild className="md:hidden">
+                  <Button variant="ghost" size="icon">
+                    <Menu className="h-6 w-6" />
+                  </Button>
+                </SheetTrigger>
+                <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+                  <nav className="flex flex-col gap-4 mt-8">
+                    <a href="#" className="text-lg font-medium hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>
+                      Home
+                    </a>
+                    <a href="#about" className="text-lg font-medium hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>
+                      About
+                    </a>
+                    <a href="#contact" className="text-lg font-medium hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>
+                      Contact
+                    </a>
+                    <div className="border-t pt-4">
+                      <p className="text-sm font-semibold text-muted-foreground mb-2">Cities We Serve</p>
+                      {cities.map((city) => (
+                        <a
+                          key={city}
+                          href={`#${city.toLowerCase().replace(/\s+/g, '-')}`}
+                          className="block py-2 text-base hover:text-primary transition-colors"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          {city}
+                        </a>
+                      ))}
+                    </div>
+                  </nav>
+                </SheetContent>
+              </Sheet>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-primary via-primary to-primary/90 text-primary-foreground py-16 md:py-24">
+        <div className="container mx-auto px-4 md:px-6 max-w-7xl">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+              Fort Payne Bail Bonds — 24/7 Family-Owned Service
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90">
+              Fast, Transparent, Compassionate. Licensed Alabama Bail Bond Agents.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+              <PhoneButton name="Richard" number="256-601-2041" />
+              <PhoneButton name="Connie" number="256-630-2824" />
+              <PhoneButton name="Toni" number="256-440-0822" />
+            </div>
+            <p className="text-lg text-primary-foreground/80 italic">
+              Family-owned and operated since 2019, serving DeKalb and Cherokee Counties
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Trust Signals */}
+      <Section variant="muted">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
+          {trustSignals.map((signal, index) => (
+            <div key={index} className="flex flex-col items-center text-center gap-2">
+              <signal.icon className="w-8 h-8 text-accent" />
+              <p className="text-sm md:text-base font-medium text-foreground">
+                {signal.text}
+              </p>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* When Your Loved One Needs Help */}
+      <Section id="about">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
+            When Your Loved One Needs Help, We're Here
+          </h2>
+          <div className="text-lg leading-relaxed space-y-4 text-foreground/90">
+            <p>
+              We understand this is a difficult time. Whether it's 2 AM on a Sunday or a holiday afternoon, Connie's Bail Bonding answers immediately. No call centers. No delays. Just Connie, Toni, and Richard—ready to help your family right now.
+            </p>
+          </div>
+          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-left">
+            <div className="flex items-start gap-2">
+              <Star className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
+              <span className="text-sm">Five-Star Google Reviews</span>
+            </div>
+            <div className="flex items-start gap-2">
+              <Check className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
+              <span className="text-sm">Licensed Alabama Bail Bond Agents</span>
+            </div>
+            <div className="flex items-start gap-2">
+              <Check className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
+              <span className="text-sm">No Hidden Fees—Only the State-Required 10%</span>
+            </div>
+            <div className="flex items-start gap-2">
+              <Check className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
+              <span className="text-sm">Available 24 Hours a Day, 7 Days a Week</span>
+            </div>
+            <div className="flex items-start gap-2">
+              <Check className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
+              <span className="text-sm">Payment Plans & Credit Cards Accepted</span>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* Why Choose Connie's */}
+      <Section variant="primary">
+        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-foreground">
+          Why Choose Connie's Bail Bonding?
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {whyChooseFeatures.map((feature, index) => (
+            <Card key={index} className="border-border/50 hover:border-accent/50 transition-all hover:shadow-lg">
+              <CardContent className="p-6">
+                <feature.icon className="w-12 h-12 text-accent mb-4" />
+                <h3 className="text-xl font-bold mb-3 text-foreground">{feature.title}</h3>
+                <p className="text-base leading-relaxed text-foreground/80">{feature.description}</p>
+                {feature.title === "Transparent Pricing" && (
+                  <div className="mt-4 p-4 bg-muted/50 rounded-md text-sm">
+                    <p className="font-semibold">Example:</p>
+                    <p>$5,000 bail = $500 fee</p>
+                    <p>$10,000 bail = $1,000 fee</p>
+                  </div>
+                )}
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </Section>
+
+      {/* How Our Bail Process Works */}
+      <Section>
+        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-foreground">
+          How Our Bail Process Works
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {processSteps.map((step, index) => (
+            <div key={index} className="text-center">
+              <div className="w-16 h-16 rounded-full bg-accent text-accent-foreground font-bold text-2xl flex items-center justify-center mx-auto mb-4">
+                {step.number}
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-foreground">{step.title}</h3>
+              <p className="text-base leading-relaxed text-foreground/80">{step.description}</p>
+            </div>
+          ))}
+        </div>
+        <div className="text-center mt-12">
+          <PhoneButton name="Call Richard Now" number="256-601-2041" variant="primary" className="max-w-md mx-auto" />
+        </div>
+      </Section>
+
+      {/* Services */}
+      <Section variant="muted">
+        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-foreground">
+          Services We Offer Across DeKalb & Cherokee Counties
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+          {services.map((service, index) => (
+            <div key={index} className="flex items-start gap-3">
+              <Check className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
+              <span className="text-base text-foreground/90">{service}</span>
+            </div>
+          ))}
+        </div>
+        <div className="text-center mt-8">
+          <p className="text-lg text-foreground/90">
+            No matter the charge or situation, we're here to help. Call now:{" "}
+            <a href="tel:2566012041" className="font-bold text-primary hover:text-primary/80 transition-colors">
+              Richard 256-601-2041
+            </a>
+          </p>
+        </div>
+      </Section>
+
+      {/* Areas We Serve */}
+      <Section>
+        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-foreground">
+          Areas We Serve in Northeast Alabama
+        </h2>
+        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <h3 className="text-2xl font-bold mb-4 text-primary">DeKalb County</h3>
+            <div className="flex flex-wrap gap-2">
+              {["Fort Payne", "Rainsville", "Henagar", "Fyffe", "Valley Head", "Pisgah"].map((city) => (
+                <span key={city} className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
+                  {city}
+                </span>
+              ))}
+            </div>
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold mb-4 text-primary">Cherokee County</h3>
+            <div className="flex flex-wrap gap-2">
+              <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
+                Centre
+              </span>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* Testimonials */}
+      <Section variant="primary">
+        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-foreground">
+          What Our Clients Say
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          {testimonials.map((testimonial, index) => (
+            <TestimonialCard key={index} quote={testimonial} />
+          ))}
+        </div>
+        <div className="text-center">
+          <Button variant="outline" size="lg" asChild>
+            <a href="https://www.google.com/maps/search/Connie's+Bail+Bonding" target="_blank" rel="noopener noreferrer">
+              Read All Reviews on Google →
+            </a>
+          </Button>
+        </div>
+      </Section>
+
+      {/* FAQ */}
+      <Section>
+        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-foreground">
+          Frequently Asked Questions
+        </h2>
+        <div className="max-w-4xl mx-auto">
+          <FAQList faqs={faqs} />
+        </div>
+      </Section>
+
+      {/* Final CTA */}
+      <Section variant="primary" id="contact">
+        <div className="text-center max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
+            Need Fort Payne Bail Bonds Now?
+          </h2>
+          <p className="text-xl mb-8 text-foreground/90">Call immediately for 24/7 service:</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+            <PhoneButton name="Richard" number="256-601-2041" />
+            <PhoneButton name="Connie" number="256-630-2824" />
+            <PhoneButton name="Toni" number="256-440-0822" />
+          </div>
+          <div className="bg-card p-6 rounded-lg border border-border shadow-sm">
+            <h3 className="text-xl font-bold mb-3 text-foreground">Connie's Bail Bonding, LLC</h3>
+            <div className="flex items-start justify-center gap-2 text-foreground/80 mb-2">
+              <MapPin className="w-5 h-5 flex-shrink-0 mt-1" />
+              <p>2700 Jordan Rd SW<br />Fort Payne, AL 35967</p>
+            </div>
+            <p className="text-base text-foreground/80 mt-4 italic">
+              We'll meet you at the DeKalb County Detention Center or Cherokee County Courthouse within minutes. Let us help your family tonight.
+            </p>
+          </div>
+        </div>
+      </Section>
+
+      {/* Key Locations */}
+      <Section variant="muted">
+        <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center text-foreground">
+          Key Locations We Serve
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          {keyLocations.map((location, index) => (
+            <div key={index} className="flex items-start gap-3 p-4 bg-card rounded-lg border border-border">
+              <MapPin className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
+              <div>
+                <h3 className="font-bold text-foreground mb-1">{location.name}</h3>
+                <p className="text-sm text-foreground/70">{location.address}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* Footer */}
+      <footer className="bg-primary text-primary-foreground py-12">
+        <div className="container mx-auto px-4 md:px-6 max-w-7xl">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div>
+              <h3 className="text-xl font-bold mb-4">Contact Us</h3>
+              <div className="space-y-2">
+                <p className="flex items-center gap-2">
+                  <Phone className="w-4 h-4" />
+                  <a href="tel:2566012041" className="hover:text-accent transition-colors">Richard: 256-601-2041</a>
+                </p>
+                <p className="flex items-center gap-2">
+                  <Phone className="w-4 h-4" />
+                  <a href="tel:2566302824" className="hover:text-accent transition-colors">Connie: 256-630-2824</a>
+                </p>
+                <p className="flex items-center gap-2">
+                  <Phone className="w-4 h-4" />
+                  <a href="tel:2564400822" className="hover:text-accent transition-colors">Toni: 256-440-0822</a>
+                </p>
+                <p className="flex items-start gap-2 mt-4">
+                  <MapPin className="w-4 h-4 flex-shrink-0 mt-1" />
+                  <span>2700 Jordan Rd SW<br />Fort Payne, AL 35967</span>
+                </p>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold mb-4">Quick Links</h3>
+              <nav className="flex flex-col gap-2">
+                <a href="#" className="hover:text-accent transition-colors">Home</a>
+                <a href="#about" className="hover:text-accent transition-colors">About</a>
+                <a href="#contact" className="hover:text-accent transition-colors">Contact</a>
+                <a href="#faq" className="hover:text-accent transition-colors">FAQ</a>
+              </nav>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold mb-4">Legal</h3>
+              <p className="text-sm mb-4">Licensed Alabama Bail Bond Agents</p>
+              <p className="text-sm mb-4">Family-Owned Since 2019</p>
+              <p className="text-sm mb-4">Available 24/7/365</p>
+            </div>
+          </div>
+          <div className="border-t border-primary-foreground/20 pt-8 text-center text-sm space-y-2">
+            <p className="text-primary-foreground/80 italic">
+              This website does not constitute legal advice. Bail bond approval is subject to court discretion.
+            </p>
+            <p className="font-semibold">
+              © 2025 Connie's Bail Bonding, LLC. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
