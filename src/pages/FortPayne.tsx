@@ -457,9 +457,9 @@ const FortPayne = () => {
               <h3 className="font-bold text-lg mb-4 text-foreground">Quick Links</h3>
               <ul className="space-y-2 text-foreground/80">
                 <li><Link to="/" className="hover:text-primary transition-colors">Home</Link></li>
-                <li><a href="/#about" className="hover:text-primary transition-colors">About</a></li>
-                <li><a href="/#services" className="hover:text-primary transition-colors">Services</a></li>
-                <li><a href="/#contact" className="hover:text-primary transition-colors">Contact</a></li>
+                <li><Link to="/about" className="hover:text-primary transition-colors">About</Link></li>
+                <li><Link to="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
+                <li><Link to="/faq" className="hover:text-primary transition-colors">FAQ</Link></li>
               </ul>
             </div>
             
