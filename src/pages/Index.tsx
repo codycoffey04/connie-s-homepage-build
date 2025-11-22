@@ -444,10 +444,10 @@ const Index = () => {
             <div>
               <h3 className="text-xl font-bold mb-4">Quick Links</h3>
               <nav className="flex flex-col gap-2">
-                <a href="#" className="hover:text-accent transition-colors">Home</a>
-                <a href="#about" className="hover:text-accent transition-colors">About</a>
-                <a href="#contact" className="hover:text-accent transition-colors">Contact</a>
-                <a href="#faq" className="hover:text-accent transition-colors">FAQ</a>
+                <Link to="/" className="hover:text-accent transition-colors">Home</Link>
+                <Link to="/about" className="hover:text-accent transition-colors">About</Link>
+                <Link to="/contact" className="hover:text-accent transition-colors">Contact</Link>
+                <Link to="/faq" className="hover:text-accent transition-colors">FAQ</Link>
               </nav>
             </div>
             <div>
