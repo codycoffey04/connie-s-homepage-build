@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, Phone, ChevronDown } from "lucide-react";
+import logo from "@/assets/logo.jpeg";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import {
@@ -20,8 +21,12 @@ export const Navigation = () => {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4 md:px-6 max-w-7xl">
         <div className="flex h-16 items-center justify-between">
-          <Link to="/" className="flex items-center space-x-2">
-            <span className="text-xl font-bold text-primary">Connie's Bail Bonding</span>
+          <Link to="/" className="flex items-center">
+            <img 
+              src={logo} 
+              alt="Connie's Bail Bonding - Available 24/7" 
+              className="h-12 w-auto hover:opacity-80 transition-opacity"
+            />
           </Link>
 
           {/* Desktop Navigation */}
