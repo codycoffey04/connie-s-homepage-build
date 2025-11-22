@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Navigation } from "@/components/Navigation";
 import { PhoneButton } from "@/components/PhoneButton";
 import { Section } from "@/components/Section";
@@ -15,7 +16,7 @@ import {
   Star,
   Check
 } from "lucide-react";
-import { phoneNumbers } from "@/lib/cityUtils";
+import { phoneNumbers, cities } from "@/lib/cityUtils";
 
 const Index = () => {
 
@@ -303,19 +304,35 @@ const Index = () => {
           <div>
             <h3 className="text-2xl font-bold mb-4 text-primary">DeKalb County</h3>
             <div className="flex flex-wrap gap-2">
-              {["Fort Payne", "Rainsville", "Henagar", "Fyffe", "Valley Head", "Pisgah"].map((city) => (
-                <span key={city} className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
-                  {city}
-                </span>
-              ))}
+              {cities
+                .filter(city => ['Fort Payne', 'Rainsville', 'Henagar', 'Fyffe', 'Valley Head', 'Pisgah'].includes(city.name))
+                .map((city) => (
+                  <Link 
+                    key={city.slug} 
+                    to={`/${city.slug}`}
+                    className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium hover:bg-primary/20 hover:scale-105 transition-all inline-block"
+                  >
+                    {city.name}
+                  </Link>
+                ))
+              }
             </div>
           </div>
           <div>
             <h3 className="text-2xl font-bold mb-4 text-primary">Cherokee County</h3>
             <div className="flex flex-wrap gap-2">
-              <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
-                Centre
-              </span>
+              {cities
+                .filter(city => city.name === 'Centre')
+                .map((city) => (
+                  <Link 
+                    key={city.slug} 
+                    to={`/${city.slug}`}
+                    className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium hover:bg-primary/20 hover:scale-105 transition-all inline-block"
+                  >
+                    {city.name}
+                  </Link>
+                ))
+              }
             </div>
           </div>
         </div>
