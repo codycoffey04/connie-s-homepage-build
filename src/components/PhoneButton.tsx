@@ -15,25 +15,22 @@ export const PhoneButton = ({ name, number, variant = "primary", className }: Ph
     <a href={`tel:${formattedNumber}`} className="w-full group">
       <div
         className={cn(
-          "w-full h-auto min-h-[80px] p-6 rounded-xl",
-          "bg-white text-foreground",
-          "border-2 border-transparent",
+          "w-full h-auto min-h-[88px] py-6 px-6 rounded-xl",
+          "bg-teal text-white",
           "shadow-lg hover:shadow-2xl",
           "transition-all duration-300",
-          "hover:border-teal hover:-translate-y-1",
-          "flex flex-col sm:flex-row gap-3 items-center justify-center",
+          "hover:bg-teal/90 hover:-translate-y-1 active:translate-y-0",
+          "flex flex-col sm:flex-row gap-4 items-center justify-center",
           "cursor-pointer",
           className
         )}
       >
-        <div className="w-12 h-12 rounded-full bg-teal/10 flex items-center justify-center group-hover:bg-teal/20 transition-colors">
-          <Phone className="w-6 h-6 text-teal" />
-        </div>
+        <Phone className="w-8 h-8 text-white shrink-0" />
         <div className="flex flex-col text-center sm:text-left">
-          <span className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">
+          <span className="text-xs sm:text-sm font-semibold text-white/80 uppercase tracking-wider">
             {name}
           </span>
-          <span className="text-xl sm:text-2xl font-bold text-navy-deep">
+          <span className="text-2xl sm:text-3xl font-bold text-white leading-none">
             {number}
           </span>
         </div>
