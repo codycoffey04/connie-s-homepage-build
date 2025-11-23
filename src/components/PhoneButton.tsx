@@ -16,10 +16,10 @@ export const PhoneButton = ({ name, number, variant = "primary", className }: Ph
       <div
         className={cn(
           "w-full h-auto min-h-[88px] py-6 px-6 rounded-xl",
-          "bg-white border-2 border-teal",
+          "bg-gray-50/50",
           "shadow-sm",
           "transition-all duration-300",
-          "hover:bg-teal/5 hover:border-teal/80",
+          "hover:bg-gray-100/70",
           "flex flex-col sm:flex-row gap-4 items-center justify-center",
           "cursor-pointer",
           className
