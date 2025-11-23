@@ -18,6 +18,7 @@ import {
   Check
 } from "lucide-react";
 import { phoneNumbers, cities } from "@/lib/cityUtils";
+import heroBg from "@/assets/hero-bg.jpg";
 
 const Index = () => {
 
@@ -162,16 +163,23 @@ const Index = () => {
       <StickyCallButton />
 
       {/* Hero Section */}
-      <section className="relative bg-white py-20 md:py-28">
-        <div className="container mx-auto px-4 md:px-6 max-w-6xl">
+      <section 
+        className="relative py-20 md:py-28 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${heroBg})` }}
+      >
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-navy-deep/70 via-navy-deep/65 to-navy-deep/70" />
+        
+        {/* Content with relative positioning to sit above overlay */}
+        <div className="relative container mx-auto px-4 md:px-6 max-w-6xl">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight text-navy-deep uppercase tracking-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight text-white uppercase tracking-tight drop-shadow-lg">
               Fast & Affordable Bail Bonds
             </h1>
-            <p className="text-2xl md:text-3xl mb-8 text-teal font-bold">
+            <p className="text-2xl md:text-3xl mb-8 text-teal font-extrabold drop-shadow-md">
               24/7 Emergency Service
             </p>
-            <p className="text-lg md:text-xl mb-10 text-foreground/70">
+            <p className="text-lg md:text-xl mb-10 text-white/95 drop-shadow-md">
               Family-Owned • Licensed Alabama Agents • Serving DeKalb & Cherokee Counties Since 2019
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
@@ -179,7 +187,7 @@ const Index = () => {
               <PhoneButton name={phoneNumbers.connie.name} number={phoneNumbers.connie.number} />
               <PhoneButton name={phoneNumbers.toni.name} number={phoneNumbers.toni.number} />
             </div>
-            <p className="text-lg font-bold text-navy-deep uppercase tracking-wide">
+            <p className="text-lg font-bold text-white uppercase tracking-wide drop-shadow-md">
               ☝️ Click to Call for Immediate 24/7 Help
             </p>
           </div>
