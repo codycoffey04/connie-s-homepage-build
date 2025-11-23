@@ -167,10 +167,7 @@ const Index = () => {
         className="relative py-20 md:py-28 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroBg})` }}
       >
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-navy-deep/70 via-navy-deep/65 to-navy-deep/70" />
-        
-        {/* Content with relative positioning to sit above overlay */}
+        {/* Content with relative positioning */}
         <div className="relative container mx-auto px-4 md:px-6 max-w-6xl">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight text-white uppercase tracking-tight drop-shadow-lg">
