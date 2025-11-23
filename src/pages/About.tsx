@@ -7,6 +7,7 @@ import { Shield, Heart, MapPin, DollarSign, Check, BookOpen, Star, Users, Phone 
 import { Link } from "react-router-dom";
 import { SEO } from "@/components/SEO";
 import { getLocalBusinessSchema, getBreadcrumbSchema } from "@/lib/schemaUtils";
+import aboutHeroBg from "@/assets/about-hero-bg.jpg";
 
 const About = () => {
   const teamMembers = [
@@ -94,26 +95,58 @@ const About = () => {
       />
       <Navigation />
       
-      {/* Hero Section */}
-      <Section className="pt-24 md:pt-32 pb-12 md:pb-16">
-        <div className="text-center max-w-4xl mx-auto mb-12">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4">
-            About Connie's Bail Bonding
-          </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-            Family-Owned and Operated Since 2019
-          </p>
+      {/* Hero Section - Full Screen with Background Image */}
+      <section 
+        className="relative min-h-[85vh] bg-black flex items-center bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${aboutHeroBg})` }}
+      >
+        {/* Dark overlay for text contrast */}
+        <div className="absolute inset-0 bg-black/50" />
+        
+        <div className="relative container mx-auto px-4 md:px-6 max-w-7xl z-10">
+          {/* Main Content - Left Aligned */}
+          <div className="max-w-3xl">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 text-white uppercase tracking-tighter leading-none">
+              About<br />
+              Connie's<br />
+              <span className="text-brand-red">Bail Bonding</span>
+            </h1>
+            
+            <p className="text-2xl md:text-3xl mb-8 text-white font-bold">
+              Family-Owned & Operated Since 2019
+            </p>
+            
+            <p className="text-lg md:text-xl mb-10 text-white/90 max-w-xl">
+              Meet Connie, Toni, and Richard — licensed Alabama bail bond agents serving DeKalb & Cherokee Counties with compassion and professionalism.
+            </p>
+          </div>
         </div>
-
-        <div className="max-w-3xl mx-auto space-y-4">
-          <PhoneButton name="Richard" number="256-601-2041" variant="primary" />
-          <PhoneButton name="Connie" number="256-630-2824" variant="secondary" />
-          <PhoneButton name="Toni" number="256-440-0822" variant="secondary" />
-          <p className="text-center text-muted-foreground text-sm mt-4">
-            Available 24 hours a day, 7 days a week
-          </p>
+        
+        {/* Slim Contact Banner - Bottom of Hero */}
+        <div className="absolute bottom-0 left-0 right-0 bg-black/90 backdrop-blur-sm border-t-4 border-brand-red z-10">
+          <div className="container mx-auto px-4 py-4">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+              <p className="text-white/70 text-sm uppercase tracking-wide font-semibold">
+                Available 24/7 - Call Any Team Member:
+              </p>
+              <div className="flex flex-wrap gap-4 md:gap-6 justify-center">
+                <a href="tel:2566012041" className="text-white hover:text-brand-red transition-colors font-bold flex items-center gap-2">
+                  <Phone className="w-4 h-4" />
+                  Richard: 256-601-2041
+                </a>
+                <a href="tel:2565237685" className="text-white hover:text-brand-red transition-colors font-bold flex items-center gap-2">
+                  <Phone className="w-4 h-4" />
+                  Connie: 256-523-7685
+                </a>
+                <a href="tel:2569979932" className="text-white hover:text-brand-red transition-colors font-bold flex items-center gap-2">
+                  <Phone className="w-4 h-4" />
+                  Toni: 256-997-9932
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-      </Section>
+      </section>
 
       {/* Our Story Section */}
       <Section variant="muted">
