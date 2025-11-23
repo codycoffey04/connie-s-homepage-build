@@ -2,6 +2,8 @@ import { Navigation } from "@/components/Navigation";
 import { Section } from "@/components/Section";
 import { PhoneButton } from "@/components/PhoneButton";
 import { FAQList } from "@/components/FAQItem";
+import { SEO } from "@/components/SEO";
+import { getLocalBusinessSchema, getBreadcrumbSchema, getFAQSchema } from "@/lib/schemaUtils";
 
 const generalFaqs = [
   {
@@ -103,8 +105,23 @@ const legalFaqs = [
 ];
 
 const FAQ = () => {
+  const allFaqs = [...generalFaqs, ...processFaqs, ...localFaqs, ...paymentFaqs, ...legalFaqs];
+  
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Bail Bonds FAQ | Common Questions Answered"
+        description="Get answers to frequently asked questions about bail bonds in Alabama. Learn about costs, the process, payment options, and more from licensed agents."
+        canonical="/faq"
+        schema={[
+          getLocalBusinessSchema(),
+          getFAQSchema(allFaqs),
+          getBreadcrumbSchema([
+            { name: "Home", url: "/" },
+            { name: "FAQ", url: "/faq" }
+          ])
+        ]}
+      />
       <Navigation />
       
       {/* Hero Section */}

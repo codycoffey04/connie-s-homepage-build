@@ -15,6 +15,8 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { phoneNumbers } from "@/lib/cityUtils";
+import { SEO } from "@/components/SEO";
+import { getLocalBusinessSchema, getBreadcrumbSchema } from "@/lib/schemaUtils";
 
 const ValleyHead = () => {
   const features = [
@@ -96,6 +98,18 @@ const ValleyHead = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Valley Head Bail Bonds | 24/7 Service | DeKalb County, AL"
+        description="Fast 24/7 bail bonds serving Valley Head, AL and DeKalb County. Licensed agents ready to help your family. Call 256-601-2041 now."
+        canonical="/valley-head"
+        schema={[
+          getLocalBusinessSchema("Valley Head"),
+          getBreadcrumbSchema([
+            { name: "Home", url: "/" },
+            { name: "Valley Head", url: "/valley-head" }
+          ])
+        ]}
+      />
       <Navigation />
 
       {/* Hero Section */}

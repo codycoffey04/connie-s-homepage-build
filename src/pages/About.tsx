@@ -5,6 +5,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { TestimonialCard } from "@/components/TestimonialCard";
 import { Shield, Heart, MapPin, DollarSign, Check, BookOpen, Star, Users } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEO } from "@/components/SEO";
+import { getLocalBusinessSchema, getBreadcrumbSchema } from "@/lib/schemaUtils";
 
 const About = () => {
   const teamMembers = [
@@ -78,6 +80,18 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="About Us | Family-Owned Bail Bond Service Since 2019"
+        description="Meet Connie, Toni, and Richard - licensed Alabama bail bond agents serving DeKalb & Cherokee Counties with compassion and professionalism 24/7."
+        canonical="/about"
+        schema={[
+          getLocalBusinessSchema(),
+          getBreadcrumbSchema([
+            { name: "Home", url: "/" },
+            { name: "About", url: "/about" }
+          ])
+        ]}
+      />
       <Navigation />
       
       {/* Hero Section */}

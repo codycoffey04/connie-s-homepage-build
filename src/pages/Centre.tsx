@@ -15,6 +15,8 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { phoneNumbers } from "@/lib/cityUtils";
+import { SEO } from "@/components/SEO";
+import { getLocalBusinessSchema, getBreadcrumbSchema } from "@/lib/schemaUtils";
 
 const Centre = () => {
   const features = [
@@ -94,6 +96,18 @@ const Centre = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Centre Bail Bonds | 24/7 Service | Cherokee County, AL"
+        description="Fast 24/7 bail bonds serving Centre, AL and Cherokee County. Licensed agents who know the local system. Call 256-601-2041 now."
+        canonical="/centre"
+        schema={[
+          getLocalBusinessSchema("Centre"),
+          getBreadcrumbSchema([
+            { name: "Home", url: "/" },
+            { name: "Centre", url: "/centre" }
+          ])
+        ]}
+      />
       <Navigation />
 
       {/* Hero Section */}

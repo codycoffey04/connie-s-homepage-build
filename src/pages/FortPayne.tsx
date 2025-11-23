@@ -17,6 +17,8 @@ import {
   DollarSign
 } from "lucide-react";
 import { phoneNumbers } from "@/lib/cityUtils";
+import { SEO } from "@/components/SEO";
+import { getLocalBusinessSchema, getBreadcrumbSchema } from "@/lib/schemaUtils";
 
 const FortPayne = () => {
   const features = [
@@ -121,6 +123,18 @@ const FortPayne = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Fort Payne Bail Bonds | 24/7 Service | DeKalb County, AL"
+        description="Fast 24/7 bail bonds in Fort Payne, AL. Licensed agents next to DeKalb County Detention Center. Call Richard 256-601-2041. No hidden fees."
+        canonical="/fort-payne"
+        schema={[
+          getLocalBusinessSchema("Fort Payne"),
+          getBreadcrumbSchema([
+            { name: "Home", url: "/" },
+            { name: "Fort Payne", url: "/fort-payne" }
+          ])
+        ]}
+      />
       <Navigation />
 
       {/* Hero Section */}

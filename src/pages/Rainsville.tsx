@@ -15,6 +15,8 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { phoneNumbers } from "@/lib/cityUtils";
+import { SEO } from "@/components/SEO";
+import { getLocalBusinessSchema, getBreadcrumbSchema } from "@/lib/schemaUtils";
 
 const Rainsville = () => {
   const features = [
@@ -96,6 +98,18 @@ const Rainsville = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Rainsville Bail Bonds | 24/7 Service | DeKalb County, AL"
+        description="Fast 24/7 bail bonds serving Rainsville, AL and DeKalb County. Licensed agents ready to help. Call 256-601-2041. Payment plans available."
+        canonical="/rainsville"
+        schema={[
+          getLocalBusinessSchema("Rainsville"),
+          getBreadcrumbSchema([
+            { name: "Home", url: "/" },
+            { name: "Rainsville", url: "/rainsville" }
+          ])
+        ]}
+      />
       <Navigation />
 
       {/* Hero Section */}

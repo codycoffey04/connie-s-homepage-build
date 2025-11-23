@@ -15,6 +15,8 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { phoneNumbers } from "@/lib/cityUtils";
+import { SEO } from "@/components/SEO";
+import { getLocalBusinessSchema, getBreadcrumbSchema } from "@/lib/schemaUtils";
 
 const Fyffe = () => {
   const features = [
@@ -94,6 +96,18 @@ const Fyffe = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Fyffe Bail Bonds | 24/7 Service | DeKalb County, AL"
+        description="Fast 24/7 bail bonds serving Fyffe, AL and DeKalb County. Licensed agents near you. Call 256-601-2041 now. Transparent pricing, no hidden fees."
+        canonical="/fyffe"
+        schema={[
+          getLocalBusinessSchema("Fyffe"),
+          getBreadcrumbSchema([
+            { name: "Home", url: "/" },
+            { name: "Fyffe", url: "/fyffe" }
+          ])
+        ]}
+      />
       <Navigation />
 
       {/* Hero Section */}
