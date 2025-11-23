@@ -149,7 +149,7 @@ const Centre = () => {
             Centre's Trusted Bail Bond Service
           </h2>
           <p className="text-lg text-foreground/80 leading-relaxed">
-            When someone you love is arrested in Centre or anywhere in Cherokee County, Connie's Bail Bonding is ready to help. We serve Centre 24/7 with the same fast, compassionate service we bring to all of Northeast Alabama.
+            <strong className="text-brand-red">Serving Centre & Cherokee County Since 2019</strong> — When someone you love is arrested in Centre or anywhere in Cherokee County, Connie's Bail Bonding is ready to help. We serve Centre 24/7 with the same fast, compassionate service we bring to all of Northeast Alabama.
           </p>
           <p className="text-lg text-foreground/80 leading-relaxed mt-4">
             Centre is the county seat of Cherokee County, which means the Cherokee County Courthouse and Cherokee County Detention Center are both located right here. We know these facilities well, understand the release procedures, and can meet you at either location within minutes to get your loved one out quickly.
@@ -190,6 +190,91 @@ const Centre = () => {
               <p className="text-foreground/80 leading-relaxed">{step.description}</p>
             </div>
           ))}
+        </div>
+      </Section>
+
+      {/* Local Law Enforcement & Court Information */}
+      <Section className="bg-gradient-to-b from-muted to-white py-16">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-black mb-8 text-center uppercase">
+            Local Information for <span className="text-brand-red">Centre Residents</span>
+          </h2>
+          
+          {/* Courthouse Hours */}
+          <Card className="mb-6 border-2 border-primary/20">
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                <Clock className="w-5 h-5" /> Cherokee County Courthouse Hours
+              </h3>
+              <p className="mb-2"><strong>Address:</strong> 100 Main St, Centre, AL 35960</p>
+              <p className="mb-2"><strong>Hours:</strong> Monday-Friday, 8:00 AM - 4:30 PM</p>
+              <p className="mb-2"><strong>Closed:</strong> Weekends and Federal Holidays</p>
+              <p className="text-sm text-muted-foreground mt-4">
+                <strong>Note:</strong> Bonds can be posted 24/7 for standard charges with preset bail amounts. 
+                For serious charges requiring a judge's bond hearing, you may need to wait until the courthouse reopens.
+              </p>
+            </CardContent>
+          </Card>
+          
+          {/* Law Enforcement */}
+          <Card className="mb-6 border-2 border-primary/20">
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                <Shield className="w-5 h-5" /> Law Enforcement Serving Centre
+              </h3>
+              <ul className="space-y-2">
+                <li className="flex items-start gap-2">
+                  <ChevronRight className="w-5 h-5 text-primary mt-0.5" />
+                  <span>Centre Police Department</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <ChevronRight className="w-5 h-5 text-primary mt-0.5" />
+                  <span>Cherokee County Sheriff's Office</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <ChevronRight className="w-5 h-5 text-primary mt-0.5" />
+                  <span>Alabama State Troopers (Highway Patrol)</span>
+                </li>
+              </ul>
+              <p className="text-sm text-muted-foreground mt-4">
+                Arrests by any of these agencies in Centre or Cherokee County are processed at the 
+                Cherokee County Detention Center.
+              </p>
+            </CardContent>
+          </Card>
+          
+          {/* Directions & Parking */}
+          <Card className="border-2 border-primary/20">
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                <MapPin className="w-5 h-5" /> Meeting Location & Parking
+              </h3>
+              <div className="space-y-4">
+                <div>
+                  <p className="font-semibold mb-1">Cherokee County Detention Center</p>
+                  <p className="text-sm mb-2">110 Cedar Bluff Rd, Centre, AL 35960</p>
+                  <p className="text-sm text-muted-foreground">
+                    <strong>Parking:</strong> Visitor parking available in the main lot. 
+                    We'll meet you at the entrance and guide you through the process.
+                  </p>
+                </div>
+                <div className="pt-4 border-t">
+                  <p className="font-semibold mb-1">Cherokee County Courthouse</p>
+                  <p className="text-sm mb-2">100 Main St, Centre, AL 35960</p>
+                  <p className="text-sm text-muted-foreground">
+                    <strong>Parking:</strong> On-street parking available on Main Street and surrounding blocks. 
+                    Courthouse has a public parking area behind the building.
+                  </p>
+                </div>
+                <div className="pt-4 border-t bg-primary/5 -mx-6 -mb-6 p-6 rounded-b-lg">
+                  <p className="text-sm font-semibold">
+                    <Clock className="w-4 h-4 inline mr-2" />
+                    From our Fort Payne office, we can reach Centre in approximately 25 minutes.
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </Section>
 

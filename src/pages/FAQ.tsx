@@ -143,8 +143,47 @@ const FAQ = () => {
         </div>
       </Section>
 
+      {/* Table of Contents - Sticky Navigation */}
+      <Section className="bg-muted/50 py-8 sticky top-20 z-40 border-y border-border">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-lg font-bold mb-4 text-center text-foreground">Jump to Section:</h2>
+          <nav className="flex flex-wrap justify-center gap-4">
+            <a 
+              href="#general" 
+              className="px-4 py-2 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors text-sm font-semibold"
+            >
+              General Questions
+            </a>
+            <a 
+              href="#process" 
+              className="px-4 py-2 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors text-sm font-semibold"
+            >
+              The Process
+            </a>
+            <a 
+              href="#local" 
+              className="px-4 py-2 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors text-sm font-semibold"
+            >
+              Local Info
+            </a>
+            <a 
+              href="#payment" 
+              className="px-4 py-2 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors text-sm font-semibold"
+            >
+              Payment & Costs
+            </a>
+            <a 
+              href="#legal" 
+              className="px-4 py-2 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors text-sm font-semibold"
+            >
+              Legal & Compliance
+            </a>
+          </nav>
+        </div>
+      </Section>
+
       {/* General Bail Bond Questions */}
-      <Section variant="muted">
+      <Section variant="muted" id="general">
         <div className="max-w-4xl mx-auto space-y-8">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center">
             General Bail Bond Questions
@@ -154,7 +193,7 @@ const FAQ = () => {
       </Section>
 
       {/* The Bail Process */}
-      <Section variant="default">
+      <Section variant="default" id="process">
         <div className="max-w-4xl mx-auto space-y-8">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center">
             The Bail Process
@@ -164,7 +203,7 @@ const FAQ = () => {
       </Section>
 
       {/* Local Questions */}
-      <Section variant="muted">
+      <Section variant="muted" id="local">
         <div className="max-w-4xl mx-auto space-y-8">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center">
             Local Questions
@@ -174,7 +213,7 @@ const FAQ = () => {
       </Section>
 
       {/* Payment & Costs */}
-      <Section variant="default">
+      <Section variant="default" id="payment">
         <div className="max-w-4xl mx-auto space-y-8">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center">
             Payment & Costs
@@ -184,7 +223,7 @@ const FAQ = () => {
       </Section>
 
       {/* Legal & Compliance Questions */}
-      <Section variant="muted">
+      <Section variant="muted" id="legal">
         <div className="max-w-4xl mx-auto space-y-8">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center">
             Legal & Compliance Questions
