@@ -382,17 +382,20 @@ const Henagar = () => {
               <h3 className="text-2xl font-black mb-6 uppercase tracking-tight">Contact Us</h3>
               <div className="space-y-3">
                 <p>
-                  <a href={`tel:${phoneNumbers.richard.number.replace(/[^0-9]/g, "")}`} className="hover:text-brand-red transition-colors text-lg font-semibold">
+                  <a href={`tel:${phoneNumbers.richard.number.replace(/[^0-9]/g, "")}`} className="hover:text-brand-red transition-colors text-lg font-semibold flex items-center gap-2">
+                    <Phone className="w-4 h-4" />
                     Richard: {phoneNumbers.richard.number}
                   </a>
                 </p>
                 <p>
-                  <a href={`tel:${phoneNumbers.connie.number.replace(/[^0-9]/g, "")}`} className="hover:text-brand-red transition-colors text-lg font-semibold">
+                  <a href={`tel:${phoneNumbers.connie.number.replace(/[^0-9]/g, "")}`} className="hover:text-brand-red transition-colors text-lg font-semibold flex items-center gap-2">
+                    <Phone className="w-4 h-4" />
                     Connie: {phoneNumbers.connie.number}
                   </a>
                 </p>
                 <p>
-                  <a href={`tel:${phoneNumbers.toni.number.replace(/[^0-9]/g, "")}`} className="hover:text-brand-red transition-colors text-lg font-semibold">
+                  <a href={`tel:${phoneNumbers.toni.number.replace(/[^0-9]/g, "")}`} className="hover:text-brand-red transition-colors text-lg font-semibold flex items-center gap-2">
+                    <Phone className="w-4 h-4" />
                     Toni: {phoneNumbers.toni.number}
                   </a>
                 </p>
