@@ -216,13 +216,16 @@ const Index = () => {
                 Available 24/7 - Call Any Team Member:
               </p>
               <div className="flex flex-wrap gap-4 md:gap-6 justify-center">
-                <a href={`tel:${phoneNumbers.richard.number.replace(/[^0-9]/g, "")}`} className="text-white hover:text-brand-red transition-colors font-bold">
+                <a href={`tel:${phoneNumbers.richard.number.replace(/[^0-9]/g, "")}`} className="text-white hover:text-brand-red transition-colors font-bold flex items-center gap-2">
+                  <Phone className="w-4 h-4" />
                   Richard: {phoneNumbers.richard.number}
                 </a>
-                <a href={`tel:${phoneNumbers.connie.number.replace(/[^0-9]/g, "")}`} className="text-white hover:text-brand-red transition-colors font-bold">
+                <a href={`tel:${phoneNumbers.connie.number.replace(/[^0-9]/g, "")}`} className="text-white hover:text-brand-red transition-colors font-bold flex items-center gap-2">
+                  <Phone className="w-4 h-4" />
                   Connie: {phoneNumbers.connie.number}
                 </a>
-                <a href={`tel:${phoneNumbers.toni.number.replace(/[^0-9]/g, "")}`} className="text-white hover:text-brand-red transition-colors font-bold">
+                <a href={`tel:${phoneNumbers.toni.number.replace(/[^0-9]/g, "")}`} className="text-white hover:text-brand-red transition-colors font-bold flex items-center gap-2">
+                  <Phone className="w-4 h-4" />
                   Toni: {phoneNumbers.toni.number}
                 </a>
               </div>
