@@ -434,50 +434,55 @@ const FortPayne = () => {
       </Section>
 
       {/* Footer */}
-      <footer className="bg-navy-deep text-white py-12">
+      <footer className="bg-black border-t-4 border-brand-red text-white py-16">
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
             <div>
-              <h3 className="font-bold text-lg mb-4">Contact Us</h3>
-              <div className="space-y-2 text-white/80">
-                <p className="font-semibold text-white">Connie's Bail Bonding, LLC</p>
-                <p>2700 Jordan Rd SW</p>
-                <p>Fort Payne, AL 35967</p>
-                <div className="space-y-1 mt-4">
-                  <p><strong>Richard:</strong> {phoneNumbers.richard.number}</p>
-                  <p><strong>Connie:</strong> {phoneNumbers.connie.number}</p>
-                  <p><strong>Toni:</strong> {phoneNumbers.toni.number}</p>
-                </div>
+              <h3 className="text-2xl font-black mb-6 uppercase tracking-tight">Contact Us</h3>
+              <div className="space-y-3">
+                <p>
+                  <a href={`tel:${phoneNumbers.richard.number.replace(/[^0-9]/g, "")}`} className="hover:text-brand-red transition-colors text-lg font-semibold">
+                    Richard: {phoneNumbers.richard.number}
+                  </a>
+                </p>
+                <p>
+                  <a href={`tel:${phoneNumbers.connie.number.replace(/[^0-9]/g, "")}`} className="hover:text-brand-red transition-colors text-lg font-semibold">
+                    Connie: {phoneNumbers.connie.number}
+                  </a>
+                </p>
+                <p>
+                  <a href={`tel:${phoneNumbers.toni.number.replace(/[^0-9]/g, "")}`} className="hover:text-brand-red transition-colors text-lg font-semibold">
+                    Toni: {phoneNumbers.toni.number}
+                  </a>
+                </p>
+                <p className="flex items-start gap-2 mt-4">
+                  <MapPin className="w-4 h-4 flex-shrink-0 mt-1" />
+                  <span>2700 Jordan Rd SW<br />Fort Payne, AL 35967</span>
+                </p>
               </div>
             </div>
-            
             <div>
-              <h3 className="font-bold text-lg mb-4">Quick Links</h3>
-              <ul className="space-y-2 text-white/80">
-                <li><Link to="/" className="hover:text-teal transition-colors">Home</Link></li>
-                <li><Link to="/about" className="hover:text-teal transition-colors">About</Link></li>
-                <li><Link to="/contact" className="hover:text-teal transition-colors">Contact</Link></li>
-                <li><Link to="/faq" className="hover:text-teal transition-colors">FAQ</Link></li>
-              </ul>
+              <h3 className="text-2xl font-black mb-6 uppercase tracking-tight">Quick Links</h3>
+              <nav className="flex flex-col gap-3">
+                <Link to="/" className="hover:text-brand-red transition-colors font-semibold uppercase text-sm">Home</Link>
+                <Link to="/about" className="hover:text-brand-red transition-colors font-semibold uppercase text-sm">About</Link>
+                <Link to="/contact" className="hover:text-brand-red transition-colors font-semibold uppercase text-sm">Contact</Link>
+                <Link to="/faq" className="hover:text-brand-red transition-colors font-semibold uppercase text-sm">FAQ</Link>
+              </nav>
             </div>
-            
             <div>
-              <h3 className="font-bold text-lg mb-4">Service Areas</h3>
-              <ul className="space-y-2 text-white/80">
-                <li><Link to="/fort-payne" className="hover:text-teal transition-colors">Fort Payne</Link></li>
-                <li><Link to="/rainsville" className="hover:text-teal transition-colors">Rainsville</Link></li>
-                <li><Link to="/centre" className="hover:text-teal transition-colors">Centre</Link></li>
-                <li><Link to="/henagar" className="hover:text-teal transition-colors">Henagar</Link></li>
-              </ul>
+              <h3 className="text-2xl font-black mb-6 uppercase tracking-tight">Legal</h3>
+              <p className="text-sm mb-4 font-semibold">Licensed Alabama Bail Bond Agents</p>
+              <p className="text-sm mb-4 font-semibold">Family-Owned Since 2019</p>
+              <p className="text-sm mb-4 font-semibold">Available 24/7/365</p>
             </div>
           </div>
-          
-          <div className="border-t border-white/20 pt-8 text-center text-sm text-white/70">
-            <p className="mb-2">
-              Licensed Alabama Bail Bond Agents | Family-Owned Since 2019 | Serving DeKalb & Cherokee Counties
+          <div className="border-t border-white/20 pt-8 text-center text-sm space-y-3">
+            <p className="text-white/70 italic">
+              This website does not constitute legal advice. Bail bond approval is subject to court discretion.
             </p>
-            <p>
-              © {new Date().getFullYear()} Connie's Bail Bonding, LLC. All rights reserved.
+            <p className="font-bold text-white">
+              © 2025 Connie's Bail Bonding, LLC. All rights reserved.
             </p>
           </div>
         </div>
