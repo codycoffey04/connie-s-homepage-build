@@ -113,35 +113,100 @@ const Contact = () => {
         </div>
       </Section>
 
-      {/* Office Location */}
+      {/* Office Location with Interactive Map */}
       <Section variant="muted">
-        <div className="max-w-3xl mx-auto">
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-3">
-                <MapPin className="w-6 h-6 text-primary" />
-                Our Office Location
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div>
-                <p className="font-bold text-lg">Connie's Bail Bonding, LLC</p>
-                <p className="text-foreground/80">2700 Jordan Rd SW</p>
-                <p className="text-foreground/80">Fort Payne, AL 35967</p>
-              </div>
-              <p className="text-primary font-semibold">
-                Located next to the DeKalb County Detention Center for fast service.
-              </p>
-              <a
-                href="https://www.google.com/maps/place/2700+Jordan+Rd+SW,+Fort+Payne,+AL+35967"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-semibold transition-colors"
-              >
-                Get Directions on Google Maps →
-              </a>
-            </CardContent>
-          </Card>
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
+            Our Office Location
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-8 items-start">
+            {/* Left: Interactive Map */}
+            <div className="relative w-full h-[400px] rounded-lg overflow-hidden shadow-lg border-4 border-primary/20">
+              <iframe
+                src="https://maps.google.com/maps?q=2700+Jordan+Rd+SW,+Fort+Payne,+AL+35967&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Connie's Bail Bonding Office Location - 2700 Jordan Rd SW, Fort Payne, AL 35967"
+              />
+            </div>
+            
+            {/* Right: Location Details + CTA */}
+            <div className="space-y-6">
+              <Card className="border-2 border-primary">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-3 text-2xl">
+                    <MapPin className="w-7 h-7 text-primary" />
+                    Visit Our Office
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div>
+                    <p className="font-bold text-xl">Connie's Bail Bonding, LLC</p>
+                    <p className="text-lg text-foreground/80">2700 Jordan Rd SW</p>
+                    <p className="text-lg text-foreground/80">Fort Payne, AL 35967</p>
+                  </div>
+                  
+                  <div className="bg-primary/10 p-4 rounded-lg border-l-4 border-primary">
+                    <p className="font-semibold text-primary flex items-center gap-2">
+                      <Building2 className="w-5 h-5" />
+                      Located next to DeKalb County Detention Center
+                    </p>
+                    <p className="text-sm text-foreground/70 mt-2">
+                      We're right next door for the fastest possible service.
+                    </p>
+                  </div>
+                  
+                  {/* Get Directions Button - Pre-filled */}
+                  <a
+                    href="https://www.google.com/maps/dir/?api=1&destination=2700+Jordan+Rd+SW,Fort+Payne,AL+35967"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-3 w-full bg-primary text-primary-foreground px-6 py-4 rounded-lg font-bold text-lg hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl"
+                  >
+                    <MapPin className="w-6 h-6" />
+                    Get Directions
+                  </a>
+                  
+                  <p className="text-sm text-center text-foreground/60 italic">
+                    Directions will open in Google Maps from your current location
+                  </p>
+                </CardContent>
+              </Card>
+              
+              {/* Contact Info Card */}
+              <Card>
+                <CardContent className="pt-6 space-y-3">
+                  <h3 className="font-bold text-lg mb-3">Contact Us</h3>
+                  <a 
+                    href={`tel:${phoneNumbers.richard.number.replace(/[^0-9]/g, "")}`} 
+                    className="flex items-center gap-2 hover:text-primary transition-colors"
+                  >
+                    <Phone className="w-4 h-4" />
+                    Richard: {phoneNumbers.richard.number}
+                  </a>
+                  <a 
+                    href={`tel:${phoneNumbers.connie.number.replace(/[^0-9]/g, "")}`} 
+                    className="flex items-center gap-2 hover:text-primary transition-colors"
+                  >
+                    <Phone className="w-4 h-4" />
+                    Connie: {phoneNumbers.connie.number}
+                  </a>
+                  <a 
+                    href={`tel:${phoneNumbers.toni.number.replace(/[^0-9]/g, "")}`} 
+                    className="flex items-center gap-2 hover:text-primary transition-colors"
+                  >
+                    <Phone className="w-4 h-4" />
+                    Toni: {phoneNumbers.toni.number}
+                  </a>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
         </div>
       </Section>
 
