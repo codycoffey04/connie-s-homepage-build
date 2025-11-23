@@ -20,7 +20,7 @@ export const Navigation = () => {
   return (
     <header className="sticky top-0 z-50 w-full bg-black border-b-2 border-brand-red shadow-lg">
       <div className="container mx-auto px-4 md:px-6 max-w-7xl">
-        <div className="flex h-20 items-center justify-between">
+        <div className="flex h-20 items-center justify-between relative">
           <Link to="/" className="flex items-center">
             <img 
               src={logo} 
@@ -28,6 +28,13 @@ export const Navigation = () => {
               className="h-12 w-auto brightness-0 invert hover:opacity-80 transition-opacity"
             />
           </Link>
+
+          {/* CENTER: Company Name */}
+          <div className="hidden lg:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+            <h1 className="text-2xl font-black text-white uppercase tracking-wider whitespace-nowrap">
+              Connie's Bail Bonding
+            </h1>
+          </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-6">
