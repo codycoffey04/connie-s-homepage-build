@@ -13,6 +13,9 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -45,11 +48,9 @@ export default {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
         },
-        'navy-deep': 'hsl(218, 32%, 15%)',
-        'navy-light': 'hsl(218, 30%, 25%)',
-        'teal': 'hsl(180, 56%, 39%)',
-        'teal-light': 'hsl(180, 50%, 50%)',
-        'light-gray': 'hsl(210, 36%, 98%)',
+        'brand-red': '#FF0000',
+        'brand-black': '#000000',
+        'brand-gray': '#808080',
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",

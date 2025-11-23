@@ -15,7 +15,8 @@ import {
   Shield, 
   MapPin,
   Star,
-  Check
+  Check,
+  Phone
 } from "lucide-react";
 import { phoneNumbers, cities } from "@/lib/cityUtils";
 import heroBg from "@/assets/hero-bg.jpg";
@@ -162,51 +163,90 @@ const Index = () => {
       <Navigation />
       <StickyCallButton />
 
-      {/* Hero Section */}
+      {/* Hero Section - Modern Banner Style */}
       <section 
-        className="relative py-20 md:py-28 bg-cover bg-center bg-no-repeat"
+        className="relative min-h-[85vh] bg-black flex items-center bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroBg})` }}
       >
-        {/* Content with relative positioning */}
-        <div className="relative container mx-auto px-4 md:px-6 max-w-6xl">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight text-white uppercase tracking-tight drop-shadow-lg">
-              Fast & Affordable Bail Bonds
+        {/* Subtle dark overlay for image contrast */}
+        <div className="absolute inset-0 bg-black/40" />
+        
+        <div className="relative container mx-auto px-4 md:px-6 max-w-7xl z-10">
+          {/* Main Content - Left Aligned, Bold */}
+          <div className="max-w-3xl">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 text-white uppercase tracking-tighter leading-none">
+              Fast.<br />
+              Fair.<br />
+              <span className="text-brand-red">24/7.</span>
             </h1>
-            <p className="text-2xl md:text-3xl mb-8 text-teal font-extrabold drop-shadow-md">
-              24/7 Emergency Service
+            
+            <p className="text-2xl md:text-3xl mb-8 text-white font-bold">
+              Alabama's Most Trusted Bail Bond Service
             </p>
-            <p className="text-lg md:text-xl mb-10 text-white/95 drop-shadow-md">
-              Family-Owned • Licensed Alabama Agents • Serving DeKalb & Cherokee Counties Since 2019
+            
+            <p className="text-lg md:text-xl mb-10 text-white/90 max-w-xl">
+              Family-owned. Licensed agents. Serving DeKalb & Cherokee Counties since 2019.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-              <PhoneButton name={phoneNumbers.richard.name} number={phoneNumbers.richard.number} />
-              <PhoneButton name={phoneNumbers.connie.name} number={phoneNumbers.connie.number} />
-              <PhoneButton name={phoneNumbers.toni.name} number={phoneNumbers.toni.number} />
+            
+            {/* Primary CTA - Single Bold Button */}
+            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+              <a 
+                href={`tel:${phoneNumbers.richard.number.replace(/[^0-9]/g, "")}`}
+                className="inline-flex items-center justify-center px-8 py-5 bg-brand-red text-white font-black text-xl uppercase tracking-wide hover:bg-red-600 transition-all duration-200 shadow-2xl hover:shadow-red-500/50 hover:scale-105"
+              >
+                <Phone className="mr-3 h-6 w-6" />
+                Call Now
+              </a>
+              
+              <a 
+                href={`sms:${phoneNumbers.richard.number.replace(/[^0-9]/g, "")}`}
+                className="inline-flex items-center justify-center px-8 py-5 bg-white text-black font-bold text-xl uppercase tracking-wide hover:bg-gray-100 transition-all duration-200"
+              >
+                Text Us
+              </a>
             </div>
-            <p className="text-lg font-bold text-white uppercase tracking-wide drop-shadow-md">
-              ☝️ Click to Call for Immediate 24/7 Help
-            </p>
+          </div>
+        </div>
+        
+        {/* Slim Contact Banner - Bottom of Hero */}
+        <div className="absolute bottom-0 left-0 right-0 bg-black/90 backdrop-blur-sm border-t-4 border-brand-red z-10">
+          <div className="container mx-auto px-4 py-4">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+              <p className="text-white/70 text-sm uppercase tracking-wide font-semibold">
+                Available 24/7 - Call Any Team Member:
+              </p>
+              <div className="flex flex-wrap gap-4 md:gap-6 justify-center">
+                <a href={`tel:${phoneNumbers.richard.number.replace(/[^0-9]/g, "")}`} className="text-white hover:text-brand-red transition-colors font-bold">
+                  Richard: {phoneNumbers.richard.number}
+                </a>
+                <a href={`tel:${phoneNumbers.connie.number.replace(/[^0-9]/g, "")}`} className="text-white hover:text-brand-red transition-colors font-bold">
+                  Connie: {phoneNumbers.connie.number}
+                </a>
+                <a href={`tel:${phoneNumbers.toni.number.replace(/[^0-9]/g, "")}`} className="text-white hover:text-brand-red transition-colors font-bold">
+                  Toni: {phoneNumbers.toni.number}
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Why Choose Us - Bullet List */}
-      <Section className="bg-white py-16">
-        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-navy-deep">
-          Why Families Choose Connie's Bail Bonding:
+      <Section className="bg-white py-20">
+        <h2 className="text-4xl md:text-5xl font-black mb-12 text-center text-black uppercase tracking-tight">
+          Why Choose <span className="text-brand-red">Connie's</span>
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl mx-auto">
           {whyChooseList.map((item, index) => (
-            <div key={index} className="flex items-start gap-3">
-              <Check className="w-6 h-6 text-teal flex-shrink-0 mt-1" />
-              <span className="text-base md:text-lg font-medium text-foreground">{item}</span>
+            <div key={index} className="flex items-start gap-4 p-4 hover:bg-gray-50 transition-colors group">
+              <div className="w-8 h-8 rounded-full bg-brand-red flex items-center justify-center flex-shrink-0">
+                <Check className="w-5 h-5 text-white" />
+              </div>
+              <span className="text-lg font-medium text-black group-hover:text-brand-red transition-colors">
+                {item}
+              </span>
             </div>
           ))}
-        </div>
-        <div className="text-center mt-10">
-          <p className="text-base text-foreground/70 mb-4">Need help right now?</p>
-          <PhoneButton name="Call Richard" number={phoneNumbers.richard.number} className="max-w-md mx-auto" />
         </div>
       </Section>
 
@@ -247,21 +287,25 @@ const Index = () => {
       </Section>
 
       {/* Why Choose Connie's */}
-      <Section className="bg-white py-16 md:py-24">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-16 text-center text-navy-deep">
-          Why Choose Connie's Bail Bonding?
+      <Section className="bg-black py-24">
+        <h2 className="text-4xl md:text-5xl font-black mb-16 text-center text-white uppercase tracking-tight">
+          What Makes Us <span className="text-brand-red">Different</span>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {whyChooseFeatures.map((feature, index) => (
-            <Card key={index} className="border-border/50 hover:shadow-lg transition-all duration-300 rounded-xl overflow-hidden">
+            <Card key={index} className="bg-white border-2 border-transparent hover:border-brand-red transition-all duration-300 group">
               <CardContent className="p-8">
-                <feature.icon className="w-8 h-8 text-teal mb-6" />
-                <h3 className="text-xl md:text-2xl font-bold mb-4 text-foreground">{feature.title}</h3>
-                <p className="text-base leading-relaxed text-foreground/70">{feature.description}</p>
+                <div className="w-16 h-16 rounded-full bg-black group-hover:bg-brand-red transition-colors flex items-center justify-center mb-6">
+                  <feature.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-black mb-4 text-black uppercase tracking-tight">
+                  {feature.title}
+                </h3>
+                <p className="text-base leading-relaxed text-gray-700">{feature.description}</p>
                 {feature.title === "Transparent Pricing" && (
-                  <div className="mt-6 p-5 bg-muted/30 rounded-lg border border-border/50">
-                    <p className="font-semibold mb-2 text-navy-deep">Example:</p>
-                    <div className="space-y-1 text-sm text-foreground/80">
+                  <div className="mt-6 p-5 bg-gray-50 rounded-lg border border-gray-200">
+                    <p className="font-bold mb-2 text-black">Example:</p>
+                    <div className="space-y-1 text-sm text-gray-700">
                       <p>$5,000 bail = $500 fee</p>
                       <p>$10,000 bail = $1,000 fee</p>
                     </div>
@@ -274,24 +318,22 @@ const Index = () => {
       </Section>
 
       {/* How Our Bail Process Works */}
-      <Section className="bg-muted py-16 md:py-24">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-16 text-center text-navy-deep">
-          How Our Bail Process Works
+      <Section className="bg-white py-24">
+        <h2 className="text-4xl md:text-5xl font-black mb-16 text-center text-black uppercase tracking-tight">
+          How It <span className="text-brand-red">Works</span>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
           {processSteps.map((step, index) => (
-            <div key={index} className="text-center">
-              <div className="w-20 h-20 rounded-full bg-navy-deep text-white font-bold text-3xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+            <div key={index} className="text-center group">
+              <div className="w-24 h-24 bg-brand-red text-white font-black text-4xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                 {step.number}
               </div>
-              <h3 className="text-xl md:text-2xl font-bold mb-4 text-foreground">{step.title}</h3>
-              <p className="text-base leading-relaxed text-foreground/70">{step.description}</p>
+              <h3 className="text-xl font-black mb-4 text-black uppercase">
+                {step.title}
+              </h3>
+              <p className="text-base leading-relaxed text-gray-700">{step.description}</p>
             </div>
           ))}
-        </div>
-        <div className="text-center mt-16">
-          <p className="text-lg text-foreground/80 mb-4">Questions? Call Us Anytime:</p>
-          <PhoneButton name="Call Richard Now" number={phoneNumbers.richard.number} className="max-w-md mx-auto" />
         </div>
       </Section>
 
