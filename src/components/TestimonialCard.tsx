@@ -8,14 +8,14 @@ export const TestimonialCard = ({ quote }: TestimonialCardProps) => {
   return (
     <div className="bg-white rounded-xl border border-border/30 shadow-md p-8 relative">
       {/* Large quote mark */}
-      <div className="absolute top-6 left-6 text-teal/20">
+      <div className="absolute top-6 left-6 text-brand-red/20">
         <Quote className="w-12 h-12" />
       </div>
       
       {/* Stars */}
       <div className="flex gap-1 mb-4 pl-16">
         {[...Array(5)].map((_, i) => (
-          <Star key={i} className="w-5 h-5 fill-teal text-teal" />
+          <Star key={i} className="w-5 h-5 fill-brand-red text-brand-red" />
         ))}
       </div>
       
@@ -26,7 +26,7 @@ export const TestimonialCard = ({ quote }: TestimonialCardProps) => {
       
       {/* Attribution */}
       <div className="mt-6 pt-4 border-t border-border/30 pl-16">
-        <p className="text-sm font-semibold text-teal">Verified Google Review</p>
+        <p className="text-sm font-semibold text-brand-red">Verified Google Review</p>
       </div>
     </div>
   );

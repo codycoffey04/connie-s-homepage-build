@@ -263,23 +263,23 @@ const Index = () => {
           </div>
           <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-left">
             <div className="flex items-start gap-2">
-              <Star className="w-5 h-5 text-teal flex-shrink-0 mt-1" />
+              <Star className="w-5 h-5 text-brand-red flex-shrink-0 mt-1" />
               <span className="text-sm">Five-Star Google Reviews</span>
             </div>
             <div className="flex items-start gap-2">
-              <Check className="w-5 h-5 text-teal flex-shrink-0 mt-1" />
+              <Check className="w-5 h-5 text-brand-red flex-shrink-0 mt-1" />
               <span className="text-sm">Licensed Alabama Bail Bond Agents</span>
             </div>
             <div className="flex items-start gap-2">
-              <Check className="w-5 h-5 text-teal flex-shrink-0 mt-1" />
+              <Check className="w-5 h-5 text-brand-red flex-shrink-0 mt-1" />
               <span className="text-sm">No Hidden Fees—Only the State-Required 10%</span>
             </div>
             <div className="flex items-start gap-2">
-              <Check className="w-5 h-5 text-teal flex-shrink-0 mt-1" />
+              <Check className="w-5 h-5 text-brand-red flex-shrink-0 mt-1" />
               <span className="text-sm">Available 24 Hours a Day, 7 Days a Week</span>
             </div>
             <div className="flex items-start gap-2">
-              <Check className="w-5 h-5 text-teal flex-shrink-0 mt-1" />
+              <Check className="w-5 h-5 text-brand-red flex-shrink-0 mt-1" />
               <span className="text-sm">Payment Plans & Credit Cards Accepted</span>
             </div>
           </div>
@@ -339,13 +339,13 @@ const Index = () => {
 
       {/* Services */}
       <Section className="bg-white py-16">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-navy-deep">
+        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-black">
           Services We Offer Across DeKalb & Cherokee Counties
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
           {services.map((service, index) => (
             <div key={index} className="flex items-start gap-3">
-              <Check className="w-6 h-6 text-teal flex-shrink-0 mt-1" />
+              <Check className="w-6 h-6 text-brand-red flex-shrink-0 mt-1" />
               <span className="text-base text-foreground/90">{service}</span>
             </div>
           ))}
@@ -353,7 +353,7 @@ const Index = () => {
         <div className="text-center mt-8">
           <p className="text-lg text-foreground/90">
             No matter the charge or situation, we're here to help. Call now:{" "}
-            <a href="tel:2566012041" className="font-bold text-primary hover:text-primary/80 transition-colors">
+            <a href="tel:2566012041" className="font-bold text-brand-red hover:text-red-600 transition-colors">
               Richard 256-601-2041
             </a>
           </p>
@@ -362,7 +362,7 @@ const Index = () => {
 
       {/* Areas We Serve */}
       <Section className="bg-muted py-16">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-navy-deep">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-black">
           Areas We Serve in Northeast Alabama
         </h2>
         <p className="text-center text-lg text-foreground/80 mb-12 max-w-3xl mx-auto">
@@ -371,8 +371,8 @@ const Index = () => {
         
         {/* DeKalb County */}
         <div className="max-w-6xl mx-auto mb-12">
-          <h3 className="text-2xl font-bold mb-6 text-primary flex items-center gap-2">
-            <MapPin className="w-6 h-6" />
+          <h3 className="text-2xl font-bold mb-6 text-black flex items-center gap-2">
+            <MapPin className="w-6 h-6 text-brand-red" />
             DeKalb County
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -384,12 +384,12 @@ const Index = () => {
                   to={`/${city.slug}`}
                   className="group"
                 >
-                  <Card className="h-full border-border hover:border-primary hover:shadow-lg transition-all duration-200 cursor-pointer">
+                  <Card className="h-full border-border hover:border-brand-red hover:shadow-lg transition-all duration-200 cursor-pointer">
                     <CardContent className="p-6">
                       <div className="flex items-start gap-3">
-                        <MapPin className="w-5 h-5 text-teal flex-shrink-0 mt-1" />
+                        <MapPin className="w-5 h-5 text-brand-red flex-shrink-0 mt-1" />
                         <div className="flex-1">
-                          <h4 className="text-xl font-bold text-foreground mb-1 group-hover:text-primary transition-colors">
+                          <h4 className="text-xl font-bold text-foreground mb-1 group-hover:text-brand-red transition-colors">
                             {city.name}
                           </h4>
                           <p className="text-sm text-foreground/70 mb-2">
@@ -409,8 +409,8 @@ const Index = () => {
 
         {/* Cherokee County */}
         <div className="max-w-6xl mx-auto">
-          <h3 className="text-2xl font-bold mb-6 text-primary flex items-center gap-2">
-            <MapPin className="w-6 h-6" />
+          <h3 className="text-2xl font-bold mb-6 text-black flex items-center gap-2">
+            <MapPin className="w-6 h-6 text-brand-red" />
             Cherokee County
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -422,12 +422,12 @@ const Index = () => {
                   to={`/${city.slug}`}
                   className="group"
                 >
-                  <Card className="h-full border-border hover:border-primary hover:shadow-lg transition-all duration-200 cursor-pointer">
+                  <Card className="h-full border-border hover:border-brand-red hover:shadow-lg transition-all duration-200 cursor-pointer">
                     <CardContent className="p-6">
                       <div className="flex items-start gap-3">
-                        <MapPin className="w-5 h-5 text-teal flex-shrink-0 mt-1" />
+                        <MapPin className="w-5 h-5 text-brand-red flex-shrink-0 mt-1" />
                         <div className="flex-1">
-                          <h4 className="text-xl font-bold text-foreground mb-1 group-hover:text-primary transition-colors">
+                          <h4 className="text-xl font-bold text-foreground mb-1 group-hover:text-brand-red transition-colors">
                             {city.name}
                           </h4>
                           <p className="text-sm text-foreground/70 mb-2">
@@ -448,7 +448,7 @@ const Index = () => {
 
       {/* Testimonials */}
       <Section className="bg-white py-16 md:py-24">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-16 text-center text-navy-deep">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-16 text-center text-black">
           What Our Clients Say
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 max-w-6xl mx-auto">
@@ -461,7 +461,7 @@ const Index = () => {
             href="https://www.google.com/maps/search/Connie's+Bail+Bonding" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-teal text-white rounded-lg hover:bg-teal-light transition-colors font-semibold shadow-lg hover:shadow-xl"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-brand-red text-white hover:bg-red-600 transition-colors font-bold uppercase tracking-wide shadow-lg hover:shadow-xl"
           >
             Read All Reviews on Google →
           </a>
@@ -470,11 +470,11 @@ const Index = () => {
 
       {/* FAQ */}
       <Section className="bg-muted py-16">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-navy-deep">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-black">
           Frequently Asked Questions
         </h2>
         <p className="text-center text-base text-foreground/60 mb-8">
-          Or call us 24/7: <a href="tel:2566012041" className="font-bold text-teal hover:underline">256-601-2041</a>
+          Or call us 24/7: <a href="tel:2566012041" className="font-bold text-brand-red hover:text-red-600 transition-colors">256-601-2041</a>
         </p>
         <div className="max-w-4xl mx-auto">
           <FAQList faqs={faqs} />
@@ -484,7 +484,7 @@ const Index = () => {
       {/* Final CTA */}
       <Section className="bg-white py-16" id="contact">
         <div className="text-center max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-navy-deep">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-black">
             Need Fort Payne Bail Bonds Now?
           </h2>
           <p className="text-xl mb-8 text-foreground/90">Call immediately for 24/7 service:</p>
@@ -508,13 +508,13 @@ const Index = () => {
 
       {/* Key Locations */}
       <Section className="bg-muted py-16">
-        <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center text-navy-deep">
+        <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center text-black">
           Key Locations We Serve
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {keyLocations.map((location, index) => (
             <div key={index} className="flex items-start gap-3 p-4 bg-card rounded-lg border border-border">
-              <MapPin className="w-5 h-5 text-teal flex-shrink-0 mt-1" />
+              <MapPin className="w-5 h-5 text-brand-red flex-shrink-0 mt-1" />
               <div>
                 <h3 className="font-bold text-foreground mb-1">{location.name}</h3>
                 <p className="text-sm text-foreground/70">{location.address}</p>
@@ -525,24 +525,24 @@ const Index = () => {
       </Section>
 
       {/* Footer */}
-      <footer className="bg-navy-deep text-white py-16">
+      <footer className="bg-black border-t-4 border-brand-red text-white py-16">
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
             <div>
-              <h3 className="text-2xl font-bold mb-6">Contact Us</h3>
+              <h3 className="text-2xl font-black mb-6 uppercase tracking-tight">Contact Us</h3>
               <div className="space-y-3">
                 <p>
-                  <a href={`tel:${phoneNumbers.richard.number.replace(/[^0-9]/g, "")}`} className="hover:text-teal transition-colors text-lg">
+                  <a href={`tel:${phoneNumbers.richard.number.replace(/[^0-9]/g, "")}`} className="hover:text-brand-red transition-colors text-lg font-semibold">
                     Richard: {phoneNumbers.richard.number}
                   </a>
                 </p>
                 <p>
-                  <a href={`tel:${phoneNumbers.connie.number.replace(/[^0-9]/g, "")}`} className="hover:text-teal transition-colors text-lg">
+                  <a href={`tel:${phoneNumbers.connie.number.replace(/[^0-9]/g, "")}`} className="hover:text-brand-red transition-colors text-lg font-semibold">
                     Connie: {phoneNumbers.connie.number}
                   </a>
                 </p>
                 <p>
-                  <a href={`tel:${phoneNumbers.toni.number.replace(/[^0-9]/g, "")}`} className="hover:text-teal transition-colors text-lg">
+                  <a href={`tel:${phoneNumbers.toni.number.replace(/[^0-9]/g, "")}`} className="hover:text-brand-red transition-colors text-lg font-semibold">
                     Toni: {phoneNumbers.toni.number}
                   </a>
                 </p>
@@ -553,26 +553,26 @@ const Index = () => {
               </div>
             </div>
             <div>
-              <h3 className="text-2xl font-bold mb-6">Quick Links</h3>
+              <h3 className="text-2xl font-black mb-6 uppercase tracking-tight">Quick Links</h3>
               <nav className="flex flex-col gap-3">
-                <Link to="/" className="hover:text-teal transition-colors">Home</Link>
-                <Link to="/about" className="hover:text-teal transition-colors">About</Link>
-                <Link to="/contact" className="hover:text-teal transition-colors">Contact</Link>
-                <Link to="/faq" className="hover:text-teal transition-colors">FAQ</Link>
+                <Link to="/" className="hover:text-brand-red transition-colors font-semibold uppercase text-sm">Home</Link>
+                <Link to="/about" className="hover:text-brand-red transition-colors font-semibold uppercase text-sm">About</Link>
+                <Link to="/contact" className="hover:text-brand-red transition-colors font-semibold uppercase text-sm">Contact</Link>
+                <Link to="/faq" className="hover:text-brand-red transition-colors font-semibold uppercase text-sm">FAQ</Link>
               </nav>
             </div>
             <div>
-              <h3 className="text-2xl font-bold mb-6">Legal</h3>
-              <p className="text-sm mb-4">Licensed Alabama Bail Bond Agents</p>
-              <p className="text-sm mb-4">Family-Owned Since 2019</p>
-              <p className="text-sm mb-4">Available 24/7/365</p>
+              <h3 className="text-2xl font-black mb-6 uppercase tracking-tight">Legal</h3>
+              <p className="text-sm mb-4 font-semibold">Licensed Alabama Bail Bond Agents</p>
+              <p className="text-sm mb-4 font-semibold">Family-Owned Since 2019</p>
+              <p className="text-sm mb-4 font-semibold">Available 24/7/365</p>
             </div>
           </div>
           <div className="border-t border-white/20 pt-8 text-center text-sm space-y-3">
             <p className="text-white/70 italic">
               This website does not constitute legal advice. Bail bond approval is subject to court discretion.
             </p>
-            <p className="font-semibold text-white">
+            <p className="font-bold text-white">
               © 2025 Connie's Bail Bonding, LLC. All rights reserved.
             </p>
           </div>
