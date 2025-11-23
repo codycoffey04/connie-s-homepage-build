@@ -8,44 +8,44 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Backgrounds - Clean whites and light grays */
+    /* Backgrounds - Pure white */
     --background: 0 0% 100%;
-    --foreground: 215 20% 20%;  /* Dark charcoal #2d3748 */
+    --foreground: 0 0% 0%;  /* Pure black text */
 
     --card: 0 0% 100%;
-    --card-foreground: 215 20% 20%;
+    --card-foreground: 0 0% 0%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 20% 20%;
+    --popover-foreground: 0 0% 0%;
 
-    /* Primary - Brand Navy from logo */
-    --primary: 218 32% 15%;  /* #1a2332 Brand Navy */
-    --primary-light: 218 30% 25%;  /* Lighter navy */
+    /* Primary - Bright Red Brand */
+    --primary: 0 100% 50%;  /* #FF0000 Bright Red */
+    --primary-light: 0 100% 60%;  /* Lighter red for hovers */
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary - Brand Teal from logo */
-    --secondary: 180 56% 39%;  /* #2c9b9b Brand Teal */
-    --secondary-light: 180 50% 50%;
+    /* Secondary - Pure Black */
+    --secondary: 0 0% 0%;  /* #000000 Black */
+    --secondary-light: 0 0% 15%;  /* Dark gray for variations */
     --secondary-foreground: 0 0% 100%;
 
-    /* Accent - Brand Teal (same as secondary for consistency) */
-    --accent: 180 56% 39%;  /* #2c9b9b Brand Teal */
+    /* Accent - Gray */
+    --accent: 0 0% 50%;  /* #808080 Gray */
     --accent-foreground: 0 0% 100%;
 
     /* Muted backgrounds for sections */
-    --muted: 210 36% 98%;  /* #f7fafc Light gray from brand */
-    --muted-foreground: 215 15% 45%;
+    --muted: 0 0% 96%;  /* Light gray backgrounds */
+    --muted-foreground: 0 0% 30%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    /* Borders - subtle */
-    --border: 215 15% 90%;
-    --input: 215 15% 90%;
-    --ring: 211 50% 24%;
+    /* Borders - light gray */
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 0 100% 50%;  /* Red focus rings */
 
     /* Border radius for modern feel */
-    --radius: 0.75rem;  /* Increased from 0.5rem */
+    --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
 

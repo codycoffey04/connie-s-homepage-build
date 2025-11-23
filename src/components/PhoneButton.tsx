@@ -12,29 +12,22 @@ export const PhoneButton = ({ name, number, variant = "primary", className }: Ph
   const formattedNumber = number.replace(/[^0-9]/g, "");
   
   return (
-    <a href={`tel:${formattedNumber}`} className="w-full group">
-      <div
-        className={cn(
-          "w-full h-auto min-h-[88px] py-6 px-6 rounded-xl",
-          "bg-gray-50/50",
-          "shadow-sm",
-          "transition-all duration-300",
-          "hover:bg-gray-100/70",
-          "flex flex-col sm:flex-row gap-4 items-center justify-center",
-          "cursor-pointer",
-          className
-        )}
-      >
-        <Phone className="w-8 h-8 text-teal shrink-0" />
-        <div className="flex flex-col text-center sm:text-left">
-          <span className="text-xs sm:text-sm font-semibold text-muted-foreground uppercase tracking-wider">
-            {name}
-          </span>
-          <span className="text-2xl sm:text-3xl font-bold text-navy-deep leading-none">
-            {number}
-          </span>
+    <a
+      href={`tel:${formattedNumber}`}
+      className={cn(
+        "group flex items-center justify-between p-6 bg-white border-2 border-black hover:border-brand-red hover:bg-black transition-all duration-300",
+        className
+      )}
+    >
+      <div className="flex-1">
+        <div className="text-sm font-bold text-gray-600 uppercase tracking-wide mb-1 group-hover:text-white transition-colors">
+          {name}
+        </div>
+        <div className="text-2xl font-black text-black group-hover:text-white transition-colors">
+          {number}
         </div>
       </div>
+      <Phone className="w-8 h-8 text-brand-red group-hover:text-white transition-colors" />
     </a>
   );
 };
