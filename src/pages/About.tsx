@@ -3,7 +3,7 @@ import { Section } from "@/components/Section";
 import { PhoneButton } from "@/components/PhoneButton";
 import { Card, CardContent } from "@/components/ui/card";
 import { TestimonialCard } from "@/components/TestimonialCard";
-import { Shield, Heart, MapPin, DollarSign, Check, BookOpen, Star, Users } from "lucide-react";
+import { Shield, Heart, MapPin, DollarSign, Check, BookOpen, Star, Users, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import { SEO } from "@/components/SEO";
 import { getLocalBusinessSchema, getBreadcrumbSchema } from "@/lib/schemaUtils";
@@ -297,6 +297,64 @@ const About = () => {
           </div>
         </div>
       </Section>
+
+      {/* Footer */}
+      <footer className="bg-black border-t-4 border-brand-red text-white py-16">
+        <div className="container mx-auto px-4 md:px-6 max-w-7xl">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+            <div>
+              <h3 className="text-2xl font-black mb-6 uppercase tracking-tight">Contact Us</h3>
+              <div className="space-y-3">
+                <p>
+                  <a href="tel:2566012041" className="hover:text-brand-red transition-colors text-lg font-semibold flex items-center gap-2">
+                    <Phone className="w-4 h-4" />
+                    Richard: 256-601-2041
+                  </a>
+                </p>
+                <p>
+                  <a href="tel:2566302824" className="hover:text-brand-red transition-colors text-lg font-semibold flex items-center gap-2">
+                    <Phone className="w-4 h-4" />
+                    Connie: 256-630-2824
+                  </a>
+                </p>
+                <p>
+                  <a href="tel:2564400822" className="hover:text-brand-red transition-colors text-lg font-semibold flex items-center gap-2">
+                    <Phone className="w-4 h-4" />
+                    Toni: 256-440-0822
+                  </a>
+                </p>
+                <p className="flex items-start gap-2 mt-4">
+                  <MapPin className="w-4 h-4 flex-shrink-0 mt-1" />
+                  <span>2700 Jordan Rd SW<br />Fort Payne, AL 35967</span>
+                </p>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-2xl font-black mb-6 uppercase tracking-tight">Quick Links</h3>
+              <nav className="flex flex-col gap-3">
+                <Link to="/" className="hover:text-brand-red transition-colors font-semibold uppercase text-sm">Home</Link>
+                <Link to="/about" className="hover:text-brand-red transition-colors font-semibold uppercase text-sm">About</Link>
+                <Link to="/contact" className="hover:text-brand-red transition-colors font-semibold uppercase text-sm">Contact</Link>
+                <Link to="/faq" className="hover:text-brand-red transition-colors font-semibold uppercase text-sm">FAQ</Link>
+              </nav>
+            </div>
+            <div>
+              <h3 className="text-2xl font-black mb-6 uppercase tracking-tight">Legal</h3>
+              <p className="text-sm mb-4 font-semibold">Licensed Alabama Bail Bond Agents</p>
+              <p className="text-sm mb-4 font-semibold">Family-Owned Since 2019</p>
+              <p className="text-sm mb-4 font-semibold">Available 24/7/365</p>
+            </div>
+          </div>
+          <div className="border-t border-white/20 pt-8 text-center text-sm space-y-3">
+            <p className="text-white/70 italic">
+              This website does not constitute legal advice. Bail bond approval is subject to court discretion.
+            </p>
+            <p className="font-bold text-white">
+              © 2025 Connie's Bail Bonding, LLC. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
