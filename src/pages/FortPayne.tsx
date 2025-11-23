@@ -179,7 +179,7 @@ const FortPayne = () => {
           </h2>
           <div className="text-lg text-foreground/80 space-y-4 text-left md:text-center">
             <p>
-              When someone you love is arrested in Fort Payne, every minute matters. Connie's Bail Bonding is located right here in Fort Payne—at 2700 Jordan Rd SW, right next to the DeKalb County Detention Center. We know the jail staff, the court procedures, and exactly how to get your loved one released quickly.
+              <strong className="text-brand-red">Serving Fort Payne & DeKalb County Since 2019</strong> — When someone you love is arrested in Fort Payne, every minute matters. Connie's Bail Bonding is located right here in Fort Payne—at 2700 Jordan Rd SW, right next to the DeKalb County Detention Center. We know the jail staff, the court procedures, and exactly how to get your loved one released quickly.
             </p>
             <p>
               Since 2019, we've built our reputation on trust and professionalism in the Fort Payne community. Our family team answers calls personally 24/7—no call centers, no delays. Just honest, compassionate help when you need it most.
@@ -239,6 +239,90 @@ const FortPayne = () => {
               </CardContent>
             </Card>
           ))}
+        </div>
+      </Section>
+
+      {/* Local Law Enforcement & Court Information */}
+      <Section className="bg-gradient-to-b from-white to-muted py-16">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-black mb-8 text-center uppercase">
+            Local Information for <span className="text-brand-red">Fort Payne Residents</span>
+          </h2>
+          
+          {/* Courthouse Hours */}
+          <Card className="mb-6 border-2 border-primary/20">
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                <Clock className="w-5 h-5" /> DeKalb County Courthouse Hours
+              </h3>
+              <p className="mb-2"><strong>Address:</strong> 300 Grand Ave SW, Fort Payne, AL 35967</p>
+              <p className="mb-2"><strong>Hours:</strong> Monday-Friday, 8:00 AM - 4:30 PM</p>
+              <p className="mb-2"><strong>Closed:</strong> Weekends and Federal Holidays</p>
+              <p className="text-sm text-muted-foreground mt-4">
+                <strong>Note:</strong> Bonds can be posted 24/7 for standard charges with preset bail amounts. 
+                For serious charges requiring a judge's bond hearing, you may need to wait until the courthouse reopens.
+              </p>
+            </CardContent>
+          </Card>
+          
+          {/* Law Enforcement */}
+          <Card className="mb-6 border-2 border-primary/20">
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                <Shield className="w-5 h-5" /> Law Enforcement Serving Fort Payne
+              </h3>
+              <ul className="space-y-2">
+                <li className="flex items-start gap-2">
+                  <ChevronRight className="w-5 h-5 text-primary mt-0.5" />
+                  <span>Fort Payne Police Department</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <ChevronRight className="w-5 h-5 text-primary mt-0.5" />
+                  <span>DeKalb County Sheriff's Office</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <ChevronRight className="w-5 h-5 text-primary mt-0.5" />
+                  <span>Alabama State Troopers (Highway Patrol)</span>
+                </li>
+              </ul>
+              <p className="text-sm text-muted-foreground mt-4">
+                Arrests by any of these agencies in Fort Payne or DeKalb County are processed at the 
+                DeKalb County Detention Center.
+              </p>
+            </CardContent>
+          </Card>
+          
+          {/* Directions & Parking */}
+          <Card className="border-2 border-primary/20">
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                <MapPin className="w-5 h-5" /> Meeting Location & Parking
+              </h3>
+              <div className="space-y-4">
+                <div>
+                  <p className="font-semibold mb-1">DeKalb County Detention Center</p>
+                  <p className="text-sm mb-2">2801 Jordan Rd SW, Fort Payne, AL 35967</p>
+                  <p className="text-sm text-muted-foreground">
+                    <strong>Parking:</strong> Visitor parking available in the main lot. 
+                    We'll meet you at the entrance and guide you through the process.
+                  </p>
+                </div>
+                <div className="pt-4 border-t">
+                  <p className="font-semibold mb-1">DeKalb County Courthouse</p>
+                  <p className="text-sm mb-2">300 Grand Ave SW, Fort Payne, AL 35967</p>
+                  <p className="text-sm text-muted-foreground">
+                    <strong>Parking:</strong> Public parking available on Grand Avenue and in the courthouse lot.
+                  </p>
+                </div>
+                <div className="pt-4 border-t bg-primary/5 -mx-6 -mb-6 p-6 rounded-b-lg">
+                  <p className="text-sm font-semibold">
+                    <MapPin className="w-4 h-4 inline mr-2" />
+                    Our office at 2700 Jordan Rd SW is right next to the detention center—we can meet you within minutes.
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </Section>
 

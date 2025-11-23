@@ -248,6 +248,58 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Quick Answers Section - AEO Optimized */}
+      <Section className="bg-gradient-to-b from-black to-gray-900 py-16 border-t-4 border-brand-red">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-black text-center text-white mb-12 uppercase">
+            Quick Answers — <span className="text-brand-red">What You Need to Know Right Now</span>
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* How Much? */}
+            <Card className="bg-white border-2 border-transparent hover:border-brand-red transition-all">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 rounded-full bg-brand-red text-white flex items-center justify-center mx-auto mb-6">
+                  <DollarSign className="w-8 h-8" />
+                </div>
+                <h3 className="text-2xl font-black mb-4 text-black uppercase">How Much?</h3>
+                <div className="text-4xl font-black text-brand-red mb-4">10%</div>
+                <p className="text-base text-gray-700 leading-relaxed">
+                  By Alabama law, all bail bonds cost 10% of the bail amount. $5,000 bail = $500 fee. No hidden charges.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* How Fast? */}
+            <Card className="bg-white border-2 border-transparent hover:border-brand-red transition-all">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 rounded-full bg-brand-red text-white flex items-center justify-center mx-auto mb-6">
+                  <Clock className="w-8 h-8" />
+                </div>
+                <h3 className="text-2xl font-black mb-4 text-black uppercase">How Fast?</h3>
+                <div className="text-4xl font-black text-brand-red mb-4">2-8 Hours</div>
+                <p className="text-base text-gray-700 leading-relaxed">
+                  Typical release time after we post bond. We stay in communication throughout the process.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* When? */}
+            <Card className="bg-white border-2 border-transparent hover:border-brand-red transition-all">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 rounded-full bg-brand-red text-white flex items-center justify-center mx-auto mb-6">
+                  <Phone className="w-8 h-8" />
+                </div>
+                <h3 className="text-2xl font-black mb-4 text-black uppercase">When?</h3>
+                <div className="text-4xl font-black text-brand-red mb-4">24/7/365</div>
+                <p className="text-base text-gray-700 leading-relaxed">
+                  Connie, Toni, or Richard answer calls personally at any hour. No call centers. No waiting.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </Section>
+
       {/* Why Choose Us - Bullet List */}
       <Section className="bg-white py-20">
         <h2 className="text-4xl md:text-5xl font-black mb-12 text-center text-black uppercase tracking-tight">
@@ -374,6 +426,76 @@ const Index = () => {
               Richard 256-601-2041
             </a>
           </p>
+        </div>
+      </Section>
+
+      {/* Payment Methods & Credentials */}
+      <Section className="bg-muted py-16">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12">
+            {/* Payment Methods */}
+            <div className="bg-white p-8 rounded-lg shadow-lg border-2 border-border">
+              <h3 className="text-2xl font-black mb-6 uppercase text-black">Payment Options</h3>
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-full bg-brand-red flex items-center justify-center flex-shrink-0">
+                    <CreditCard className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="text-lg font-semibold text-foreground">All Major Credit Cards</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-full bg-brand-red flex items-center justify-center flex-shrink-0">
+                    <DollarSign className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="text-lg font-semibold text-foreground">Cash Accepted</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-full bg-brand-red flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="text-lg font-semibold text-foreground">Flexible Payment Plans</span>
+                </div>
+              </div>
+              <p className="text-sm text-foreground/70 mt-6 italic">
+                We work with families to create payment arrangements that fit your budget.
+              </p>
+            </div>
+
+            {/* Credentials */}
+            <div className="bg-black text-white p-8 rounded-lg shadow-lg border-4 border-brand-red">
+              <h3 className="text-2xl font-black mb-6 uppercase">Licensed & Trusted</h3>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <Shield className="w-6 h-6 text-brand-red flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="font-bold mb-1">Licensed by Alabama</p>
+                    <p className="text-sm text-white/80">Professional Bail Bonding Board</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Star className="w-6 h-6 text-brand-red flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="font-bold mb-1">5-Star Google Reviews</p>
+                    <p className="text-sm text-white/80">Real families, real results</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Users className="w-6 h-6 text-brand-red flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="font-bold mb-1">Family-Owned Since 2019</p>
+                    <p className="text-sm text-white/80">Serving DeKalb & Cherokee Counties</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <MapPin className="w-6 h-6 text-brand-red flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="font-bold mb-1">Next to DeKalb County Jail</p>
+                    <p className="text-sm text-white/80">Fast response, local expertise</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </Section>
 
