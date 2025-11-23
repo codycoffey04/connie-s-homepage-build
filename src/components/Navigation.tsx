@@ -34,12 +34,12 @@ export const Navigation = () => {
             <Link to="/" className="text-sm font-bold text-white uppercase tracking-wide hover:text-brand-red transition-colors">
               Home
             </Link>
-            <a href="/#about" className="text-sm font-bold text-white uppercase tracking-wide hover:text-brand-red transition-colors">
+            <Link to="/about" className="text-sm font-bold text-white uppercase tracking-wide hover:text-brand-red transition-colors">
               About
-            </a>
-            <a href="/#contact" className="text-sm font-bold text-white uppercase tracking-wide hover:text-brand-red transition-colors">
+            </Link>
+            <Link to="/contact" className="text-sm font-bold text-white uppercase tracking-wide hover:text-brand-red transition-colors">
               Contact
-            </a>
+            </Link>
             
             <NavigationMenu>
               <NavigationMenuList>
@@ -89,20 +89,20 @@ export const Navigation = () => {
                 >
                   Home
                 </Link>
-                <a 
-                  href="/#about" 
+                <Link 
+                  to="/about" 
                   className="text-lg font-bold text-white hover:text-brand-red transition-colors uppercase"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   About
-                </a>
-                <a 
-                  href="/#contact" 
+                </Link>
+                <Link 
+                  to="/contact" 
                   className="text-lg font-bold text-white hover:text-brand-red transition-colors uppercase"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Contact
-                </a>
+                </Link>
                 
                 <div className="border-t border-white/20 pt-4 mt-2">
                   <p className="text-sm font-bold text-white/70 mb-3 uppercase">Cities We Serve</p>
