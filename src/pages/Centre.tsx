@@ -380,66 +380,56 @@ const Centre = () => {
       </Section>
 
       {/* Footer */}
-      <footer className="bg-muted/50 py-12 border-t border-border">
+      <footer className="bg-black border-t-4 border-brand-red text-white py-16">
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="md:col-span-2">
-              <h3 className="text-2xl font-bold mb-4 text-foreground">
-                Connie's Bail Bonding, LLC
-              </h3>
-              <p className="text-foreground/80 mb-4">
-                2700 Jordan Rd SW<br />
-                Fort Payne, AL 35967
-              </p>
-              <div className="space-y-2">
-                <div className="flex items-center gap-2 text-foreground/80">
-                  <Phone className="w-4 h-4" />
-                  <span>Richard: {phoneNumbers.richard.number}</span>
-                </div>
-                <div className="flex items-center gap-2 text-foreground/80">
-                  <Phone className="w-4 h-4" />
-                  <span>Connie: {phoneNumbers.connie.number}</span>
-                </div>
-                <div className="flex items-center gap-2 text-foreground/80">
-                  <Phone className="w-4 h-4" />
-                  <span>Toni: {phoneNumbers.toni.number}</span>
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+            <div>
+              <h3 className="text-2xl font-black mb-6 uppercase tracking-tight">Contact Us</h3>
+              <div className="space-y-3">
+                <p>
+                  <a href={`tel:${phoneNumbers.richard.number.replace(/[^0-9]/g, "")}`} className="hover:text-brand-red transition-colors text-lg font-semibold">
+                    Richard: {phoneNumbers.richard.number}
+                  </a>
+                </p>
+                <p>
+                  <a href={`tel:${phoneNumbers.connie.number.replace(/[^0-9]/g, "")}`} className="hover:text-brand-red transition-colors text-lg font-semibold">
+                    Connie: {phoneNumbers.connie.number}
+                  </a>
+                </p>
+                <p>
+                  <a href={`tel:${phoneNumbers.toni.number.replace(/[^0-9]/g, "")}`} className="hover:text-brand-red transition-colors text-lg font-semibold">
+                    Toni: {phoneNumbers.toni.number}
+                  </a>
+                </p>
+                <p className="flex items-start gap-2 mt-4">
+                  <MapPin className="w-4 h-4 flex-shrink-0 mt-1" />
+                  <span>2700 Jordan Rd SW<br />Fort Payne, AL 35967</span>
+                </p>
               </div>
             </div>
             <div>
-              <h4 className="font-semibold mb-4 text-foreground">Quick Links</h4>
-              <ul className="space-y-2">
-                <li>
-                  <Link to="/" className="text-foreground/80 hover:text-primary transition-colors">
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/about" className="text-foreground/80 hover:text-primary transition-colors">
-                    About
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/contact" className="text-foreground/80 hover:text-primary transition-colors">
-                    Contact
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/faq" className="text-foreground/80 hover:text-primary transition-colors">
-                    FAQ
-                  </Link>
-                </li>
-              </ul>
+              <h3 className="text-2xl font-black mb-6 uppercase tracking-tight">Quick Links</h3>
+              <nav className="flex flex-col gap-3">
+                <Link to="/" className="hover:text-brand-red transition-colors font-semibold uppercase text-sm">Home</Link>
+                <Link to="/about" className="hover:text-brand-red transition-colors font-semibold uppercase text-sm">About</Link>
+                <Link to="/contact" className="hover:text-brand-red transition-colors font-semibold uppercase text-sm">Contact</Link>
+                <Link to="/faq" className="hover:text-brand-red transition-colors font-semibold uppercase text-sm">FAQ</Link>
+              </nav>
             </div>
             <div>
-              <h4 className="font-semibold mb-4 text-foreground">Service Area</h4>
-              <p className="text-sm text-foreground/80">
-                Licensed Alabama Bail Bond Agents serving Centre and all of Cherokee County since 2019.
-              </p>
+              <h3 className="text-2xl font-black mb-6 uppercase tracking-tight">Legal</h3>
+              <p className="text-sm mb-4 font-semibold">Licensed Alabama Bail Bond Agents</p>
+              <p className="text-sm mb-4 font-semibold">Family-Owned Since 2019</p>
+              <p className="text-sm mb-4 font-semibold">Available 24/7/365</p>
             </div>
           </div>
-          <div className="border-t border-border mt-8 pt-8 text-center text-sm text-foreground/60">
-            <p>© 2025 Connie's Bail Bonding, LLC. All rights reserved.</p>
+          <div className="border-t border-white/20 pt-8 text-center text-sm space-y-3">
+            <p className="text-white/70 italic">
+              This website does not constitute legal advice. Bail bond approval is subject to court discretion.
+            </p>
+            <p className="font-bold text-white">
+              © 2025 Connie's Bail Bonding, LLC. All rights reserved.
+            </p>
           </div>
         </div>
       </footer>
