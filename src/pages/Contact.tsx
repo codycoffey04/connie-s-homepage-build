@@ -6,6 +6,8 @@ import { PhoneButton } from "@/components/PhoneButton";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { FAQList } from "@/components/FAQItem";
 import { phoneNumbers } from "@/lib/cityUtils";
+import { SEO } from "@/components/SEO";
+import { getLocalBusinessSchema, getBreadcrumbSchema, getFAQSchema } from "@/lib/schemaUtils";
 
 const serviceAreas = {
   dekalb: [
@@ -71,6 +73,19 @@ const contactFaqs = [
 const Contact = () => {
   return (
     <div className="min-h-screen flex flex-col">
+      <SEO 
+        title="Contact Us | 24/7 Bail Bonds | Fort Payne, AL"
+        description="Contact Connie's Bail Bonding 24/7. Call Richard 256-601-2041, Connie 256-630-2824, or Toni 256-440-0822. Located at 2700 Jordan Rd SW, Fort Payne."
+        canonical="/contact"
+        schema={[
+          getLocalBusinessSchema(),
+          getFAQSchema(contactFaqs),
+          getBreadcrumbSchema([
+            { name: "Home", url: "/" },
+            { name: "Contact", url: "/contact" }
+          ])
+        ]}
+      />
       <Navigation />
       
       {/* Hero Section */}

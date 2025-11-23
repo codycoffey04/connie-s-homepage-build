@@ -15,6 +15,8 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { phoneNumbers } from "@/lib/cityUtils";
+import { SEO } from "@/components/SEO";
+import { getLocalBusinessSchema, getBreadcrumbSchema } from "@/lib/schemaUtils";
 
 const Pisgah = () => {
   const features = [
@@ -92,6 +94,18 @@ const Pisgah = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Pisgah Bail Bonds | 24/7 Service | DeKalb County, AL"
+        description="Fast 24/7 bail bonds serving Pisgah, AL and DeKalb County. Licensed agents available now. Call 256-601-2041. Compassionate, professional service."
+        canonical="/pisgah"
+        schema={[
+          getLocalBusinessSchema("Pisgah"),
+          getBreadcrumbSchema([
+            { name: "Home", url: "/" },
+            { name: "Pisgah", url: "/pisgah" }
+          ])
+        ]}
+      />
       <Navigation />
 
       {/* Hero Section */}

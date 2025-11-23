@@ -15,6 +15,8 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { phoneNumbers } from "@/lib/cityUtils";
+import { SEO } from "@/components/SEO";
+import { getLocalBusinessSchema, getBreadcrumbSchema } from "@/lib/schemaUtils";
 
 const Henagar = () => {
   const features = [
@@ -92,6 +94,18 @@ const Henagar = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Henagar Bail Bonds | 24/7 Service | DeKalb County, AL"
+        description="Fast 24/7 bail bonds serving Henagar, AL and DeKalb County. Licensed Alabama agents. Call 256-601-2041. Family-owned, transparent pricing."
+        canonical="/henagar"
+        schema={[
+          getLocalBusinessSchema("Henagar"),
+          getBreadcrumbSchema([
+            { name: "Home", url: "/" },
+            { name: "Henagar", url: "/henagar" }
+          ])
+        ]}
+      />
       <Navigation />
 
       {/* Hero Section */}

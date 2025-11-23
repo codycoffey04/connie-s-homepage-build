@@ -6,6 +6,8 @@ import { TestimonialCard } from "@/components/TestimonialCard";
 import { FAQList } from "@/components/FAQItem";
 import { Card, CardContent } from "@/components/ui/card";
 import { StickyCallButton } from "@/components/StickyCallButton";
+import { SEO } from "@/components/SEO";
+import { getLocalBusinessSchema, getBreadcrumbSchema, getServiceSchema } from "@/lib/schemaUtils";
 import { 
   Clock, 
   Zap, 
@@ -160,6 +162,18 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="24/7 Bail Bonds Fort Payne, AL | DeKalb & Cherokee County"
+        description="Fast, confidential 24/7 bail bonds in Fort Payne, Rainsville, Henagar & DeKalb County AL. Licensed agents Richard, Connie & Toni. Call 256-601-2041 now."
+        canonical="/"
+        schema={[
+          getLocalBusinessSchema(),
+          getServiceSchema(),
+          getBreadcrumbSchema([
+            { name: "Home", url: "/" }
+          ])
+        ]}
+      />
       <Navigation />
       <StickyCallButton />
 
