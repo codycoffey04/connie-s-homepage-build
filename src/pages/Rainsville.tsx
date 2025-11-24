@@ -120,8 +120,11 @@ const Rainsville = () => {
 
       {/* Hero Section - Full Screen with Background */}
       <section 
-        className="relative min-h-[85vh] bg-black flex items-center bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${rainsvilleHeroBg})` }}
+        className="relative min-h-[85vh] bg-black flex items-center bg-cover bg-no-repeat"
+        style={{ 
+          backgroundImage: `url(${rainsvilleHeroBg})`,
+          backgroundPosition: 'right center'
+        }}
       >
         <div className="absolute inset-0 bg-black/50" />
         
