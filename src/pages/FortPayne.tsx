@@ -20,6 +20,9 @@ import { phoneNumbers } from "@/lib/cityUtils";
 import { SEO } from "@/components/SEO";
 import { getLocalBusinessSchema, getBreadcrumbSchema } from "@/lib/schemaUtils";
 import fortPayneHeroBg from "@/assets/hero-bg.jpg";
+import supportHands from "@/assets/support-hands.jpg";
+import legalGavel from "@/assets/legal-gavel.jpg";
+import paymentMethods from "@/assets/payment-methods.jpg";
 
 const FortPayne = () => {
   const features = [
@@ -206,56 +209,68 @@ const FortPayne = () => {
       </Section>
 
       {/* Why Choose Us */}
-      <Section className="bg-white py-16">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-navy-deep mb-4">
-            Why Choose Connie's for Fort Payne Bail Bonds?
-          </h2>
-        </div>
-        
-        <div className="grid md:grid-cols-2 gap-8">
-          {features.map((feature, index) => (
-            <Card key={index} className="border-border/50 shadow-sm hover:shadow-md transition-shadow">
-              <CardHeader>
-                <div className="flex items-start gap-4">
-                  <feature.icon className="w-6 h-6 text-teal mt-1" />
-                  <CardTitle className="text-xl">{feature.title}</CardTitle>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-foreground/80 leading-relaxed">
-                  {feature.description}
-                </p>
-              </CardContent>
-            </Card>
-          ))}
+      <Section 
+        className="relative bg-cover bg-center py-16"
+        style={{ backgroundImage: `url(${supportHands})` }}
+      >
+        <div className="absolute inset-0 bg-black/70" />
+        <div className="relative z-10">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Connie's for Fort Payne Bail Bonds?
+            </h2>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            {features.map((feature, index) => (
+              <Card key={index} className="border-border/50 shadow-sm hover:shadow-md transition-shadow bg-white/95">
+                <CardHeader>
+                  <div className="flex items-start gap-4">
+                    <feature.icon className="w-6 h-6 text-teal mt-1" />
+                    <CardTitle className="text-xl">{feature.title}</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-foreground/80 leading-relaxed">
+                    {feature.description}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </Section>
 
       {/* How Bail Works in Fort Payne */}
-      <Section className="bg-muted py-16">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-navy-deep mb-4">
-            How Bail Works in Fort Payne
-          </h2>
-        </div>
-        
-        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-          {howBailWorks.map((item, index) => (
-            <Card key={index} className="border-border/50">
-              <CardHeader>
-                <CardTitle className="text-lg flex items-center gap-2">
-                  <MapPin className="w-5 h-5 text-teal" />
-                  {item.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-foreground/80">
-                  {item.description}
-                </p>
-              </CardContent>
-            </Card>
-          ))}
+      <Section 
+        className="relative bg-cover bg-center py-16"
+        style={{ backgroundImage: `url(${legalGavel})` }}
+      >
+        <div className="absolute inset-0 bg-black/75" />
+        <div className="relative z-10">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              How Bail Works in Fort Payne
+            </h2>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            {howBailWorks.map((item, index) => (
+              <Card key={index} className="border-border/50 bg-white/95">
+                <CardHeader>
+                  <CardTitle className="text-lg flex items-center gap-2">
+                    <MapPin className="w-5 h-5 text-teal" />
+                    {item.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-foreground/80">
+                    {item.description}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </Section>
 
@@ -354,6 +369,18 @@ const FortPayne = () => {
         <div className="max-w-3xl mx-auto">
           <Card className="border-border/50 shadow-md">
             <CardContent className="p-8">
+              <div className="flex items-center gap-6 mb-8">
+                <img 
+                  src={paymentMethods} 
+                  alt="Payment methods accepted - credit cards and cash" 
+                  className="w-32 h-32 rounded-lg object-cover shadow-lg"
+                />
+                <div>
+                  <h3 className="text-xl font-bold mb-2">Flexible Payment Options</h3>
+                  <p className="text-foreground/80">Credit cards, cash, and payment plans available</p>
+                </div>
+              </div>
+              
               <ul className="grid md:grid-cols-2 gap-4">
                 {services.map((service, index) => (
                   <li key={index} className="flex items-start gap-3">

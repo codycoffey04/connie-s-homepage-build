@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, CSSProperties } from "react";
 import { cn } from "@/lib/utils";
 
 interface SectionProps {
@@ -6,12 +6,14 @@ interface SectionProps {
   className?: string;
   id?: string;
   variant?: "default" | "muted" | "primary";
+  style?: CSSProperties;
 }
 
-export const Section = ({ children, className, id, variant = "default" }: SectionProps) => {
+export const Section = ({ children, className, id, variant = "default", style }: SectionProps) => {
   return (
     <section
       id={id}
+      style={style}
       className={cn(
         "w-full py-12 md:py-20",
         variant === "muted" && "bg-light-gray",

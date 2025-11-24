@@ -18,6 +18,9 @@ import { phoneNumbers } from "@/lib/cityUtils";
 import { SEO } from "@/components/SEO";
 import { getLocalBusinessSchema, getBreadcrumbSchema } from "@/lib/schemaUtils";
 import henagarHeroBg from "@/assets/henagar-hero-bg.jpg";
+import supportHands from "@/assets/support-hands.jpg";
+import legalGavel from "@/assets/legal-gavel.jpg";
+import paymentMethods from "@/assets/payment-methods.jpg";
 
 const Henagar = () => {
   const features = [
@@ -175,35 +178,47 @@ const Henagar = () => {
       </Section>
 
       {/* Why Choose Us */}
-      <Section>
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-foreground">
-          Why Choose Connie's for Henagar Bail Bonds?
-        </h2>
-        <div className="grid md:grid-cols-2 gap-8">
-          {features.map((feature, index) => (
-            <Card key={index} className="border-border/50 shadow-sm hover:shadow-md transition-shadow">
-              <CardContent className="p-6">
-                <feature.icon className="w-12 h-12 text-primary mb-4" />
-                <h3 className="text-xl font-bold mb-3 text-foreground">{feature.title}</h3>
-                <p className="text-foreground/80 leading-relaxed">{feature.description}</p>
-              </CardContent>
-            </Card>
-          ))}
+      <Section 
+        className="relative bg-cover bg-center"
+        style={{ backgroundImage: `url(${supportHands})` }}
+      >
+        <div className="absolute inset-0 bg-black/70" />
+        <div className="relative z-10">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-white">
+            Why Choose Connie's for Henagar Bail Bonds?
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            {features.map((feature, index) => (
+              <Card key={index} className="border-border/50 shadow-sm hover:shadow-md transition-shadow bg-white/95">
+                <CardContent className="p-6">
+                  <feature.icon className="w-12 h-12 text-primary mb-4" />
+                  <h3 className="text-xl font-bold mb-3 text-foreground">{feature.title}</h3>
+                  <p className="text-foreground/80 leading-relaxed">{feature.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </Section>
 
       {/* How Bail Works */}
-      <Section variant="muted">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-foreground">
-          How Bail Works for Henagar Residents
-        </h2>
-        <div className="max-w-4xl mx-auto space-y-8">
-          {bailProcess.map((step, index) => (
-            <div key={index} className="bg-card p-6 rounded-lg border border-border/50 shadow-sm">
-              <h3 className="text-xl font-bold mb-3 text-primary">{step.title}</h3>
-              <p className="text-foreground/80 leading-relaxed">{step.description}</p>
-            </div>
-          ))}
+      <Section 
+        className="relative bg-cover bg-center"
+        style={{ backgroundImage: `url(${legalGavel})` }}
+      >
+        <div className="absolute inset-0 bg-black/75" />
+        <div className="relative z-10">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-white">
+            How Bail Works for Henagar Residents
+          </h2>
+          <div className="max-w-4xl mx-auto space-y-8">
+            {bailProcess.map((step, index) => (
+              <div key={index} className="bg-white/95 p-6 rounded-lg border border-border/50 shadow-sm">
+                <h3 className="text-xl font-bold mb-3 text-primary">{step.title}</h3>
+                <p className="text-foreground/80 leading-relaxed">{step.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </Section>
 
@@ -297,6 +312,17 @@ const Henagar = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-foreground">
             Services for Henagar Residents
           </h2>
+          <div className="flex items-center gap-6 mb-8 justify-center">
+            <img 
+              src={paymentMethods} 
+              alt="Flexible payment options available" 
+              className="w-32 h-32 rounded-lg object-cover shadow-lg"
+            />
+            <div>
+              <h3 className="text-xl font-bold mb-2">Flexible Payment Plans</h3>
+              <p className="text-foreground/80">Credit cards accepted, payment plans available</p>
+            </div>
+          </div>
           <div className="grid md:grid-cols-2 gap-4 mb-8">
             {services.map((service, index) => (
               <div key={index} className="flex items-start gap-3">
