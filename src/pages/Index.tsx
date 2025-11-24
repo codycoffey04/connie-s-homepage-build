@@ -49,49 +49,15 @@ const Index = () => {
     "Five-Star Google Reviews"
   ];
 
-  const whyChooseFeatures = [
-    {
-      icon: Clock,
-      image: clock247,
-      imageAlt: "24/7 emergency bail bond service",
-      title: "Available 24/7",
-      description: "Arrests don't follow business hours, and neither do we. Our family team answers calls personally at any hour—no answering services, no waiting."
-    },
-    {
-      icon: Zap,
-      image: howFastLightning,
-      imageAlt: "Lightning fast bail bond service",
-      title: "Fast Service",
-      description: "We're located right next to the DeKalb County Detention Center. We know the staff, the procedures, and how to get your loved one released quickly."
-    },
-    {
-      icon: DollarSign,
-      image: paymentMethods,
-      imageAlt: "Transparent pricing and payment methods",
-      title: "Transparent Pricing",
-      description: "Alabama law requires a 10% bail bond fee. That's all we charge—no administrative fees, no surprise costs. Ever."
-    },
-    {
-      icon: Users,
-      image: supportHands,
-      imageAlt: "Family-owned compassionate service",
-      title: "Family Owned & Operated",
-      description: "You'll talk directly to Connie, Toni, or Richard. We treat every client with dignity and professionalism because we're your neighbors, not a corporation."
-    },
-    {
-      icon: CreditCard,
-      image: paymentMethods,
-      imageAlt: "Flexible payment plan options",
-      title: "Payment Plans Available",
-      description: "We understand that coming up with 10% can be challenging. We work with families to create flexible payment arrangements. Credit cards accepted."
-    },
-    {
-      icon: Shield,
-      image: scalesJustice,
-      imageAlt: "Respectful and discreet bail bond service",
-      title: "Respectful & Discreet",
-      description: "We know this is stressful. We'll guide you through every step without judgment, keeping everything confidential."
-    }
+  const whyChooseChecklist = [
+    "Available 24/7 - We Answer Every Call Personally",
+    "Licensed Alabama Bail Bond Agents",
+    "Family-Owned & Operated Since 2019",
+    "Located Next to DeKalb County Detention Center",
+    "Fast Release - Usually 2-8 Hours",
+    "Transparent Pricing - Only State-Required 10%",
+    "No Hidden Fees - Ever",
+    "Payment Plans Available"
   ];
 
   const processSteps = [
@@ -414,39 +380,46 @@ const Index = () => {
         </AnimatedSection>
       </Section>
 
-      {/* Why Choose Connie's */}
-      <Section className="bg-black py-24">
-        <h2 className="text-4xl md:text-5xl font-black mb-16 text-center text-white uppercase tracking-tight">
-          What Makes Us <span className="text-brand-red">Different</span>
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {whyChooseFeatures.map((feature, index) => (
-            <AnimatedCard key={index} index={index}>
-              <Card className="bg-white border-2 border-transparent hover:border-brand-red transition-all duration-300 overflow-hidden">
-                <CardContent className="p-0">
-                  <div className="relative h-48 overflow-hidden">
-                    <img src={feature.image} alt={feature.imageAlt} className="w-full h-full object-cover" />
-                    <div className="absolute inset-0 bg-black/40"></div>
-                  </div>
-                  <div className="p-8">
-                    <h3 className="text-2xl font-black mb-4 text-black uppercase tracking-tight">
-                      {feature.title}
-                    </h3>
-                    <p className="text-base leading-relaxed text-gray-700">{feature.description}</p>
-                    {feature.title === "Transparent Pricing" && (
-                      <div className="mt-6 p-5 bg-gray-50 rounded-lg border border-gray-200">
-                        <p className="font-bold mb-2 text-black">Example:</p>
-                        <div className="space-y-1 text-sm text-gray-700">
-                          <p>$5,000 bail = $500 fee</p>
-                          <p>$10,000 bail = $1,000 fee</p>
-                        </div>
+      {/* Why Choose Connie's - Split Screen */}
+      <Section className="bg-white py-24">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            
+            {/* Left: Image */}
+            <AnimatedSection delay={0}>
+              <div className="relative h-[500px] lg:h-[600px] rounded-lg overflow-hidden shadow-2xl">
+                <img 
+                  src={freedomHandcuffs} 
+                  alt="Freedom from custody - professional bail bonds"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black/20"></div>
+              </div>
+            </AnimatedSection>
+
+            {/* Right: Heading + Checklist */}
+            <AnimatedSection delay={0.2}>
+              <div className="space-y-8">
+                <h2 className="text-4xl md:text-5xl font-black text-black uppercase tracking-tight">
+                  What Makes Us <span className="text-brand-red">Different</span>
+                </h2>
+                
+                <div className="space-y-4">
+                  {whyChooseChecklist.map((item, index) => (
+                    <div key={index} className="flex items-start gap-4">
+                      <div className="w-8 h-8 rounded-full bg-brand-red flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Check className="w-5 h-5 text-white" />
                       </div>
-                    )}
-                  </div>
-                </CardContent>
-              </Card>
-            </AnimatedCard>
-          ))}
+                      <p className="text-lg text-gray-800 font-medium leading-relaxed">
+                        {item}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </AnimatedSection>
+            
+          </div>
         </div>
       </Section>
 
