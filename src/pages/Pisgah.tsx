@@ -18,6 +18,9 @@ import { phoneNumbers } from "@/lib/cityUtils";
 import { SEO } from "@/components/SEO";
 import { getLocalBusinessSchema, getBreadcrumbSchema } from "@/lib/schemaUtils";
 import pisgahHeroBg from "@/assets/pisgah-hero-bg.jpg";
+import supportHands from "@/assets/support-hands.jpg";
+import legalGavel from "@/assets/legal-gavel.jpg";
+import paymentMethods from "@/assets/payment-methods.jpg";
 
 const Pisgah = () => {
   const features = [
@@ -175,35 +178,56 @@ const Pisgah = () => {
       </Section>
 
       {/* Why Choose Us */}
-      <Section>
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-foreground">
-          Why Choose Connie's for Pisgah Bail Bonds?
-        </h2>
-        <div className="grid md:grid-cols-2 gap-8">
-          {features.map((feature, index) => (
-            <Card key={index} className="border-border/50 shadow-sm hover:shadow-md transition-shadow">
-              <CardContent className="p-6">
-                <feature.icon className="w-12 h-12 text-primary mb-4" />
-                <h3 className="text-xl font-bold mb-3 text-foreground">{feature.title}</h3>
-                <p className="text-foreground/80 leading-relaxed">{feature.description}</p>
-              </CardContent>
-            </Card>
-          ))}
+      <Section 
+        className="relative overflow-hidden"
+        style={{ 
+          backgroundImage: `url(${supportHands})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      >
+        <div className="absolute inset-0 bg-black/70 z-0" />
+        <div className="relative z-10">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-white">
+            Why Choose Connie's for Pisgah Bail Bonds?
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            {features.map((feature, index) => (
+              <Card key={index} className="border-border/50 shadow-sm hover:shadow-md transition-shadow bg-card/90 backdrop-blur-sm">
+                <CardContent className="p-6">
+                  <feature.icon className="w-12 h-12 text-primary mb-4" />
+                  <h3 className="text-xl font-bold mb-3 text-foreground">{feature.title}</h3>
+                  <p className="text-foreground/80 leading-relaxed">{feature.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </Section>
 
       {/* How Bail Works */}
-      <Section variant="muted">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-foreground">
-          How Bail Works for Pisgah Residents
-        </h2>
-        <div className="max-w-4xl mx-auto space-y-8">
-          {bailProcess.map((step, index) => (
-            <div key={index} className="bg-card p-6 rounded-lg border border-border/50 shadow-sm">
-              <h3 className="text-xl font-bold mb-3 text-primary">{step.title}</h3>
-              <p className="text-foreground/80 leading-relaxed">{step.description}</p>
-            </div>
-          ))}
+      <Section 
+        variant="muted"
+        className="relative overflow-hidden"
+        style={{ 
+          backgroundImage: `url(${legalGavel})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      >
+        <div className="absolute inset-0 bg-black/60 z-0" />
+        <div className="relative z-10">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-white">
+            How Bail Works for Pisgah Residents
+          </h2>
+          <div className="max-w-4xl mx-auto space-y-8">
+            {bailProcess.map((step, index) => (
+              <div key={index} className="bg-card/90 backdrop-blur-sm p-6 rounded-lg border border-border/50 shadow-sm">
+                <h3 className="text-xl font-bold mb-3 text-primary">{step.title}</h3>
+                <p className="text-foreground/80 leading-relaxed">{step.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </Section>
 
@@ -297,14 +321,23 @@ const Pisgah = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-foreground">
             Services for Pisgah Residents
           </h2>
-          <div className="grid md:grid-cols-2 gap-4 mb-8">
-            {services.map((service, index) => (
-              <div key={index} className="flex items-start gap-3">
-                <ChevronRight className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                <span className="text-foreground/80">{service}</span>
-              </div>
-            ))}
+          
+          <div className="flex items-start gap-8 mb-8">
+            <div className="flex-1 grid md:grid-cols-2 gap-4">
+              {services.map((service, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <ChevronRight className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                  <span className="text-foreground/80">{service}</span>
+                </div>
+              ))}
+            </div>
+            <img 
+              src={paymentMethods} 
+              alt="Flexible payment options for bail bonds" 
+              className="w-64 h-64 rounded-lg object-cover shadow-lg hidden md:block"
+            />
           </div>
+          
           <div className="text-center mt-8">
             <p className="text-lg mb-4 text-foreground/80">
               Call anytime, day or night: <span className="font-bold text-primary">Richard {phoneNumbers.richard.number}</span>
