@@ -32,6 +32,7 @@ import legalGavel from "@/assets/legal-gavel.jpg";
 import scalesJustice from "@/assets/scales-justice.jpg";
 import alabamaMap from "@/assets/alabama-map.jpg";
 import paymentMethods from "@/assets/payment-methods.jpg";
+import howFastLightning from "@/assets/how-fast-lightning.jpg";
 
 const Index = () => {
 
@@ -267,32 +268,38 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* How Much? */}
             <AnimatedCard index={0}>
-              <Card className="bg-white border-2 border-transparent hover:border-brand-red transition-all">
-                <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 rounded-full bg-brand-red text-white flex items-center justify-center mx-auto mb-6">
-                    <DollarSign className="w-8 h-8" />
+              <Card className="bg-white border-2 border-transparent hover:border-brand-red transition-all overflow-hidden">
+                <CardContent className="p-0">
+                  <div className="relative h-48 overflow-hidden">
+                    <img src={paymentMethods} alt="Payment methods and pricing transparency" className="w-full h-full object-cover" />
+                    <div className="absolute inset-0 bg-black/40"></div>
                   </div>
-                  <h3 className="text-2xl font-black mb-4 text-black uppercase">How Much?</h3>
-                  <div className="text-4xl font-black text-brand-red mb-4">10%</div>
-                  <p className="text-base text-gray-700 leading-relaxed">
-                    By Alabama law, all bail bonds cost 10% of the bail amount. $5,000 bail = $500 fee. No hidden charges.
-                  </p>
+                  <div className="p-8 text-center">
+                    <h3 className="text-2xl font-black mb-4 text-black uppercase">How Much?</h3>
+                    <div className="text-4xl font-black text-brand-red mb-4">10%</div>
+                    <p className="text-base text-gray-700 leading-relaxed">
+                      By Alabama law, all bail bonds cost 10% of the bail amount. $5,000 bail = $500 fee. No hidden charges.
+                    </p>
+                  </div>
                 </CardContent>
               </Card>
             </AnimatedCard>
 
             {/* How Fast? */}
             <AnimatedCard index={1}>
-              <Card className="bg-white border-2 border-transparent hover:border-brand-red transition-all">
-                <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 rounded-full bg-brand-red text-white flex items-center justify-center mx-auto mb-6">
-                    <Clock className="w-8 h-8" />
+              <Card className="bg-white border-2 border-transparent hover:border-brand-red transition-all overflow-hidden">
+                <CardContent className="p-0">
+                  <div className="relative h-48 overflow-hidden">
+                    <img src={howFastLightning} alt="Fast bail bond service" className="w-full h-full object-cover" />
+                    <div className="absolute inset-0 bg-black/40"></div>
                   </div>
-                  <h3 className="text-2xl font-black mb-4 text-black uppercase">How Fast?</h3>
-                  <div className="text-4xl font-black text-brand-red mb-4">2-8 Hours</div>
-                  <p className="text-base text-gray-700 leading-relaxed">
-                    Typical release time after we post bond. We stay in communication throughout the process.
-                  </p>
+                  <div className="p-8 text-center">
+                    <h3 className="text-2xl font-black mb-4 text-black uppercase">How Fast?</h3>
+                    <div className="text-4xl font-black text-brand-red mb-4">2-8 Hours</div>
+                    <p className="text-base text-gray-700 leading-relaxed">
+                      Typical release time after we post bond. We stay in communication throughout the process.
+                    </p>
+                  </div>
                 </CardContent>
               </Card>
             </AnimatedCard>
