@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { Navigation } from "@/components/Navigation";
 import { PhoneButton } from "@/components/PhoneButton";
 import { Section } from "@/components/Section";
+import { AnimatedSection } from "@/components/AnimatedSection";
+import { AnimatedImage } from "@/components/AnimatedImage";
 import { TestimonialCard } from "@/components/TestimonialCard";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -214,7 +216,7 @@ const FortPayne = () => {
         style={{ backgroundImage: `url(${supportHands})` }}
       >
         <div className="absolute inset-0 bg-black/70" />
-        <div className="relative z-10">
+        <AnimatedSection className="relative z-10">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Connie's for Fort Payne Bail Bonds?
@@ -238,7 +240,7 @@ const FortPayne = () => {
               </Card>
             ))}
           </div>
-        </div>
+        </AnimatedSection>
       </Section>
 
       {/* How Bail Works in Fort Payne */}
@@ -247,7 +249,7 @@ const FortPayne = () => {
         style={{ backgroundImage: `url(${legalGavel})` }}
       >
         <div className="absolute inset-0 bg-black/75" />
-        <div className="relative z-10">
+        <AnimatedSection className="relative z-10" delay={0.2}>
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               How Bail Works in Fort Payne
@@ -271,7 +273,7 @@ const FortPayne = () => {
               </Card>
             ))}
           </div>
-        </div>
+        </AnimatedSection>
       </Section>
 
       {/* Local Law Enforcement & Court Information */}

@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { Navigation } from "@/components/Navigation";
 import { PhoneButton } from "@/components/PhoneButton";
 import { Section } from "@/components/Section";
+import { AnimatedSection } from "@/components/AnimatedSection";
+import { AnimatedImage } from "@/components/AnimatedImage";
 import { TestimonialCard } from "@/components/TestimonialCard";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -187,7 +189,7 @@ const Pisgah = () => {
         }}
       >
         <div className="absolute inset-0 bg-black/70 z-0" />
-        <div className="relative z-10">
+        <AnimatedSection className="relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-white">
             Why Choose Connie's for Pisgah Bail Bonds?
           </h2>
@@ -202,7 +204,7 @@ const Pisgah = () => {
               </Card>
             ))}
           </div>
-        </div>
+        </AnimatedSection>
       </Section>
 
       {/* How Bail Works */}
@@ -216,7 +218,7 @@ const Pisgah = () => {
         }}
       >
         <div className="absolute inset-0 bg-black/60 z-0" />
-        <div className="relative z-10">
+        <AnimatedSection className="relative z-10" delay={0.2}>
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-white">
             How Bail Works for Pisgah Residents
           </h2>
@@ -228,7 +230,7 @@ const Pisgah = () => {
               </div>
             ))}
           </div>
-        </div>
+        </AnimatedSection>
       </Section>
 
       {/* Local Law Enforcement & Court Information */}
@@ -331,10 +333,12 @@ const Pisgah = () => {
                 </div>
               ))}
             </div>
-            <img 
+            <AnimatedImage
               src={paymentMethods} 
               alt="Flexible payment options for bail bonds" 
               className="w-64 h-64 rounded-lg object-cover shadow-lg hidden md:block"
+              scale={true}
+              delay={0.2}
             />
           </div>
           
