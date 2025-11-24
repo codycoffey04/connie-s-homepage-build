@@ -52,31 +52,43 @@ const Index = () => {
   const whyChooseFeatures = [
     {
       icon: Clock,
+      image: clock247,
+      imageAlt: "24/7 emergency bail bond service",
       title: "Available 24/7",
       description: "Arrests don't follow business hours, and neither do we. Our family team answers calls personally at any hour—no answering services, no waiting."
     },
     {
       icon: Zap,
+      image: howFastLightning,
+      imageAlt: "Lightning fast bail bond service",
       title: "Fast Service",
       description: "We're located right next to the DeKalb County Detention Center. We know the staff, the procedures, and how to get your loved one released quickly."
     },
     {
       icon: DollarSign,
+      image: paymentMethods,
+      imageAlt: "Transparent pricing and payment methods",
       title: "Transparent Pricing",
       description: "Alabama law requires a 10% bail bond fee. That's all we charge—no administrative fees, no surprise costs. Ever."
     },
     {
       icon: Users,
+      image: supportHands,
+      imageAlt: "Family-owned compassionate service",
       title: "Family Owned & Operated",
       description: "You'll talk directly to Connie, Toni, or Richard. We treat every client with dignity and professionalism because we're your neighbors, not a corporation."
     },
     {
       icon: CreditCard,
+      image: paymentMethods,
+      imageAlt: "Flexible payment plan options",
       title: "Payment Plans Available",
       description: "We understand that coming up with 10% can be challenging. We work with families to create flexible payment arrangements. Credit cards accepted."
     },
     {
       icon: Shield,
+      image: scalesJustice,
+      imageAlt: "Respectful and discreet bail bond service",
       title: "Respectful & Discreet",
       description: "We know this is stressful. We'll guide you through every step without judgment, keeping everything confidential."
     }
@@ -409,26 +421,31 @@ const Index = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {whyChooseFeatures.map((feature, index) => (
-            <Card key={index} className="bg-white border-2 border-transparent hover:border-brand-red transition-all duration-300 group">
-              <CardContent className="p-8">
-                <div className="w-16 h-16 rounded-full bg-black group-hover:bg-brand-red transition-colors flex items-center justify-center mb-6">
-                  <feature.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-black mb-4 text-black uppercase tracking-tight">
-                  {feature.title}
-                </h3>
-                <p className="text-base leading-relaxed text-gray-700">{feature.description}</p>
-                {feature.title === "Transparent Pricing" && (
-                  <div className="mt-6 p-5 bg-gray-50 rounded-lg border border-gray-200">
-                    <p className="font-bold mb-2 text-black">Example:</p>
-                    <div className="space-y-1 text-sm text-gray-700">
-                      <p>$5,000 bail = $500 fee</p>
-                      <p>$10,000 bail = $1,000 fee</p>
-                    </div>
+            <AnimatedCard key={index} index={index}>
+              <Card className="bg-white border-2 border-transparent hover:border-brand-red transition-all duration-300 overflow-hidden">
+                <CardContent className="p-0">
+                  <div className="relative h-48 overflow-hidden">
+                    <img src={feature.image} alt={feature.imageAlt} className="w-full h-full object-cover" />
+                    <div className="absolute inset-0 bg-black/40"></div>
                   </div>
-                )}
-              </CardContent>
-            </Card>
+                  <div className="p-8">
+                    <h3 className="text-2xl font-black mb-4 text-black uppercase tracking-tight">
+                      {feature.title}
+                    </h3>
+                    <p className="text-base leading-relaxed text-gray-700">{feature.description}</p>
+                    {feature.title === "Transparent Pricing" && (
+                      <div className="mt-6 p-5 bg-gray-50 rounded-lg border border-gray-200">
+                        <p className="font-bold mb-2 text-black">Example:</p>
+                        <div className="space-y-1 text-sm text-gray-700">
+                          <p>$5,000 bail = $500 fee</p>
+                          <p>$10,000 bail = $1,000 fee</p>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </CardContent>
+              </Card>
+            </AnimatedCard>
           ))}
         </div>
       </Section>
