@@ -123,10 +123,15 @@ const Rainsville = () => {
         className="relative min-h-[85vh] bg-black flex items-center bg-cover bg-no-repeat"
         style={{ 
           backgroundImage: `url(${rainsvilleHeroBg})`,
-          backgroundPosition: 'right center'
+          backgroundPosition: '75% center'
         }}
       >
-        <div className="absolute inset-0 bg-black/50" />
+        <div 
+          className="absolute inset-0" 
+          style={{
+            background: 'linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%)'
+          }}
+        />
         
         <div className="relative container mx-auto px-4 md:px-6 max-w-7xl z-10">
           <div className="max-w-3xl">
