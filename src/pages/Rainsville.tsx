@@ -111,6 +111,7 @@ const Rainsville = () => {
         title="Rainsville Bail Bonds | 24/7 Service | DeKalb County, AL"
         description="Fast 24/7 bail bonds serving Rainsville, AL and DeKalb County. Licensed agents ready to help. Call 256-601-2041. Payment plans available."
         canonical="/rainsville"
+        city="Rainsville"
         schema={[
           getLocalBusinessSchema("Rainsville"),
           getBreadcrumbSchema([
@@ -192,7 +193,7 @@ const Rainsville = () => {
               <Card className="bg-white border-2 border-transparent hover:border-brand-red transition-all overflow-hidden">
                 <CardContent className="p-0">
                   <div className="relative h-48 overflow-hidden">
-                    <img src={paymentMethods} alt="Payment methods and pricing transparency" className="w-full h-full object-cover" />
+                    <img src={paymentMethods} alt="Flexible bail bond payment methods in Rainsville Alabama including credit cards and payment plans" className="w-full h-full object-cover" loading="lazy" />
                     <div className="absolute inset-0 bg-black/40"></div>
                   </div>
                   <div className="p-8 text-center">
@@ -211,7 +212,7 @@ const Rainsville = () => {
               <Card className="bg-white border-2 border-transparent hover:border-brand-red transition-all overflow-hidden">
                 <CardContent className="p-0">
                   <div className="relative h-48 overflow-hidden">
-                    <img src={howFastLightning} alt="Fast bail bond service" className="w-full h-full object-cover" />
+                    <img src={howFastLightning} alt="Fast 2-8 hour bail bond release times in Rainsville DeKalb County Alabama" className="w-full h-full object-cover" loading="lazy" />
                     <div className="absolute inset-0 bg-black/40"></div>
                   </div>
                   <div className="p-8 text-center">

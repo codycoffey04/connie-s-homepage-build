@@ -6,11 +6,23 @@ interface SEOProps {
   canonical?: string;
   ogImage?: string;
   schema?: object[];
+  city?: string;
 }
 
-export const SEO = ({ title, description, canonical, ogImage, schema }: SEOProps) => {
+export const SEO = ({ title, description, canonical, ogImage, schema, city }: SEOProps) => {
   const fullTitle = `${title} | Connie's Bail Bonding`;
-  const defaultImage = ogImage || 'https://conniesbailbonding.com/og-image.jpg';
+  
+  // City-specific OG images
+  const getCityOGImage = () => {
+    if (ogImage) return ogImage;
+    if (city) {
+      const citySlug = city.toLowerCase().replace(/\s+/g, '-');
+      return `https://conniesbailbonding.com/og-${citySlug}.jpg`;
+    }
+    return 'https://conniesbailbonding.com/og-image.jpg';
+  };
+  
+  const defaultImage = getCityOGImage();
   const siteUrl = 'https://conniesbailbonding.com';
   const canonicalUrl = canonical ? `${siteUrl}${canonical}` : siteUrl;
 

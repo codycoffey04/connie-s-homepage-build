@@ -10,7 +10,7 @@ import { SEO } from "@/components/SEO";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { AnimatedImage } from "@/components/AnimatedImage";
 import { AnimatedCard } from "@/components/AnimatedCard";
-import { getLocalBusinessSchema, getBreadcrumbSchema, getServiceSchema } from "@/lib/schemaUtils";
+import { getLocalBusinessSchema, getBreadcrumbSchema, getServiceSchema, getHowToSchema } from "@/lib/schemaUtils";
 import { 
   Clock, 
   Zap, 
@@ -158,6 +158,7 @@ const Index = () => {
         schema={[
           getLocalBusinessSchema(),
           getServiceSchema(),
+          getHowToSchema(),
           getBreadcrumbSchema([
             { name: "Home", url: "/" }
           ])
@@ -249,7 +250,7 @@ const Index = () => {
               <Card className="bg-white border-2 border-transparent hover:border-brand-red transition-all overflow-hidden">
                 <CardContent className="p-0">
                   <div className="relative h-48 overflow-hidden">
-                    <img src={paymentMethods} alt="Payment methods and pricing transparency" className="w-full h-full object-cover" />
+                    <img src={paymentMethods} alt="Flexible bail bond payment methods in Fort Payne Alabama including credit cards and payment plans" className="w-full h-full object-cover" loading="lazy" />
                     <div className="absolute inset-0 bg-black/40"></div>
                   </div>
                   <div className="p-8 text-center">
@@ -268,7 +269,7 @@ const Index = () => {
               <Card className="bg-white border-2 border-transparent hover:border-brand-red transition-all overflow-hidden">
                 <CardContent className="p-0">
                   <div className="relative h-48 overflow-hidden">
-                    <img src={howFastLightning} alt="Fast bail bond service" className="w-full h-full object-cover" />
+                    <img src={howFastLightning} alt="Fast bail bond service throughout DeKalb County and Cherokee County Alabama" className="w-full h-full object-cover" loading="lazy" />
                     <div className="absolute inset-0 bg-black/40"></div>
                   </div>
                   <div className="p-8 text-center">
@@ -287,7 +288,7 @@ const Index = () => {
               <Card className="bg-white border-2 border-transparent hover:border-brand-red transition-all overflow-hidden">
                 <CardContent className="p-0">
                   <div className="relative h-48 overflow-hidden">
-                    <img src={clock247} alt="24/7 emergency bail bond service" className="w-full h-full object-cover" />
+                    <img src={clock247} alt="24/7 emergency bail bonds available around the clock throughout Alabama" className="w-full h-full object-cover" loading="lazy" />
                     <div className="absolute inset-0 bg-black/40"></div>
                   </div>
                   <div className="p-8 text-center">
