@@ -7,6 +7,9 @@ import { FAQList } from "@/components/FAQItem";
 import { Card, CardContent } from "@/components/ui/card";
 import { StickyCallButton } from "@/components/StickyCallButton";
 import { SEO } from "@/components/SEO";
+import { AnimatedSection } from "@/components/AnimatedSection";
+import { AnimatedImage } from "@/components/AnimatedImage";
+import { AnimatedCard } from "@/components/AnimatedCard";
 import { getLocalBusinessSchema, getBreadcrumbSchema, getServiceSchema } from "@/lib/schemaUtils";
 import { 
   Clock, 
@@ -263,49 +266,55 @@ const Index = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* How Much? */}
-            <Card className="bg-white border-2 border-transparent hover:border-brand-red transition-all">
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 rounded-full bg-brand-red text-white flex items-center justify-center mx-auto mb-6">
-                  <DollarSign className="w-8 h-8" />
-                </div>
-                <h3 className="text-2xl font-black mb-4 text-black uppercase">How Much?</h3>
-                <div className="text-4xl font-black text-brand-red mb-4">10%</div>
-                <p className="text-base text-gray-700 leading-relaxed">
-                  By Alabama law, all bail bonds cost 10% of the bail amount. $5,000 bail = $500 fee. No hidden charges.
-                </p>
-              </CardContent>
-            </Card>
+            <AnimatedCard index={0}>
+              <Card className="bg-white border-2 border-transparent hover:border-brand-red transition-all">
+                <CardContent className="p-8 text-center">
+                  <div className="w-16 h-16 rounded-full bg-brand-red text-white flex items-center justify-center mx-auto mb-6">
+                    <DollarSign className="w-8 h-8" />
+                  </div>
+                  <h3 className="text-2xl font-black mb-4 text-black uppercase">How Much?</h3>
+                  <div className="text-4xl font-black text-brand-red mb-4">10%</div>
+                  <p className="text-base text-gray-700 leading-relaxed">
+                    By Alabama law, all bail bonds cost 10% of the bail amount. $5,000 bail = $500 fee. No hidden charges.
+                  </p>
+                </CardContent>
+              </Card>
+            </AnimatedCard>
 
             {/* How Fast? */}
-            <Card className="bg-white border-2 border-transparent hover:border-brand-red transition-all">
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 rounded-full bg-brand-red text-white flex items-center justify-center mx-auto mb-6">
-                  <Clock className="w-8 h-8" />
-                </div>
-                <h3 className="text-2xl font-black mb-4 text-black uppercase">How Fast?</h3>
-                <div className="text-4xl font-black text-brand-red mb-4">2-8 Hours</div>
-                <p className="text-base text-gray-700 leading-relaxed">
-                  Typical release time after we post bond. We stay in communication throughout the process.
-                </p>
-              </CardContent>
-            </Card>
+            <AnimatedCard index={1}>
+              <Card className="bg-white border-2 border-transparent hover:border-brand-red transition-all">
+                <CardContent className="p-8 text-center">
+                  <div className="w-16 h-16 rounded-full bg-brand-red text-white flex items-center justify-center mx-auto mb-6">
+                    <Clock className="w-8 h-8" />
+                  </div>
+                  <h3 className="text-2xl font-black mb-4 text-black uppercase">How Fast?</h3>
+                  <div className="text-4xl font-black text-brand-red mb-4">2-8 Hours</div>
+                  <p className="text-base text-gray-700 leading-relaxed">
+                    Typical release time after we post bond. We stay in communication throughout the process.
+                  </p>
+                </CardContent>
+              </Card>
+            </AnimatedCard>
 
             {/* When? */}
-            <Card className="bg-white border-2 border-transparent hover:border-brand-red transition-all overflow-hidden">
-              <CardContent className="p-0">
-                <div className="relative h-48 overflow-hidden">
-                  <img src={clock247} alt="24/7 emergency bail bond service" className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-black/40"></div>
-                </div>
-                <div className="p-8 text-center">
-                  <h3 className="text-2xl font-black mb-4 text-black uppercase">When?</h3>
-                  <div className="text-4xl font-black text-brand-red mb-4">24/7/365</div>
-                  <p className="text-base text-gray-700 leading-relaxed">
-                    Connie, Toni, or Richard answer calls personally at any hour. No call centers. No waiting.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
+            <AnimatedCard index={2}>
+              <Card className="bg-white border-2 border-transparent hover:border-brand-red transition-all overflow-hidden">
+                <CardContent className="p-0">
+                  <div className="relative h-48 overflow-hidden">
+                    <img src={clock247} alt="24/7 emergency bail bond service" className="w-full h-full object-cover" />
+                    <div className="absolute inset-0 bg-black/40"></div>
+                  </div>
+                  <div className="p-8 text-center">
+                    <h3 className="text-2xl font-black mb-4 text-black uppercase">When?</h3>
+                    <div className="text-4xl font-black text-brand-red mb-4">24/7/365</div>
+                    <p className="text-base text-gray-700 leading-relaxed">
+                      Connie, Toni, or Richard answer calls personally at any hour. No call centers. No waiting.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </AnimatedCard>
           </div>
         </div>
       </Section>
@@ -314,10 +323,12 @@ const Index = () => {
       <Section className="bg-white py-20">
         <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           <div>
-            <img 
+            <AnimatedImage
               src={freedomHandcuffs} 
               alt="Unlocked handcuffs representing freedom and bail bonds" 
               className="w-full h-auto rounded-lg shadow-2xl"
+              scale={true}
+              delay={0.2}
             />
           </div>
           <div>
@@ -350,7 +361,7 @@ const Index = () => {
           />
           <div className="absolute inset-0 bg-black/70"></div>
         </div>
-        <div className="max-w-4xl mx-auto text-center relative z-10">
+        <AnimatedSection className="max-w-4xl mx-auto text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
             When Your Loved One Needs Help, We're Here
           </h2>
@@ -381,7 +392,7 @@ const Index = () => {
               <span className="text-sm text-white">Payment Plans & Credit Cards Accepted</span>
             </div>
           </div>
-        </div>
+        </AnimatedSection>
       </Section>
 
       {/* Why Choose Connie's */}
@@ -427,10 +438,12 @@ const Index = () => {
             </p>
           </div>
           <div>
-            <img 
+            <AnimatedImage
               src={legalGavel} 
               alt="Legal gavel representing justice system and bail bonds" 
               className="w-full h-auto rounded-lg shadow-2xl"
+              scale={true}
+              delay={0.3}
             />
           </div>
         </div>
@@ -479,7 +492,7 @@ const Index = () => {
             {/* Payment Methods */}
             <div className="bg-white p-8 rounded-lg shadow-lg border-2 border-border overflow-hidden">
               <div className="relative h-48 mb-6 -mx-8 -mt-8">
-                <img src={paymentMethods} alt="Credit cards and cash payment methods" className="w-full h-full object-cover" />
+                <AnimatedImage src={paymentMethods} alt="Credit cards and cash payment methods" className="w-full h-full object-cover" delay={0.2} />
                 <div className="absolute inset-0 bg-black/30"></div>
               </div>
               <h3 className="text-2xl font-black mb-6 uppercase text-black">Payment Options</h3>
@@ -511,7 +524,7 @@ const Index = () => {
             {/* Credentials */}
             <div className="bg-black text-white p-8 rounded-lg shadow-lg border-4 border-brand-red overflow-hidden">
               <div className="relative h-48 mb-6 -mx-8 -mt-8">
-                <img src={scalesJustice} alt="Scales of justice representing licensed bail bond services" className="w-full h-full object-cover" />
+                <AnimatedImage src={scalesJustice} alt="Scales of justice representing licensed bail bond services" className="w-full h-full object-cover" delay={0.3} />
                 <div className="absolute inset-0 bg-black/50"></div>
               </div>
               <h3 className="text-2xl font-black mb-6 uppercase">Licensed & Trusted</h3>
