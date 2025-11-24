@@ -304,34 +304,46 @@ const Index = () => {
         </div>
       </Section>
 
-      {/* Why Choose Us - Bullet List */}
-      <Section className="bg-white py-20">
-        <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-          <div>
-            <AnimatedImage
-              src={freedomHandcuffs} 
-              alt="Unlocked handcuffs representing freedom and bail bonds" 
-              className="w-full h-auto rounded-lg shadow-2xl"
-              scale={true}
-              delay={0.2}
-            />
-          </div>
-          <div>
-            <h2 className="text-4xl md:text-5xl font-black mb-12 text-black uppercase tracking-tight">
-              Why Choose <span className="text-brand-red">Connie's</span>
-            </h2>
-            <div className="space-y-4">
-              {whyChooseList.map((item, index) => (
-                <div key={index} className="flex items-start gap-4 p-4 hover:bg-gray-50 transition-colors group">
-                  <div className="w-8 h-8 rounded-full bg-brand-red flex items-center justify-center flex-shrink-0">
-                    <Check className="w-5 h-5 text-white" />
-                  </div>
-                  <span className="text-lg font-medium text-black group-hover:text-brand-red transition-colors">
-                    {item}
-                  </span>
+      {/* Why Choose Connie's */}
+      <Section className="bg-white py-24">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            
+            {/* Left: Image */}
+            <AnimatedSection delay={0.2}>
+              <div className="relative h-[500px] lg:h-[600px] rounded-lg overflow-hidden shadow-2xl">
+                <img 
+                  src={freedomHandcuffs} 
+                  alt="Freedom from custody - professional bail bonds"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-black/20"></div>
+              </div>
+            </AnimatedSection>
+
+            {/* Right: Heading + Checklist */}
+            <AnimatedSection delay={0.4}>
+              <div className="space-y-8">
+                <h2 className="text-4xl md:text-5xl font-black text-black uppercase tracking-tight">
+                  Why Choose <span className="text-brand-red">Connie's</span>
+                </h2>
+                
+                <div className="space-y-4">
+                  {whyChooseList.map((item, index) => (
+                    <div key={index} className="flex items-start gap-4">
+                      <div className="w-8 h-8 rounded-full bg-brand-red flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Check className="w-5 h-5 text-white" />
+                      </div>
+                      <p className="text-lg text-gray-800 font-medium leading-relaxed">
+                        {item}
+                      </p>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
+              </div>
+            </AnimatedSection>
+            
           </div>
         </div>
       </Section>
@@ -380,48 +392,6 @@ const Index = () => {
         </AnimatedSection>
       </Section>
 
-      {/* Why Choose Connie's - Split Screen */}
-      <Section className="bg-white py-24">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            
-            {/* Left: Image */}
-            <AnimatedSection delay={0}>
-              <div className="relative h-[500px] lg:h-[600px] rounded-lg overflow-hidden shadow-2xl">
-                <img 
-                  src={freedomHandcuffs} 
-                  alt="Freedom from custody - professional bail bonds"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-black/20"></div>
-              </div>
-            </AnimatedSection>
-
-            {/* Right: Heading + Checklist */}
-            <AnimatedSection delay={0.2}>
-              <div className="space-y-8">
-                <h2 className="text-4xl md:text-5xl font-black text-black uppercase tracking-tight">
-                  What Makes Us <span className="text-brand-red">Different</span>
-                </h2>
-                
-                <div className="space-y-4">
-                  {whyChooseChecklist.map((item, index) => (
-                    <div key={index} className="flex items-start gap-4">
-                      <div className="w-8 h-8 rounded-full bg-brand-red flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <Check className="w-5 h-5 text-white" />
-                      </div>
-                      <p className="text-lg text-gray-800 font-medium leading-relaxed">
-                        {item}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </AnimatedSection>
-            
-          </div>
-        </div>
-      </Section>
 
       {/* How Our Bail Process Works */}
       <Section className="bg-white py-24">
