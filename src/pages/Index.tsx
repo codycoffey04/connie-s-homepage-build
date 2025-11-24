@@ -22,6 +22,13 @@ import {
 } from "lucide-react";
 import { phoneNumbers, cities } from "@/lib/cityUtils";
 import heroBg from "@/assets/hero-bg.jpg";
+import freedomHandcuffs from "@/assets/freedom-handcuffs.jpg";
+import supportHands from "@/assets/support-hands.jpg";
+import clock247 from "@/assets/24-7-clock.jpg";
+import legalGavel from "@/assets/legal-gavel.jpg";
+import scalesJustice from "@/assets/scales-justice.jpg";
+import alabamaMap from "@/assets/alabama-map.jpg";
+import paymentMethods from "@/assets/payment-methods.jpg";
 
 const Index = () => {
 
@@ -284,16 +291,19 @@ const Index = () => {
             </Card>
 
             {/* When? */}
-            <Card className="bg-white border-2 border-transparent hover:border-brand-red transition-all">
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 rounded-full bg-brand-red text-white flex items-center justify-center mx-auto mb-6">
-                  <Phone className="w-8 h-8" />
+            <Card className="bg-white border-2 border-transparent hover:border-brand-red transition-all overflow-hidden">
+              <CardContent className="p-0">
+                <div className="relative h-48 overflow-hidden">
+                  <img src={clock247} alt="24/7 emergency bail bond service" className="w-full h-full object-cover" />
+                  <div className="absolute inset-0 bg-black/40"></div>
                 </div>
-                <h3 className="text-2xl font-black mb-4 text-black uppercase">When?</h3>
-                <div className="text-4xl font-black text-brand-red mb-4">24/7/365</div>
-                <p className="text-base text-gray-700 leading-relaxed">
-                  Connie, Toni, or Richard answer calls personally at any hour. No call centers. No waiting.
-                </p>
+                <div className="p-8 text-center">
+                  <h3 className="text-2xl font-black mb-4 text-black uppercase">When?</h3>
+                  <div className="text-4xl font-black text-brand-red mb-4">24/7/365</div>
+                  <p className="text-base text-gray-700 leading-relaxed">
+                    Connie, Toni, or Richard answer calls personally at any hour. No call centers. No waiting.
+                  </p>
+                </div>
               </CardContent>
             </Card>
           </div>
@@ -302,30 +312,49 @@ const Index = () => {
 
       {/* Why Choose Us - Bullet List */}
       <Section className="bg-white py-20">
-        <h2 className="text-4xl md:text-5xl font-black mb-12 text-center text-black uppercase tracking-tight">
-          Why Choose <span className="text-brand-red">Connie's</span>
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl mx-auto">
-          {whyChooseList.map((item, index) => (
-            <div key={index} className="flex items-start gap-4 p-4 hover:bg-gray-50 transition-colors group">
-              <div className="w-8 h-8 rounded-full bg-brand-red flex items-center justify-center flex-shrink-0">
-                <Check className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-lg font-medium text-black group-hover:text-brand-red transition-colors">
-                {item}
-              </span>
+        <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+          <div>
+            <img 
+              src={freedomHandcuffs} 
+              alt="Unlocked handcuffs representing freedom and bail bonds" 
+              className="w-full h-auto rounded-lg shadow-2xl"
+            />
+          </div>
+          <div>
+            <h2 className="text-4xl md:text-5xl font-black mb-12 text-black uppercase tracking-tight">
+              Why Choose <span className="text-brand-red">Connie's</span>
+            </h2>
+            <div className="space-y-4">
+              {whyChooseList.map((item, index) => (
+                <div key={index} className="flex items-start gap-4 p-4 hover:bg-gray-50 transition-colors group">
+                  <div className="w-8 h-8 rounded-full bg-brand-red flex items-center justify-center flex-shrink-0">
+                    <Check className="w-5 h-5 text-white" />
+                  </div>
+                  <span className="text-lg font-medium text-black group-hover:text-brand-red transition-colors">
+                    {item}
+                  </span>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </Section>
 
       {/* When Your Loved One Needs Help */}
-      <Section id="about">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
+      <Section id="about" className="relative overflow-hidden">
+        <div className="absolute inset-0">
+          <img 
+            src={supportHands} 
+            alt="Hands reaching out in support representing compassionate bail bond service" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/70"></div>
+        </div>
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
             When Your Loved One Needs Help, We're Here
           </h2>
-          <div className="text-lg leading-relaxed space-y-4 text-foreground/90">
+          <div className="text-lg leading-relaxed space-y-4 text-white/90">
             <p>
               We understand this is a difficult time. Whether it's 2 AM on a Sunday or a holiday afternoon, Connie's Bail Bonding answers immediately. No call centers. No delays. Just Connie, Toni, and Richard—ready to help your family right now.
             </p>
@@ -333,23 +362,23 @@ const Index = () => {
           <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-left">
             <div className="flex items-start gap-2">
               <Star className="w-5 h-5 text-brand-red flex-shrink-0 mt-1" />
-              <span className="text-sm">Five-Star Google Reviews</span>
+              <span className="text-sm text-white">Five-Star Google Reviews</span>
             </div>
             <div className="flex items-start gap-2">
               <Check className="w-5 h-5 text-brand-red flex-shrink-0 mt-1" />
-              <span className="text-sm">Licensed Alabama Bail Bond Agents</span>
+              <span className="text-sm text-white">Licensed Alabama Bail Bond Agents</span>
             </div>
             <div className="flex items-start gap-2">
               <Check className="w-5 h-5 text-brand-red flex-shrink-0 mt-1" />
-              <span className="text-sm">No Hidden Fees—Only the State-Required 10%</span>
+              <span className="text-sm text-white">No Hidden Fees—Only the State-Required 10%</span>
             </div>
             <div className="flex items-start gap-2">
               <Check className="w-5 h-5 text-brand-red flex-shrink-0 mt-1" />
-              <span className="text-sm">Available 24 Hours a Day, 7 Days a Week</span>
+              <span className="text-sm text-white">Available 24 Hours a Day, 7 Days a Week</span>
             </div>
             <div className="flex items-start gap-2">
               <Check className="w-5 h-5 text-brand-red flex-shrink-0 mt-1" />
-              <span className="text-sm">Payment Plans & Credit Cards Accepted</span>
+              <span className="text-sm text-white">Payment Plans & Credit Cards Accepted</span>
             </div>
           </div>
         </div>
@@ -388,9 +417,23 @@ const Index = () => {
 
       {/* How Our Bail Process Works */}
       <Section className="bg-white py-24">
-        <h2 className="text-4xl md:text-5xl font-black mb-16 text-center text-black uppercase tracking-tight">
-          How It <span className="text-brand-red">Works</span>
-        </h2>
+        <div className="grid md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto mb-16">
+          <div>
+            <h2 className="text-4xl md:text-5xl font-black mb-6 text-black uppercase tracking-tight">
+              How It <span className="text-brand-red">Works</span>
+            </h2>
+            <p className="text-lg text-gray-700 mb-8">
+              We've streamlined the bail bond process to get your loved one released as quickly as possible. Here's what happens when you call us.
+            </p>
+          </div>
+          <div>
+            <img 
+              src={legalGavel} 
+              alt="Legal gavel representing justice system and bail bonds" 
+              className="w-full h-auto rounded-lg shadow-2xl"
+            />
+          </div>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
           {processSteps.map((step, index) => (
             <div key={index} className="text-center group">
@@ -434,7 +477,11 @@ const Index = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12">
             {/* Payment Methods */}
-            <div className="bg-white p-8 rounded-lg shadow-lg border-2 border-border">
+            <div className="bg-white p-8 rounded-lg shadow-lg border-2 border-border overflow-hidden">
+              <div className="relative h-48 mb-6 -mx-8 -mt-8">
+                <img src={paymentMethods} alt="Credit cards and cash payment methods" className="w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-black/30"></div>
+              </div>
               <h3 className="text-2xl font-black mb-6 uppercase text-black">Payment Options</h3>
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
@@ -462,7 +509,11 @@ const Index = () => {
             </div>
 
             {/* Credentials */}
-            <div className="bg-black text-white p-8 rounded-lg shadow-lg border-4 border-brand-red">
+            <div className="bg-black text-white p-8 rounded-lg shadow-lg border-4 border-brand-red overflow-hidden">
+              <div className="relative h-48 mb-6 -mx-8 -mt-8">
+                <img src={scalesJustice} alt="Scales of justice representing licensed bail bond services" className="w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-black/50"></div>
+              </div>
               <h3 className="text-2xl font-black mb-6 uppercase">Licensed & Trusted</h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
@@ -501,12 +552,21 @@ const Index = () => {
 
       {/* Areas We Serve */}
       <Section className="bg-muted py-16">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-black">
-          Areas We Serve in Northeast Alabama
-        </h2>
-        <p className="text-center text-lg text-foreground/80 mb-12 max-w-3xl mx-auto">
-          Providing 24/7 bail bond services throughout DeKalb and Cherokee Counties
-        </p>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">
+            Areas We Serve in Northeast Alabama
+          </h2>
+          <p className="text-lg text-foreground/80 mb-8 max-w-3xl mx-auto">
+            Providing 24/7 bail bond services throughout DeKalb and Cherokee Counties
+          </p>
+          <div className="max-w-md mx-auto mb-8">
+            <img 
+              src={alabamaMap} 
+              alt="Alabama map showing DeKalb and Cherokee counties service areas" 
+              className="w-full h-auto rounded-lg shadow-xl"
+            />
+          </div>
+        </div>
         
         {/* DeKalb County */}
         <div className="max-w-6xl mx-auto mb-12">
