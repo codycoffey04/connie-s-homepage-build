@@ -8,6 +8,7 @@ import { FAQList } from "@/components/FAQItem";
 import { phoneNumbers } from "@/lib/cityUtils";
 import { SEO } from "@/components/SEO";
 import { getLocalBusinessSchema, getBreadcrumbSchema, getFAQSchema } from "@/lib/schemaUtils";
+import contactHeroBg from "@/assets/contact-hero-bg.jpg";
 
 const serviceAreas = {
   dekalb: [
@@ -88,30 +89,56 @@ const Contact = () => {
       />
       <Navigation />
       
-      {/* Hero Section */}
-      <Section className="pt-24 md:pt-32">
-        <div className="text-center max-w-4xl mx-auto space-y-6">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
-            Contact Connie's Bail Bonding
-          </h1>
-          <h2 className="text-2xl md:text-3xl font-semibold text-primary">
-            We're Available 24/7—Call Anytime
-          </h2>
-          <p className="text-lg md:text-xl text-foreground/80 leading-relaxed max-w-3xl mx-auto">
-            Arrests don't follow business hours, and neither do we. Whether it's 2 AM on a Sunday or a holiday afternoon, Connie's Bail Bonding answers immediately. No call centers. No delays. Just Connie, Toni, and Richard—ready to help your family right now.
-          </p>
+      {/* Hero Section - Full Screen with Background */}
+      <section 
+        className="relative min-h-[85vh] bg-black flex items-center bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${contactHeroBg})` }}
+      >
+        <div className="absolute inset-0 bg-black/50" />
+        
+        <div className="relative container mx-auto px-4 md:px-6 max-w-7xl z-10">
+          <div className="max-w-3xl">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 text-white uppercase tracking-tighter leading-none">
+              Contact<br />
+              Connie's<br />
+              <span className="text-brand-red">Bail Bonding</span>
+            </h1>
+            
+            <p className="text-2xl md:text-3xl mb-8 text-white font-bold">
+              We're Available 24/7—Call Anytime
+            </p>
+            
+            <p className="text-lg md:text-xl mb-10 text-white/90 max-w-xl">
+              No call centers. No delays. Just Connie, Toni, and Richard—ready to help your family right now.
+            </p>
+          </div>
         </div>
-
-        <div className="mt-12 space-y-4 max-w-2xl mx-auto">
-          <h3 className="text-2xl font-bold text-center mb-6">Call Us Immediately</h3>
-          <PhoneButton name={phoneNumbers.richard.name} number={phoneNumbers.richard.number} variant="primary" />
-          <PhoneButton name={phoneNumbers.connie.name} number={phoneNumbers.connie.number} variant="primary" />
-          <PhoneButton name={phoneNumbers.toni.name} number={phoneNumbers.toni.number} variant="primary" />
-          <p className="text-center text-foreground/70 italic mt-6">
-            We answer our own phones 24 hours a day, 7 days a week, 365 days a year.
-          </p>
+        
+        {/* Slim Contact Banner - Bottom of Hero */}
+        <div className="absolute bottom-0 left-0 right-0 bg-black/90 backdrop-blur-sm border-t-4 border-brand-red z-10">
+          <div className="container mx-auto px-4 py-4">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+              <p className="text-white/70 text-sm uppercase tracking-wide font-semibold">
+                Available 24/7 - Call Any Team Member:
+              </p>
+              <div className="flex flex-wrap gap-4 md:gap-6 justify-center">
+                <a href="tel:2566012041" className="text-white hover:text-brand-red transition-colors font-bold flex items-center gap-2">
+                  <Phone className="w-4 h-4" />
+                  Richard: 256-601-2041
+                </a>
+                <a href="tel:2566302824" className="text-white hover:text-brand-red transition-colors font-bold flex items-center gap-2">
+                  <Phone className="w-4 h-4" />
+                  Connie: 256-630-2824
+                </a>
+                <a href="tel:2564400822" className="text-white hover:text-brand-red transition-colors font-bold flex items-center gap-2">
+                  <Phone className="w-4 h-4" />
+                  Toni: 256-440-0822
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-      </Section>
+      </section>
 
       {/* Office Location with Interactive Map */}
       <Section variant="muted">
