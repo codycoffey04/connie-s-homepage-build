@@ -4,6 +4,7 @@ import { PhoneButton } from "@/components/PhoneButton";
 import { Section } from "@/components/Section";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { AnimatedImage } from "@/components/AnimatedImage";
+import { AnimatedCard } from "@/components/AnimatedCard";
 import { TestimonialCard } from "@/components/TestimonialCard";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -23,6 +24,8 @@ import rainsvilleHeroBg from "@/assets/rainsville-hero-bg.jpg";
 import clockImage from "@/assets/24-7-clock.jpg";
 import legalGavel from "@/assets/legal-gavel.jpg";
 import scalesJustice from "@/assets/scales-justice.jpg";
+import paymentMethods from "@/assets/payment-methods.jpg";
+import howFastLightning from "@/assets/how-fast-lightning.jpg";
 
 const Rainsville = () => {
   const features = [
@@ -175,6 +178,75 @@ const Rainsville = () => {
           </div>
         </div>
       </section>
+
+      {/* Quick Answers Section - AEO Optimized */}
+      <Section className="bg-gradient-to-b from-black to-gray-900 py-16 border-t-4 border-brand-red">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-black text-center text-white mb-12 uppercase">
+            Quick Answers — <span className="text-brand-red">What You Need to Know Right Now</span>
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            {/* HOW MUCH? Card */}
+            <AnimatedCard index={0}>
+              <Card className="bg-white border-2 border-transparent hover:border-brand-red transition-all overflow-hidden">
+                <CardContent className="p-0">
+                  <div className="relative h-48 overflow-hidden">
+                    <img src={paymentMethods} alt="Payment methods and pricing transparency" className="w-full h-full object-cover" />
+                    <div className="absolute inset-0 bg-black/40"></div>
+                  </div>
+                  <div className="p-8 text-center">
+                    <h3 className="text-2xl font-black mb-4 text-black uppercase">How Much?</h3>
+                    <div className="text-4xl font-black text-brand-red mb-4">10%</div>
+                    <p className="text-base text-gray-700 leading-relaxed">
+                      By Alabama law, all bail bonds cost 10% of the bail amount. $5,000 bail = $500 fee. No hidden charges.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </AnimatedCard>
+
+            {/* HOW FAST? Card - Rainsville Specific */}
+            <AnimatedCard index={1}>
+              <Card className="bg-white border-2 border-transparent hover:border-brand-red transition-all overflow-hidden">
+                <CardContent className="p-0">
+                  <div className="relative h-48 overflow-hidden">
+                    <img src={howFastLightning} alt="Fast bail bond service" className="w-full h-full object-cover" />
+                    <div className="absolute inset-0 bg-black/40"></div>
+                  </div>
+                  <div className="p-8 text-center">
+                    <h3 className="text-2xl font-black mb-4 text-black uppercase">How Fast?</h3>
+                    <div className="text-4xl font-black text-brand-red mb-4">2-8 Hours</div>
+                    <p className="text-base text-gray-700 leading-relaxed">
+                      Typical release time after we post bond. We stay in communication throughout the process.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </AnimatedCard>
+
+            {/* WHEN? Card */}
+            <AnimatedCard index={2}>
+              <Card className="bg-white border-2 border-transparent hover:border-brand-red transition-all overflow-hidden">
+                <CardContent className="p-0">
+                  <div className="relative h-48 overflow-hidden">
+                    <img src={clockImage} alt="24/7 emergency bail bond service" className="w-full h-full object-cover" />
+                    <div className="absolute inset-0 bg-black/40"></div>
+                  </div>
+                  <div className="p-8 text-center">
+                    <h3 className="text-2xl font-black mb-4 text-black uppercase">When?</h3>
+                    <div className="text-4xl font-black text-brand-red mb-4">24/7/365</div>
+                    <p className="text-base text-gray-700 leading-relaxed">
+                      Connie, Toni, or Richard answer calls personally at any hour. No call centers. No waiting.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </AnimatedCard>
+
+          </div>
+        </div>
+      </Section>
 
       {/* Trust Section */}
       <Section variant="muted">
