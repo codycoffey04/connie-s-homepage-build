@@ -198,3 +198,41 @@ export const getFAQSchema = (faqs: { question: string; answer: string }[]) => ({
     }
   }))
 });
+
+export const getHowToSchema = () => ({
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Get a Bail Bond in Alabama",
+  "description": "Step-by-step guide to getting a bail bond in Fort Payne and DeKalb County, Alabama",
+  "totalTime": "PT2H",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Call Us Immediately",
+      "text": "Contact Connie's Bail Bonding at 256-601-2041, 256-630-2824, or 256-440-0822. We answer 24/7/365.",
+      "url": "https://conniesbailbonding.com/#call"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Provide Information",
+      "text": "Tell us the inmate's name, jail location, and charges. We'll look up their bail amount and explain the process.",
+      "url": "https://conniesbailbonding.com/#information"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Complete Paperwork",
+      "text": "We'll meet you to complete the simple paperwork. Bring a valid ID and discuss payment options including flexible payment plans.",
+      "url": "https://conniesbailbonding.com/#paperwork"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Post Bond & Release",
+      "text": "We post the bond at the jail. Release typically takes 1-8 hours in Fort Payne, 2-8 hours in other DeKalb County cities.",
+      "url": "https://conniesbailbonding.com/#release"
+    }
+  ]
+});
