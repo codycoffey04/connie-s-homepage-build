@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Facebook, MapPin } from "lucide-react";
+import { Phone, Facebook, MapPin, Clock } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -33,6 +33,15 @@ export const Footer = () => {
                 <MapPin className="h-4 w-4 text-brand-red flex-shrink-0 mt-0.5" />
                 <span>2700 Jordan Rd SW<br />Fort Payne, AL 35967</span>
               </a>
+              
+              {/* Business Hours */}
+              <div className="flex items-start gap-2 pt-2">
+                <Clock className="h-4 w-4 text-brand-red flex-shrink-0 mt-0.5" />
+                <div>
+                  <span className="block font-semibold text-white">Open 24/7</span>
+                  <span className="text-white/70 text-sm">Every Day, Including Holidays</span>
+                </div>
+              </div>
             </div>
           </div>
 
