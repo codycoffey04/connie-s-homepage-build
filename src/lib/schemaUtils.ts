@@ -350,3 +350,52 @@ export const getItemListSchema = (items: { name: string; description: string; ur
     }
   }))
 });
+
+export const getArticleSchema = (
+  headline: string,
+  description: string,
+  url: string,
+  datePublished: string = "2024-01-15",
+  dateModified: string = "2025-11-25"
+) => ({
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": headline,
+  "description": description,
+  "author": {
+    "@type": "Organization",
+    "name": "Connie's Bail Bonding"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Connie's Bail Bonding",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://conniesbailbonding.com/logo.png"
+    }
+  },
+  "datePublished": datePublished,
+  "dateModified": dateModified,
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": `https://conniesbailbonding.com${url}`
+  }
+});
+
+export const getCustomHowToSchema = (
+  name: string,
+  description: string,
+  steps: { name: string; text: string }[]
+) => ({
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": name,
+  "description": description,
+  "totalTime": "PT8H",
+  "step": steps.map((step, index) => ({
+    "@type": "HowToStep",
+    "position": index + 1,
+    "name": step.name,
+    "text": step.text
+  }))
+});

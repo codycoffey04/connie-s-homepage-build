@@ -17,6 +17,8 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import FAQ from "./pages/FAQ";
 import BailBondsGuide from "./pages/BailBondsGuide";
+import HowBailWorksAlabama from "./pages/HowBailWorksAlabama";
+import BailCostsAlabama from "./pages/BailCostsAlabama";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -42,6 +44,8 @@ const App = () => (
             <Route path="/contact" element={<Contact />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/bail-bonds-guide" element={<BailBondsGuide />} />
+            <Route path="/bail-bonds-guide/how-bail-works-alabama" element={<HowBailWorksAlabama />} />
+            <Route path="/bail-bonds-guide/bail-costs-alabama" element={<BailCostsAlabama />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
