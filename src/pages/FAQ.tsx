@@ -11,6 +11,18 @@ const generalFaqs = [
     answer: "Alabama law sets bail bond fees at 10% of the total bail amount. This rate is required by state law—every licensed bail bondsman in Alabama charges the same percentage.\n\nExamples:\n• $1,000 bail = $100 bond fee\n• $5,000 bail = $500 bond fee\n• $10,000 bail = $1,000 bond fee\n\nThis 10% fee is non-refundable, even if charges are dropped or the defendant is found not guilty. That's because you're paying for the bail bond service, not the bail itself."
   },
   {
+    question: "Can I get a bail bond with bad credit?",
+    answer: "Yes. Bad credit does not prevent you from getting a bail bond. We work with families in all financial situations.\n\nWhile we may ask about your financial situation to set up payment plans, we don't run credit checks like a bank would. Our focus is on helping you get your loved one home, not judging your credit score.\n\nIf you're concerned about affording the bond fee, ask us about flexible payment plans when you call."
+  },
+  {
+    question: "How do I find out someone's bail amount in Fort Payne?",
+    answer: "Call us at 256-601-2041 and we'll look it up for you immediately.\n\nAll we need is the person's full legal name and which jail they're in (DeKalb County Detention Center or Cherokee County Detention Center). We have direct access to jail booking systems and can get you the bail amount, charges, and booking information within minutes.\n\nYou can also call the jail directly:\n• DeKalb County Detention Center: 256-845-3851\n• Cherokee County Detention Center: 256-927-3643\n\nBut calling us is faster—we'll not only get the information but also explain your options right away."
+  },
+  {
+    question: "What happens if you miss court after posting bail?",
+    answer: "Missing a court date after posting bail has serious consequences:\n\n1. **Bail Forfeiture:** The court keeps the full bail amount (not just the 10% you paid us)\n2. **Warrant Issued:** A bench warrant is issued for your arrest\n3. **Financial Responsibility:** The person who signed the bond becomes responsible for the full bail amount\n4. **Additional Charges:** You may face additional criminal charges for failure to appear\n\nThis is why attending all court dates is absolutely critical. We provide court date reminders and follow-up to help you stay compliant.\n\nIf you have a legitimate emergency (medical issue, family crisis), call us immediately so we can help communicate with the court and try to resolve the situation before a warrant is issued."
+  },
+  {
     question: "Are there any hidden fees?",
     answer: "No. We charge only the state-required 10% premium—nothing extra. No administrative fees, no processing fees, no surprise charges. What we quote you on the phone is exactly what you'll pay.\n\nSome bail bond companies add extra fees on top of the 10%. We don't. Transparency is one of our core values."
   },
@@ -57,6 +69,14 @@ const processFaqs = [
 
 const localFaqs = [
   {
+    question: "Where is the DeKalb County jail located?",
+    answer: "The DeKalb County Detention Center is located at:\n\n**2801 Jordan Rd SW, Fort Payne, AL 35967**\n\nOur office is right next door at 2700 Jordan Rd SW, so we can be at the jail within 2 minutes of your call.\n\nIf you need to visit someone or drop off items, the jail is just off Highway 35 in Fort Payne. There's parking available on-site."
+  },
+  {
+    question: "How long does it take to bail someone out of DeKalb County jail?",
+    answer: "In Fort Payne (DeKalb County Detention Center), typical release time is **1-8 hours** after we post the bond.\n\nFor other DeKalb County cities (Rainsville, Fyffe, Henagar, Valley Head, Pisgah), release typically takes **2-8 hours**.\n\nFor Cherokee County (Centre), release typically takes **2-10 hours**.\n\nFactors that affect timing:\n• How busy the jail is (late night/early morning is usually faster)\n• Shift changes (releases may pause during shift changes)\n• Booking backlog (weekends can be busier)\n• Administrative processing time\n\nWe stay in communication with you throughout the entire process so you know exactly what's happening."
+  },
+  {
     question: "What areas do you serve?",
     answer: "We serve all of DeKalb County and Cherokee County in Northeast Alabama, including:\n\nDeKalb County: Fort Payne, Rainsville, Henagar, Fyffe, Valley Head, Pisgah, and all surrounding communities\n\nCherokee County: Centre and all surrounding communities\n\nIf your loved one is arrested anywhere in these counties, we can help."
   },
@@ -71,6 +91,14 @@ const localFaqs = [
 ];
 
 const paymentFaqs = [
+  {
+    question: "Do you offer payment plans for bail bonds?",
+    answer: "Yes. We offer flexible payment plans that work with your budget.\n\nHere's how it works:\n• We post the bond immediately—your loved one doesn't wait for you to pay in full\n• You pay a down payment (amount varies based on the bond)\n• We set up installment payments over time\n• No interest charges—just the state-required 10% fee\n\nEvery family's situation is different, so we customize payment arrangements based on what you can afford. Call us at 256-601-2041 to discuss your specific situation—we'll work something out."
+  },
+  {
+    question: "Can I use collateral instead of cash for a bail bond?",
+    answer: "For most standard bail bonds (under $50,000), collateral is not required—just the 10% fee.\n\nFor higher bail amounts or special situations, we may accept collateral such as:\n• Vehicle titles (car, truck, motorcycle)\n• Real estate/property deeds\n• Jewelry or valuable assets\n\nCollateral serves as additional security to guarantee the defendant will appear in court. If all court appearances are made, your collateral is returned in full.\n\nCall us to discuss whether collateral would be needed for your specific situation."
+  },
   {
     question: "Can I pay with a credit card?",
     answer: "Yes. We accept all major credit cards (Visa, Mastercard, Discover, American Express). This makes it easier to get help quickly, even if you don't have cash on hand."
@@ -104,8 +132,27 @@ const legalFaqs = [
   }
 ];
 
+const chargeSpecificFaqs = [
+  {
+    question: "How much does a DUI bail bond cost in Alabama?",
+    answer: "DUI bail bonds in Alabama cost 10% of the bail amount, just like any other charge.\n\nTypical DUI bail amounts:\n• First-time DUI (no injuries): $500-$2,500\n• Second DUI: $2,500-$5,000\n• DUI with injury: $5,000-$25,000\n• Felony DUI: $10,000+\n\nExamples:\n• $1,000 DUI bail = $100 bond fee\n• $5,000 DUI bail = $500 bond fee\n\nWe handle DUI bail bonds 24/7 throughout DeKalb and Cherokee Counties. Call 256-601-2041 immediately after arrest—the sooner you call, the sooner we can start the release process."
+  },
+  {
+    question: "Can you get bail for a felony charge in Alabama?",
+    answer: "Yes, bail is available for most felony charges in Alabama.\n\nHowever, under Aniah's Law (passed in 2022), judges can deny bail entirely for certain violent felonies such as:\n• Murder\n• First-degree kidnapping\n• First-degree rape\n• First-degree robbery\n• Certain sexual offenses involving minors\n\nFor all other felony charges (drug possession, theft, burglary, assault, fraud, etc.), bail is available and we can help.\n\nFelony bail amounts are typically higher ($10,000-$100,000+), but we offer payment plans to make it manageable. Call us to discuss your specific situation."
+  },
+  {
+    question: "What is the bail amount for domestic violence in Alabama?",
+    answer: "Domestic violence bail amounts in Alabama vary based on severity:\n\n• Third-degree domestic violence (misdemeanor): $500-$2,500\n• Second-degree domestic violence (misdemeanor): $1,000-$5,000\n• First-degree domestic violence (felony): $5,000-$25,000+\n\nFactors that affect bail:\n• Prior domestic violence convictions\n• Severity of injuries\n• Whether weapons were involved\n• Violation of protective orders\n\nWe handle domestic violence bail bonds throughout DeKalb and Cherokee Counties. Alabama law requires a 10% bond fee regardless of the charge."
+  },
+  {
+    question: "How does bail work for drug charges in Alabama?",
+    answer: "Drug charge bail in Alabama depends on the type and amount:\n\n**Marijuana possession:**\n• Personal use amount: $500-$2,500 bail\n• Larger amounts: $5,000-$25,000 bail\n\n**Controlled substances (meth, cocaine, pills):**\n• Possession: $2,500-$10,000 bail\n• Trafficking: $25,000-$100,000+ bail\n\nAll bail bonds cost 10% of the bail amount. We offer payment plans for higher bail amounts.\n\nWe handle drug-related bail bonds 24/7. Call 256-601-2041 to discuss your specific charges and bail options."
+  }
+];
+
 const FAQ = () => {
-  const allFaqs = [...generalFaqs, ...processFaqs, ...localFaqs, ...paymentFaqs, ...legalFaqs];
+  const allFaqs = [...generalFaqs, ...processFaqs, ...localFaqs, ...paymentFaqs, ...legalFaqs, ...chargeSpecificFaqs];
   
   return (
     <div className="min-h-screen bg-background">
@@ -178,6 +225,12 @@ const FAQ = () => {
             >
               Legal & Compliance
             </a>
+            <a 
+              href="#charges" 
+              className="px-4 py-2 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors text-sm font-semibold"
+            >
+              By Charge Type
+            </a>
           </nav>
         </div>
       </Section>
@@ -229,6 +282,16 @@ const FAQ = () => {
             Legal & Compliance Questions
           </h2>
           <FAQList faqs={legalFaqs} />
+        </div>
+      </Section>
+
+      {/* Charge-Specific Questions */}
+      <Section variant="default" id="charges">
+        <div className="max-w-4xl mx-auto space-y-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center">
+            Bail Bonds by Charge Type
+          </h2>
+          <FAQList faqs={chargeSpecificFaqs} />
         </div>
       </Section>
 
