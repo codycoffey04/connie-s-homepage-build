@@ -125,7 +125,7 @@ const CherokeeCountyJailGuide = () => {
           {/* Answer Box */}
           <AnswerBox 
             question="How do I post bail at Cherokee County Jail?"
-            answer="Call Connie's Bail Bonding 24/7 at 256-601-2041, 256-523-7685, or 256-997-9932. Provide the inmate's name and charges. We post bonds at Cherokee County Detention Center (110 Cedar Bluff Road, Centre, AL). Release typically takes 2-10 hours. Located about 30 minutes from Fort Payne. Costs 10% premium plus state fees."
+            answer="Call Connie's Bail Bonding 24/7 at 256-601-2041, 256-630-2824, or 256-440-0822. Provide the inmate's name and charges. We post bonds at Cherokee County Detention Center (110 Cedar Bluff Road, Centre, AL). Release typically takes 2-10 hours. Located about 30 minutes from Fort Payne. Costs 10% premium plus state fees."
           />
         </AnimatedSection>
 

@@ -128,14 +128,14 @@ export const getLocalBusinessSchema = (city?: string) => ({
     },
     {
       "@type": "ContactPoint",
-      "telephone": "256-523-7685",
+      "telephone": "256-630-2824",
       "contactType": "customer service",
       "availableLanguage": "English",
       "areaServed": "US-AL"
     },
     {
       "@type": "ContactPoint",
-      "telephone": "256-997-9932",
+      "telephone": "256-440-0822",
       "contactType": "customer service",
       "availableLanguage": "English",
       "areaServed": "US-AL"

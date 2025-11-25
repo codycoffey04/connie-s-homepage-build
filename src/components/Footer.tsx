@@ -14,13 +14,13 @@ export const Footer = () => {
                 <Phone className="h-4 w-4 text-brand-red" />
                 <span>Richard: 256-601-2041</span>
               </a>
-              <a href="tel:256-523-7685" className="flex items-center gap-2 hover:text-white transition-colors">
+              <a href="tel:256-630-2824" className="flex items-center gap-2 hover:text-white transition-colors">
                 <Phone className="h-4 w-4 text-brand-red" />
-                <span>Connie: 256-523-7685</span>
+                <span>Connie: 256-630-2824</span>
               </a>
-              <a href="tel:256-997-9932" className="flex items-center gap-2 hover:text-white transition-colors">
+              <a href="tel:256-440-0822" className="flex items-center gap-2 hover:text-white transition-colors">
                 <Phone className="h-4 w-4 text-brand-red" />
-                <span>Toni: 256-997-9932</span>
+                <span>Toni: 256-440-0822</span>
               </a>
               
               {/* Business Address */}
