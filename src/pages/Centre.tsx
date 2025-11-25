@@ -771,6 +771,7 @@ const Centre = () => {
                 <Link to="/about" className="hover:text-brand-red transition-colors font-semibold uppercase text-sm">About</Link>
                 <Link to="/contact" className="hover:text-brand-red transition-colors font-semibold uppercase text-sm">Contact</Link>
                 <Link to="/faq" className="hover:text-brand-red transition-colors font-semibold uppercase text-sm">FAQ</Link>
+                <Link to="/bail-bonds-guide" className="hover:text-brand-red transition-colors font-semibold uppercase text-sm">Bail Bonds Guide</Link>
               </nav>
             </div>
             <div>
