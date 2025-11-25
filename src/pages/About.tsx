@@ -232,6 +232,70 @@ const About = () => {
         </div>
       </Section>
 
+      {/* Professional Licensing & Compliance Section */}
+      <Section variant="muted">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-10 text-center">
+            Professional Licensing & Compliance
+          </h2>
+          
+          <div className="bg-white border-2 border-primary/20 rounded-lg p-8 space-y-6">
+            <div className="text-center mb-8">
+              <Shield className="w-16 h-16 text-primary mx-auto mb-4" />
+              <h3 className="text-2xl font-bold text-foreground mb-2">
+                Fully Licensed by the State of Alabama
+              </h3>
+              <p className="text-muted-foreground">
+                All agents are licensed, bonded, and insured under Alabama law
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="space-y-4">
+                <h4 className="font-bold text-lg text-foreground flex items-center gap-2">
+                  <BookOpen className="w-5 h-5 text-primary" />
+                  Regulatory Authority
+                </h4>
+                <ul className="space-y-2 text-foreground/80">
+                  <li>• Alabama Professional Bail Bonding Board</li>
+                  <li>• Alabama Department of Insurance</li>
+                  <li>• Regulated under Alabama Code Title 15-13</li>
+                </ul>
+                <a 
+                  href="https://www.aldoi.gov/Licensees/LicenseSearch.aspx" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-primary hover:underline font-semibold text-sm"
+                >
+                  Verify Our License →
+                </a>
+              </div>
+              
+              <div className="space-y-4">
+                <h4 className="font-bold text-lg text-foreground flex items-center gap-2">
+                  <Check className="w-5 h-5 text-primary" />
+                  Requirements Met
+                </h4>
+                <ul className="space-y-2 text-foreground/80">
+                  <li>• State Background Checks: Passed</li>
+                  <li>• Professional Liability Insurance: Active</li>
+                  <li>• Continuing Education: Current</li>
+                  <li>• Annual License Renewal: Compliant</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div className="border-t pt-6 mt-6">
+              <p className="text-sm text-foreground/70 text-center">
+                <strong>Legal Notice:</strong> All bail bond fees in Alabama are set by state law at 10% of the bail amount (Alabama Code § 15-13-114). 
+                This rate is uniform across all licensed bail bond agents in the state. We comply with all Alabama Department of Insurance regulations 
+                and Alabama Professional Bail Bonding Board requirements.
+              </p>
+            </div>
+          </div>
+        </div>
+      </Section>
+
       {/* Why Families Choose Us Section */}
       <Section variant="muted">
         <div className="max-w-6xl mx-auto">

@@ -37,6 +37,9 @@ export const Navigation = () => {
             <Link to="/contact" className="text-sm font-bold text-white uppercase tracking-wide hover:text-brand-red transition-colors">
               Contact
             </Link>
+            <Link to="/faq" className="text-sm font-bold text-white uppercase tracking-wide hover:text-brand-red transition-colors">
+              FAQ
+            </Link>
             
             <NavigationMenu>
               <NavigationMenuList>
@@ -99,6 +102,13 @@ export const Navigation = () => {
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Contact
+                </Link>
+                <Link 
+                  to="/faq" 
+                  className="text-lg font-bold text-white hover:text-brand-red transition-colors uppercase"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  FAQ
                 </Link>
                 
                 <div className="border-t border-white/20 pt-4 mt-2">

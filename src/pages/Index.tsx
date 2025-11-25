@@ -327,6 +327,32 @@ const Index = () => {
             {/* Right: Heading + Checklist */}
             <AnimatedSection delay={0.4}>
               <div className="space-y-8">
+                {/* Years of Experience Badge */}
+                <div className="bg-primary/10 border-2 border-primary rounded-lg p-6 mb-8">
+                  <div className="flex items-center justify-center gap-4 md:gap-8 flex-wrap">
+                    <div className="text-center">
+                      <div className="text-5xl font-black text-primary mb-2">6+</div>
+                      <div className="text-sm font-semibold text-foreground uppercase tracking-wide">
+                        Years Serving<br />Northeast Alabama
+                      </div>
+                    </div>
+                    <div className="h-16 w-px bg-border hidden md:block"></div>
+                    <div className="text-center">
+                      <div className="text-5xl font-black text-primary mb-2">500+</div>
+                      <div className="text-sm font-semibold text-foreground uppercase tracking-wide">
+                        Families<br />Helped
+                      </div>
+                    </div>
+                    <div className="h-16 w-px bg-border hidden md:block"></div>
+                    <div className="text-center">
+                      <div className="text-5xl font-black text-primary mb-2">24/7</div>
+                      <div className="text-sm font-semibold text-foreground uppercase tracking-wide">
+                        Available<br />Every Day
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
                 <h2 className="text-4xl md:text-5xl font-black text-black uppercase tracking-tight">
                   Why Choose <span className="text-brand-red">Connie's</span>
                 </h2>
@@ -623,6 +649,77 @@ const Index = () => {
                   </Card>
                 </Link>
               ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* Common Searches - Long-Tail Keyword Targeting */}
+      <Section className="service-area bg-muted py-16">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-black text-center mb-4 uppercase">
+            Common Questions We Answer
+          </h2>
+          <p className="text-center text-muted-foreground mb-10">
+            Quick answers to what people search for most
+          </p>
+          
+          <div className="grid md:grid-cols-2 gap-6">
+            <Link 
+              to="/faq#payment" 
+              className="bg-white border-2 border-transparent hover:border-primary p-6 rounded-lg transition-all group"
+            >
+              <h3 className="font-black text-lg mb-2 group-hover:text-primary">
+                "Can I get a bail bond with payment plans?"
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                Yes. We offer flexible payment plans with no interest. Read more →
+              </p>
+            </Link>
+            
+            <Link 
+              to="/faq#general" 
+              className="bg-white border-2 border-transparent hover:border-primary p-6 rounded-lg transition-all group"
+            >
+              <h3 className="font-black text-lg mb-2 group-hover:text-primary">
+                "How long does it take to get out of jail?"
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                1-8 hours in Fort Payne, 2-8 hours in other cities. Read more →
+              </p>
+            </Link>
+            
+            <Link 
+              to="/faq#general" 
+              className="bg-white border-2 border-transparent hover:border-primary p-6 rounded-lg transition-all group"
+            >
+              <h3 className="font-black text-lg mb-2 group-hover:text-primary">
+                "Can I get a bail bond with bad credit?"
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                Yes. We don't run credit checks—we help all families. Read more →
+              </p>
+            </Link>
+            
+            <Link 
+              to="/faq#charges" 
+              className="bg-white border-2 border-transparent hover:border-primary p-6 rounded-lg transition-all group"
+            >
+              <h3 className="font-black text-lg mb-2 group-hover:text-primary">
+                "How much does a DUI bail bond cost?"
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                10% of bail amount. Typical DUI bail: $500-$5,000. Read more →
+              </p>
+            </Link>
+          </div>
+          
+          <div className="text-center mt-8">
+            <Link 
+              to="/faq" 
+              className="inline-block px-8 py-4 bg-primary text-primary-foreground font-black uppercase hover:bg-primary/90 transition-colors"
+            >
+              See All FAQ
+            </Link>
           </div>
         </div>
       </Section>
