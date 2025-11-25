@@ -5,6 +5,7 @@ import { FAQList } from "@/components/FAQItem";
 import { StickyCallButton } from "@/components/StickyCallButton";
 import { SEO } from "@/components/SEO";
 import { getLocalBusinessSchema, getBreadcrumbSchema, getFAQSchema } from "@/lib/schemaUtils";
+import scalesJustice from "@/assets/scales-justice.jpg";
 
 const generalFaqs = [
   {
@@ -174,23 +175,39 @@ const FAQ = () => {
       <StickyCallButton />
       
       {/* Hero Section */}
-      <Section variant="default" className="pt-24">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
-            Frequently Asked Questions About Bail Bonds
+      <section 
+        className="relative min-h-[70vh] flex items-center justify-center"
+        style={{
+          backgroundImage: `url(${scalesJustice})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      >
+        <div className="absolute inset-0 bg-black/60" />
+        
+        <div className="relative z-10 max-w-6xl mx-auto px-4 py-20 text-center space-y-8">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight text-white">
+            Frequently Asked Questions
+            <br />
+            <span className="text-brand-red">About Bail Bonds</span>
           </h1>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-white/90 font-semibold max-w-3xl mx-auto">
+            Get Answers to Common Questions About Bail in Alabama
+          </p>
+
+          {/* Emergency Call Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-12 max-w-4xl mx-auto">
             <PhoneButton name="Richard" number="256-601-2041" variant="primary" />
             <PhoneButton name="Connie" number="256-630-2824" variant="primary" />
             <PhoneButton name="Toni" number="256-440-0822" variant="primary" />
           </div>
-          
-          <p className="text-lg text-muted-foreground italic">
-            Have a question we didn't answer? Call us 24/7—we're here to help.
+
+          <p className="text-white/80 text-lg mt-6 italic">
+            Have a question we didn't answer? Call 24/7—we're here to help.
           </p>
         </div>
-      </Section>
+      </section>
 
       {/* Table of Contents - Sticky Navigation */}
       <Section className="bg-muted/50 py-8 sticky top-20 z-40 border-y border-border">
