@@ -1,4 +1,5 @@
 import { Navigation } from "@/components/Navigation";
+import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { Section } from "@/components/Section";
 import { PhoneButton } from "@/components/PhoneButton";
@@ -647,61 +648,7 @@ const BondForfeitureProcess = () => {
         </div>
       </Section>
 
-      {/* Footer */}
-      <footer className="bg-black text-white border-t-4 border-brand-red py-12">
-        <div className="container mx-auto px-4 md:px-6 max-w-7xl">
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
-            <div>
-              <h3 className="text-xl font-black uppercase mb-4">Contact Us</h3>
-              <div className="space-y-3">
-                <p className="flex items-center gap-2">
-                  <Phone className="h-5 w-5 text-brand-red" />
-                  <a href={`tel:${phoneNumbers.richard.number.replace(/[^0-9]/g, "")}`} className="hover:text-brand-red transition-colors">
-                    {phoneNumbers.richard.name}: {phoneNumbers.richard.number}
-                  </a>
-                </p>
-                <p className="flex items-center gap-2">
-                  <Phone className="h-5 w-5 text-brand-red" />
-                  <a href={`tel:${phoneNumbers.connie.number.replace(/[^0-9]/g, "")}`} className="hover:text-brand-red transition-colors">
-                    {phoneNumbers.connie.name}: {phoneNumbers.connie.number}
-                  </a>
-                </p>
-                <p className="flex items-center gap-2">
-                  <Phone className="h-5 w-5 text-brand-red" />
-                  <a href={`tel:${phoneNumbers.toni.number.replace(/[^0-9]/g, "")}`} className="hover:text-brand-red transition-colors">
-                    {phoneNumbers.toni.name}: {phoneNumbers.toni.number}
-                  </a>
-                </p>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-black uppercase mb-4">Quick Links</h3>
-              <ul className="space-y-2">
-                <li><a href="/" className="hover:text-brand-red transition-colors">Home</a></li>
-                <li><a href="/about" className="hover:text-brand-red transition-colors">About</a></li>
-                <li><a href="/contact" className="hover:text-brand-red transition-colors">Contact</a></li>
-                <li><a href="/faq" className="hover:text-brand-red transition-colors">FAQ</a></li>
-                <li><a href="/bail-bonds-guide" className="hover:text-brand-red transition-colors">Bail Guide</a></li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-black uppercase mb-4">Legal</h3>
-              <p className="text-sm text-gray-400">
-                Licensed by the Alabama Professional Bail Bonding Board. Serving DeKalb and Cherokee Counties since 2019.
-              </p>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
-            <p>&copy; {new Date().getFullYear()} Connie's Bail Bonding. All rights reserved.</p>
-            <p className="mt-2">
-              Professional bail bond services in Fort Payne, Rainsville, Centre, and surrounding areas.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 };
