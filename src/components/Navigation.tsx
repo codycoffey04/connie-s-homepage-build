@@ -28,26 +28,26 @@ export const Navigation = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-6">
-            <Link to="/" className="text-sm font-bold text-white uppercase tracking-wide hover:text-brand-red transition-colors">
+            <Link to="/" className="text-sm font-bold text-white tracking-wide hover:text-brand-red transition-colors">
               Home
             </Link>
-            <Link to="/about" className="text-sm font-bold text-white uppercase tracking-wide hover:text-brand-red transition-colors">
+            <Link to="/about" className="text-sm font-bold text-white tracking-wide hover:text-brand-red transition-colors">
               About
             </Link>
-            <Link to="/contact" className="text-sm font-bold text-white uppercase tracking-wide hover:text-brand-red transition-colors">
+            <Link to="/contact" className="text-sm font-bold text-white tracking-wide hover:text-brand-red transition-colors">
               Contact
             </Link>
-            <Link to="/faq" className="text-sm font-bold text-white uppercase tracking-wide hover:text-brand-red transition-colors">
+            <Link to="/faq" className="text-sm font-bold text-white tracking-wide hover:text-brand-red transition-colors">
               FAQ
             </Link>
-            <Link to="/bail-bonds-guide" className="text-sm font-bold text-white uppercase tracking-wide hover:text-brand-red transition-colors">
-              Guide
+            <Link to="/bail-bonds-guide" className="text-sm font-bold text-white tracking-wide hover:text-brand-red transition-colors">
+              Bail Guide
             </Link>
             
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm font-bold text-white uppercase tracking-wide hover:text-brand-red bg-transparent">
+                  <NavigationMenuTrigger className="text-sm font-bold text-white tracking-wide hover:text-brand-red bg-transparent">
                     Cities
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
@@ -87,38 +87,38 @@ export const Navigation = () => {
               <nav className="flex flex-col gap-4 mt-8">
                 <Link 
                   to="/" 
-                  className="text-lg font-bold text-white hover:text-brand-red transition-colors uppercase"
+                  className="text-lg font-bold text-white hover:text-brand-red transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Home
                 </Link>
                 <Link 
                   to="/about" 
-                  className="text-lg font-bold text-white hover:text-brand-red transition-colors uppercase"
+                  className="text-lg font-bold text-white hover:text-brand-red transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   About
                 </Link>
                 <Link 
                   to="/contact" 
-                  className="text-lg font-bold text-white hover:text-brand-red transition-colors uppercase"
+                  className="text-lg font-bold text-white hover:text-brand-red transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Contact
                 </Link>
                 <Link 
                   to="/faq" 
-                  className="text-lg font-bold text-white hover:text-brand-red transition-colors uppercase"
+                  className="text-lg font-bold text-white hover:text-brand-red transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   FAQ
                 </Link>
                 <Link 
                   to="/bail-bonds-guide" 
-                  className="text-lg font-bold text-white hover:text-brand-red transition-colors uppercase"
+                  className="text-lg font-bold text-white hover:text-brand-red transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  Guide
+                  Bail Guide
                 </Link>
                 
                 <div className="border-t border-white/20 pt-4 mt-2">

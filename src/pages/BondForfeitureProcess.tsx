@@ -682,7 +682,7 @@ const BondForfeitureProcess = () => {
                 <li><a href="/about" className="hover:text-brand-red transition-colors">About</a></li>
                 <li><a href="/contact" className="hover:text-brand-red transition-colors">Contact</a></li>
                 <li><a href="/faq" className="hover:text-brand-red transition-colors">FAQ</a></li>
-                <li><a href="/bail-bonds-guide" className="hover:text-brand-red transition-colors">Bail Bonds Guide</a></li>
+                <li><a href="/bail-bonds-guide" className="hover:text-brand-red transition-colors">Bail Guide</a></li>
               </ul>
             </div>
 
