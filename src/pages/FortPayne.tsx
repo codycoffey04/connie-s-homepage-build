@@ -23,7 +23,7 @@ import {
 import { phoneNumbers } from "@/lib/cityUtils";
 import { StickyCallButton } from "@/components/StickyCallButton";
 import { SEO } from "@/components/SEO";
-import { getLocalBusinessSchema, getBreadcrumbSchema, getSpeakableSchema } from "@/lib/schemaUtils";
+import { getLocalBusinessSchema, getBreadcrumbSchema, getSpeakableSchema, getFAQSchema, getCityServiceAreaSchema } from "@/lib/schemaUtils";
 import fortPayneHeroBg from "@/assets/hero-bg.jpg";
 import supportHands from "@/assets/support-hands.jpg";
 import legalGavel from "@/assets/legal-gavel.jpg";
@@ -132,6 +132,29 @@ const FortPayne = () => {
     "I literally felt like family in the way they treated me."
   ];
 
+  const faqs = [
+    {
+      question: "How much does a bail bond cost in Fort Payne?",
+      answer: "Alabama law sets bail bond fees at 10% of the total bail amount. This is non-negotiable by law—every licensed bondsman charges the same rate. For example, if bail is set at $5,000, the bond fee is $500. We charge no additional administrative fees."
+    },
+    {
+      question: "How long does release take from DeKalb County Jail?",
+      answer: "Typical release time is 1-8 hours after we post the bond, depending on how busy the jail is. Because we're located right next to the detention center, we can post bonds immediately and monitor the release process closely."
+    },
+    {
+      question: "Do you really answer calls 24/7 in Fort Payne?",
+      answer: "Yes. Richard, Connie, or Toni will answer your call at any time—even at 3 AM on Christmas morning. We're a family business based right here in Fort Payne, and we answer our own phones. No call centers, no delays."
+    },
+    {
+      question: "What if I can't afford the full 10% upfront?",
+      answer: "We offer flexible payment plans for families who need help. We accept credit cards and can work out arrangements that fit your budget. Call us and we'll discuss your options—there's no pressure, just honest guidance."
+    },
+    {
+      question: "Where is your Fort Payne office located?",
+      answer: "Our office is at 2700 Jordan Rd SW, Fort Payne, AL 35967—right next door to the DeKalb County Detention Center. This allows us to meet clients quickly and post bonds immediately, which is why our release times are often faster than other bail bond companies."
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <SEO 
@@ -141,7 +164,9 @@ const FortPayne = () => {
         city="Fort Payne"
         schema={[
           getLocalBusinessSchema("Fort Payne"),
+          getCityServiceAreaSchema("Fort Payne"),
           getSpeakableSchema(),
+          getFAQSchema(faqs),
           getBreadcrumbSchema([
             { name: "Home", url: "/" },
             { name: "Fort Payne", url: "/fort-payne" }

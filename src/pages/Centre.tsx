@@ -21,7 +21,7 @@ import {
 import { phoneNumbers } from "@/lib/cityUtils";
 import { StickyCallButton } from "@/components/StickyCallButton";
 import { SEO } from "@/components/SEO";
-import { getLocalBusinessSchema, getBreadcrumbSchema, getSpeakableSchema } from "@/lib/schemaUtils";
+import { getLocalBusinessSchema, getBreadcrumbSchema, getSpeakableSchema, getFAQSchema, getCityServiceAreaSchema } from "@/lib/schemaUtils";
 import centreHeroBg from "@/assets/centre-hero-bg.jpg";
 import freedomHandcuffs from "@/assets/freedom-handcuffs.jpg";
 import legalGavel from "@/assets/legal-gavel.jpg";
@@ -106,6 +106,29 @@ const Centre = () => {
     "Great business. Professional and courteous. Would recommend to anyone needing help. Will use again if ever needed.",
   ];
 
+  const faqs = [
+    {
+      question: "How much does a bail bond cost in Centre?",
+      answer: "Alabama law sets bail bond fees at 10% of the total bail amount. This is non-negotiable by law—every licensed bondsman charges the same rate. For example, if bail is set at $5,000, the bond fee is $500. We charge no additional administrative fees."
+    },
+    {
+      question: "How long does release take from Cherokee County Jail?",
+      answer: "Typical release time is 2-10 hours after we post the bond, depending on how busy the jail is. Cherokee County Detention Center may not process bonds during shift change times (approximately 5-7 AM, 11 AM-1 PM, and 5-7 PM), so we time everything strategically to avoid delays."
+    },
+    {
+      question: "Do you serve Centre and Cherokee County 24/7?",
+      answer: "Yes. Richard, Connie, or Toni will answer your call at any time—even at 3 AM on Christmas morning. We're located about 25 minutes from Centre in Fort Payne, and we regularly serve Cherokee County."
+    },
+    {
+      question: "What if I can't afford the full 10% upfront?",
+      answer: "We offer flexible payment plans for families who need help. We accept credit cards and can work out arrangements that fit your budget. Call us and we'll discuss your options—there's no pressure, just honest guidance."
+    },
+    {
+      question: "Where do Centre arrestees go?",
+      answer: "Anyone arrested in Centre—whether by Centre Police, Cherokee County Sheriff, or state troopers—is transported to the Cherokee County Detention Center at 110 Cedar Bluff Rd in Centre. All bail bonds are posted at the Cherokee County Courthouse on Main Street."
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <SEO 
@@ -115,7 +138,9 @@ const Centre = () => {
         city="Centre"
         schema={[
           getLocalBusinessSchema("Centre"),
+          getCityServiceAreaSchema("Centre"),
           getSpeakableSchema(),
+          getFAQSchema(faqs),
           getBreadcrumbSchema([
             { name: "Home", url: "/" },
             { name: "Centre", url: "/centre" }
