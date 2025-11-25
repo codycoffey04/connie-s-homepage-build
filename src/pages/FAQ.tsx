@@ -3,7 +3,6 @@ import { Section } from "@/components/Section";
 import { PhoneButton } from "@/components/PhoneButton";
 import { FAQList } from "@/components/FAQItem";
 import { StickyCallButton } from "@/components/StickyCallButton";
-import { ScrollToTop } from "@/components/ScrollToTop";
 import { SEO } from "@/components/SEO";
 import { getLocalBusinessSchema, getBreadcrumbSchema, getFAQSchema } from "@/lib/schemaUtils";
 
@@ -173,7 +172,6 @@ const FAQ = () => {
       />
       <Navigation />
       <StickyCallButton />
-      <ScrollToTop />
       
       {/* Hero Section */}
       <Section variant="default" className="pt-24">

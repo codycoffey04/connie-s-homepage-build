@@ -6,7 +6,6 @@ import { TestimonialCard } from "@/components/TestimonialCard";
 import { Shield, Heart, MapPin, DollarSign, Check, BookOpen, Star, Users, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import { StickyCallButton } from "@/components/StickyCallButton";
-import { ScrollToTop } from "@/components/ScrollToTop";
 import { SEO } from "@/components/SEO";
 import { getLocalBusinessSchema, getBreadcrumbSchema, getSpeakableSchema } from "@/lib/schemaUtils";
 import aboutHeroBg from "@/assets/about-hero-bg.jpg";
@@ -99,7 +98,6 @@ const About = () => {
       />
       <Navigation />
       <StickyCallButton />
-      <ScrollToTop />
       
       {/* Hero Section - Full Screen with Background Image */}
       <section 
