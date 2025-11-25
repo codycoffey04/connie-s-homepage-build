@@ -21,7 +21,7 @@ import {
 import { phoneNumbers } from "@/lib/cityUtils";
 import { StickyCallButton } from "@/components/StickyCallButton";
 import { SEO } from "@/components/SEO";
-import { getLocalBusinessSchema, getBreadcrumbSchema, getSpeakableSchema } from "@/lib/schemaUtils";
+import { getLocalBusinessSchema, getBreadcrumbSchema, getSpeakableSchema, getFAQSchema, getCityServiceAreaSchema } from "@/lib/schemaUtils";
 import henagarHeroBg from "@/assets/henagar-hero-bg.jpg";
 import supportHands from "@/assets/support-hands.jpg";
 import legalGavel from "@/assets/legal-gavel.jpg";
@@ -103,6 +103,29 @@ const Henagar = () => {
     "Just good people helping people get out of jail so they can continue living their lives... we're not bad people, we sometimes make bad decisions.",
   ];
 
+  const faqs = [
+    {
+      question: "How much does a bail bond cost in Henagar?",
+      answer: "Alabama law sets bail bond fees at 10% of the total bail amount. This is non-negotiable by law—every licensed bondsman charges the same rate. For example, if bail is set at $5,000, the bond fee is $500. We charge no additional administrative fees."
+    },
+    {
+      question: "How long does release take from DeKalb County Jail for Henagar arrests?",
+      answer: "Typical release time is 2-8 hours after we post the bond, depending on how busy the jail is. We stay in communication with you throughout the process so you're never left wondering what's happening."
+    },
+    {
+      question: "Do you serve Henagar 24/7?",
+      answer: "Yes. Richard, Connie, or Toni will answer your call at any time—even at 3 AM on Christmas morning. We're located just a short drive from Henagar in Fort Payne, and we can respond quickly to meet your needs."
+    },
+    {
+      question: "What if I can't afford the full 10% upfront?",
+      answer: "We offer flexible payment plans for families who need help. We accept credit cards and can work out arrangements that fit your budget. Call us and we'll discuss your options—there's no pressure, just honest guidance."
+    },
+    {
+      question: "Where do Henagar arrestees go?",
+      answer: "Anyone arrested in Henagar—whether by Henagar Police or DeKalb County Sheriff—is transported to the DeKalb County Detention Center in Fort Payne at 2801 Jordan Rd SW. All bail bonds are posted at the DeKalb County Courthouse."
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <SEO 
@@ -112,7 +135,9 @@ const Henagar = () => {
         city="Henagar"
         schema={[
           getLocalBusinessSchema("Henagar"),
+          getCityServiceAreaSchema("Henagar"),
           getSpeakableSchema(),
+          getFAQSchema(faqs),
           getBreadcrumbSchema([
             { name: "Home", url: "/" },
             { name: "Henagar", url: "/henagar" }

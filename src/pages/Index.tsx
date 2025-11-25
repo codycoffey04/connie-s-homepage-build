@@ -12,7 +12,7 @@ import { SEO } from "@/components/SEO";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { AnimatedImage } from "@/components/AnimatedImage";
 import { AnimatedCard } from "@/components/AnimatedCard";
-import { getLocalBusinessSchema, getBreadcrumbSchema, getServiceSchema, getHowToSchema, getSpeakableSchema } from "@/lib/schemaUtils";
+import { getLocalBusinessSchema, getBreadcrumbSchema, getServiceSchema, getHowToSchema, getSpeakableSchema, getWebSiteSchema } from "@/lib/schemaUtils";
 import { 
   Clock, 
   Zap, 
@@ -163,6 +163,7 @@ const Index = () => {
         canonical="/"
         schema={[
           getLocalBusinessSchema(),
+          getWebSiteSchema(),
           getServiceSchema(),
           getHowToSchema(),
           getSpeakableSchema(),

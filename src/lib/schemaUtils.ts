@@ -408,3 +408,242 @@ export const getCustomHowToSchema = (
     "text": step.text
   }))
 });
+
+// WebSite Schema for homepage
+export const getWebSiteSchema = () => ({
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Connie's Bail Bonding",
+  "url": "https://conniesbailbonding.com",
+  "description": "24/7 bail bond services in Fort Payne, DeKalb County, and Cherokee County, Alabama",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://conniesbailbonding.com/bail-bonds-guide?search={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Connie's Bail Bonding",
+    "url": "https://conniesbailbonding.com"
+  }
+});
+
+// Place Schema - DeKalb County Jail
+export const getDeKalbCountyJailSchema = () => ({
+  "@context": "https://schema.org",
+  "@type": "GovernmentBuilding",
+  "name": "DeKalb County Detention Center",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2801 Jordan Road SW",
+    "addressLocality": "Fort Payne",
+    "addressRegion": "AL",
+    "postalCode": "35968",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "34.4378",
+    "longitude": "-85.7241"
+  },
+  "telephone": "(256) 845-3801",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  }
+});
+
+// Place Schema - DeKalb County Courthouse
+export const getDeKalbCountyCourthouseSchema = () => ({
+  "@context": "https://schema.org",
+  "@type": "Courthouse",
+  "name": "DeKalb County Courthouse",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "300 Grand Avenue SW",
+    "addressLocality": "Fort Payne",
+    "addressRegion": "AL",
+    "postalCode": "35967",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "34.4444",
+    "longitude": "-85.7198"
+  },
+  "telephone": "(256) 845-8500",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "08:00",
+    "closes": "16:30"
+  }
+});
+
+// Place Schema - Cherokee County Jail
+export const getCherokeeCountyJailSchema = () => ({
+  "@context": "https://schema.org",
+  "@type": "GovernmentBuilding",
+  "name": "Cherokee County Detention Center",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "110 Cedar Bluff Road",
+    "addressLocality": "Centre",
+    "addressRegion": "AL",
+    "postalCode": "35960",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "34.1571",
+    "longitude": "-85.6788"
+  },
+  "telephone": "(256) 927-3565",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  }
+});
+
+// Place Schema - Cherokee County Courthouse
+export const getCherokeeCourthouseSchema = () => ({
+  "@context": "https://schema.org",
+  "@type": "Courthouse",
+  "name": "Cherokee County Courthouse",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "100 Main Street",
+    "addressLocality": "Centre",
+    "addressRegion": "AL",
+    "postalCode": "35960",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "34.1626",
+    "longitude": "-85.6788"
+  },
+  "telephone": "(256) 927-3368",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "08:00",
+    "closes": "16:30"
+  }
+});
+
+// Enhanced Service Area Schema for City Pages
+export const getCityServiceAreaSchema = (cityName: string) => {
+  const cityData: Record<string, { lat: string; lng: string; zipCodes: string[]; county: string; population: string }> = {
+    "Fort Payne": {
+      lat: "34.4443",
+      lng: "-85.7197",
+      zipCodes: ["35967", "35968"],
+      county: "DeKalb",
+      population: "14000"
+    },
+    "Rainsville": {
+      lat: "34.4942",
+      lng: "-85.8486",
+      zipCodes: ["35986"],
+      county: "DeKalb",
+      population: "5000"
+    },
+    "Henagar": {
+      lat: "34.6356",
+      lng: "-85.7694",
+      zipCodes: ["35978"],
+      county: "DeKalb",
+      population: "2500"
+    },
+    "Fyffe": {
+      lat: "34.4470",
+      lng: "-85.9036",
+      zipCodes: ["35971"],
+      county: "DeKalb",
+      population: "1000"
+    },
+    "Pisgah": {
+      lat: "34.6881",
+      lng: "-85.8342",
+      zipCodes: ["35765"],
+      county: "DeKalb",
+      population: "700"
+    },
+    "Valley Head": {
+      lat: "34.5692",
+      lng: "-85.6197",
+      zipCodes: ["35989"],
+      county: "DeKalb",
+      population: "550"
+    },
+    "Centre": {
+      lat: "34.1626",
+      lng: "-85.6788",
+      zipCodes: ["35960"],
+      county: "Cherokee",
+      population: "3600"
+    }
+  };
+
+  const data = cityData[cityName];
+  if (!data) return null;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": `Bail Bond Service in ${cityName}, Alabama`,
+    "provider": {
+      "@type": "BailBondService",
+      "name": "Connie's Bail Bonding"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": cityName,
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "name": `${data.county} County`,
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Alabama"
+        }
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": data.lat,
+        "longitude": data.lng
+      }
+    },
+    "serviceArea": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": data.lat,
+        "longitude": data.lng
+      },
+      "geoRadius": "15 mi"
+    },
+    "availableChannel": {
+      "@type": "ServiceChannel",
+      "servicePhone": {
+        "@type": "ContactPoint",
+        "telephone": "256-601-2041",
+        "contactType": "customer service",
+        "availableLanguage": "English",
+        "hoursAvailable": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      }
+    }
+  };
+};
