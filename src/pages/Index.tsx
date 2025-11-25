@@ -24,7 +24,9 @@ import {
   Check,
   Phone,
   BookOpen,
-  ArrowRight
+  ArrowRight,
+  Building,
+  Scale
 } from "lucide-react";
 import { phoneNumbers, cities } from "@/lib/cityUtils";
 import heroBg from "@/assets/hero-bg.jpg";
@@ -460,31 +462,163 @@ const Index = () => {
         </div>
       </Section>
 
-      {/* Services */}
-      <Section className="bg-white py-16">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-black">
-          Services We Offer Across DeKalb & Cherokee Counties
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
-          {services.map((service, index) => (
-            <div key={index} className="flex items-start gap-3">
-              <Check className="w-6 h-6 text-brand-red flex-shrink-0 mt-1" />
-              <span className="text-base text-foreground/90">{service}</span>
+      {/* Services We Offer Section */}
+      <Section className="bg-white">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-black text-center mb-12 uppercase tracking-tight">
+            Services We Offer
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="space-y-6">
+              <div className="flex items-start gap-3">
+                <div className="w-6 h-6 rounded-full bg-brand-red flex items-center justify-center flex-shrink-0 mt-1">
+                  <Check className="h-4 w-4 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-lg mb-1">24/7 Emergency Service</h3>
+                  <p className="text-foreground/80">Available anytime, day or night, including holidays</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-6 h-6 rounded-full bg-brand-red flex items-center justify-center flex-shrink-0 mt-1">
+                  <Check className="h-4 w-4 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-lg mb-1">Fast Jail Release</h3>
+                  <p className="text-foreground/80">Get your loved one out in 2-8 hours</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-6 h-6 rounded-full bg-brand-red flex items-center justify-center flex-shrink-0 mt-1">
+                  <Check className="h-4 w-4 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-lg mb-1">Flexible Payment Plans</h3>
+                  <p className="text-foreground/80">Credit cards, debit cards, and payment arrangements</p>
+                </div>
+              </div>
             </div>
-          ))}
+            <div className="space-y-6">
+              <div className="flex items-start gap-3">
+                <div className="w-6 h-6 rounded-full bg-brand-red flex items-center justify-center flex-shrink-0 mt-1">
+                  <Check className="h-4 w-4 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-lg mb-1">Licensed & Bonded</h3>
+                  <p className="text-foreground/80">Fully licensed Alabama bail bond agents</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-6 h-6 rounded-full bg-brand-red flex items-center justify-center flex-shrink-0 mt-1">
+                  <Check className="h-4 w-4 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-lg mb-1">Confidential & Discreet</h3>
+                  <p className="text-foreground/80">Your privacy is our priority</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-6 h-6 rounded-full bg-brand-red flex items-center justify-center flex-shrink-0 mt-1">
+                  <Check className="h-4 w-4 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-lg mb-1">Family Owned & Operated</h3>
+                  <p className="text-foreground/80">Personal service from people who care</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="text-center mt-8">
-          <p className="text-lg text-foreground/90">
-            No matter the charge or situation, we're here to help. Call now:{" "}
-            <a href="tel:2566012041" className="font-bold text-brand-red hover:text-red-600 transition-colors">
-              Richard 256-601-2041
-            </a>
-          </p>
+      </Section>
+
+      {/* Learn About the Bail Process Section */}
+      <Section className="bg-muted">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-4">
+              Learn About the Bail Process
+            </h2>
+            <p className="text-lg text-foreground/80">
+              Free resources to help you understand your options and make informed decisions
+            </p>
+          </div>
+          
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <Link 
+              to="/bail-bonds-guide/how-bail-works-alabama"
+              className="bg-white p-6 rounded-lg border border-border hover:border-brand-red transition-all hover:-translate-y-1 shadow-sm hover:shadow-md group"
+            >
+              <div className="w-12 h-12 rounded-full bg-brand-red/10 flex items-center justify-center mb-4 group-hover:bg-brand-red/20 transition-colors">
+                <Scale className="h-6 w-6 text-brand-red" />
+              </div>
+              <h3 className="font-bold text-lg mb-2 group-hover:text-brand-red transition-colors">
+                How Bail Works in Alabama
+              </h3>
+              <p className="text-sm text-foreground/70">
+                Step-by-step guide from arrest to release
+              </p>
+            </Link>
+
+            <Link 
+              to="/bail-bonds-guide/bail-costs-alabama"
+              className="bg-white p-6 rounded-lg border border-border hover:border-brand-red transition-all hover:-translate-y-1 shadow-sm hover:shadow-md group"
+            >
+              <div className="w-12 h-12 rounded-full bg-brand-red/10 flex items-center justify-center mb-4 group-hover:bg-brand-red/20 transition-colors">
+                <DollarSign className="h-6 w-6 text-brand-red" />
+              </div>
+              <h3 className="font-bold text-lg mb-2 group-hover:text-brand-red transition-colors">
+                Bail Costs & Fees Explained
+              </h3>
+              <p className="text-sm text-foreground/70">
+                Understand the 10% premium and state fees
+              </p>
+            </Link>
+
+            <Link 
+              to="/bail-bonds-guide/dekalb-county-jail-guide"
+              className="bg-white p-6 rounded-lg border border-border hover:border-brand-red transition-all hover:-translate-y-1 shadow-sm hover:shadow-md group"
+            >
+              <div className="w-12 h-12 rounded-full bg-brand-red/10 flex items-center justify-center mb-4 group-hover:bg-brand-red/20 transition-colors">
+                <Building className="h-6 w-6 text-brand-red" />
+              </div>
+              <h3 className="font-bold text-lg mb-2 group-hover:text-brand-red transition-colors">
+                DeKalb County Jail Guide
+              </h3>
+              <p className="text-sm text-foreground/70">
+                Posting bail at Fort Payne detention center
+              </p>
+            </Link>
+
+            <Link 
+              to="/bail-bonds-guide/cosigner-responsibilities"
+              className="bg-white p-6 rounded-lg border border-border hover:border-brand-red transition-all hover:-translate-y-1 shadow-sm hover:shadow-md group"
+            >
+              <div className="w-12 h-12 rounded-full bg-brand-red/10 flex items-center justify-center mb-4 group-hover:bg-brand-red/20 transition-colors">
+                <Users className="h-6 w-6 text-brand-red" />
+              </div>
+              <h3 className="font-bold text-lg mb-2 group-hover:text-brand-red transition-colors">
+                Cosigner Responsibilities
+              </h3>
+              <p className="text-sm text-foreground/70">
+                Know your obligations before you sign
+              </p>
+            </Link>
+          </div>
+
+          <div className="text-center">
+            <Link 
+              to="/bail-bonds-guide"
+              className="inline-flex items-center gap-2 text-brand-red hover:text-brand-red/80 font-bold transition-colors"
+            >
+              View All Guides
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
         </div>
       </Section>
 
       {/* Payment Methods & Credentials */}
-      <Section className="bg-muted py-16">
+      <Section className="bg-white py-16">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12">
             {/* Payment Methods */}
@@ -561,244 +695,154 @@ const Index = () => {
         </div>
       </Section>
 
-      {/* Areas We Serve */}
-      <Section className="service-area bg-muted py-16">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">
+      {/* Areas We Serve Section */}
+      <Section className="service-area bg-muted">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-black text-center mb-8 uppercase tracking-tight">
             Areas We Serve in Northeast Alabama
           </h2>
-          <p className="text-lg text-foreground/80 mb-8 max-w-3xl mx-auto">
-            Providing 24/7 bail bond services throughout DeKalb and Cherokee Counties
-          </p>
-          <div className="max-w-md mx-auto mb-8">
-            <img 
-              src={alabamaMap} 
-              alt="Alabama map showing DeKalb and Cherokee counties service areas" 
-              className="w-full h-auto rounded-lg shadow-xl"
+          
+          <div className="mb-12">
+            <AnimatedImage
+              src={alabamaMap}
+              alt="Alabama map showing service areas"
+              className="w-full max-w-2xl mx-auto rounded-lg shadow-lg"
             />
           </div>
-        </div>
-        
-        {/* DeKalb County */}
-        <div className="max-w-6xl mx-auto mb-12">
-          <h3 className="text-2xl font-bold mb-6 text-black flex items-center gap-2">
-            <MapPin className="w-6 h-6 text-brand-red" />
-            DeKalb County
-          </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {cities
-              .filter(city => city.county === 'DeKalb')
-              .map((city) => (
+
+          <div className="space-y-8">
+            {/* DeKalb County */}
+            <div>
+              <div className="flex items-center gap-2 mb-4">
+                <MapPin className="h-5 w-5 text-brand-red" />
+                <h3 className="text-xl font-black uppercase tracking-tight text-brand-red">
+                  DeKalb County
+                </h3>
+              </div>
+              <div className="flex flex-wrap gap-3">
                 <Link 
-                  key={city.slug} 
-                  to={`/${city.slug}`}
-                  className="group"
+                  to="/fort-payne"
+                  className="inline-flex items-center px-6 py-3 bg-white border-2 border-border rounded-full font-bold hover:border-brand-red hover:text-brand-red transition-all hover:-translate-y-0.5 shadow-sm hover:shadow-md"
                 >
-                  <Card className="h-full border-border hover:border-brand-red hover:shadow-lg transition-all duration-200 cursor-pointer">
-                    <CardContent className="p-6">
-                      <div className="flex items-start gap-3">
-                        <MapPin className="w-5 h-5 text-brand-red flex-shrink-0 mt-1" />
-                        <div className="flex-1">
-                          <h4 className="text-xl font-bold text-foreground mb-1 group-hover:text-brand-red transition-colors">
-                            {city.name}
-                          </h4>
-                          <p className="text-sm text-foreground/70 mb-2">
-                            {city.state}
-                          </p>
-                          <p className="text-sm text-foreground/60">
-                            <span className="font-medium">ZIP:</span> {city.zipCodes.join(', ')}
-                          </p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
+                  Fort Payne
+                  <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
-              ))}
+                <Link 
+                  to="/rainsville"
+                  className="inline-flex items-center px-6 py-3 bg-white border-2 border-border rounded-full font-bold hover:border-brand-red hover:text-brand-red transition-all hover:-translate-y-0.5 shadow-sm hover:shadow-md"
+                >
+                  Rainsville
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+                <Link 
+                  to="/henagar"
+                  className="inline-flex items-center px-6 py-3 bg-white border-2 border-border rounded-full font-bold hover:border-brand-red hover:text-brand-red transition-all hover:-translate-y-0.5 shadow-sm hover:shadow-md"
+                >
+                  Henagar
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+                <Link 
+                  to="/fyffe"
+                  className="inline-flex items-center px-6 py-3 bg-white border-2 border-border rounded-full font-bold hover:border-brand-red hover:text-brand-red transition-all hover:-translate-y-0.5 shadow-sm hover:shadow-md"
+                >
+                  Fyffe
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+                <Link 
+                  to="/valley-head"
+                  className="inline-flex items-center px-6 py-3 bg-white border-2 border-border rounded-full font-bold hover:border-brand-red hover:text-brand-red transition-all hover:-translate-y-0.5 shadow-sm hover:shadow-md"
+                >
+                  Valley Head
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+                <Link 
+                  to="/pisgah"
+                  className="inline-flex items-center px-6 py-3 bg-white border-2 border-border rounded-full font-bold hover:border-brand-red hover:text-brand-red transition-all hover:-translate-y-0.5 shadow-sm hover:shadow-md"
+                >
+                  Pisgah
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Cherokee County */}
+            <div>
+              <div className="flex items-center gap-2 mb-4">
+                <MapPin className="h-5 w-5 text-brand-red" />
+                <h3 className="text-xl font-black uppercase tracking-tight text-brand-red">
+                  Cherokee County
+                </h3>
+              </div>
+              <div className="flex flex-wrap gap-3">
+                <Link 
+                  to="/centre"
+                  className="inline-flex items-center px-6 py-3 bg-white border-2 border-border rounded-full font-bold hover:border-brand-red hover:text-brand-red transition-all hover:-translate-y-0.5 shadow-sm hover:shadow-md"
+                >
+                  Centre
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
+      </Section>
 
-        {/* Cherokee County */}
+      {/* Testimonials Section */}
+      <Section className="bg-white">
         <div className="max-w-6xl mx-auto">
-          <h3 className="text-2xl font-bold mb-6 text-black flex items-center gap-2">
-            <MapPin className="w-6 h-6 text-brand-red" />
-            Cherokee County
-          </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {cities
-              .filter(city => city.county === 'Cherokee')
-              .map((city) => (
-                <Link 
-                  key={city.slug} 
-                  to={`/${city.slug}`}
-                  className="group"
-                >
-                  <Card className="h-full border-border hover:border-brand-red hover:shadow-lg transition-all duration-200 cursor-pointer">
-                    <CardContent className="p-6">
-                      <div className="flex items-start gap-3">
-                        <MapPin className="w-5 h-5 text-brand-red flex-shrink-0 mt-1" />
-                        <div className="flex-1">
-                          <h4 className="text-xl font-bold text-foreground mb-1 group-hover:text-brand-red transition-colors">
-                            {city.name}
-                          </h4>
-                          <p className="text-sm text-foreground/70 mb-2">
-                            {city.state}
-                          </p>
-                          <p className="text-sm text-foreground/60">
-                            <span className="font-medium">ZIP:</span> {city.zipCodes.join(', ')}
-                          </p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </Link>
-              ))}
-          </div>
-        </div>
-      </Section>
-
-      {/* Common Searches - Long-Tail Keyword Targeting */}
-      <Section className="service-area bg-muted py-16">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-black text-center mb-4 uppercase">
-            Common Questions We Answer
+          <h2 className="text-3xl md:text-4xl font-black text-center mb-12 uppercase tracking-tight">
+            What Our Clients Say
           </h2>
-          <p className="text-center text-muted-foreground mb-10">
-            Quick answers to what people search for most
-          </p>
-          
-          <div className="grid md:grid-cols-2 gap-6">
-            <Link 
-              to="/faq#payment" 
-              className="bg-white border-2 border-transparent hover:border-primary p-6 rounded-lg transition-all group"
-            >
-              <h3 className="font-black text-lg mb-2 group-hover:text-primary">
-                "Can I get a bail bond with payment plans?"
-              </h3>
-              <p className="text-sm text-muted-foreground">
-                Yes. We offer flexible payment plans with no interest. Read more →
-              </p>
-            </Link>
-            
-            <Link 
-              to="/faq#general" 
-              className="bg-white border-2 border-transparent hover:border-primary p-6 rounded-lg transition-all group"
-            >
-              <h3 className="font-black text-lg mb-2 group-hover:text-primary">
-                "How long does it take to get out of jail?"
-              </h3>
-              <p className="text-sm text-muted-foreground">
-                1-8 hours in Fort Payne, 2-8 hours in other cities. Read more →
-              </p>
-            </Link>
-            
-            <Link 
-              to="/faq#general" 
-              className="bg-white border-2 border-transparent hover:border-primary p-6 rounded-lg transition-all group"
-            >
-              <h3 className="font-black text-lg mb-2 group-hover:text-primary">
-                "Can I get a bail bond with bad credit?"
-              </h3>
-              <p className="text-sm text-muted-foreground">
-                Yes. We don't run credit checks—we help all families. Read more →
-              </p>
-            </Link>
-            
-            <Link 
-              to="/faq#charges" 
-              className="bg-white border-2 border-transparent hover:border-primary p-6 rounded-lg transition-all group"
-            >
-              <h3 className="font-black text-lg mb-2 group-hover:text-primary">
-                "How much does a DUI bail bond cost?"
-              </h3>
-              <p className="text-sm text-muted-foreground">
-                10% of bail amount. Typical DUI bail: $500-$5,000. Read more →
-              </p>
-            </Link>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            {testimonials.map((testimonial, index) => (
+              <TestimonialCard key={index} quote={testimonial} />
+            ))}
           </div>
-          
-          <div className="text-center mt-8">
-            <Link 
-              to="/faq" 
-              className="inline-block px-8 py-4 bg-primary text-primary-foreground font-black uppercase hover:bg-primary/90 transition-colors"
+          <div className="text-center">
+            <a 
+              href="https://www.google.com/maps/search/Connie's+Bail+Bonding" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-brand-red text-white hover:bg-red-600 transition-colors font-bold uppercase tracking-wide shadow-lg hover:shadow-xl"
             >
-              See All FAQ
-            </Link>
+              Read All Reviews on Google →
+            </a>
           </div>
         </div>
       </Section>
 
-      {/* Testimonials */}
-      <Section className="bg-white py-16 md:py-24">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-16 text-center text-black">
-          What Our Clients Say
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 max-w-6xl mx-auto">
-          {testimonials.map((testimonial, index) => (
-            <TestimonialCard key={index} quote={testimonial} />
-          ))}
-        </div>
-        <div className="text-center">
-          <a 
-            href="https://www.google.com/maps/search/Connie's+Bail+Bonding" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-brand-red text-white hover:bg-red-600 transition-colors font-bold uppercase tracking-wide shadow-lg hover:shadow-xl"
-          >
-            Read All Reviews on Google →
-          </a>
-        </div>
-      </Section>
-
-      {/* Live Google Reviews Widget */}
-      <Section className="bg-muted py-16 md:py-24">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-center text-black">
-          All Reviews from Google
-        </h2>
-        <p className="text-center text-base text-foreground/60 mb-12">
-          Real reviews from our clients - updated automatically
-        </p>
-        <GoogleReviewsWidget placeId="ChIJAa6xSXPZYYgR0zqawfYasDk" />
-      </Section>
-
-      {/* FAQ */}
-      <Section className="bg-white py-16">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-black">
-          Frequently Asked Questions
-        </h2>
-        <p className="text-center text-base text-foreground/60 mb-8">
-          Or call us 24/7: <a href="tel:2566012041" className="font-bold text-brand-red hover:text-red-600 transition-colors">256-601-2041</a>
-        </p>
-        <div className="max-w-4xl mx-auto">
-          <FAQList faqs={faqs} />
-        </div>
-      </Section>
-
-      {/* Guide Promotion Section */}
-      <Section className="bg-gradient-to-br from-primary/5 to-primary/10 py-16 border-y-4 border-primary">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-6">
-            <BookOpen className="w-8 h-8 text-primary" />
-          </div>
-          <h2 className="text-3xl md:text-4xl font-black mb-4 uppercase tracking-tight">
-            Free Alabama Bail Bonds Guide
+      {/* Google Reviews Widget */}
+      <Section className="bg-muted">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-black text-center mb-4 uppercase tracking-tight">
+            Live Google Reviews
           </h2>
-          <p className="text-lg text-foreground/80 mb-8 max-w-2xl mx-auto">
-            New to the bail process? Our comprehensive guide covers everything from how bail works to what happens after arrest. Get answers to your questions 24/7.
+          <p className="text-center text-base text-foreground/60 mb-12">
+            Real reviews from our clients - updated automatically
           </p>
-          <Link 
-            to="/bail-bonds-guide"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-black uppercase hover:bg-primary/90 transition-colors text-lg"
-          >
-            Explore the Guide
-            <ArrowRight className="w-5 h-5" />
-          </Link>
+          <GoogleReviewsWidget placeId="ChIJAa6xSXPZYYgR0zqawfYasDk" />
         </div>
       </Section>
 
-      {/* Final CTA */}
-      <Section className="bg-white py-16" id="contact">
+      {/* FAQ Section */}
+      <Section className="bg-white">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-black text-center mb-4 uppercase tracking-tight">
+            Frequently Asked Questions
+          </h2>
+          <p className="text-center text-base text-foreground/60 mb-8">
+            Or call us 24/7: <a href="tel:2566012041" className="font-bold text-brand-red hover:text-red-600 transition-colors">256-601-2041</a>
+          </p>
+          <div className="max-w-4xl mx-auto">
+            <FAQList faqs={faqs} />
+          </div>
+        </div>
+      </Section>
+
+      {/* Final CTA Section */}
+      <Section className="bg-muted" id="contact">
         <div className="text-center max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-black">
+          <h2 className="text-3xl md:text-4xl font-black mb-6 uppercase tracking-tight">
             Need Fort Payne Bail Bonds Now?
           </h2>
           <p className="text-xl mb-8 text-foreground/90">Call immediately for 24/7 service:</p>
@@ -841,49 +885,84 @@ const Index = () => {
       {/* Footer */}
       <footer className="bg-black border-t-4 border-brand-red text-white py-16">
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
+            {/* Contact Us */}
             <div>
-              <h3 className="text-2xl font-black mb-6 uppercase tracking-tight">Contact Us</h3>
-              <div className="space-y-3">
-                <p>
-                  <a href={`tel:${phoneNumbers.richard.number.replace(/[^0-9]/g, "")}`} className="hover:text-brand-red transition-colors text-lg font-semibold flex items-center gap-2">
-                    <Phone className="w-4 h-4" />
-                    Richard: {phoneNumbers.richard.number}
-                  </a>
-                </p>
-                <p>
-                  <a href={`tel:${phoneNumbers.connie.number.replace(/[^0-9]/g, "")}`} className="hover:text-brand-red transition-colors text-lg font-semibold flex items-center gap-2">
-                    <Phone className="w-4 h-4" />
-                    Connie: {phoneNumbers.connie.number}
-                  </a>
-                </p>
-                <p>
-                  <a href={`tel:${phoneNumbers.toni.number.replace(/[^0-9]/g, "")}`} className="hover:text-brand-red transition-colors text-lg font-semibold flex items-center gap-2">
-                    <Phone className="w-4 h-4" />
-                    Toni: {phoneNumbers.toni.number}
-                  </a>
-                </p>
-                <p className="flex items-start gap-2 mt-4">
-                  <MapPin className="w-4 h-4 flex-shrink-0 mt-1" />
-                  <span>2700 Jordan Rd SW<br />Fort Payne, AL 35967</span>
-                </p>
+              <h3 className="text-white font-black text-lg mb-6 uppercase tracking-tight">Contact Us</h3>
+              <div className="space-y-4 text-white/90">
+                <a href="tel:256-601-2041" className="flex items-center gap-2 hover:text-white transition-colors">
+                  <Phone className="h-4 w-4 text-brand-red" />
+                  <span>📞 Richard: 256-601-2041</span>
+                </a>
+                <a href="tel:256-523-7685" className="flex items-center gap-2 hover:text-white transition-colors">
+                  <Phone className="h-4 w-4 text-brand-red" />
+                  <span>📞 Connie: 256-523-7685</span>
+                </a>
+                <a href="tel:256-997-9932" className="flex items-center gap-2 hover:text-white transition-colors">
+                  <Phone className="h-4 w-4 text-brand-red" />
+                  <span>📞 Toni: 256-997-9932</span>
+                </a>
               </div>
             </div>
+
+            {/* Quick Links */}
             <div>
-              <h3 className="text-2xl font-black mb-6 uppercase tracking-tight">Quick Links</h3>
-              <nav className="flex flex-col gap-3">
-                <Link to="/" className="hover:text-brand-red transition-colors font-semibold text-sm">Home</Link>
-                <Link to="/about" className="hover:text-brand-red transition-colors font-semibold text-sm">About</Link>
-                <Link to="/contact" className="hover:text-brand-red transition-colors font-semibold text-sm">Contact</Link>
-                <Link to="/faq" className="hover:text-brand-red transition-colors font-semibold text-sm">FAQ</Link>
-                <Link to="/bail-bonds-guide" className="hover:text-brand-red transition-colors font-semibold text-sm">Bail Guide</Link>
-              </nav>
+              <h3 className="text-white font-black text-lg mb-6 uppercase tracking-tight">Quick Links</h3>
+              <div className="space-y-3">
+                <Link to="/" className="block text-white/90 hover:text-white transition-colors">
+                  Home
+                </Link>
+                <Link to="/about" className="block text-white/90 hover:text-white transition-colors">
+                  About
+                </Link>
+                <Link to="/contact" className="block text-white/90 hover:text-white transition-colors">
+                  Contact
+                </Link>
+                <Link to="/faq" className="block text-white/90 hover:text-white transition-colors">
+                  FAQ
+                </Link>
+                <Link to="/bail-bonds-guide" className="block text-white/90 hover:text-white transition-colors">
+                  Bail Guide
+                </Link>
+              </div>
             </div>
+
+            {/* Cities We Serve */}
             <div>
-              <h3 className="text-2xl font-black mb-6 uppercase tracking-tight">Legal</h3>
-              <p className="text-sm mb-4 font-semibold">Licensed Alabama Bail Bond Agents</p>
-              <p className="text-sm mb-4 font-semibold">Family-Owned Since 2019</p>
-              <p className="text-sm mb-4 font-semibold">Available 24/7/365</p>
+              <h3 className="text-white font-black text-lg mb-6 uppercase tracking-tight">Cities We Serve</h3>
+              <div className="space-y-3">
+                <Link to="/fort-payne" className="block text-white/90 hover:text-white transition-colors">
+                  Fort Payne
+                </Link>
+                <Link to="/rainsville" className="block text-white/90 hover:text-white transition-colors">
+                  Rainsville
+                </Link>
+                <Link to="/henagar" className="block text-white/90 hover:text-white transition-colors">
+                  Henagar
+                </Link>
+                <Link to="/fyffe" className="block text-white/90 hover:text-white transition-colors">
+                  Fyffe
+                </Link>
+                <Link to="/valley-head" className="block text-white/90 hover:text-white transition-colors">
+                  Valley Head
+                </Link>
+                <Link to="/pisgah" className="block text-white/90 hover:text-white transition-colors">
+                  Pisgah
+                </Link>
+                <Link to="/centre" className="block text-white/90 hover:text-white transition-colors">
+                  Centre
+                </Link>
+              </div>
+            </div>
+
+            {/* About Us */}
+            <div>
+              <h3 className="text-white font-black text-lg mb-6 uppercase tracking-tight">About Us</h3>
+              <div className="space-y-3 text-white/90">
+                <p>Licensed Alabama Bail Bond Agents</p>
+                <p>Family-Owned Since 2019</p>
+                <p>Available 24/7/365</p>
+              </div>
             </div>
           </div>
           <div className="border-t border-white/20 pt-8 text-center text-sm space-y-3">
