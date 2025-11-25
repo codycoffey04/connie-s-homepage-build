@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Facebook } from "lucide-react";
+import { Phone, Facebook, MapPin } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -21,6 +21,17 @@ export const Footer = () => {
               <a href="tel:256-997-9932" className="flex items-center gap-2 hover:text-white transition-colors">
                 <Phone className="h-4 w-4 text-brand-red" />
                 <span>Toni: 256-997-9932</span>
+              </a>
+              
+              {/* Business Address */}
+              <a 
+                href="https://www.google.com/maps/search/?api=1&query=2700+Jordan+Rd+SW,+Fort+Payne,+AL+35967"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-2 hover:text-white transition-colors pt-2"
+              >
+                <MapPin className="h-4 w-4 text-brand-red flex-shrink-0 mt-0.5" />
+                <span>2700 Jordan Rd SW<br />Fort Payne, AL 35967</span>
               </a>
             </div>
           </div>
