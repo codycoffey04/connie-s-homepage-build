@@ -322,7 +322,7 @@ const Index = () => {
                 <div className="text-sm font-semibold text-foreground/70">Years Serving Alabama</div>
               </div>
               <div>
-                <div className="text-3xl font-black text-brand-red mb-1">500+</div>
+                <div className="text-3xl font-black text-brand-red mb-1">1,000+</div>
                 <div className="text-sm font-semibold text-foreground/70">Families Helped</div>
               </div>
               <div>
@@ -438,71 +438,37 @@ const Index = () => {
       {/* Services We Offer Section */}
       <Section className="bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-black text-center mb-12 uppercase tracking-tight">
-            Services We Offer
-          </h2>
-          <div className="flex justify-center">
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl">
-              <div className="space-y-6">
-                <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-brand-red flex items-center justify-center flex-shrink-0 mt-1">
-                    <Check className="h-4 w-4 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-lg mb-1">24/7 Emergency Service</h3>
-                    <p className="text-foreground/80">Available anytime, day or night, including holidays</p>
-                  </div>
+        <h2 className="text-3xl md:text-4xl font-black text-center mb-12 uppercase tracking-tight">
+          Services We Offer
+        </h2>
+        <div className="grid md:grid-cols-2 gap-x-12 gap-y-6 max-w-4xl mx-auto">
+          <div className="space-y-6 w-full">
+            {services.slice(0, Math.ceil(services.length / 2)).map((service, index) => (
+              <div
+                key={index}
+                className="flex items-start gap-4"
+              >
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-red flex items-center justify-center mt-1">
+                  <Check className="h-5 w-5 text-white" />
                 </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-brand-red flex items-center justify-center flex-shrink-0 mt-1">
-                    <Check className="h-4 w-4 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-lg mb-1">Fast Jail Release</h3>
-                    <p className="text-foreground/80">Get your loved one out in 2-8 hours</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-brand-red flex items-center justify-center flex-shrink-0 mt-1">
-                    <Check className="h-4 w-4 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-lg mb-1">Flexible Payment Plans</h3>
-                    <p className="text-foreground/80">Credit cards, debit cards, and payment arrangements</p>
-                  </div>
-                </div>
+                <p className="text-lg font-semibold">{service}</p>
               </div>
-              <div className="space-y-6">
-                <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-brand-red flex items-center justify-center flex-shrink-0 mt-1">
-                    <Check className="h-4 w-4 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-lg mb-1">Licensed & Bonded</h3>
-                    <p className="text-foreground/80">Fully licensed Alabama bail bond agents</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-brand-red flex items-center justify-center flex-shrink-0 mt-1">
-                    <Check className="h-4 w-4 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-lg mb-1">Confidential & Discreet</h3>
-                    <p className="text-foreground/80">Your privacy is our priority</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-brand-red flex items-center justify-center flex-shrink-0 mt-1">
-                    <Check className="h-4 w-4 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-lg mb-1">Family Owned & Operated</h3>
-                    <p className="text-foreground/80">Personal service from people who care</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
+          <div className="space-y-6 w-full">
+            {services.slice(Math.ceil(services.length / 2)).map((service, index) => (
+              <div
+                key={index}
+                className="flex items-start gap-4"
+              >
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-red flex items-center justify-center mt-1">
+                  <Check className="h-5 w-5 text-white" />
+                </div>
+                <p className="text-lg font-semibold">{service}</p>
+              </div>
+            ))}
+          </div>
+        </div>
         </div>
       </Section>
 
