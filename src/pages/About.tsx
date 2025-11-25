@@ -139,13 +139,13 @@ const About = () => {
                   <Phone className="w-4 h-4" />
                   Richard: 256-601-2041
                 </a>
-                <a href="tel:2565237685" className="text-white hover:text-brand-red transition-colors font-bold flex items-center gap-2">
+                <a href="tel:2566302824" className="text-white hover:text-brand-red transition-colors font-bold flex items-center gap-2">
                   <Phone className="w-4 h-4" />
-                  Connie: 256-523-7685
+                  Connie: 256-630-2824
                 </a>
-                <a href="tel:2569979932" className="text-white hover:text-brand-red transition-colors font-bold flex items-center gap-2">
+                <a href="tel:2564400822" className="text-white hover:text-brand-red transition-colors font-bold flex items-center gap-2">
                   <Phone className="w-4 h-4" />
-                  Toni: 256-997-9932
+                  Toni: 256-440-0822
                 </a>
               </div>
             </div>
