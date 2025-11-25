@@ -34,16 +34,28 @@ export const SEO = ({ title, description, canonical, ogImage, schema, city, revi
       <meta name="description" content={description} />
       <link rel="canonical" href={canonicalUrl} />
       
-      {/* Open Graph */}
+      {/* Open Graph - Enhanced */}
+      <meta property="og:type" content="business.business" />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:image" content={defaultImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content={`${title} - Professional bail bond services`} />
+      <meta property="og:locale" content="en_US" />
+      <meta property="og:site_name" content="Connie's Bail Bonding" />
       
-      {/* Twitter */}
+      {/* Twitter - Enhanced */}
+      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={defaultImage} />
+      <meta name="twitter:image:alt" content={`${title} - Professional bail bond services`} />
+      
+      {/* General SEO */}
+      <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+      <meta name="author" content="Connie's Bail Bonding" />
       
       {/* Structured Data */}
       {schema && schema.map((schemaItem, index) => (
