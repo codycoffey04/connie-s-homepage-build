@@ -309,6 +309,57 @@ const Rainsville = () => {
         </AnimatedSection>
       </Section>
 
+      {/* How to Get to Our Office from Rainsville */}
+      <Section className="bg-muted py-16">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-black mb-8 text-center uppercase">
+            How to Get to Our Office from Rainsville
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="relative w-full h-[400px] rounded-lg overflow-hidden shadow-lg border-4 border-primary/20">
+              <iframe
+                src="https://maps.google.com/maps?q=2700+Jordan+Rd+SW,+Fort+Payne,+AL+35967&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Directions from Rainsville to Connie's Bail Bonding Office"
+              />
+            </div>
+            
+            <div className="space-y-6">
+              <Card className="border-2 border-primary">
+                <CardContent className="p-6">
+                  <h3 className="text-2xl font-black mb-4">🚗 15-Minute Drive</h3>
+                  <div className="space-y-3 text-foreground/80">
+                    <p><strong>Distance:</strong> 10 miles from Rainsville</p>
+                    <p><strong>Route:</strong> Take Highway 35 South to Fort Payne</p>
+                    <p><strong>We're located:</strong> Right next to DeKalb County Detention Center on Jordan Rd</p>
+                  </div>
+                  
+                  <div className="bg-primary/10 border-l-4 border-primary p-4 mt-4">
+                    <p className="text-sm font-semibold">When you call, we can meet you at the jail or courthouse within minutes of arriving.</p>
+                  </div>
+                  
+                  <a
+                    href="https://www.google.com/maps/dir/?api=1&origin=Rainsville+AL&destination=2700+Jordan+Rd+SW,Fort+Payne,AL+35967"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-3 w-full bg-primary text-primary-foreground px-6 py-4 rounded-lg font-black uppercase hover:bg-primary/90 transition-colors shadow-lg mt-6"
+                  >
+                    <MapPin className="w-6 h-6" />
+                    Get Directions from Rainsville
+                  </a>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </Section>
+
       {/* Local Law Enforcement & Court Information */}
       <Section className="bg-gradient-to-b from-muted to-white py-16">
         <div className="max-w-4xl mx-auto">

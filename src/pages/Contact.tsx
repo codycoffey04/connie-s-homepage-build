@@ -325,32 +325,155 @@ const Contact = () => {
         </div>
       </Section>
 
-      {/* Key Jail and Courthouse Locations */}
+      {/* Key Jail and Courthouse Locations with Interactive Maps */}
       <Section>
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Key Jail and Courthouse Locations
           </h2>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            {keyLocations.map((location) => (
-              <div key={location.county}>
-                <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
-                  <Building2 className="w-6 h-6 text-primary" />
-                  {location.county}
-                </h3>
-                <div className="space-y-4">
-                  {location.facilities.map((facility, index) => (
-                    <Card key={index}>
-                      <CardContent className="pt-6">
-                        <p className="font-bold text-lg mb-2">{facility.name}</p>
-                        <p className="text-foreground/70">{facility.address}</p>
-                      </CardContent>
-                    </Card>
-                  ))}
+          {/* DeKalb County */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
+              <Building2 className="w-6 h-6 text-primary" />
+              DeKalb County
+            </h3>
+            
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* DeKalb County Detention Center */}
+              <div className="space-y-4">
+                <Card>
+                  <CardContent className="pt-6">
+                    <p className="font-bold text-lg mb-2">DeKalb County Detention Center</p>
+                    <p className="text-foreground/70 mb-4">2801 Jordan Rd SW, Fort Payne, AL 35967</p>
+                    <a
+                      href="https://www.google.com/maps/dir/?api=1&destination=2801+Jordan+Rd+SW,Fort+Payne,AL+35967"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-primary hover:underline font-semibold"
+                    >
+                      <MapPin className="w-4 h-4" />
+                      Get Directions
+                    </a>
+                  </CardContent>
+                </Card>
+                <div className="relative w-full h-[250px] rounded-lg overflow-hidden shadow-lg border-2 border-primary/20">
+                  <iframe
+                    src="https://maps.google.com/maps?q=2801+Jordan+Rd+SW,+Fort+Payne,+AL+35967&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="DeKalb County Detention Center Location Map"
+                  />
                 </div>
               </div>
-            ))}
+              
+              {/* DeKalb County Courthouse */}
+              <div className="space-y-4">
+                <Card>
+                  <CardContent className="pt-6">
+                    <p className="font-bold text-lg mb-2">DeKalb County Courthouse</p>
+                    <p className="text-foreground/70 mb-4">300 Grand Ave SW, Fort Payne, AL 35967</p>
+                    <a
+                      href="https://www.google.com/maps/dir/?api=1&destination=300+Grand+Ave+SW,Fort+Payne,AL+35967"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-primary hover:underline font-semibold"
+                    >
+                      <MapPin className="w-4 h-4" />
+                      Get Directions
+                    </a>
+                  </CardContent>
+                </Card>
+                <div className="relative w-full h-[250px] rounded-lg overflow-hidden shadow-lg border-2 border-primary/20">
+                  <iframe
+                    src="https://maps.google.com/maps?q=300+Grand+Ave+SW,+Fort+Payne,+AL+35967&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="DeKalb County Courthouse Location Map"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Cherokee County */}
+          <div>
+            <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
+              <Building2 className="w-6 h-6 text-primary" />
+              Cherokee County
+            </h3>
+            
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Cherokee County Detention Center */}
+              <div className="space-y-4">
+                <Card>
+                  <CardContent className="pt-6">
+                    <p className="font-bold text-lg mb-2">Cherokee County Detention Center</p>
+                    <p className="text-foreground/70 mb-4">110 Cedar Bluff Rd, Centre, AL 35960</p>
+                    <a
+                      href="https://www.google.com/maps/dir/?api=1&destination=110+Cedar+Bluff+Rd,Centre,AL+35960"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-primary hover:underline font-semibold"
+                    >
+                      <MapPin className="w-4 h-4" />
+                      Get Directions
+                    </a>
+                  </CardContent>
+                </Card>
+                <div className="relative w-full h-[250px] rounded-lg overflow-hidden shadow-lg border-2 border-primary/20">
+                  <iframe
+                    src="https://maps.google.com/maps?q=110+Cedar+Bluff+Rd,+Centre,+AL+35960&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Cherokee County Detention Center Location Map"
+                  />
+                </div>
+              </div>
+              
+              {/* Cherokee County Courthouse */}
+              <div className="space-y-4">
+                <Card>
+                  <CardContent className="pt-6">
+                    <p className="font-bold text-lg mb-2">Cherokee County Courthouse</p>
+                    <p className="text-foreground/70 mb-4">100 Main St, Centre, AL 35960</p>
+                    <a
+                      href="https://www.google.com/maps/dir/?api=1&destination=100+Main+St,Centre,AL+35960"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-primary hover:underline font-semibold"
+                    >
+                      <MapPin className="w-4 h-4" />
+                      Get Directions
+                    </a>
+                  </CardContent>
+                </Card>
+                <div className="relative w-full h-[250px] rounded-lg overflow-hidden shadow-lg border-2 border-primary/20">
+                  <iframe
+                    src="https://maps.google.com/maps?q=100+Main+St,+Centre,+AL+35960&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Cherokee County Courthouse Location Map"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </Section>

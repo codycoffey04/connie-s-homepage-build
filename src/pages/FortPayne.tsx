@@ -351,6 +351,55 @@ const FortPayne = () => {
         </AnimatedSection>
       </Section>
 
+      {/* Office Location Map */}
+      <Section className="bg-white py-16">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-black mb-8 text-center uppercase">
+            Our Fort Payne Office Location
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Map */}
+            <div className="relative w-full h-[400px] rounded-lg overflow-hidden shadow-lg border-4 border-primary/20">
+              <iframe
+                src="https://maps.google.com/maps?q=2700+Jordan+Rd+SW,+Fort+Payne,+AL+35967&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Connie's Bail Bonding Office - 2700 Jordan Rd SW, Fort Payne, AL"
+              />
+            </div>
+            
+            {/* Details */}
+            <div className="space-y-6">
+              <Card className="border-2 border-primary">
+                <CardContent className="p-6">
+                  <h3 className="text-2xl font-black mb-4">📍 We're Right Here in Fort Payne</h3>
+                  <div className="space-y-3 text-foreground/80">
+                    <p className="text-lg"><strong>Address:</strong><br />2700 Jordan Rd SW<br />Fort Payne, AL 35967</p>
+                    <p className="text-lg"><strong>Next to:</strong> DeKalb County Detention Center (2-minute walk)</p>
+                    <p className="text-lg"><strong>From Downtown Fort Payne:</strong> 5-minute drive via Gault Ave</p>
+                  </div>
+                  
+                  <a
+                    href="https://www.google.com/maps/dir/?api=1&origin=Fort+Payne+AL&destination=2700+Jordan+Rd+SW,Fort+Payne,AL+35967"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-3 w-full bg-primary text-primary-foreground px-6 py-4 rounded-lg font-black uppercase hover:bg-primary/90 transition-colors shadow-lg mt-6"
+                  >
+                    <MapPin className="w-6 h-6" />
+                    Get Directions from Your Location
+                  </a>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </Section>
+
       {/* Local Law Enforcement & Court Information */}
       <Section className="bg-gradient-to-b from-white to-muted py-16">
         <div className="max-w-4xl mx-auto">
