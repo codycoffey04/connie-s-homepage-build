@@ -1,4 +1,5 @@
 import { Navigation } from "@/components/Navigation";
+import { Footer } from "@/components/Footer";
 import { StickyCallButton } from "@/components/StickyCallButton";
 import { SEO } from "@/components/SEO";
 import { AnimatedSection } from "@/components/AnimatedSection";
@@ -575,45 +576,7 @@ const CosignerResponsibilities = () => {
           </div>
         </AnimatedSection>
 
-        {/* Footer */}
-        <footer className="bg-black text-white border-t-4 border-brand-red py-12">
-          <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-3 gap-8 mb-8">
-              <div>
-                <h3 className="text-xl font-bold uppercase mb-4">Contact Us</h3>
-                <div className="space-y-3">
-                  {Object.values(phoneNumbers).map((contact) => (
-                    <div key={contact.number} className="flex items-center gap-2">
-                      <Phone className="h-4 w-4 text-brand-red" />
-                      <a href={`tel:${contact.number.replace(/[^0-9]/g, '')}`} className="hover:text-brand-red transition-colors">
-                        {contact.name}: {contact.number}
-                      </a>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold uppercase mb-4">Quick Links</h3>
-                <ul className="space-y-2">
-                  <li><a href="/" className="hover:text-brand-red transition-colors">Home</a></li>
-                  <li><a href="/about" className="hover:text-brand-red transition-colors">About</a></li>
-                  <li><a href="/contact" className="hover:text-brand-red transition-colors">Contact</a></li>
-                  <li><a href="/faq" className="hover:text-brand-red transition-colors">FAQ</a></li>
-                  <li><a href="/bail-bonds-guide" className="hover:text-brand-red transition-colors">Bail Guide</a></li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold uppercase mb-4">Legal</h3>
-                <p className="text-sm text-gray-400">Licensed & Bonded in Alabama</p>
-                <p className="text-sm text-gray-400 mt-2">Serving DeKalb & Cherokee Counties</p>
-              </div>
-            </div>
-            <div className="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
-              <p>&copy; {new Date().getFullYear()} Connie's Bail Bonding. All rights reserved.</p>
-              <p className="mt-2">Available 24/7 for Emergency Bail Bonds</p>
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </div>
     </>
   );

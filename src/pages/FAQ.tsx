@@ -1,4 +1,5 @@
 import { Navigation } from "@/components/Navigation";
+import { Footer } from "@/components/Footer";
 import { Section } from "@/components/Section";
 import { PhoneButton } from "@/components/PhoneButton";
 import { FAQList } from "@/components/FAQItem";
@@ -343,6 +344,8 @@ const FAQ = () => {
           </div>
         </div>
       </Section>
+
+      <Footer />
     </div>
   );
 };

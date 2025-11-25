@@ -1,4 +1,5 @@
 import { Navigation } from "@/components/Navigation";
+import { Footer } from "@/components/Footer";
 import { StickyCallButton } from "@/components/StickyCallButton";
 import { SEO } from "@/components/SEO";
 import { FAQList } from "@/components/FAQItem";
@@ -287,60 +288,7 @@ const BailBondsGuide = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-black border-t-4 border-brand-red py-12">
-        <div className="container mx-auto px-4 md:px-6 max-w-7xl">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            {/* Contact Us */}
-            <div>
-              <h3 className="text-xl font-black text-white uppercase mb-4">Contact Us</h3>
-              <div className="space-y-3">
-                <a href={`tel:${phoneNumbers.richard.number.replace(/[^0-9]/g, "")}`} className="flex items-center gap-2 text-gray-300 hover:text-brand-red transition-colors">
-                  <Phone className="w-4 h-4" />
-                  <span>{phoneNumbers.richard.name}: {phoneNumbers.richard.number}</span>
-                </a>
-                <a href={`tel:${phoneNumbers.connie.number.replace(/[^0-9]/g, "")}`} className="flex items-center gap-2 text-gray-300 hover:text-brand-red transition-colors">
-                  <Phone className="w-4 h-4" />
-                  <span>{phoneNumbers.connie.name}: {phoneNumbers.connie.number}</span>
-                </a>
-                <a href={`tel:${phoneNumbers.toni.number.replace(/[^0-9]/g, "")}`} className="flex items-center gap-2 text-gray-300 hover:text-brand-red transition-colors">
-                  <Phone className="w-4 h-4" />
-                  <span>{phoneNumbers.toni.name}: {phoneNumbers.toni.number}</span>
-                </a>
-              </div>
-            </div>
-
-            {/* Quick Links */}
-            <div>
-              <h3 className="text-xl font-black text-white uppercase mb-4">Quick Links</h3>
-              <ul className="space-y-2">
-                <li><a href="/" className="text-gray-300 hover:text-brand-red transition-colors">Home</a></li>
-                <li><a href="/about" className="text-gray-300 hover:text-brand-red transition-colors">About</a></li>
-                <li><a href="/contact" className="text-gray-300 hover:text-brand-red transition-colors">Contact</a></li>
-                <li><a href="/faq" className="text-gray-300 hover:text-brand-red transition-colors">FAQ</a></li>
-                <li><a href="/bail-bonds-guide" className="text-gray-300 hover:text-brand-red transition-colors">Bail Guide</a></li>
-              </ul>
-            </div>
-
-            {/* Legal */}
-            <div>
-              <h3 className="text-xl font-black text-white uppercase mb-4">Legal</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
-                Licensed bail bond agency serving DeKalb County and Cherokee County, Alabama. 
-                Available 24 hours a day, 7 days a week, 365 days a year.
-              </p>
-            </div>
-          </div>
-
-          {/* Copyright */}
-          <div className="border-t border-white/20 pt-6">
-            <p className="text-center text-gray-400 text-sm">
-              © {new Date().getFullYear()} Connie's Bail Bonding. All rights reserved. 
-              <span className="block mt-2">Professional bail bond services in Alabama since 2019.</span>
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 };
