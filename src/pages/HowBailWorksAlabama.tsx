@@ -6,6 +6,8 @@ import { SEO } from "@/components/SEO";
 import { FAQList } from "@/components/FAQItem";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { AnimatedCard } from "@/components/AnimatedCard";
+import { AnswerBox } from "@/components/AnswerBox";
+import { StatisticBox } from "@/components/StatisticBox";
 import { Card, CardContent } from "@/components/ui/card";
 import { Scale, DollarSign, Building, Users, Phone, CheckCircle, XCircle, ArrowRight } from "lucide-react";
 import { phoneNumbers } from "@/lib/cityUtils";
@@ -163,6 +165,26 @@ const HowBailWorksAlabama = () => {
               <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-4xl mb-8">
                 When someone is arrested in Alabama, bail is the process that allows them to be released from jail while awaiting trial. Understanding how bail works helps you act quickly and make informed decisions during a stressful time. Here's everything you need to know about the Alabama bail process.
               </p>
+              
+              {/* Author Byline */}
+              <div className="flex items-center gap-3 text-gray-600 mb-8">
+                <span>Written by <strong>Connie</strong></span>
+                <span>•</span>
+                <a href="https://apbb.alabama.gov/licensee/B0092" 
+                   className="text-brand-red hover:underline"
+                   target="_blank" rel="noopener noreferrer">
+                  APBB License #B0092 ✓
+                </a>
+                <span>•</span>
+                <span>Updated November 2025</span>
+              </div>
+
+              {/* Answer Box */}
+              <AnswerBox 
+                question="How does bail work in Alabama?"
+                answer="After arrest and booking (1-3 hours), a judge sets bail based on charges and risk factors. You can pay 10% through a bail bondsman plus state fees, or pay the full amount in cash to the court. Once posted, the jail processes release (typically 2-8 hours). The defendant must appear at all court dates or the bail is forfeited."
+                source="Alabama Code § 15-13-106"
+              />
             </AnimatedSection>
 
             {/* What Is Bail */}
@@ -178,8 +200,20 @@ const HowBailWorksAlabama = () => {
             {/* The Process Step-by-Step */}
             <AnimatedSection delay={0.2}>
               <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-8 mt-16">
-                The Alabama Bail Process Step-by-Step
+                How Does the Alabama Bail Process Work?
               </h2>
+              
+              <StatisticBox 
+                statistic="Booking typically takes 1-3 hours"
+                context="This is the first step after arrest before bail can even be posted."
+                citation="DeKalb County Sheriff's Office"
+              />
+              
+              <StatisticBox 
+                statistic="Release processing: 2-8 hours at DeKalb County Jail"
+                context="After bail is posted, this is how long it takes for the inmate to be released."
+                citation="Local operational data"
+              />
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {bailProcessSteps.map((step, index) => (
                   <AnimatedCard key={index} index={index}>

@@ -5,6 +5,8 @@ import { Section } from "@/components/Section";
 import { PhoneButton } from "@/components/PhoneButton";
 import { StickyCallButton } from "@/components/StickyCallButton";
 import { FAQList } from "@/components/FAQItem";
+import { AnswerBox } from "@/components/AnswerBox";
+import { StatisticBox } from "@/components/StatisticBox";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Breadcrumb,
@@ -144,9 +146,28 @@ const WhatHappensAfterArrest = () => {
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight mb-6">
           What Happens After an Arrest in Alabama
         </h1>
-        <p className="text-xl md:text-2xl text-gray-300 max-w-4xl leading-relaxed">
+        <p className="text-xl md:text-2xl text-gray-300 max-w-4xl leading-relaxed mb-6">
           When someone you care about is arrested, you're left wondering what's happening to them. Understanding the process helps you take the right steps to get them released as quickly as possible. Here's exactly what happens from the moment of arrest through release.
         </p>
+        
+        {/* Author Byline */}
+        <div className="flex items-center gap-3 text-gray-400 mb-8">
+          <span>Written by <strong className="text-white">Toni</strong></span>
+          <span>•</span>
+          <a href="https://apbb.alabama.gov/licensee/S0345" 
+             className="text-brand-red hover:underline"
+             target="_blank" rel="noopener noreferrer">
+            APBB License #S0345 ✓
+          </a>
+          <span>•</span>
+          <span>Updated November 2025</span>
+        </div>
+
+        {/* Answer Box */}
+        <AnswerBox 
+          question="What happens after someone is arrested in Alabama?"
+          answer="After arrest, they're transported to jail for booking (1-3 hours): photograph, fingerprints, background check, property collected. Bail is set either immediately via schedule or by judge within 24-72 hours. Once bail is posted through a bondsman (10% + fees), release processing takes 2-10 hours depending on the facility."
+        />
       </Section>
 
       {/* The Arrest */}

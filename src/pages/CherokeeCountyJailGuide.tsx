@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { StickyCallButton } from "@/components/StickyCallButton";
 import { SEO } from "@/components/SEO";
 import { AnimatedSection } from "@/components/AnimatedSection";
+import { AnswerBox } from "@/components/AnswerBox";
 import { Card, CardContent } from "@/components/ui/card";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Phone, MapPin, Clock, Building, Scale, DollarSign, Users, ArrowRight, ChevronDown } from "lucide-react";
@@ -104,9 +105,28 @@ const CherokeeCountyJailGuide = () => {
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight mb-8">
             Cherokee County Jail Bail Guide
           </h1>
-          <p className="text-xl text-gray-700 leading-relaxed max-w-4xl">
+          <p className="text-xl text-gray-700 leading-relaxed max-w-4xl mb-8">
             When someone is arrested in Cherokee County, Alabama, they're taken to the Cherokee County Detention Center in Centre. Here's everything you need to know about posting bail and getting your loved one released.
           </p>
+          
+          {/* Author Byline */}
+          <div className="flex items-center gap-3 text-gray-600 mb-8">
+            <span>Written by <strong>Toni</strong></span>
+            <span>•</span>
+            <a href="https://apbb.alabama.gov/licensee/S0345" 
+               className="text-brand-red hover:underline"
+               target="_blank" rel="noopener noreferrer">
+              APBB License #S0345 ✓
+            </a>
+            <span>•</span>
+            <span>Updated November 2025</span>
+          </div>
+
+          {/* Answer Box */}
+          <AnswerBox 
+            question="How do I post bail at Cherokee County Jail?"
+            answer="Call Connie's Bail Bonding 24/7 at 256-601-2041, 256-523-7685, or 256-997-9932. Provide the inmate's name and charges. We post bonds at Cherokee County Detention Center (110 Cedar Bluff Road, Centre, AL). Release typically takes 2-10 hours. Located about 30 minutes from Fort Payne. Costs 10% premium plus state fees."
+          />
         </AnimatedSection>
 
         {/* Facility Information */}

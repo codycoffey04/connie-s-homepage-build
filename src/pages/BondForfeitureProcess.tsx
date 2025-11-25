@@ -5,6 +5,8 @@ import { Section } from "@/components/Section";
 import { PhoneButton } from "@/components/PhoneButton";
 import { StickyCallButton } from "@/components/StickyCallButton";
 import { FAQList } from "@/components/FAQItem";
+import { AnswerBox } from "@/components/AnswerBox";
+import { StatisticBox } from "@/components/StatisticBox";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Breadcrumb,
@@ -140,9 +142,29 @@ const BondForfeitureProcess = () => {
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight mb-6">
           Bond Forfeiture Process in Alabama
         </h1>
-        <p className="text-xl md:text-2xl text-gray-300 max-w-4xl leading-relaxed">
+        <p className="text-xl md:text-2xl text-gray-300 max-w-4xl leading-relaxed mb-6">
           Bond forfeiture happens when a defendant fails to appear in court as required. It's the worst-case scenario for everyone involved—the defendant, the cosigner, and the bail bondsman. Understanding the process helps you know what to expect and how to potentially minimize the damage.
         </p>
+        
+        {/* Author Byline */}
+        <div className="flex items-center gap-3 text-gray-400 mb-8">
+          <span>Written by <strong className="text-white">Richard</strong></span>
+          <span>•</span>
+          <a href="https://apbb.alabama.gov/licensee/S0334" 
+             className="text-brand-red hover:underline"
+             target="_blank" rel="noopener noreferrer">
+            APBB License #S0334 ✓
+          </a>
+          <span>•</span>
+          <span>Updated November 2025</span>
+        </div>
+
+        {/* Answer Box */}
+        <AnswerBox 
+          question="What is bond forfeiture in Alabama?"
+          answer="Bond forfeiture occurs when a defendant fails to appear in court. The court issues a bench warrant and conditional forfeiture notice. Alabama law provides approximately 90 days for the bondsman to locate and return the defendant. If unsuccessful, the bond becomes final—the bondsman pays the full bail to the court and pursues the cosigner for reimbursement."
+          source="Ala. Code § 15-13-131"
+        />
       </Section>
 
       {/* What Triggers Forfeiture */}

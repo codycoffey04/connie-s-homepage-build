@@ -5,6 +5,8 @@ import { Section } from "@/components/Section";
 import { PhoneButton } from "@/components/PhoneButton";
 import { StickyCallButton } from "@/components/StickyCallButton";
 import { FAQList } from "@/components/FAQItem";
+import { AnswerBox } from "@/components/AnswerBox";
+import { StatisticBox } from "@/components/StatisticBox";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Breadcrumb,
@@ -106,18 +108,44 @@ const TypesOfBailBonds = () => {
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight mb-6">
           Types of Bail Bonds in Alabama
         </h1>
-        <p className="text-xl md:text-2xl text-gray-300 max-w-4xl leading-relaxed">
+        <p className="text-xl md:text-2xl text-gray-300 max-w-4xl leading-relaxed mb-6">
           When bail is set, you have options for how to pay it. Alabama law (Ala. Code § 15-13-111) recognizes several forms of bail, each with different requirements, costs, and risks. Understanding your options helps you choose the best path to get your loved one released.
         </p>
+        
+        {/* Author Byline */}
+        <div className="flex items-center gap-3 text-gray-400 mb-8">
+          <span>Written by <strong className="text-white">Connie</strong></span>
+          <span>•</span>
+          <a href="https://apbb.alabama.gov/licensee/B0092" 
+             className="text-brand-red hover:underline"
+             target="_blank" rel="noopener noreferrer">
+            APBB License #B0092 ✓
+          </a>
+          <span>•</span>
+          <span>Updated November 2025</span>
+        </div>
+
+        {/* Answer Box */}
+        <AnswerBox 
+          question="What are the types of bail bonds in Alabama?"
+          answer="Alabama recognizes four types of bail: Cash Bonds (pay full amount, fully refundable), Surety Bonds (pay 10% to bondsman, most common), Property Bonds (use real estate equity as collateral), and Release on Own Recognizance/ROR (no payment required, judge's discretion for low-risk cases)."
+          source="Ala. Code § 15-13-111"
+        />
       </Section>
 
-      {/* Cash Bond */}
       <Section>
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-4 mb-6">
             <DollarSign className="h-12 w-12 text-brand-red" />
-            <h2 className="text-4xl font-black uppercase tracking-tight">Cash Bond</h2>
+            <h2 className="text-4xl font-black uppercase tracking-tight">What Is a Cash Bond?</h2>
           </div>
+          
+          <StatisticBox 
+            statistic="Surety bonds (through a bondsman) are used in 95%+ of cases"
+            context="Most people don't have thousands in cash available to post bail directly with the court."
+            citation="Bail industry data"
+          />
+          
           <p className="text-xl mb-6">
             A cash bond means paying the full bail amount directly to the court or jail.
           </p>

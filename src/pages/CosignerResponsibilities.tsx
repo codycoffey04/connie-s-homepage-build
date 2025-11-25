@@ -3,6 +3,8 @@ import { Footer } from "@/components/Footer";
 import { StickyCallButton } from "@/components/StickyCallButton";
 import { SEO } from "@/components/SEO";
 import { AnimatedSection } from "@/components/AnimatedSection";
+import { AnswerBox } from "@/components/AnswerBox";
+import { StatisticBox } from "@/components/StatisticBox";
 import { Card, CardContent } from "@/components/ui/card";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Phone, Users, AlertTriangle, ShieldCheck, Scale, DollarSign, ArrowRight, ChevronDown, XCircle, CheckCircle } from "lucide-react";
@@ -100,9 +102,29 @@ const CosignerResponsibilities = () => {
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight mb-8">
             Bail Bond Cosigner Responsibilities in Alabama
           </h1>
-          <p className="text-xl text-gray-700 leading-relaxed max-w-4xl">
+          <p className="text-xl text-gray-700 leading-relaxed max-w-4xl mb-8">
             Cosigning a bail bond is a serious legal and financial commitment. Before you sign, you need to understand exactly what you're agreeing to. This guide explains your responsibilities, your risks, and what happens if things go wrong.
           </p>
+          
+          {/* Author Byline */}
+          <div className="flex items-center gap-3 text-gray-600 mb-8">
+            <span>Written by <strong>Richard</strong></span>
+            <span>•</span>
+            <a href="https://apbb.alabama.gov/licensee/S0334" 
+               className="text-brand-red hover:underline"
+               target="_blank" rel="noopener noreferrer">
+              APBB License #S0334 ✓
+            </a>
+            <span>•</span>
+            <span>Updated November 2025</span>
+          </div>
+
+          {/* Answer Box */}
+          <AnswerBox 
+            question="What are cosigner responsibilities for a bail bond?"
+            answer="As a cosigner (indemnitor), you guarantee two things: (1) the defendant will appear at all court dates, and (2) you will pay the full bail amount if they don't. You face financial liability including wage garnishment (up to 25% of disposable income), loss of collateral, and civil lawsuits if the defendant skips court."
+            source="Alabama indemnity agreement law"
+          />
         </AnimatedSection>
 
         {/* What Is a Cosigner */}
@@ -146,8 +168,21 @@ const CosignerResponsibilities = () => {
         <AnimatedSection className="py-16">
           <div className="container mx-auto px-4">
             <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-8">
-              Your Legal Obligations as Cosigner
+              What Are Your Legal Obligations as a Cosigner?
             </h2>
+            
+            <StatisticBox 
+              statistic="Up to 25% of disposable wages can be garnished"
+              context="If the defendant skips and you owe the forfeited bail, the bond company can garnish your wages under Alabama law."
+              citation="Alabama wage garnishment law"
+            />
+            
+            <StatisticBox 
+              statistic="90-day grace period for bond forfeiture"
+              context="Alabama gives bondsmen approximately 90 days to locate the defendant before final forfeiture judgment."
+              citation="Ala. Code § 15-13-131"
+              citationUrl="https://casetext.com/statute/code-of-alabama/title-15-criminal-procedure/chapter-13-bail/article-7-bail-bond-forfeitures"
+            />
             <div className="max-w-4xl">
               <p className="text-xl text-gray-700 mb-8">
                 When you sign a bail bond indemnity agreement, you're legally obligated to:
