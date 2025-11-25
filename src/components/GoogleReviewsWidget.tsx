@@ -10,6 +10,8 @@ export const GoogleReviewsWidget = ({
   placeId, 
   businessName = "Connie's Bail Bonding" 
 }: GoogleReviewsWidgetProps) => {
+  const embedUrl = `https://maps.google.com/maps?q=${encodeURIComponent(businessName)},+Fort+Payne,+AL&t=&z=15&ie=UTF8&iwloc=&output=embed`;
+  
   return (
     <div className="w-full max-w-6xl mx-auto">
       {/* Header with Average Rating */}
@@ -25,7 +27,7 @@ export const GoogleReviewsWidget = ({
         <p className="text-muted-foreground">Based on Google Reviews</p>
       </div>
 
-      {/* Google Maps Embed with Reviews */}
+      {/* Google Maps Embed */}
       <Card className="overflow-hidden border-2 border-border/30 shadow-lg">
         <CardContent className="p-0">
           <iframe
@@ -34,9 +36,9 @@ export const GoogleReviewsWidget = ({
             style={{ border: 0 }}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            src={`https://www.google.com/maps/embed/v1/place?key=&q=place_id:${placeId}&zoom=15`}
+            src={embedUrl}
             allowFullScreen
-            title={`${businessName} Google Reviews`}
+            title={`${businessName} Location`}
           />
         </CardContent>
       </Card>
