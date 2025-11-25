@@ -10,7 +10,7 @@ import { SEO } from "@/components/SEO";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { AnimatedImage } from "@/components/AnimatedImage";
 import { AnimatedCard } from "@/components/AnimatedCard";
-import { getLocalBusinessSchema, getBreadcrumbSchema, getServiceSchema, getHowToSchema } from "@/lib/schemaUtils";
+import { getLocalBusinessSchema, getBreadcrumbSchema, getServiceSchema, getHowToSchema, getSpeakableSchema } from "@/lib/schemaUtils";
 import { 
   Clock, 
   Zap, 
@@ -159,6 +159,7 @@ const Index = () => {
           getLocalBusinessSchema(),
           getServiceSchema(),
           getHowToSchema(),
+          getSpeakableSchema(),
           getBreadcrumbSchema([
             { name: "Home", url: "/" }
           ])
@@ -213,7 +214,7 @@ const Index = () => {
         </div>
         
         {/* Slim Contact Banner - Bottom of Hero */}
-        <div className="absolute bottom-0 left-0 right-0 bg-black/90 backdrop-blur-sm border-t-4 border-brand-red z-10">
+        <div className="contact-info absolute bottom-0 left-0 right-0 bg-black/90 backdrop-blur-sm border-t-4 border-brand-red z-10">
           <div className="container mx-auto px-4 py-4">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
               <p className="text-white/70 text-sm uppercase tracking-wide font-semibold">
@@ -238,8 +239,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Quick Answers Section - AEO Optimized */}
-      <Section className="bg-gradient-to-b from-black to-gray-900 py-16 border-t-4 border-brand-red">
+      {/* Quick Answers Section */}
+      <Section className="quick-answers bg-gradient-to-b from-black to-gray-900 py-16 border-t-4 border-brand-red">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-black text-center text-white mb-12 uppercase">
             Quick Answers — <span className="text-brand-red">What You Need to Know Right Now</span>
@@ -532,7 +533,7 @@ const Index = () => {
       </Section>
 
       {/* Areas We Serve */}
-      <Section className="bg-muted py-16">
+      <Section className="service-area bg-muted py-16">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">
             Areas We Serve in Northeast Alabama

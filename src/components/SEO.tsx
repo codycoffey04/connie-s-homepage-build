@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import { getReviewSchema } from '@/lib/schemaUtils';
 
 interface SEOProps {
   title: string;
@@ -7,9 +8,10 @@ interface SEOProps {
   ogImage?: string;
   schema?: object[];
   city?: string;
+  reviews?: string[];
 }
 
-export const SEO = ({ title, description, canonical, ogImage, schema, city }: SEOProps) => {
+export const SEO = ({ title, description, canonical, ogImage, schema, city, reviews }: SEOProps) => {
   const fullTitle = `${title} | Connie's Bail Bonding`;
   
   // City-specific OG images
@@ -47,6 +49,13 @@ export const SEO = ({ title, description, canonical, ogImage, schema, city }: SE
       {schema && schema.map((schemaItem, index) => (
         <script key={index} type="application/ld+json">
           {JSON.stringify(schemaItem)}
+        </script>
+      ))}
+      
+      {/* Review Schema */}
+      {reviews && reviews.length > 0 && getReviewSchema(reviews).map((reviewSchema, index) => (
+        <script key={`review-${index}`} type="application/ld+json">
+          {JSON.stringify(reviewSchema)}
         </script>
       ))}
     </Helmet>

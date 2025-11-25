@@ -19,7 +19,7 @@ import {
 } from "lucide-react";
 import { phoneNumbers } from "@/lib/cityUtils";
 import { SEO } from "@/components/SEO";
-import { getLocalBusinessSchema, getBreadcrumbSchema } from "@/lib/schemaUtils";
+import { getLocalBusinessSchema, getBreadcrumbSchema, getSpeakableSchema } from "@/lib/schemaUtils";
 import rainsvilleHeroBg from "@/assets/rainsville-hero-bg.jpg";
 import clockImage from "@/assets/24-7-clock.jpg";
 import legalGavel from "@/assets/legal-gavel.jpg";
@@ -155,7 +155,7 @@ const Rainsville = () => {
         </div>
         
         {/* Slim Contact Banner - Bottom of Hero */}
-        <div className="absolute bottom-0 left-0 right-0 bg-black/90 backdrop-blur-sm border-t-4 border-brand-red z-10">
+        <div className="contact-info absolute bottom-0 left-0 right-0 bg-black/90 backdrop-blur-sm border-t-4 border-brand-red z-10">
           <div className="container mx-auto px-4 py-4">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
               <p className="text-white/70 text-sm uppercase tracking-wide font-semibold">
@@ -181,7 +181,7 @@ const Rainsville = () => {
       </section>
 
       {/* Quick Answers Section - AEO Optimized */}
-      <Section className="bg-gradient-to-b from-black to-gray-900 py-16 border-t-4 border-brand-red">
+      <Section className="quick-answers bg-gradient-to-b from-black to-gray-900 py-16 border-t-4 border-brand-red">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-black text-center text-white mb-12 uppercase">
             Quick Answers — <span className="text-brand-red">What You Need to Know Right Now</span>
