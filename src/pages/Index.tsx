@@ -22,7 +22,9 @@ import {
   MapPin,
   Star,
   Check,
-  Phone
+  Phone,
+  BookOpen,
+  ArrowRight
 } from "lucide-react";
 import { phoneNumbers, cities } from "@/lib/cityUtils";
 import heroBg from "@/assets/hero-bg.jpg";
@@ -771,6 +773,28 @@ const Index = () => {
         </div>
       </Section>
 
+      {/* Guide Promotion Section */}
+      <Section className="bg-gradient-to-br from-primary/5 to-primary/10 py-16 border-y-4 border-primary">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-6">
+            <BookOpen className="w-8 h-8 text-primary" />
+          </div>
+          <h2 className="text-3xl md:text-4xl font-black mb-4 uppercase tracking-tight">
+            Free Alabama Bail Bonds Guide
+          </h2>
+          <p className="text-lg text-foreground/80 mb-8 max-w-2xl mx-auto">
+            New to the bail process? Our comprehensive guide covers everything from how bail works to what happens after arrest. Get answers to your questions 24/7.
+          </p>
+          <Link 
+            to="/bail-bonds-guide"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-black uppercase hover:bg-primary/90 transition-colors text-lg"
+          >
+            Explore the Guide
+            <ArrowRight className="w-5 h-5" />
+          </Link>
+        </div>
+      </Section>
+
       {/* Final CTA */}
       <Section className="bg-white py-16" id="contact">
         <div className="text-center max-w-4xl mx-auto">
@@ -852,6 +876,7 @@ const Index = () => {
                 <Link to="/about" className="hover:text-brand-red transition-colors font-semibold uppercase text-sm">About</Link>
                 <Link to="/contact" className="hover:text-brand-red transition-colors font-semibold uppercase text-sm">Contact</Link>
                 <Link to="/faq" className="hover:text-brand-red transition-colors font-semibold uppercase text-sm">FAQ</Link>
+                <Link to="/bail-bonds-guide" className="hover:text-brand-red transition-colors font-semibold uppercase text-sm">Bail Bonds Guide</Link>
               </nav>
             </div>
             <div>
