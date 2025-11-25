@@ -116,6 +116,7 @@ const Rainsville = () => {
         city="Rainsville"
         schema={[
           getLocalBusinessSchema("Rainsville"),
+          getSpeakableSchema(),
           getBreadcrumbSchema([
             { name: "Home", url: "/" },
             { name: "Rainsville", url: "/rainsville" }

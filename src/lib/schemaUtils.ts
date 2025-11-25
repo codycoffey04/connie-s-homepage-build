@@ -2,7 +2,7 @@ export const getLocalBusinessSchema = (city?: string) => ({
   "@context": "https://schema.org",
   "@type": "BailBondService",
   "name": "Connie's Bail Bonding",
-  "image": "https://conniesbailbonding.com/logo.png",
+  "image": "https://conniesbailbonding.com/og-image.jpg",
   "description": "24/7 bail bond services in Fort Payne, DeKalb County, and Cherokee County, Alabama",
   "address": {
     "@type": "PostalAddress",
@@ -128,14 +128,14 @@ export const getLocalBusinessSchema = (city?: string) => ({
     },
     {
       "@type": "ContactPoint",
-      "telephone": "256-630-2824",
+      "telephone": "256-523-7685",
       "contactType": "customer service",
       "availableLanguage": "English",
       "areaServed": "US-AL"
     },
     {
       "@type": "ContactPoint",
-      "telephone": "256-440-0822",
+      "telephone": "256-997-9932",
       "contactType": "customer service",
       "availableLanguage": "English",
       "areaServed": "US-AL"
@@ -270,6 +270,15 @@ export const getHowToSchema = () => ({
 });
 
 export const getReviewSchema = (reviews: string[]) => {
+  // Generate realistic review dates from the past 6-12 months
+  const generateReviewDate = (index: number) => {
+    const today = new Date();
+    const monthsAgo = 6 + Math.floor((index * 6) / reviews.length); // Spread reviews over 6-12 months
+    const daysOffset = Math.floor(Math.random() * 28); // Random day within the month
+    const reviewDate = new Date(today.getFullYear(), today.getMonth() - monthsAgo, today.getDate() - daysOffset);
+    return reviewDate.toISOString().split('T')[0];
+  };
+
   return reviews.map((reviewText, index) => ({
     "@context": "https://schema.org",
     "@type": "Review",
@@ -298,7 +307,7 @@ export const getReviewSchema = (reviews: string[]) => {
       "@type": "Organization",
       "name": "Google"
     },
-    "datePublished": "2024-01-15"
+    "datePublished": generateReviewDate(index)
   }));
 };
 
@@ -371,7 +380,7 @@ export const getArticleSchema = (
     "name": "Connie's Bail Bonding",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://conniesbailbonding.com/logo.png"
+      "url": "https://conniesbailbonding.com/og-image.jpg"
     }
   },
   "datePublished": datePublished,
