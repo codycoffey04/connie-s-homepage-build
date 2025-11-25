@@ -6,6 +6,8 @@ import { SEO } from "@/components/SEO";
 import { FAQList } from "@/components/FAQItem";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { AnimatedCard } from "@/components/AnimatedCard";
+import { AnswerBox } from "@/components/AnswerBox";
+import { StatisticBox } from "@/components/StatisticBox";
 import { Card, CardContent } from "@/components/ui/card";
 import { Scale, Users, CreditCard, Phone, ShieldCheck, ArrowRight, AlertCircle, CheckCircle } from "lucide-react";
 import { phoneNumbers } from "@/lib/cityUtils";
@@ -104,13 +106,40 @@ const BailCostsAlabama = () => {
               <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-4xl mb-8">
                 Understanding what you'll actually pay to bail someone out is crucial. Alabama has both bondsman premiums and state-mandated fees. Here's a complete breakdown so you know exactly what to expect—no surprises.
               </p>
+              
+              {/* Author Byline */}
+              <div className="flex items-center gap-3 text-gray-600 mb-8">
+                <span>Written by <strong>Connie</strong></span>
+                <span>•</span>
+                <a href="https://apbb.alabama.gov/licensee/B0092" 
+                   className="text-brand-red hover:underline"
+                   target="_blank" rel="noopener noreferrer">
+                  APBB License #B0092 ✓
+                </a>
+                <span>•</span>
+                <span>Updated November 2025</span>
+              </div>
+
+              {/* Answer Box */}
+              <AnswerBox 
+                question="How much does a bail bond cost in Alabama?"
+                answer="A bail bond in Alabama costs 10% of the total bail amount (the bondsman's premium) plus state-mandated fees ($35 + 3.5% of bail, with minimums of $100 for misdemeanors and $150 for felonies). For example, a $10,000 bail would cost approximately $1,385 total."
+                source="Ala. Code § 12-19-311"
+              />
             </AnimatedSection>
 
             {/* 10% Premium */}
             <AnimatedSection delay={0.1}>
               <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-6 mt-16">
-                The 10% Bail Bond Premium
+                How Much Is the Bail Bond Premium?
               </h2>
+              
+              <StatisticBox 
+                statistic="10% is the industry standard bail bond premium in Alabama"
+                context="This rate is consistent across most bondsmen and is non-refundable."
+                citation="Alabama bail industry standard"
+              />
+              
               <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mb-6">
                 When you use a bail bondsman, you pay a premium—typically 10% of the total bail amount. This is the industry standard in Alabama and across most of the country.
               </p>
@@ -126,8 +155,16 @@ const BailCostsAlabama = () => {
             {/* State Fees */}
             <AnimatedSection delay={0.2}>
               <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-6 mt-16">
-                Alabama State Bail Bond Fees
+                What Are Alabama's State Bail Bond Fees?
               </h2>
+              
+              <StatisticBox 
+                statistic="Alabama state fees: $35 + 3.5% of bail (min $100 misd/$150 felony)"
+                context="These mandatory fees are separate from the bondsman's premium."
+                citation="Ala. Code § 12-19-311"
+                citationUrl="https://casetext.com/statute/code-of-alabama/title-12-courts/chapter-19-bail-bond-costs-and-surcharges"
+              />
+              
               <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mb-6">
                 In addition to the bondsman's premium, Alabama law (Ala. Code § 12-19-311) requires state fees on every bail bond:
               </p>

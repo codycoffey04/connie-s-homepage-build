@@ -360,21 +360,59 @@ export const getItemListSchema = (items: { name: string; description: string; ur
   }))
 });
 
+// Author Schema with APBB License Verification
+export const getAuthorSchema = (authorName: "Connie" | "Richard" | "Toni" = "Connie") => {
+  const authors = {
+    "Connie": {
+      name: "Connie",
+      credential: "APBB License #B0092",
+      url: "https://apbb.alabama.gov/licensee/B0092",
+      title: "Owner & Licensed Bail Agent"
+    },
+    "Richard": {
+      name: "Richard",
+      credential: "APBB License #S0334",
+      url: "https://apbb.alabama.gov/licensee/S0334",
+      title: "Licensed Bail Agent"
+    },
+    "Toni": {
+      name: "Toni",
+      credential: "APBB License #S0345",
+      url: "https://apbb.alabama.gov/licensee/S0345",
+      title: "Licensed Bail Agent"
+    }
+  };
+  
+  return {
+    "@type": "Person",
+    "name": authors[authorName].name,
+    "jobTitle": authors[authorName].title,
+    "worksFor": {
+      "@type": "BailBondService",
+      "name": "Connie's Bail Bonding"
+    },
+    "hasCredential": {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "Professional License",
+      "name": authors[authorName].credential,
+      "url": authors[authorName].url
+    }
+  };
+};
+
 export const getArticleSchema = (
   headline: string,
   description: string,
   url: string,
   datePublished: string = "2024-01-15",
-  dateModified: string = "2025-11-25"
+  dateModified: string = "2025-11-25",
+  authorName: "Connie" | "Richard" | "Toni" = "Connie"
 ) => ({
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": headline,
   "description": description,
-  "author": {
-    "@type": "Organization",
-    "name": "Connie's Bail Bonding"
-  },
+  "author": getAuthorSchema(authorName),
   "publisher": {
     "@type": "Organization",
     "name": "Connie's Bail Bonding",

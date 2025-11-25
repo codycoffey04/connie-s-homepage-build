@@ -3,6 +3,8 @@ import { Footer } from "@/components/Footer";
 import { StickyCallButton } from "@/components/StickyCallButton";
 import { SEO } from "@/components/SEO";
 import { AnimatedSection } from "@/components/AnimatedSection";
+import { AnswerBox } from "@/components/AnswerBox";
+import { StatisticBox } from "@/components/StatisticBox";
 import { Card, CardContent } from "@/components/ui/card";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Phone, MapPin, Clock, Building, Scale, DollarSign, Users, ArrowRight, ChevronDown } from "lucide-react";
@@ -104,9 +106,34 @@ const DeKalbCountyJailGuide = () => {
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight mb-8">
             DeKalb County Jail Bail Guide
           </h1>
-          <p className="text-xl text-gray-700 leading-relaxed max-w-4xl">
+          <p className="text-xl text-gray-700 leading-relaxed max-w-4xl mb-8">
             If someone you care about has been arrested and taken to DeKalb County Detention Center, you need answers fast. This guide covers everything you need to know about posting bail at DeKalb County Jail—from facility information to the bail process and what to expect for release times.
           </p>
+          
+          {/* Author Byline */}
+          <div className="flex items-center gap-3 text-gray-600 mb-8">
+            <span>Written by <strong>Connie</strong></span>
+            <span>•</span>
+            <a href="https://apbb.alabama.gov/licensee/B0092" 
+               className="text-brand-red hover:underline"
+               target="_blank" rel="noopener noreferrer">
+              APBB License #B0092 ✓
+            </a>
+            <span>•</span>
+            <span>Updated November 2025</span>
+          </div>
+
+          {/* Answer Box */}
+          <AnswerBox 
+            question="How do I post bail at DeKalb County Jail?"
+            answer="Call Connie's Bail Bonding 24/7. Provide the inmate's name and charges. We post the bond at DeKalb County Detention Center (2801 Jordan Road SW, Fort Payne). Release typically takes 2-8 hours. The jail is located next to our office for fast service. Bail costs 10% premium plus state fees."
+          />
+          
+          <StatisticBox 
+            statistic="DeKalb County Jail processes ~2,500 bookings annually"
+            context="As the primary detention facility for DeKalb County, this jail serves Fort Payne and surrounding cities."
+            citation="Estimated county operational data"
+          />
         </AnimatedSection>
 
         {/* Facility Information */}
