@@ -264,7 +264,7 @@ const About = () => {
                   <li>• Regulated under Alabama Code Title 15-13</li>
                 </ul>
                 <a 
-                  href="https://www.aldoi.gov/Licensees/LicenseSearch.aspx" 
+                  href="https://www.apbb.alabama.gov/licensees/?jsf=jet-engine&_sm=search-aggregate!b0092" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex items-center text-primary hover:underline font-semibold text-sm"
@@ -284,6 +284,62 @@ const About = () => {
                   <li>• Continuing Education: Current</li>
                   <li>• Annual License Renewal: Compliant</li>
                 </ul>
+              </div>
+            </div>
+            
+            {/* Our Licensed Agents Subsection */}
+            <div className="border-t pt-8 mt-8">
+              <h4 className="font-bold text-xl text-foreground text-center mb-6">
+                Our Licensed Agents
+              </h4>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {/* Connie */}
+                <div className="text-center p-4 bg-primary/5 rounded-lg border border-primary/10">
+                  <h5 className="font-bold text-lg text-foreground mb-2">Connie</h5>
+                  <div className="inline-flex items-center justify-center px-3 py-1 bg-primary/10 rounded-full mb-3">
+                    <span className="text-sm font-semibold text-primary">APBB #B0092</span>
+                  </div>
+                  <a 
+                    href="https://www.apbb.alabama.gov/licensees/?jsf=jet-engine&_sm=search-aggregate!b0092" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-primary hover:underline font-semibold text-sm"
+                  >
+                    Verify →
+                  </a>
+                </div>
+
+                {/* Richard */}
+                <div className="text-center p-4 bg-primary/5 rounded-lg border border-primary/10">
+                  <h5 className="font-bold text-lg text-foreground mb-2">Richard</h5>
+                  <div className="inline-flex items-center justify-center px-3 py-1 bg-primary/10 rounded-full mb-3">
+                    <span className="text-sm font-semibold text-primary">APBB #S0334</span>
+                  </div>
+                  <a 
+                    href="https://www.apbb.alabama.gov/licensees/?jsf=jet-engine&_sm=search-aggregate!s0334" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-primary hover:underline font-semibold text-sm"
+                  >
+                    Verify →
+                  </a>
+                </div>
+
+                {/* Toni */}
+                <div className="text-center p-4 bg-primary/5 rounded-lg border border-primary/10">
+                  <h5 className="font-bold text-lg text-foreground mb-2">Toni</h5>
+                  <div className="inline-flex items-center justify-center px-3 py-1 bg-primary/10 rounded-full mb-3">
+                    <span className="text-sm font-semibold text-primary">APBB #S0345</span>
+                  </div>
+                  <a 
+                    href="https://www.apbb.alabama.gov/licensees/?jsf=jet-engine&_sm=search-aggregate!s0345" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-primary hover:underline font-semibold text-sm"
+                  >
+                    Verify →
+                  </a>
+                </div>
               </div>
             </div>
             
