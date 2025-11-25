@@ -22,6 +22,10 @@ import BailCostsAlabama from "./pages/BailCostsAlabama";
 import DeKalbCountyJailGuide from "./pages/DeKalbCountyJailGuide";
 import CherokeeCountyJailGuide from "./pages/CherokeeCountyJailGuide";
 import CosignerResponsibilities from "./pages/CosignerResponsibilities";
+import TypesOfBailBonds from "./pages/TypesOfBailBonds";
+import BondForfeitureProcess from "./pages/BondForfeitureProcess";
+import WhatHappensAfterArrest from "./pages/WhatHappensAfterArrest";
+import BailBondScams from "./pages/BailBondScams";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -52,6 +56,10 @@ const App = () => (
             <Route path="/bail-bonds-guide/dekalb-county-jail-guide" element={<DeKalbCountyJailGuide />} />
             <Route path="/bail-bonds-guide/cherokee-county-jail-guide" element={<CherokeeCountyJailGuide />} />
             <Route path="/bail-bonds-guide/cosigner-responsibilities" element={<CosignerResponsibilities />} />
+            <Route path="/bail-bonds-guide/types-of-bail-bonds" element={<TypesOfBailBonds />} />
+            <Route path="/bail-bonds-guide/bond-forfeiture-process" element={<BondForfeitureProcess />} />
+            <Route path="/bail-bonds-guide/what-happens-after-arrest" element={<WhatHappensAfterArrest />} />
+            <Route path="/bail-bonds-guide/bail-bond-scams" element={<BailBondScams />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
