@@ -320,3 +320,33 @@ export const getSpeakableSchema = () => ({
     ]
   }
 });
+
+export const getWebPageSchema = (name: string, description: string, breadcrumbs: { name: string; url: string }[]) => ({
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": name,
+  "description": description,
+  "url": `https://conniesbailbonding.com${breadcrumbs[breadcrumbs.length - 1]?.url || '/'}`,
+  "breadcrumb": getBreadcrumbSchema(breadcrumbs),
+  "publisher": {
+    "@type": "Organization",
+    "name": "Connie's Bail Bonding"
+  }
+});
+
+export const getItemListSchema = (items: { name: string; description: string; url: string }[]) => ({
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Alabama Bail Bonds Educational Guides",
+  "description": "Comprehensive educational articles about bail bonds in Alabama",
+  "itemListElement": items.map((item, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "item": {
+      "@type": "Article",
+      "name": item.name,
+      "description": item.description,
+      "url": `https://conniesbailbonding.com${item.url}`
+    }
+  }))
+});
