@@ -543,11 +543,11 @@ const Contact = () => {
             <div>
               <h3 className="text-2xl font-black mb-6 uppercase tracking-tight">Quick Links</h3>
               <nav className="flex flex-col gap-3">
-                <Link to="/" className="hover:text-brand-red transition-colors font-semibold uppercase text-sm">Home</Link>
-                <Link to="/about" className="hover:text-brand-red transition-colors font-semibold uppercase text-sm">About</Link>
-                <Link to="/contact" className="hover:text-brand-red transition-colors font-semibold uppercase text-sm">Contact</Link>
-                <Link to="/faq" className="hover:text-brand-red transition-colors font-semibold uppercase text-sm">FAQ</Link>
-                <Link to="/bail-bonds-guide" className="hover:text-brand-red transition-colors font-semibold uppercase text-sm">Bail Bonds Guide</Link>
+                <Link to="/" className="hover:text-brand-red transition-colors font-semibold text-sm">Home</Link>
+                <Link to="/about" className="hover:text-brand-red transition-colors font-semibold text-sm">About</Link>
+                <Link to="/contact" className="hover:text-brand-red transition-colors font-semibold text-sm">Contact</Link>
+                <Link to="/faq" className="hover:text-brand-red transition-colors font-semibold text-sm">FAQ</Link>
+                <Link to="/bail-bonds-guide" className="hover:text-brand-red transition-colors font-semibold text-sm">Bail Guide</Link>
               </nav>
             </div>
             <div>
