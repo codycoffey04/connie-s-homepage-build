@@ -48,10 +48,10 @@ const BailCostsAlabama = () => {
       icon: Users
     },
     {
-      title: "Bail Bond Payment Plans",
-      description: "Can't pay the full premium upfront? Learn about financing options.",
-      url: "/bail-bonds-guide/bail-bond-payment-plans",
-      icon: CreditCard
+      title: "Types of Bail Bonds",
+      description: "Cash bonds, surety bonds, property bonds—which is right for your situation?",
+      url: "/bail-bonds-guide/types-of-bail-bonds",
+      icon: Scale
     }
   ];
 

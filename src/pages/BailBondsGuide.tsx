@@ -63,13 +63,6 @@ const BailBondsGuide = () => {
       url: "/bail-bonds-guide/what-happens-after-arrest"
     },
     {
-      icon: CreditCard,
-      name: "Bail Bond Payment Plans",
-      title: "Bail Bond Payment Plans",
-      description: "Can't pay the full premium upfront? Learn about financing options.",
-      url: "/bail-bonds-guide/bail-bond-payment-plans"
-    },
-    {
       icon: AlertTriangle,
       name: "Bond Forfeiture Process",
       title: "Bond Forfeiture Process",
