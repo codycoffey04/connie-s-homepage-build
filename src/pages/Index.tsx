@@ -312,71 +312,44 @@ const Index = () => {
       </Section>
 
       {/* Why Choose Connie's */}
-      <Section className="bg-white py-24">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            
-            {/* Left: Image */}
-            <AnimatedSection delay={0.2}>
-              <div className="relative h-[500px] lg:h-[600px] rounded-lg overflow-hidden shadow-2xl">
-                <img 
-                  src={freedomHandcuffs} 
-                  alt="Freedom from custody - professional bail bonds"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-black/20"></div>
+      <Section className="bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          {/* Stats Bar */}
+          <div className="bg-brand-red/5 rounded-lg p-6 mb-12">
+            <div className="grid md:grid-cols-3 gap-6 text-center">
+              <div>
+                <div className="text-3xl font-black text-brand-red mb-1">6+</div>
+                <div className="text-sm font-semibold text-foreground/70">Years Serving Alabama</div>
               </div>
-            </AnimatedSection>
+              <div>
+                <div className="text-3xl font-black text-brand-red mb-1">500+</div>
+                <div className="text-sm font-semibold text-foreground/70">Families Helped</div>
+              </div>
+              <div>
+                <div className="text-3xl font-black text-brand-red mb-1">24/7</div>
+                <div className="text-sm font-semibold text-foreground/70">Available Every Day</div>
+              </div>
+            </div>
+          </div>
 
-            {/* Right: Heading + Checklist */}
-            <AnimatedSection delay={0.4}>
-              <div className="space-y-8">
-                {/* Years of Experience Badge */}
-                <div className="bg-primary/10 border-2 border-primary rounded-lg p-6 mb-8">
-                  <div className="flex items-center justify-center gap-4 md:gap-8 flex-wrap">
-                    <div className="text-center">
-                      <div className="text-5xl font-black text-primary mb-2">6+</div>
-                      <div className="text-sm font-semibold text-foreground uppercase tracking-wide">
-                        Years Serving<br />Northeast Alabama
-                      </div>
-                    </div>
-                    <div className="h-16 w-px bg-border hidden md:block"></div>
-                    <div className="text-center">
-                      <div className="text-5xl font-black text-primary mb-2">500+</div>
-                      <div className="text-sm font-semibold text-foreground uppercase tracking-wide">
-                        Families<br />Helped
-                      </div>
-                    </div>
-                    <div className="h-16 w-px bg-border hidden md:block"></div>
-                    <div className="text-center">
-                      <div className="text-5xl font-black text-primary mb-2">24/7</div>
-                      <div className="text-sm font-semibold text-foreground uppercase tracking-wide">
-                        Available<br />Every Day
-                      </div>
+          <h2 className="text-3xl md:text-4xl font-black text-center mb-12 uppercase tracking-tight">
+            Why Choose Connie's?
+          </h2>
+          
+          {/* Checklist Grid */}
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {whyChooseChecklist.map((item, index) => (
+              <AnimatedCard key={index} index={index}>
+                <div className="flex items-start gap-4 p-6 bg-muted/30 rounded-lg">
+                  <div className="flex-shrink-0">
+                    <div className="w-8 h-8 rounded-full bg-brand-red flex items-center justify-center">
+                      <Check className="h-5 w-5 text-white" />
                     </div>
                   </div>
+                  <p className="text-foreground/90 font-medium">{item}</p>
                 </div>
-                
-                <h2 className="text-4xl md:text-5xl font-black text-black uppercase tracking-tight">
-                  Why Choose <span className="text-brand-red">Connie's</span>
-                </h2>
-                
-                <div className="space-y-4">
-                  {whyChooseList.map((item, index) => (
-                    <div key={index} className="flex items-start gap-4">
-                      <div className="w-8 h-8 rounded-full bg-brand-red flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <Check className="w-5 h-5 text-white" />
-                      </div>
-                      <p className="text-lg text-gray-800 font-medium leading-relaxed">
-                        {item}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </AnimatedSection>
-            
+              </AnimatedCard>
+            ))}
           </div>
         </div>
       </Section>
@@ -468,62 +441,64 @@ const Index = () => {
           <h2 className="text-3xl md:text-4xl font-black text-center mb-12 uppercase tracking-tight">
             Services We Offer
           </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              <div className="flex items-start gap-3">
-                <div className="w-6 h-6 rounded-full bg-brand-red flex items-center justify-center flex-shrink-0 mt-1">
-                  <Check className="h-4 w-4 text-white" />
+          <div className="flex justify-center">
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl">
+              <div className="space-y-6">
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-brand-red flex items-center justify-center flex-shrink-0 mt-1">
+                    <Check className="h-4 w-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-1">24/7 Emergency Service</h3>
+                    <p className="text-foreground/80">Available anytime, day or night, including holidays</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-bold text-lg mb-1">24/7 Emergency Service</h3>
-                  <p className="text-foreground/80">Available anytime, day or night, including holidays</p>
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-brand-red flex items-center justify-center flex-shrink-0 mt-1">
+                    <Check className="h-4 w-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-1">Fast Jail Release</h3>
+                    <p className="text-foreground/80">Get your loved one out in 2-8 hours</p>
+                  </div>
                 </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-6 h-6 rounded-full bg-brand-red flex items-center justify-center flex-shrink-0 mt-1">
-                  <Check className="h-4 w-4 text-white" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-lg mb-1">Fast Jail Release</h3>
-                  <p className="text-foreground/80">Get your loved one out in 2-8 hours</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-6 h-6 rounded-full bg-brand-red flex items-center justify-center flex-shrink-0 mt-1">
-                  <Check className="h-4 w-4 text-white" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-lg mb-1">Flexible Payment Plans</h3>
-                  <p className="text-foreground/80">Credit cards, debit cards, and payment arrangements</p>
-                </div>
-              </div>
-            </div>
-            <div className="space-y-6">
-              <div className="flex items-start gap-3">
-                <div className="w-6 h-6 rounded-full bg-brand-red flex items-center justify-center flex-shrink-0 mt-1">
-                  <Check className="h-4 w-4 text-white" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-lg mb-1">Licensed & Bonded</h3>
-                  <p className="text-foreground/80">Fully licensed Alabama bail bond agents</p>
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-brand-red flex items-center justify-center flex-shrink-0 mt-1">
+                    <Check className="h-4 w-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-1">Flexible Payment Plans</h3>
+                    <p className="text-foreground/80">Credit cards, debit cards, and payment arrangements</p>
+                  </div>
                 </div>
               </div>
-              <div className="flex items-start gap-3">
-                <div className="w-6 h-6 rounded-full bg-brand-red flex items-center justify-center flex-shrink-0 mt-1">
-                  <Check className="h-4 w-4 text-white" />
+              <div className="space-y-6">
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-brand-red flex items-center justify-center flex-shrink-0 mt-1">
+                    <Check className="h-4 w-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-1">Licensed & Bonded</h3>
+                    <p className="text-foreground/80">Fully licensed Alabama bail bond agents</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-bold text-lg mb-1">Confidential & Discreet</h3>
-                  <p className="text-foreground/80">Your privacy is our priority</p>
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-brand-red flex items-center justify-center flex-shrink-0 mt-1">
+                    <Check className="h-4 w-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-1">Confidential & Discreet</h3>
+                    <p className="text-foreground/80">Your privacy is our priority</p>
+                  </div>
                 </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-6 h-6 rounded-full bg-brand-red flex items-center justify-center flex-shrink-0 mt-1">
-                  <Check className="h-4 w-4 text-white" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-lg mb-1">Family Owned & Operated</h3>
-                  <p className="text-foreground/80">Personal service from people who care</p>
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-brand-red flex items-center justify-center flex-shrink-0 mt-1">
+                    <Check className="h-4 w-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-1">Family Owned & Operated</h3>
+                    <p className="text-foreground/80">Personal service from people who care</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -892,15 +867,15 @@ const Index = () => {
               <div className="space-y-4 text-white/90">
                 <a href="tel:256-601-2041" className="flex items-center gap-2 hover:text-white transition-colors">
                   <Phone className="h-4 w-4 text-brand-red" />
-                  <span>📞 Richard: 256-601-2041</span>
+                  <span>Richard: 256-601-2041</span>
                 </a>
                 <a href="tel:256-523-7685" className="flex items-center gap-2 hover:text-white transition-colors">
                   <Phone className="h-4 w-4 text-brand-red" />
-                  <span>📞 Connie: 256-523-7685</span>
+                  <span>Connie: 256-523-7685</span>
                 </a>
                 <a href="tel:256-997-9932" className="flex items-center gap-2 hover:text-white transition-colors">
                   <Phone className="h-4 w-4 text-brand-red" />
-                  <span>📞 Toni: 256-997-9932</span>
+                  <span>Toni: 256-997-9932</span>
                 </a>
               </div>
             </div>
