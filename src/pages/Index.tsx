@@ -755,8 +755,7 @@ const Index = () => {
         <p className="text-center text-base text-foreground/60 mb-12">
           Real reviews from our clients - updated automatically
         </p>
-        {/* TODO: Replace "YOUR_PLACE_ID_HERE" with actual Google Place ID from https://www.placeidfinder.com/ */}
-        <GoogleReviewsWidget placeId="YOUR_PLACE_ID_HERE" />
+        <GoogleReviewsWidget placeId="ChIJAa6xSXPZYYgR0zqawfYasDk" />
       </Section>
 
       {/* FAQ */}
