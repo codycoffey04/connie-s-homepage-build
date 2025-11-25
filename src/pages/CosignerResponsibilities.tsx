@@ -549,7 +549,7 @@ const CosignerResponsibilities = () => {
                 {
                   title: "What Is Bond Forfeiture?",
                   description: "Understanding what happens when court is missed",
-                  link: "/bail-bonds-guide"
+                  link: "/bail-bonds-guide/bond-forfeiture-process"
                 },
                 {
                   title: "Bail Costs & Fees Explained",
