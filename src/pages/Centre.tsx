@@ -316,10 +316,129 @@ const Centre = () => {
         </AnimatedSection>
       </Section>
 
+      {/* How to Get to Our Office from Centre */}
+      <Section className="bg-white py-16">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-black mb-8 text-center uppercase">
+            Our Fort Payne Office (30-Minute Drive from Centre)
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="relative w-full h-[400px] rounded-lg overflow-hidden shadow-lg border-4 border-primary/20">
+              <iframe
+                src="https://maps.google.com/maps?q=2700+Jordan+Rd+SW,+Fort+Payne,+AL+35967&t=&z=11&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Directions from Centre to Connie's Bail Bonding Office"
+              />
+            </div>
+            
+            <div className="space-y-6">
+              <Card className="border-2 border-primary">
+                <CardContent className="p-6">
+                  <h3 className="text-2xl font-black mb-4">🚗 30-Minute Drive to Fort Payne</h3>
+                  <div className="space-y-3 text-foreground/80">
+                    <p><strong>Distance:</strong> ~30 miles from Centre</p>
+                    <p><strong>Our Fort Payne Office:</strong><br />2700 Jordan Rd SW, Fort Payne, AL 35967</p>
+                    <p><strong>Route:</strong> Take Highway 35 North to Fort Payne</p>
+                  </div>
+                  
+                  <div className="bg-primary/10 border-l-4 border-primary p-4 mt-4">
+                    <p className="text-sm font-semibold">We can also meet you at Cherokee County facilities in Centre—no need to drive to Fort Payne!</p>
+                  </div>
+                  
+                  <a
+                    href="https://www.google.com/maps/dir/?api=1&origin=Centre+AL&destination=2700+Jordan+Rd+SW,Fort+Payne,AL+35967"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-3 w-full bg-primary text-primary-foreground px-6 py-4 rounded-lg font-black uppercase hover:bg-primary/90 transition-colors shadow-lg mt-6"
+                  >
+                    <MapPin className="w-6 h-6" />
+                    Get Directions from Centre
+                  </a>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </Section>
+
       {/* Local Law Enforcement & Court Information */}
       <Section className="bg-gradient-to-b from-muted to-white py-16">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-black mb-8 text-center uppercase">
+            Cherokee County Facilities (Right Here in Centre)
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            {/* Cherokee County Detention Center Map */}
+            <div className="space-y-4">
+              <Card className="border-2 border-primary/20">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold mb-4">Cherokee County Detention Center</h3>
+                  <p className="mb-2"><strong>Address:</strong> 110 Cedar Bluff Rd, Centre, AL 35960</p>
+                  <a
+                    href="https://www.google.com/maps/dir/?api=1&destination=110+Cedar+Bluff+Rd,Centre,AL+35960"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-primary hover:underline font-semibold"
+                  >
+                    <MapPin className="w-4 h-4" />
+                    Get Directions
+                  </a>
+                </CardContent>
+              </Card>
+              <div className="relative w-full h-[250px] rounded-lg overflow-hidden shadow-lg border-2 border-primary/20">
+                <iframe
+                  src="https://maps.google.com/maps?q=110+Cedar+Bluff+Rd,+Centre,+AL+35960&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Cherokee County Detention Center Location Map"
+                />
+              </div>
+            </div>
+            
+            {/* Cherokee County Courthouse Map */}
+            <div className="space-y-4">
+              <Card className="border-2 border-primary/20">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold mb-4">Cherokee County Courthouse</h3>
+                  <p className="mb-2"><strong>Address:</strong> 100 Main St, Centre, AL 35960</p>
+                  <a
+                    href="https://www.google.com/maps/dir/?api=1&destination=100+Main+St,Centre,AL+35960"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-primary hover:underline font-semibold"
+                  >
+                    <MapPin className="w-4 h-4" />
+                    Get Directions
+                  </a>
+                </CardContent>
+              </Card>
+              <div className="relative w-full h-[250px] rounded-lg overflow-hidden shadow-lg border-2 border-primary/20">
+                <iframe
+                  src="https://maps.google.com/maps?q=100+Main+St,+Centre,+AL+35960&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Cherokee County Courthouse Location Map"
+                />
+              </div>
+            </div>
+          </div>
+          
+          <h2 className="text-3xl font-black mb-8 text-center uppercase mt-12">
             Local Information for <span className="text-brand-red">Centre Residents</span>
           </h2>
           
