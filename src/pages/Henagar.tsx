@@ -19,7 +19,6 @@ import {
 } from "lucide-react";
 import { phoneNumbers } from "@/lib/cityUtils";
 import { StickyCallButton } from "@/components/StickyCallButton";
-import { ScrollToTop } from "@/components/ScrollToTop";
 import { SEO } from "@/components/SEO";
 import { getLocalBusinessSchema, getBreadcrumbSchema, getSpeakableSchema } from "@/lib/schemaUtils";
 import henagarHeroBg from "@/assets/henagar-hero-bg.jpg";
@@ -122,7 +121,6 @@ const Henagar = () => {
       />
       <Navigation />
       <StickyCallButton />
-      <ScrollToTop />
 
       {/* Hero Section - Full Screen with Sylvania Rams Water Tower */}
       <section 
