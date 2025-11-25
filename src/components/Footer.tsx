@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone } from "lucide-react";
+import { Phone, Facebook } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -82,6 +82,22 @@ export const Footer = () => {
               <p>Licensed Alabama Bail Bond Agents</p>
               <p>Family-Owned Since 2019</p>
               <p>Available 24/7/365</p>
+            </div>
+            
+            {/* Social Media Links */}
+            <div className="mt-6">
+              <h4 className="text-white font-bold text-sm mb-3 uppercase tracking-tight">Follow Us</h4>
+              <div className="flex gap-3">
+                <a 
+                  href="https://www.facebook.com/connies.bailbonding/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-brand-red hover:bg-red-700 p-2 rounded-full transition-colors"
+                  aria-label="Follow us on Facebook"
+                >
+                  <Facebook className="h-5 w-5 text-white" />
+                </a>
+              </div>
             </div>
           </div>
         </div>
