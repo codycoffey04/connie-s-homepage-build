@@ -189,7 +189,7 @@ const Index = () => {
               Alabama's Most Trusted Bail Bond Service
             </p>
             
-            <p className="text-lg md:text-xl mb-10 text-white/90 max-w-xl">
+            <p className="text-lg md:text-xl mb-10 text-white max-w-xl">
               Family-owned. Licensed agents. Serving DeKalb & Cherokee Counties since 2019.
             </p>
             
