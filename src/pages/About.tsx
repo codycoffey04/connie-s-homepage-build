@@ -6,7 +6,7 @@ import { TestimonialCard } from "@/components/TestimonialCard";
 import { Shield, Heart, MapPin, DollarSign, Check, BookOpen, Star, Users, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import { SEO } from "@/components/SEO";
-import { getLocalBusinessSchema, getBreadcrumbSchema } from "@/lib/schemaUtils";
+import { getLocalBusinessSchema, getBreadcrumbSchema, getSpeakableSchema } from "@/lib/schemaUtils";
 import aboutHeroBg from "@/assets/about-hero-bg.jpg";
 
 const About = () => {
@@ -87,11 +87,13 @@ const About = () => {
         canonical="/about"
         schema={[
           getLocalBusinessSchema(),
+          getSpeakableSchema(),
           getBreadcrumbSchema([
             { name: "Home", url: "/" },
             { name: "About", url: "/about" }
           ])
         ]}
+        reviews={testimonials}
       />
       <Navigation />
       

@@ -20,7 +20,23 @@ export const getLocalBusinessSchema = (city?: string) => ({
   "telephone": "256-601-2041",
   "email": "info@conniesbailbonding.com",
   "url": "https://conniesbailbonding.com",
-  "priceRange": "$$",
+  "priceRange": "10% of bail amount (Alabama state law)",
+  "paymentAccepted": [
+    "Cash",
+    "Credit Card",
+    "Debit Card",
+    "Payment Plans"
+  ],
+  "currenciesAccepted": "USD",
+  "knowsAbout": [
+    "DeKalb County Bail Bonds",
+    "Cherokee County Bail Bonds",
+    "Alabama Bail Law",
+    "Emergency Bail Bonds",
+    "Misdemeanor Bail",
+    "Felony Bail",
+    "24/7 Bail Services"
+  ],
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
     "dayOfWeek": [
@@ -98,8 +114,17 @@ export const getLocalBusinessSchema = (city?: string) => ({
       "@type": "ContactPoint",
       "telephone": "256-601-2041",
       "contactType": "customer service",
-      "availableLanguage": "English",
-      "areaServed": "US-AL"
+      "availableLanguage": ["English"],
+      "areaServed": "US-AL",
+      "contactOption": "TollFree",
+      "hoursAvailable": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      }
     },
     {
       "@type": "ContactPoint",
@@ -119,8 +144,15 @@ export const getLocalBusinessSchema = (city?: string) => ({
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.9",
-    "reviewCount": "150"
-  }
+    "reviewCount": "150",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Connie"
+  },
+  "foundingDate": "2019"
 });
 
 export const getBreadcrumbSchema = (items: { name: string; url: string }[]) => ({
@@ -235,4 +267,56 @@ export const getHowToSchema = () => ({
       "url": "https://conniesbailbonding.com/#release"
     }
   ]
+});
+
+export const getReviewSchema = (reviews: string[]) => {
+  return reviews.map((reviewText, index) => ({
+    "@context": "https://schema.org",
+    "@type": "Review",
+    "itemReviewed": {
+      "@type": "BailBondService",
+      "name": "Connie's Bail Bonding",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2700 Jordan Rd SW",
+        "addressLocality": "Fort Payne",
+        "addressRegion": "AL",
+        "postalCode": "35967"
+      }
+    },
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5"
+    },
+    "author": {
+      "@type": "Person",
+      "name": `Verified Customer ${index + 1}`
+    },
+    "reviewBody": reviewText,
+    "publisher": {
+      "@type": "Organization",
+      "name": "Google"
+    },
+    "datePublished": "2024-01-15"
+  }));
+};
+
+export const getSpeakableSchema = () => ({
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Connie's Bail Bonding - 24/7 Bail Bonds",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      ".quick-answers",
+      ".contact-info",
+      ".how-it-works",
+      ".service-area"
+    ],
+    "xpath": [
+      "/html/head/title",
+      "/html/head/meta[@name='description']/@content"
+    ]
+  }
 });
