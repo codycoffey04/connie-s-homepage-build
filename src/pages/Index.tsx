@@ -3,6 +3,7 @@ import { Navigation } from "@/components/Navigation";
 import { PhoneButton } from "@/components/PhoneButton";
 import { Section } from "@/components/Section";
 import { TestimonialCard } from "@/components/TestimonialCard";
+import { GoogleReviewsWidget } from "@/components/GoogleReviewsWidget";
 import { FAQList } from "@/components/FAQItem";
 import { Card, CardContent } from "@/components/ui/card";
 import { StickyCallButton } from "@/components/StickyCallButton";
@@ -746,8 +747,20 @@ const Index = () => {
         </div>
       </Section>
 
+      {/* Live Google Reviews Widget */}
+      <Section className="bg-muted py-16 md:py-24">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-center text-black">
+          All Reviews from Google
+        </h2>
+        <p className="text-center text-base text-foreground/60 mb-12">
+          Real reviews from our clients - updated automatically
+        </p>
+        {/* TODO: Replace "YOUR_PLACE_ID_HERE" with actual Google Place ID from https://www.placeidfinder.com/ */}
+        <GoogleReviewsWidget placeId="YOUR_PLACE_ID_HERE" />
+      </Section>
+
       {/* FAQ */}
-      <Section className="bg-muted py-16">
+      <Section className="bg-white py-16">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-black">
           Frequently Asked Questions
         </h2>
