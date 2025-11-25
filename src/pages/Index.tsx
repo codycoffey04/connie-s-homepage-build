@@ -7,6 +7,7 @@ import { GoogleReviewsWidget } from "@/components/GoogleReviewsWidget";
 import { FAQList } from "@/components/FAQItem";
 import { Card, CardContent } from "@/components/ui/card";
 import { StickyCallButton } from "@/components/StickyCallButton";
+import { ScrollToTop } from "@/components/ScrollToTop";
 import { SEO } from "@/components/SEO";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { AnimatedImage } from "@/components/AnimatedImage";
@@ -168,6 +169,7 @@ const Index = () => {
       />
       <Navigation />
       <StickyCallButton />
+      <ScrollToTop />
 
       {/* Hero Section - Modern Banner Style */}
       <section 

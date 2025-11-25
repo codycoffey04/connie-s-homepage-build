@@ -18,6 +18,8 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { phoneNumbers } from "@/lib/cityUtils";
+import { StickyCallButton } from "@/components/StickyCallButton";
+import { ScrollToTop } from "@/components/ScrollToTop";
 import { SEO } from "@/components/SEO";
 import { getLocalBusinessSchema, getBreadcrumbSchema, getSpeakableSchema } from "@/lib/schemaUtils";
 import pisgahHeroBg from "@/assets/pisgah-hero-bg.jpg";
@@ -119,6 +121,8 @@ const Pisgah = () => {
         reviews={testimonials}
       />
       <Navigation />
+      <StickyCallButton />
+      <ScrollToTop />
 
       {/* Hero Section - Full Screen with Waterfall */}
       <section 
