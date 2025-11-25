@@ -6,6 +6,8 @@ import { PhoneButton } from "@/components/PhoneButton";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { FAQList } from "@/components/FAQItem";
 import { phoneNumbers } from "@/lib/cityUtils";
+import { StickyCallButton } from "@/components/StickyCallButton";
+import { ScrollToTop } from "@/components/ScrollToTop";
 import { SEO } from "@/components/SEO";
 import { getLocalBusinessSchema, getBreadcrumbSchema, getFAQSchema } from "@/lib/schemaUtils";
 import contactHeroBg from "@/assets/contact-hero-bg.jpg";
@@ -88,6 +90,8 @@ const Contact = () => {
         ]}
       />
       <Navigation />
+      <StickyCallButton />
+      <ScrollToTop />
       
       {/* Hero Section - Full Screen with Background */}
       <section 

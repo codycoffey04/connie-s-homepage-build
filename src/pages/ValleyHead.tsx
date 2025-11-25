@@ -18,6 +18,8 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { phoneNumbers } from "@/lib/cityUtils";
+import { StickyCallButton } from "@/components/StickyCallButton";
+import { ScrollToTop } from "@/components/ScrollToTop";
 import { SEO } from "@/components/SEO";
 import { getLocalBusinessSchema, getBreadcrumbSchema, getSpeakableSchema } from "@/lib/schemaUtils";
 import valleyHeadHeroBg from "@/assets/valleyhead-hero-bg.jpg";
@@ -123,6 +125,8 @@ const ValleyHead = () => {
         reviews={testimonials}
       />
       <Navigation />
+      <StickyCallButton />
+      <ScrollToTop />
 
       {/* Hero Section - Full Screen with Valley Head Welcome Sign */}
       <section 
