@@ -8,6 +8,7 @@ import { FAQList } from "@/components/FAQItem";
 import { AnswerBox } from "@/components/AnswerBox";
 import { StatisticBox } from "@/components/StatisticBox";
 import { ReadingMeta } from "@/components/ReadingMeta";
+import { TableOfContents } from "@/components/TableOfContents";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Breadcrumb,
@@ -162,6 +163,16 @@ const BondForfeitureProcess = () => {
           answer="Bond forfeiture occurs when a defendant fails to appear in court. The court issues a bench warrant and conditional forfeiture notice. Alabama law provides approximately 90 days for the bondsman to locate and return the defendant. If unsuccessful, the bond becomes final—the bondsman pays the full bail to the court and pursues the cosigner for reimbursement."
           source="Ala. Code § 15-13-131"
         />
+
+        <TableOfContents 
+          items={[
+            { id: 'what-triggers-forfeiture', title: 'What Triggers Forfeiture?' },
+            { id: 'forfeiture-timeline', title: 'Bond Forfeiture Timeline' },
+            { id: 'grace-period', title: '90-Day Grace Period' },
+            { id: 'sufficient-cause', title: 'What Is "Sufficient Cause"?' },
+            { id: 'faqs', title: 'Frequently Asked Questions' },
+          ]}
+        />
       </Section>
 
       {/* What Triggers Forfeiture */}
@@ -169,7 +180,7 @@ const BondForfeitureProcess = () => {
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-4 mb-6">
             <AlertTriangle className="h-12 w-12 text-brand-red" />
-            <h2 className="text-4xl font-black uppercase tracking-tight">What Triggers Bond Forfeiture?</h2>
+            <h2 id="what-triggers-forfeiture" className="text-4xl font-black uppercase tracking-tight">What Triggers Bond Forfeiture?</h2>
           </div>
           
           <Card className="mb-6">
@@ -234,7 +245,7 @@ const BondForfeitureProcess = () => {
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-4 mb-8">
             <Clock className="h-12 w-12 text-brand-red" />
-            <h2 className="text-4xl font-black uppercase tracking-tight">The Forfeiture Timeline</h2>
+            <h2 id="forfeiture-timeline" className="text-4xl font-black uppercase tracking-tight">The Forfeiture Timeline</h2>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -258,7 +269,7 @@ const BondForfeitureProcess = () => {
       {/* 90-Day Grace Period */}
       <Section>
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl font-black uppercase tracking-tight mb-6">The 90-Day Grace Period</h2>
+          <h2 id="grace-period" className="text-4xl font-black uppercase tracking-tight mb-6">The 90-Day Grace Period</h2>
           
           <Card>
             <CardContent className="p-8">
@@ -311,7 +322,7 @@ const BondForfeitureProcess = () => {
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-4 mb-6">
             <Scale className="h-12 w-12 text-brand-red" />
-            <h2 className="text-4xl font-black uppercase tracking-tight">What "Sufficient Cause" Means</h2>
+            <h2 id="sufficient-cause" className="text-4xl font-black uppercase tracking-tight">What "Sufficient Cause" Means</h2>
           </div>
 
           <Card>

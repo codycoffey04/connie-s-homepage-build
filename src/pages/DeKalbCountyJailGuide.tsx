@@ -6,6 +6,7 @@ import { AnimatedSection } from "@/components/AnimatedSection";
 import { AnswerBox } from "@/components/AnswerBox";
 import { StatisticBox } from "@/components/StatisticBox";
 import { ReadingMeta } from "@/components/ReadingMeta";
+import { TableOfContents } from "@/components/TableOfContents";
 import { Card, CardContent } from "@/components/ui/card";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Phone, MapPin, Clock, Building, Scale, DollarSign, Users, ArrowRight, ChevronDown } from "lucide-react";
@@ -129,12 +130,23 @@ const DeKalbCountyJailGuide = () => {
             context="As the primary detention facility for DeKalb County, this jail serves Fort Payne and surrounding cities."
             citation="Estimated county operational data"
           />
+
+          <TableOfContents 
+            items={[
+              { id: 'facility-information', title: 'Facility Information' },
+              { id: 'how-to-post-bail', title: 'How to Post Bail' },
+              { id: 'release-times', title: 'Release Times' },
+              { id: 'types-of-bonds', title: 'Types of Bonds Accepted' },
+              { id: 'courthouse-information', title: 'Courthouse Information' },
+              { id: 'faqs', title: 'Frequently Asked Questions' },
+            ]}
+          />
         </AnimatedSection>
 
         {/* Facility Information */}
         <AnimatedSection className="bg-gray-50 py-16">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-8">Facility Information</h2>
+            <h2 id="facility-information" className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-8">Facility Information</h2>
             <Card className="border-2 border-gray-200 bg-white max-w-3xl">
               <CardContent className="p-8">
                 <div className="flex items-center gap-3 mb-6">
@@ -188,7 +200,7 @@ const DeKalbCountyJailGuide = () => {
         {/* How to Post Bail */}
         <AnimatedSection className="py-16">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-8">
+            <h2 id="how-to-post-bail" className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-8">
               How to Post Bail at DeKalb County Jail
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl">
@@ -243,7 +255,7 @@ const DeKalbCountyJailGuide = () => {
         {/* Release Times */}
         <AnimatedSection className="bg-gray-50 py-16">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-8">
+            <h2 id="release-times" className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-8">
               Release Times at DeKalb County Jail
             </h2>
             <div className="max-w-4xl">

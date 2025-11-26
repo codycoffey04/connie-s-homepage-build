@@ -8,6 +8,7 @@ import { FAQList } from "@/components/FAQItem";
 import { AnswerBox } from "@/components/AnswerBox";
 import { StatisticBox } from "@/components/StatisticBox";
 import { ReadingMeta } from "@/components/ReadingMeta";
+import { TableOfContents } from "@/components/TableOfContents";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Breadcrumb,
@@ -128,13 +129,23 @@ const TypesOfBailBonds = () => {
           answer="Alabama recognizes four types of bail: Cash Bonds (pay full amount, fully refundable), Surety Bonds (pay 10% to bondsman, most common), Property Bonds (use real estate equity as collateral), and Release on Own Recognizance/ROR (no payment required, judge's discretion for low-risk cases)."
           source="Ala. Code § 15-13-111"
         />
+
+        <TableOfContents 
+          items={[
+            { id: 'cash-bonds', title: 'Cash Bonds' },
+            { id: 'surety-bonds', title: 'Surety Bonds (Bail Bondsman)' },
+            { id: 'property-bonds', title: 'Property Bonds' },
+            { id: 'own-recognizance', title: 'Release on Own Recognizance (ROR)' },
+            { id: 'faqs', title: 'Frequently Asked Questions' },
+          ]}
+        />
       </Section>
 
       <Section>
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-4 mb-6">
             <DollarSign className="h-12 w-12 text-brand-red" />
-            <h2 className="text-4xl font-black uppercase tracking-tight">What Is a Cash Bond?</h2>
+            <h2 id="cash-bonds" className="text-4xl font-black uppercase tracking-tight">What Is a Cash Bond?</h2>
           </div>
           
           <StatisticBox 
@@ -216,7 +227,7 @@ const TypesOfBailBonds = () => {
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-4 mb-6">
             <Scale className="h-12 w-12 text-brand-red" />
-            <h2 className="text-4xl font-black uppercase tracking-tight">Surety Bond (Bail Bond)</h2>
+            <h2 id="surety-bonds" className="text-4xl font-black uppercase tracking-tight">Surety Bond (Bail Bond)</h2>
           </div>
           <p className="text-xl mb-6">
             A surety bond is what most people mean when they say "bail bond." A licensed bail bondsman posts the full bail amount on your behalf.
@@ -291,7 +302,7 @@ const TypesOfBailBonds = () => {
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-4 mb-6">
             <Building className="h-12 w-12 text-brand-red" />
-            <h2 className="text-4xl font-black uppercase tracking-tight">Property Bond</h2>
+            <h2 id="property-bonds" className="text-4xl font-black uppercase tracking-tight">Property Bond</h2>
           </div>
           <p className="text-xl mb-6">
             A property bond uses real estate equity as collateral instead of cash.
@@ -400,7 +411,7 @@ const TypesOfBailBonds = () => {
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-4 mb-6">
             <Users className="h-12 w-12 text-brand-red" />
-            <h2 className="text-4xl font-black uppercase tracking-tight">Release on Own Recognizance (ROR)</h2>
+            <h2 id="own-recognizance" className="text-4xl font-black uppercase tracking-tight">Release on Own Recognizance (ROR)</h2>
           </div>
           <p className="text-xl mb-6">
             ROR means the defendant is released without paying any bail—just a written promise to appear.
