@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Footer } from "@/components/Footer";
 import { Navigation } from "@/components/Navigation";
 import { PhoneButton } from "@/components/PhoneButton";
+import { HeroCTA } from "@/components/HeroCTA";
 import { Section } from "@/components/Section";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { AnimatedImage } from "@/components/AnimatedImage";
@@ -18,8 +19,7 @@ import {
   Building2,
   Phone,
   ChevronRight,
-  DollarSign,
-  MessageSquare
+  DollarSign
 } from "lucide-react";
 import { phoneNumbers } from "@/lib/cityUtils";
 import { StickyCallButton } from "@/components/StickyCallButton";
@@ -205,24 +205,7 @@ const FortPayne = () => {
               Fast, licensed bail bond agents serving Fort Payne and DeKalb County. Located right next to the detention center for fastest possible service.
             </p>
             
-            {/* Primary CTA - Call and Text Buttons */}
-            <div className="flex flex-row gap-3 md:gap-4 mb-12">
-              <a 
-                href={`tel:${phoneNumbers.richard.number.replace(/[^0-9]/g, "")}`}
-                className="inline-flex items-center justify-center px-4 py-4 md:px-8 md:py-5 bg-brand-red text-white font-black text-base md:text-xl uppercase tracking-wide hover:bg-red-600 transition-all duration-200 shadow-2xl hover:shadow-red-500/50 hover:scale-105"
-              >
-                <Phone className="mr-2 md:mr-3 h-5 w-5 md:h-6 md:w-6" />
-                Call Now
-              </a>
-              
-              <a 
-                href={`sms:${phoneNumbers.richard.number.replace(/[^0-9]/g, "")}`}
-                className="inline-flex items-center justify-center px-4 py-4 md:px-8 md:py-5 bg-white text-black font-bold text-base md:text-xl uppercase tracking-wide hover:bg-gray-100 transition-all duration-200"
-              >
-                <MessageSquare className="mr-2 md:mr-3 h-5 w-5 md:h-6 md:w-6" />
-                Text Us
-              </a>
-            </div>
+            <HeroCTA className="mb-12" />
           </div>
         </div>
         
