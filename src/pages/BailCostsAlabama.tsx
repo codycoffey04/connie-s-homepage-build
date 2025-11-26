@@ -9,6 +9,7 @@ import { AnimatedCard } from "@/components/AnimatedCard";
 import { AnswerBox } from "@/components/AnswerBox";
 import { StatisticBox } from "@/components/StatisticBox";
 import { ReadingMeta } from "@/components/ReadingMeta";
+import { TableOfContents } from "@/components/TableOfContents";
 import { Card, CardContent } from "@/components/ui/card";
 import { Scale, Users, CreditCard, Phone, ShieldCheck, ArrowRight, AlertCircle, CheckCircle } from "lucide-react";
 import { phoneNumbers } from "@/lib/cityUtils";
@@ -121,11 +122,22 @@ const BailCostsAlabama = () => {
                 answer="A bail bond in Alabama costs 10% of the total bail amount (the bondsman's premium) plus state-mandated fees ($35 + 3.5% of bail, with minimums of $100 for misdemeanors and $150 for felonies). For example, a $10,000 bail would cost approximately $1,385 total."
                 source="Ala. Code § 12-19-311"
               />
+
+              <TableOfContents 
+                items={[
+                  { id: 'bail-bond-premium', title: 'Bail Bond Premium (10%)' },
+                  { id: 'state-fees', title: 'State Bail Bond Fees' },
+                  { id: 'total-cost-examples', title: 'Total Cost Examples' },
+                  { id: 'payment-options', title: 'Payment Options Available' },
+                  { id: 'what-affects-bail', title: 'What Affects Your Bail Amount?' },
+                  { id: 'faqs', title: 'Frequently Asked Questions' },
+                ]}
+              />
             </AnimatedSection>
 
             {/* 10% Premium */}
             <AnimatedSection delay={0.1}>
-              <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-6 mt-16">
+              <h2 id="bail-bond-premium" className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-6 mt-16">
                 How Much Is the Bail Bond Premium?
               </h2>
               
@@ -149,7 +161,7 @@ const BailCostsAlabama = () => {
 
             {/* State Fees */}
             <AnimatedSection delay={0.2}>
-              <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-6 mt-16">
+              <h2 id="state-fees" className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-6 mt-16">
                 What Are Alabama's State Bail Bond Fees?
               </h2>
               
@@ -269,7 +281,7 @@ const BailCostsAlabama = () => {
 
             {/* Payment Options */}
             <AnimatedSection delay={0.4}>
-              <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-6 mt-16">
+              <h2 id="payment-options" className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-6 mt-16">
                 Payment Options
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mb-6">
@@ -306,7 +318,7 @@ const BailCostsAlabama = () => {
 
             {/* What Affects Bail */}
             <AnimatedSection delay={0.5}>
-              <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-6 mt-16">
+              <h2 id="what-affects-bail" className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-6 mt-16">
                 What Affects Bail Amount?
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mb-6">

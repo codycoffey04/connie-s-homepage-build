@@ -8,6 +8,7 @@ import { FAQList } from "@/components/FAQItem";
 import { AnswerBox } from "@/components/AnswerBox";
 import { StatisticBox } from "@/components/StatisticBox";
 import { ReadingMeta } from "@/components/ReadingMeta";
+import { TableOfContents } from "@/components/TableOfContents";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Breadcrumb,
@@ -165,6 +166,16 @@ const WhatHappensAfterArrest = () => {
           question="What happens after someone is arrested in Alabama?"
           answer="After arrest, they're transported to jail for booking (1-3 hours): photograph, fingerprints, background check, property collected. Bail is set either immediately via schedule or by judge within 24-72 hours. Once bail is posted through a bondsman (10% + fees), release processing takes 2-10 hours depending on the facility."
         />
+
+        <TableOfContents 
+          items={[
+            { id: 'the-arrest', title: 'The Arrest' },
+            { id: 'booking-process', title: 'Booking Process' },
+            { id: 'bail-determination', title: 'Bail Determination' },
+            { id: 'time-in-holding', title: 'Time in Holding Cell' },
+            { id: 'faqs', title: 'Frequently Asked Questions' },
+          ]}
+        />
       </Section>
 
       {/* The Arrest */}
@@ -172,7 +183,7 @@ const WhatHappensAfterArrest = () => {
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-4 mb-6">
             <Users className="h-12 w-12 text-brand-red" />
-            <h2 className="text-4xl font-black uppercase tracking-tight">The Arrest</h2>
+            <h2 id="the-arrest" className="text-4xl font-black uppercase tracking-tight">The Arrest</h2>
           </div>
 
           <Card>
@@ -230,7 +241,7 @@ const WhatHappensAfterArrest = () => {
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-4 mb-6">
             <FileText className="h-12 w-12 text-brand-red" />
-            <h2 className="text-4xl font-black uppercase tracking-tight">Booking Process</h2>
+            <h2 id="booking-process" className="text-4xl font-black uppercase tracking-tight">Booking Process</h2>
           </div>
 
           <Card>
@@ -303,7 +314,7 @@ const WhatHappensAfterArrest = () => {
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-4 mb-6">
             <Scale className="h-12 w-12 text-brand-red" />
-            <h2 className="text-4xl font-black uppercase tracking-tight">Bail Determination</h2>
+            <h2 id="bail-determination" className="text-4xl font-black uppercase tracking-tight">Bail Determination</h2>
           </div>
 
           <Card>
@@ -389,7 +400,7 @@ const WhatHappensAfterArrest = () => {
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-4 mb-6">
             <Clock className="h-12 w-12 text-brand-red" />
-            <h2 className="text-4xl font-black uppercase tracking-tight">Time in Holding</h2>
+            <h2 id="time-in-holding" className="text-4xl font-black uppercase tracking-tight">Time in Holding</h2>
           </div>
 
           <Card>

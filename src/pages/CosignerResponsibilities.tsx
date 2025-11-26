@@ -6,6 +6,7 @@ import { AnimatedSection } from "@/components/AnimatedSection";
 import { AnswerBox } from "@/components/AnswerBox";
 import { StatisticBox } from "@/components/StatisticBox";
 import { ReadingMeta } from "@/components/ReadingMeta";
+import { TableOfContents } from "@/components/TableOfContents";
 import { Card, CardContent } from "@/components/ui/card";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Phone, Users, AlertTriangle, ShieldCheck, Scale, DollarSign, ArrowRight, ChevronDown, XCircle, CheckCircle } from "lucide-react";
@@ -120,12 +121,23 @@ const CosignerResponsibilities = () => {
             answer="As a cosigner (indemnitor), you guarantee two things: (1) the defendant will appear at all court dates, and (2) you will pay the full bail amount if they don't. You face financial liability including wage garnishment (up to 25% of disposable income), loss of collateral, and civil lawsuits if the defendant skips court."
             source="Alabama indemnity agreement law"
           />
+
+          <TableOfContents 
+            items={[
+              { id: 'what-is-cosigner', title: 'What Is a Cosigner?' },
+              { id: 'legal-obligations', title: 'Legal Obligations' },
+              { id: 'financial-risks', title: 'Financial Risks' },
+              { id: 'collateral-requirements', title: 'Collateral Requirements' },
+              { id: 'if-defendant-misses-court', title: 'If Defendant Misses Court' },
+              { id: 'faqs', title: 'Frequently Asked Questions' },
+            ]}
+          />
         </AnimatedSection>
 
         {/* What Is a Cosigner */}
         <AnimatedSection className="bg-gray-50 py-16">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-8">
+            <h2 id="what-is-cosigner" className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-8">
               What Is a Bail Bond Cosigner?
             </h2>
             <div className="max-w-4xl">
@@ -162,7 +174,7 @@ const CosignerResponsibilities = () => {
         {/* Legal Obligations */}
         <AnimatedSection className="py-16">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-8">
+            <h2 id="legal-obligations" className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-8">
               What Are Your Legal Obligations as a Cosigner?
             </h2>
             
@@ -244,7 +256,7 @@ const CosignerResponsibilities = () => {
         {/* Financial Risks */}
         <AnimatedSection className="bg-gray-50 py-16">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-8">
+            <h2 id="financial-risks" className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-8">
               Financial Risks of Cosigning
             </h2>
             <div className="max-w-4xl">
@@ -289,7 +301,7 @@ const CosignerResponsibilities = () => {
         {/* Collateral */}
         <AnimatedSection className="py-16">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-8">
+            <h2 id="collateral-requirements" className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-8">
               Collateral Requirements
             </h2>
             <div className="max-w-4xl">

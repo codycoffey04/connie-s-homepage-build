@@ -9,6 +9,7 @@ import { AnimatedCard } from "@/components/AnimatedCard";
 import { AnswerBox } from "@/components/AnswerBox";
 import { StatisticBox } from "@/components/StatisticBox";
 import { ReadingMeta } from "@/components/ReadingMeta";
+import { TableOfContents } from "@/components/TableOfContents";
 import { Card, CardContent } from "@/components/ui/card";
 import { Scale, DollarSign, Building, Users, Phone, CheckCircle, XCircle, ArrowRight } from "lucide-react";
 import { phoneNumbers } from "@/lib/cityUtils";
@@ -180,11 +181,23 @@ const HowBailWorksAlabama = () => {
                 answer="After arrest and booking (1-3 hours), a judge sets bail based on charges and risk factors. You can pay 10% through a bail bondsman plus state fees, or pay the full amount in cash to the court. Once posted, the jail processes release (typically 2-8 hours). The defendant must appear at all court dates or the bail is forfeited."
                 source="Alabama Code § 15-13-106"
               />
+
+              <TableOfContents 
+                items={[
+                  { id: 'what-is-bail', title: 'What Is Bail?' },
+                  { id: 'the-alabama-bail-process', title: 'The Alabama Bail Process Step-by-Step' },
+                  { id: 'types-of-bail', title: 'Types of Bail in Alabama' },
+                  { id: 'who-sets-bail', title: 'Who Sets Bail in Alabama?' },
+                  { id: 'how-long-does-bail-take', title: 'How Long Does Bail Take?' },
+                  { id: 'what-alabama-law-says', title: 'What Alabama Law Says' },
+                  { id: 'faqs', title: 'Frequently Asked Questions' },
+                ]}
+              />
             </AnimatedSection>
 
             {/* What Is Bail */}
             <AnimatedSection delay={0.1}>
-              <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-6 mt-16">
+              <h2 id="what-is-bail" className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-6 mt-16">
                 What Is Bail?
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed max-w-4xl">
@@ -194,7 +207,7 @@ const HowBailWorksAlabama = () => {
 
             {/* The Process Step-by-Step */}
             <AnimatedSection delay={0.2}>
-              <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-8 mt-16">
+              <h2 id="the-alabama-bail-process" className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-8 mt-16">
                 How Does the Alabama Bail Process Work?
               </h2>
               
@@ -234,7 +247,7 @@ const HowBailWorksAlabama = () => {
 
             {/* Types of Bail */}
             <AnimatedSection delay={0.3}>
-              <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-6 mt-16">
+              <h2 id="types-of-bail" className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-6 mt-16">
                 Types of Bail in Alabama
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mb-8">
@@ -277,7 +290,7 @@ const HowBailWorksAlabama = () => {
 
             {/* Who Sets Bail */}
             <AnimatedSection delay={0.4}>
-              <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-6 mt-16">
+              <h2 id="who-sets-bail" className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-6 mt-16">
                 Who Sets Bail in Alabama?
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mb-6">
@@ -313,7 +326,7 @@ const HowBailWorksAlabama = () => {
 
             {/* How Long */}
             <AnimatedSection delay={0.5}>
-              <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-6 mt-16">
+              <h2 id="how-long-does-bail-take" className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-6 mt-16">
                 How Long Does Bail Take?
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mb-6">
@@ -332,7 +345,7 @@ const HowBailWorksAlabama = () => {
 
             {/* Alabama Law */}
             <AnimatedSection delay={0.6}>
-              <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-6 mt-16">
+              <h2 id="what-alabama-law-says" className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-6 mt-16">
                 What Alabama Law Says
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mb-6">
