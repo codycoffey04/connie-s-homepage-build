@@ -1,7 +1,7 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Section } from "@/components/Section";
-import { PhoneButton } from "@/components/PhoneButton";
+import { HeroCTA } from "@/components/HeroCTA";
 import { FAQList } from "@/components/FAQItem";
 import { StickyCallButton } from "@/components/StickyCallButton";
 import { SEO } from "@/components/SEO";
@@ -197,12 +197,7 @@ const FAQ = () => {
             Get Answers to Common Questions About Bail in Alabama
           </p>
 
-          {/* Emergency Call Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-12 max-w-4xl mx-auto">
-            <PhoneButton name="Richard" number="256-601-2041" variant="primary" />
-            <PhoneButton name="Connie" number="256-630-2824" variant="primary" />
-            <PhoneButton name="Toni" number="256-440-0822" variant="primary" />
-          </div>
+          <HeroCTA variant="team" className="mt-12" />
 
           <p className="text-white/80 text-lg mt-6 italic">
             Have a question we didn't answer? Call 24/7—we're here to help.
@@ -326,11 +321,7 @@ const FAQ = () => {
             If you didn't find your answer here, call us anytime. We're here 24/7 to walk you through the process and answer any questions you have.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
-            <PhoneButton name="Richard" number="256-601-2041" variant="primary" />
-            <PhoneButton name="Connie" number="256-630-2824" variant="primary" />
-            <PhoneButton name="Toni" number="256-440-0822" variant="primary" />
-          </div>
+          <HeroCTA variant="team" className="" />
           
           <div className="pt-8 space-y-4 text-sm text-foreground/70">
             <p className="font-semibold">
