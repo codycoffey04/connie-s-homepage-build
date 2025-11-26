@@ -240,7 +240,7 @@ const FortPayne = () => {
               <Card className="bg-white border-2 border-transparent hover:border-brand-red transition-all overflow-hidden">
                 <CardContent className="p-0">
                   <div className="relative h-48 overflow-hidden">
-                    <img src={paymentMethods} alt="Flexible bail bond payment methods in Fort Payne Alabama including credit cards and payment plans" className="w-full h-full object-cover" loading="lazy" />
+                    <img src={paymentMethods} alt="Flexible bail bond payment methods in Fort Payne Alabama including credit cards and payment plans" className="w-full h-full object-cover" width="800" height="600" loading="lazy" fetchPriority="low" />
                     <div className="absolute inset-0 bg-black/40"></div>
                   </div>
                   <div className="p-8 text-center">
@@ -259,7 +259,7 @@ const FortPayne = () => {
               <Card className="bg-white border-2 border-transparent hover:border-brand-red transition-all overflow-hidden">
                 <CardContent className="p-0">
                   <div className="relative h-48 overflow-hidden">
-                    <img src={howFastLightning} alt="Fast 1-8 hour bail bond release times in Fort Payne DeKalb County Alabama" className="w-full h-full object-cover" loading="lazy" />
+                    <img src={howFastLightning} alt="Fast 1-8 hour bail bond release times in Fort Payne DeKalb County Alabama" className="w-full h-full object-cover" width="800" height="600" loading="lazy" fetchPriority="low" />
                     <div className="absolute inset-0 bg-black/40"></div>
                   </div>
                   <div className="p-8 text-center">
@@ -278,7 +278,7 @@ const FortPayne = () => {
               <Card className="bg-white border-2 border-transparent hover:border-brand-red transition-all overflow-hidden">
                 <CardContent className="p-0">
                   <div className="relative h-48 overflow-hidden">
-                    <img src={clock247} alt="24/7 emergency bail bonds available around the clock in Fort Payne Alabama" className="w-full h-full object-cover" loading="lazy" />
+                    <img src={clock247} alt="24/7 emergency bail bonds available around the clock in Fort Payne Alabama" className="w-full h-full object-cover" width="800" height="600" loading="lazy" fetchPriority="low" />
                     <div className="absolute inset-0 bg-black/40"></div>
                   </div>
                   <div className="p-8 text-center">
