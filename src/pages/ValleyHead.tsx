@@ -165,7 +165,7 @@ const ValleyHead = () => {
       >
         <div className="absolute inset-0 bg-black/50" />
         
-        <div className="relative container mx-auto px-4 md:px-6 max-w-7xl z-10">
+        <div className="relative container mx-auto px-4 md:px-6 max-w-7xl z-10 pb-32 md:pb-24">
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 text-white uppercase tracking-tighter leading-none">
               Valley Head<br />
