@@ -5,6 +5,7 @@ import { Navigation } from "@/components/Navigation";
 import { Section } from "@/components/Section";
 import { PhoneButton } from "@/components/PhoneButton";
 import { HeroCTA } from "@/components/HeroCTA";
+import { SlimContactBanner } from "@/components/SlimContactBanner";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { FAQList } from "@/components/FAQItem";
 import { phoneNumbers } from "@/lib/cityUtils";
@@ -121,29 +122,7 @@ const Contact = () => {
         </div>
         
         {/* Slim Contact Banner - Bottom of Hero */}
-        <div className="absolute bottom-0 left-0 right-0 bg-black/90 backdrop-blur-sm border-t-4 border-brand-red z-10">
-          <div className="container mx-auto px-4 py-4">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-              <p className="text-white/70 text-sm uppercase tracking-wide font-semibold">
-                Available 24/7 - Call Any Team Member:
-              </p>
-              <div className="flex flex-wrap gap-4 md:gap-6 justify-center">
-                <a href="tel:2566012041" className="text-white hover:text-brand-red transition-colors font-bold flex items-center gap-2">
-                  <Phone className="w-4 h-4" />
-                  Richard: 256-601-2041
-                </a>
-                <a href="tel:2566302824" className="text-white hover:text-brand-red transition-colors font-bold flex items-center gap-2">
-                  <Phone className="w-4 h-4" />
-                  Connie: 256-630-2824
-                </a>
-                <a href="tel:2564400822" className="text-white hover:text-brand-red transition-colors font-bold flex items-center gap-2">
-                  <Phone className="w-4 h-4" />
-                  Toni: 256-440-0822
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+        <SlimContactBanner />
       </section>
 
       {/* Office Location with Interactive Map */}
