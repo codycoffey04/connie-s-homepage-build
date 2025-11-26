@@ -133,6 +133,11 @@ const Pisgah = () => {
         description="Fast 24/7 bail bonds serving Pisgah, AL and DeKalb County. Licensed agents available now. Call 256-601-2041. Compassionate, professional service."
         canonical="/pisgah"
         city="Pisgah"
+        geo={{
+          placename: "Pisgah, Alabama",
+          region: "AL-US",
+          position: "34.6838;-85.8411"
+        }}
         schema={[
           getLocalBusinessSchema("Pisgah"),
           getCityServiceAreaSchema("Pisgah"),

@@ -7,6 +7,7 @@ import { StickyCallButton } from "@/components/StickyCallButton";
 import { FAQList } from "@/components/FAQItem";
 import { AnswerBox } from "@/components/AnswerBox";
 import { StatisticBox } from "@/components/StatisticBox";
+import { ReadingMeta } from "@/components/ReadingMeta";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Breadcrumb,
@@ -112,17 +113,13 @@ const TypesOfBailBonds = () => {
           When bail is set, you have options for how to pay it. Alabama law (Ala. Code § 15-13-111) recognizes several forms of bail, each with different requirements, costs, and risks. Understanding your options helps you choose the best path to get your loved one released.
         </p>
         
-        {/* Author Byline */}
-        <div className="flex items-center gap-3 text-gray-400 mb-8">
-          <span>Written by <strong className="text-white">Connie</strong></span>
-          <span>•</span>
-          <a href="https://apbb.alabama.gov/licensee/B0092" 
-             className="text-brand-red hover:underline"
-             target="_blank" rel="noopener noreferrer">
-            APBB License #B0092 ✓
-          </a>
-          <span>•</span>
-          <span>Updated November 2025</span>
+        {/* Reading Meta */}
+        <div className="mb-8">
+          <ReadingMeta 
+            author="Connie"
+            licenseNumber="B0092"
+            readingTime={9}
+          />
         </div>
 
         {/* Answer Box */}

@@ -133,6 +133,11 @@ const Henagar = () => {
         description="Fast 24/7 bail bonds serving Henagar, AL and DeKalb County. Licensed Alabama agents. Call 256-601-2041. Family-owned, transparent pricing."
         canonical="/henagar"
         city="Henagar"
+        geo={{
+          placename: "Henagar, Alabama",
+          region: "AL-US",
+          position: "34.6370;-85.7758"
+        }}
         schema={[
           getLocalBusinessSchema("Henagar"),
           getCityServiceAreaSchema("Henagar"),

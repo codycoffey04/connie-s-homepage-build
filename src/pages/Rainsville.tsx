@@ -137,6 +137,11 @@ const Rainsville = () => {
         description="Fast 24/7 bail bonds serving Rainsville, AL and DeKalb County. Licensed agents ready to help. Call 256-601-2041. Payment plans available."
         canonical="/rainsville"
         city="Rainsville"
+        geo={{
+          placename: "Rainsville, Alabama",
+          region: "AL-US",
+          position: "34.4871;-85.8447"
+        }}
         schema={[
           getLocalBusinessSchema("Rainsville"),
           getCityServiceAreaSchema("Rainsville"),

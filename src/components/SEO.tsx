@@ -9,9 +9,14 @@ interface SEOProps {
   schema?: object[];
   city?: string;
   reviews?: string[];
+  geo?: {
+    placename: string;
+    region: string;
+    position: string;
+  };
 }
 
-export const SEO = ({ title, description, canonical, ogImage, schema, city, reviews }: SEOProps) => {
+export const SEO = ({ title, description, canonical, ogImage, schema, city, reviews, geo }: SEOProps) => {
   const fullTitle = `${title} | Connie's Bail Bonding`;
   
   // City-specific OG images
@@ -56,6 +61,16 @@ export const SEO = ({ title, description, canonical, ogImage, schema, city, revi
       {/* General SEO */}
       <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
       <meta name="author" content="Connie's Bail Bonding" />
+      
+      {/* Geo Tags for Local SEO */}
+      {geo && (
+        <>
+          <meta name="geo.placename" content={geo.placename} />
+          <meta name="geo.region" content={geo.region} />
+          <meta name="geo.position" content={geo.position} />
+          <meta name="ICBM" content={geo.position} />
+        </>
+      )}
       
       {/* Structured Data */}
       {schema && schema.map((schemaItem, index) => (

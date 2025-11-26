@@ -6,6 +6,7 @@ import { PhoneButton } from "@/components/PhoneButton";
 import { StickyCallButton } from "@/components/StickyCallButton";
 import { FAQList } from "@/components/FAQItem";
 import { AnswerBox } from "@/components/AnswerBox";
+import { ReadingMeta } from "@/components/ReadingMeta";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Breadcrumb,
@@ -159,17 +160,13 @@ const BailBondScams = () => {
           When you're desperate to bail out a loved one, scammers see an opportunity. Unlicensed operators and outright fraudsters prey on families in crisis. Knowing the warning signs protects you from losing money to criminals instead of helping your family.
         </p>
         
-        {/* Author Byline */}
-        <div className="flex items-center gap-3 text-gray-400 mb-8">
-          <span>Written by <strong className="text-white">Connie</strong></span>
-          <span>•</span>
-          <a href="https://apbb.alabama.gov/licensee/B0092" 
-             className="text-brand-red hover:underline"
-             target="_blank" rel="noopener noreferrer">
-            APBB License #B0092 ✓
-          </a>
-          <span>•</span>
-          <span>Updated November 2025</span>
+        {/* Reading Meta */}
+        <div className="mb-8">
+          <ReadingMeta 
+            author="Connie"
+            licenseNumber="B0092"
+            readingTime={9}
+          />
         </div>
 
         {/* Answer Box */}

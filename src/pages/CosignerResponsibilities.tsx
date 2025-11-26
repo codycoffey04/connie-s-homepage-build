@@ -5,6 +5,7 @@ import { SEO } from "@/components/SEO";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { AnswerBox } from "@/components/AnswerBox";
 import { StatisticBox } from "@/components/StatisticBox";
+import { ReadingMeta } from "@/components/ReadingMeta";
 import { Card, CardContent } from "@/components/ui/card";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Phone, Users, AlertTriangle, ShieldCheck, Scale, DollarSign, ArrowRight, ChevronDown, XCircle, CheckCircle } from "lucide-react";
@@ -106,18 +107,12 @@ const CosignerResponsibilities = () => {
             Cosigning a bail bond is a serious legal and financial commitment. Before you sign, you need to understand exactly what you're agreeing to. This guide explains your responsibilities, your risks, and what happens if things go wrong.
           </p>
           
-          {/* Author Byline */}
-          <div className="flex items-center gap-3 text-gray-600 mb-8">
-            <span>Written by <strong>Richard</strong></span>
-            <span>•</span>
-            <a href="https://apbb.alabama.gov/licensee/S0334" 
-               className="text-brand-red hover:underline"
-               target="_blank" rel="noopener noreferrer">
-              APBB License #S0334 ✓
-            </a>
-            <span>•</span>
-            <span>Updated November 2025</span>
-          </div>
+          {/* Reading Meta */}
+          <ReadingMeta 
+            author="Richard"
+            licenseNumber="S0334"
+            readingTime={10}
+          />
 
           {/* Answer Box */}
           <AnswerBox 
