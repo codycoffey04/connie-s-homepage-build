@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://conniesbailbonding.com/sitemap.xml
+Sitemap: https://conniesbailbonding.com/sitemap-index.xml
