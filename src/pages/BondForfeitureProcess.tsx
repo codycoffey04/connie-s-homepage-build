@@ -7,6 +7,7 @@ import { StickyCallButton } from "@/components/StickyCallButton";
 import { FAQList } from "@/components/FAQItem";
 import { AnswerBox } from "@/components/AnswerBox";
 import { StatisticBox } from "@/components/StatisticBox";
+import { ReadingMeta } from "@/components/ReadingMeta";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Breadcrumb,
@@ -146,17 +147,13 @@ const BondForfeitureProcess = () => {
           Bond forfeiture happens when a defendant fails to appear in court as required. It's the worst-case scenario for everyone involved—the defendant, the cosigner, and the bail bondsman. Understanding the process helps you know what to expect and how to potentially minimize the damage.
         </p>
         
-        {/* Author Byline */}
-        <div className="flex items-center gap-3 text-gray-400 mb-8">
-          <span>Written by <strong className="text-white">Richard</strong></span>
-          <span>•</span>
-          <a href="https://apbb.alabama.gov/licensee/S0334" 
-             className="text-brand-red hover:underline"
-             target="_blank" rel="noopener noreferrer">
-            APBB License #S0334 ✓
-          </a>
-          <span>•</span>
-          <span>Updated November 2025</span>
+        {/* Reading Meta */}
+        <div className="mb-8">
+          <ReadingMeta 
+            author="Richard"
+            licenseNumber="S0334"
+            readingTime={8}
+          />
         </div>
 
         {/* Answer Box */}

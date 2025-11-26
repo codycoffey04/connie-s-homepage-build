@@ -162,6 +162,11 @@ const FortPayne = () => {
         description="Fast 24/7 bail bonds in Fort Payne, AL. Licensed agents next to DeKalb County Detention Center. Call Richard 256-601-2041. No hidden fees."
         canonical="/fort-payne"
         city="Fort Payne"
+        geo={{
+          placename: "Fort Payne, Alabama",
+          region: "AL-US",
+          position: "34.444389;-85.719772"
+        }}
         schema={[
           getLocalBusinessSchema("Fort Payne"),
           getCityServiceAreaSchema("Fort Payne"),

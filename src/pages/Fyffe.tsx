@@ -136,6 +136,11 @@ const Fyffe = () => {
         description="Fast 24/7 bail bonds serving Fyffe, AL and DeKalb County. Licensed agents near you. Call 256-601-2041 now. Transparent pricing, no hidden fees."
         canonical="/fyffe"
         city="Fyffe"
+        geo={{
+          placename: "Fyffe, Alabama",
+          region: "AL-US",
+          position: "34.4476;-85.9053"
+        }}
         schema={[
           getLocalBusinessSchema("Fyffe"),
           getCityServiceAreaSchema("Fyffe"),

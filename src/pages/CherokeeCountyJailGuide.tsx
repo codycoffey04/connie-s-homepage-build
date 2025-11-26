@@ -4,6 +4,7 @@ import { StickyCallButton } from "@/components/StickyCallButton";
 import { SEO } from "@/components/SEO";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { AnswerBox } from "@/components/AnswerBox";
+import { ReadingMeta } from "@/components/ReadingMeta";
 import { Card, CardContent } from "@/components/ui/card";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Phone, MapPin, Clock, Building, Scale, DollarSign, Users, ArrowRight, ChevronDown } from "lucide-react";
@@ -109,18 +110,12 @@ const CherokeeCountyJailGuide = () => {
             When someone is arrested in Cherokee County, Alabama, they're taken to the Cherokee County Detention Center in Centre. Here's everything you need to know about posting bail and getting your loved one released.
           </p>
           
-          {/* Author Byline */}
-          <div className="flex items-center gap-3 text-gray-600 mb-8">
-            <span>Written by <strong>Toni</strong></span>
-            <span>•</span>
-            <a href="https://apbb.alabama.gov/licensee/S0345" 
-               className="text-brand-red hover:underline"
-               target="_blank" rel="noopener noreferrer">
-              APBB License #S0345 ✓
-            </a>
-            <span>•</span>
-            <span>Updated November 2025</span>
-          </div>
+          {/* Reading Meta */}
+          <ReadingMeta 
+            author="Toni"
+            licenseNumber="S0345"
+            readingTime={6}
+          />
 
           {/* Answer Box */}
           <AnswerBox 

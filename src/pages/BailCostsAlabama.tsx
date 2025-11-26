@@ -8,6 +8,7 @@ import { AnimatedSection } from "@/components/AnimatedSection";
 import { AnimatedCard } from "@/components/AnimatedCard";
 import { AnswerBox } from "@/components/AnswerBox";
 import { StatisticBox } from "@/components/StatisticBox";
+import { ReadingMeta } from "@/components/ReadingMeta";
 import { Card, CardContent } from "@/components/ui/card";
 import { Scale, Users, CreditCard, Phone, ShieldCheck, ArrowRight, AlertCircle, CheckCircle } from "lucide-react";
 import { phoneNumbers } from "@/lib/cityUtils";
@@ -107,18 +108,12 @@ const BailCostsAlabama = () => {
                 Understanding what you'll actually pay to bail someone out is crucial. Alabama has both bondsman premiums and state-mandated fees. Here's a complete breakdown so you know exactly what to expect—no surprises.
               </p>
               
-              {/* Author Byline */}
-              <div className="flex items-center gap-3 text-gray-600 mb-8">
-                <span>Written by <strong>Connie</strong></span>
-                <span>•</span>
-                <a href="https://apbb.alabama.gov/licensee/B0092" 
-                   className="text-brand-red hover:underline"
-                   target="_blank" rel="noopener noreferrer">
-                  APBB License #B0092 ✓
-                </a>
-                <span>•</span>
-                <span>Updated November 2025</span>
-              </div>
+              {/* Reading Meta */}
+              <ReadingMeta 
+                author="Connie"
+                licenseNumber="B0092"
+                readingTime={7}
+              />
 
               {/* Answer Box */}
               <AnswerBox 

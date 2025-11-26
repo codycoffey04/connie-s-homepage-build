@@ -5,6 +5,7 @@ import { SEO } from "@/components/SEO";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { AnswerBox } from "@/components/AnswerBox";
 import { StatisticBox } from "@/components/StatisticBox";
+import { ReadingMeta } from "@/components/ReadingMeta";
 import { Card, CardContent } from "@/components/ui/card";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Phone, MapPin, Clock, Building, Scale, DollarSign, Users, ArrowRight, ChevronDown } from "lucide-react";
@@ -110,18 +111,12 @@ const DeKalbCountyJailGuide = () => {
             If someone you care about has been arrested and taken to DeKalb County Detention Center, you need answers fast. This guide covers everything you need to know about posting bail at DeKalb County Jail—from facility information to the bail process and what to expect for release times.
           </p>
           
-          {/* Author Byline */}
-          <div className="flex items-center gap-3 text-gray-600 mb-8">
-            <span>Written by <strong>Connie</strong></span>
-            <span>•</span>
-            <a href="https://apbb.alabama.gov/licensee/B0092" 
-               className="text-brand-red hover:underline"
-               target="_blank" rel="noopener noreferrer">
-              APBB License #B0092 ✓
-            </a>
-            <span>•</span>
-            <span>Updated November 2025</span>
-          </div>
+          {/* Reading Meta */}
+          <ReadingMeta 
+            author="Connie"
+            licenseNumber="B0092"
+            readingTime={6}
+          />
 
           {/* Answer Box */}
           <AnswerBox 

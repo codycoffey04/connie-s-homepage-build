@@ -136,6 +136,11 @@ const Centre = () => {
         description="Fast 24/7 bail bonds serving Centre, AL and Cherokee County. Licensed agents who know the local system. Call 256-601-2041 now."
         canonical="/centre"
         city="Centre"
+        geo={{
+          placename: "Centre, Alabama",
+          region: "AL-US",
+          position: "34.1518;-85.6788"
+        }}
         schema={[
           getLocalBusinessSchema("Centre"),
           getCityServiceAreaSchema("Centre"),

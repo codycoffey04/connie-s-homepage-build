@@ -137,6 +137,11 @@ const ValleyHead = () => {
         description="Fast 24/7 bail bonds serving Valley Head, AL and DeKalb County. Licensed agents ready to help your family. Call 256-601-2041 now."
         canonical="/valley-head"
         city="Valley Head"
+        geo={{
+          placename: "Valley Head, Alabama",
+          region: "AL-US",
+          position: "34.5684;-85.6133"
+        }}
         schema={[
           getLocalBusinessSchema("Valley Head"),
           getCityServiceAreaSchema("Valley Head"),

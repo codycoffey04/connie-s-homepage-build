@@ -18,6 +18,14 @@ export const Navigation = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-black border-b-2 border-brand-red shadow-lg">
+      {/* Skip to main content link for accessibility */}
+      <a 
+        href="#main-content" 
+        className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:px-4 focus:py-2 focus:bg-brand-red focus:text-white focus:font-bold focus:rounded"
+      >
+        Skip to main content
+      </a>
+      
       <div className="container mx-auto px-4 md:px-6 max-w-7xl">
         <div className="flex h-20 items-center justify-between">
           <Link to="/" className="flex items-center">
@@ -27,20 +35,20 @@ export const Navigation = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-6">
-            <Link to="/" className="text-sm font-bold text-white tracking-wide hover:text-brand-red transition-colors">
+          <nav className="hidden md:flex items-center gap-6" aria-label="Main navigation">
+            <Link to="/" className="text-sm font-bold text-white tracking-wide hover:text-brand-red transition-colors" aria-label="Go to homepage">
               Home
             </Link>
-            <Link to="/about" className="text-sm font-bold text-white tracking-wide hover:text-brand-red transition-colors">
+            <Link to="/about" className="text-sm font-bold text-white tracking-wide hover:text-brand-red transition-colors" aria-label="Learn about Connie's Bail Bonding">
               About
             </Link>
-            <Link to="/contact" className="text-sm font-bold text-white tracking-wide hover:text-brand-red transition-colors">
+            <Link to="/contact" className="text-sm font-bold text-white tracking-wide hover:text-brand-red transition-colors" aria-label="Contact us">
               Contact
             </Link>
-            <Link to="/faq" className="text-sm font-bold text-white tracking-wide hover:text-brand-red transition-colors">
+            <Link to="/faq" className="text-sm font-bold text-white tracking-wide hover:text-brand-red transition-colors" aria-label="Frequently asked questions">
               FAQ
             </Link>
-            <Link to="/bail-bonds-guide" className="text-sm font-bold text-white tracking-wide hover:text-brand-red transition-colors">
+            <Link to="/bail-bonds-guide" className="text-sm font-bold text-white tracking-wide hover:text-brand-red transition-colors" aria-label="Read our bail bonds guide">
               Bail Guide
             </Link>
             
@@ -79,8 +87,14 @@ export const Navigation = () => {
           {/* Mobile Menu */}
           <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
             <SheetTrigger asChild className="md:hidden">
-              <Button variant="ghost" size="icon" className="text-white hover:text-brand-red hover:bg-white/10">
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                className="text-white hover:text-brand-red hover:bg-white/10"
+                aria-label="Open mobile menu"
+              >
                 <Menu className="h-6 w-6" />
+                <span className="sr-only">Menu</span>
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] bg-black border-l-2 border-brand-red">
