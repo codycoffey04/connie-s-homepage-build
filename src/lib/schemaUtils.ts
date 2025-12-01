@@ -2,7 +2,7 @@ export const getLocalBusinessSchema = (city?: string) => ({
   "@context": "https://schema.org",
   "@type": "BailBondService",
   "name": "Connie's Bail Bonding",
-  "image": "https://conniesbailbonding.com/og-image.jpg",
+  "image": "https://connies-bailbonds.com/og-image.jpg",
   "description": "24/7 bail bond services in Fort Payne, DeKalb County, and Cherokee County, Alabama",
   "address": {
     "@type": "PostalAddress",
@@ -18,8 +18,8 @@ export const getLocalBusinessSchema = (city?: string) => ({
     "longitude": "-85.719772"
   },
   "telephone": "256-601-2041",
-  "email": "info@conniesbailbonding.com",
-  "url": "https://conniesbailbonding.com",
+  "email": "info@connies-bailbonds.com",
+  "url": "https://connies-bailbonds.com",
   "priceRange": "10% of bail amount (Alabama state law)",
   "paymentAccepted": [
     "Cash",
@@ -162,7 +162,7 @@ export const getBreadcrumbSchema = (items: { name: string; url: string }[]) => (
     "@type": "ListItem",
     "position": index + 1,
     "name": item.name,
-    "item": `https://conniesbailbonding.com${item.url}`
+    "item": `https://connies-bailbonds.com${item.url}`
   }))
 });
 
@@ -243,28 +243,28 @@ export const getHowToSchema = () => ({
       "position": 1,
       "name": "Call Us Immediately",
       "text": "Contact Connie's Bail Bonding at 256-601-2041, 256-630-2824, or 256-440-0822. We answer 24/7/365.",
-      "url": "https://conniesbailbonding.com/#call"
+      "url": "https://connies-bailbonds.com/#call"
     },
     {
       "@type": "HowToStep",
       "position": 2,
       "name": "Provide Information",
       "text": "Tell us the inmate's name, jail location, and charges. We'll look up their bail amount and explain the process.",
-      "url": "https://conniesbailbonding.com/#information"
+      "url": "https://connies-bailbonds.com/#information"
     },
     {
       "@type": "HowToStep",
       "position": 3,
       "name": "Complete Paperwork",
       "text": "We'll meet you to complete the simple paperwork. Bring a valid ID and discuss payment options including flexible payment plans.",
-      "url": "https://conniesbailbonding.com/#paperwork"
+      "url": "https://connies-bailbonds.com/#paperwork"
     },
     {
       "@type": "HowToStep",
       "position": 4,
       "name": "Post Bond & Release",
       "text": "We post the bond at the jail. Release typically takes 1-8 hours in Fort Payne, 2-8 hours in other DeKalb County cities.",
-      "url": "https://conniesbailbonding.com/#release"
+      "url": "https://connies-bailbonds.com/#release"
     }
   ]
 });
@@ -335,7 +335,7 @@ export const getWebPageSchema = (name: string, description: string, breadcrumbs:
   "@type": "WebPage",
   "name": name,
   "description": description,
-  "url": `https://conniesbailbonding.com${breadcrumbs[breadcrumbs.length - 1]?.url || '/'}`,
+  "url": `https://connies-bailbonds.com${breadcrumbs[breadcrumbs.length - 1]?.url || '/'}`,
   "breadcrumb": getBreadcrumbSchema(breadcrumbs),
   "publisher": {
     "@type": "Organization",
@@ -355,7 +355,7 @@ export const getItemListSchema = (items: { name: string; description: string; ur
       "@type": "Article",
       "name": item.name,
       "description": item.description,
-      "url": `https://conniesbailbonding.com${item.url}`
+      "url": `https://connies-bailbonds.com${item.url}`
     }
   }))
 });
@@ -418,14 +418,14 @@ export const getArticleSchema = (
     "name": "Connie's Bail Bonding",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://conniesbailbonding.com/og-image.jpg"
+      "url": "https://connies-bailbonds.com/og-image.jpg"
     }
   },
   "datePublished": datePublished,
   "dateModified": dateModified,
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": `https://conniesbailbonding.com${url}`
+    "@id": `https://connies-bailbonds.com${url}`
   }
 });
 
@@ -452,20 +452,20 @@ export const getWebSiteSchema = () => ({
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "Connie's Bail Bonding",
-  "url": "https://conniesbailbonding.com",
+  "url": "https://connies-bailbonds.com",
   "description": "24/7 bail bond services in Fort Payne, DeKalb County, and Cherokee County, Alabama",
   "potentialAction": {
     "@type": "SearchAction",
     "target": {
       "@type": "EntryPoint",
-      "urlTemplate": "https://conniesbailbonding.com/bail-bonds-guide?search={search_term_string}"
+      "urlTemplate": "https://connies-bailbonds.com/bail-bonds-guide?search={search_term_string}"
     },
     "query-input": "required name=search_term_string"
   },
   "publisher": {
     "@type": "Organization",
     "name": "Connie's Bail Bonding",
-    "url": "https://conniesbailbonding.com"
+    "url": "https://connies-bailbonds.com"
   }
 });
 

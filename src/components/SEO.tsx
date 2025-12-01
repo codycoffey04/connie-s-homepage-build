@@ -24,13 +24,13 @@ export const SEO = ({ title, description, canonical, ogImage, schema, city, revi
     if (ogImage) return ogImage;
     if (city) {
       const citySlug = city.toLowerCase().replace(/\s+/g, '-');
-      return `https://conniesbailbonding.com/og-${citySlug}.jpg`;
+      return `https://connies-bailbonds.com/og-${citySlug}.jpg`;
     }
-    return 'https://conniesbailbonding.com/og-image.jpg';
+    return 'https://connies-bailbonds.com/og-image.jpg';
   };
   
   const defaultImage = getCityOGImage();
-  const siteUrl = 'https://conniesbailbonding.com';
+  const siteUrl = 'https://connies-bailbonds.com';
   const canonicalUrl = canonical ? `${siteUrl}${canonical}` : siteUrl;
 
   return (
