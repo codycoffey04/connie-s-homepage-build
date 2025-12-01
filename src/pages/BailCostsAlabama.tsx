@@ -15,6 +15,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Scale, Users, CreditCard, Phone, ShieldCheck, ArrowRight, AlertCircle, CheckCircle } from "lucide-react";
 import { phoneNumbers } from "@/lib/cityUtils";
 import { getArticleSchema, getFAQSchema, getSpeakableSchema, getBreadcrumbSchema, getLocalBusinessSchema } from "@/lib/schemaUtils";
+import bailCostsHeroBg from "@/assets/bail-costs-hero-bg.jpg";
 
 const BailCostsAlabama = () => {
   const faqs = [
@@ -92,50 +93,63 @@ const BailCostsAlabama = () => {
         <StickyCallButton />
         
         <main className="flex-grow pt-20">
-          <Section className="py-12">
-            {/* Breadcrumb */}
-            <nav className="text-sm text-gray-500 mb-8">
-              <a href="/" className="hover:text-brand-red transition-colors">Home</a>
-              <span className="mx-2">/</span>
-              <a href="/bail-bonds-guide" className="hover:text-brand-red transition-colors">Bail Bonds Guide</a>
-              <span className="mx-2">/</span>
-              <span className="text-gray-900 font-medium">Bail Costs in Alabama</span>
-            </nav>
+          {/* Hero Section */}
+          <section 
+            className="relative min-h-[70vh] flex items-center text-white bg-cover bg-center"
+            style={{ backgroundImage: `url(${bailCostsHeroBg})` }}
+          >
+            {/* Dark overlay */}
+            <div className="absolute inset-0 bg-black/60" />
+            
+            {/* Content */}
+            <div className="relative z-10 container mx-auto px-4 md:px-6 max-w-6xl py-20 md:py-32">
+              {/* Breadcrumb */}
+              <nav className="text-sm mb-8">
+                <a href="/" className="text-gray-400 hover:text-white transition-colors">Home</a>
+                <span className="mx-2 text-gray-600">/</span>
+                <a href="/bail-bonds-guide" className="text-gray-400 hover:text-white transition-colors">Bail Bonds Guide</a>
+                <span className="mx-2 text-gray-600">/</span>
+                <span className="text-white font-medium">Bail Costs in Alabama</span>
+              </nav>
 
-            {/* Hero */}
-            <AnimatedSection>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight mb-6">
-                Bail Bond Costs & Fees in Alabama
-              </h1>
-              <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-4xl mb-8">
-                Understanding what you'll actually pay to bail someone out is crucial. Alabama has both bondsman premiums and state-mandated fees. Here's a complete breakdown so you know exactly what to expect—no surprises.
-              </p>
-              
-              {/* Reading Meta */}
-              <ReadingMeta 
-                author="Connie"
-                licenseNumber="B0092"
-                readingTime={7}
-              />
+              {/* Hero */}
+              <AnimatedSection>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight mb-6">
+                  Bail Bond Costs & Fees in Alabama
+                </h1>
+                <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-4xl mb-8">
+                  Understanding what you'll actually pay to bail someone out is crucial. Alabama has both bondsman premiums and state-mandated fees. Here's a complete breakdown so you know exactly what to expect—no surprises.
+                </p>
+                
+                {/* Reading Meta */}
+                <ReadingMeta 
+                  author="Connie"
+                  licenseNumber="B0092"
+                  readingTime={7}
+                />
 
-              {/* Answer Box */}
-              <AnswerBox 
-                question="How much does a bail bond cost in Alabama?"
-                answer="A bail bond in Alabama costs 10% of the total bail amount (the bondsman's premium) plus state-mandated fees ($35 + 3.5% of bail, with minimums of $100 for misdemeanors and $150 for felonies). For example, a $10,000 bail would cost approximately $1,385 total."
-                source="Ala. Code § 12-19-311"
-              />
+                {/* Answer Box */}
+                <AnswerBox 
+                  question="How much does a bail bond cost in Alabama?"
+                  answer="A bail bond in Alabama costs 10% of the total bail amount (the bondsman's premium) plus state-mandated fees ($35 + 3.5% of bail, with minimums of $100 for misdemeanors and $150 for felonies). For example, a $10,000 bail would cost approximately $1,385 total."
+                  source="Ala. Code § 12-19-311"
+                />
 
-              <TableOfContents 
-                items={[
-                  { id: 'bail-bond-premium', title: 'Bail Bond Premium (10%)' },
-                  { id: 'state-fees', title: 'State Bail Bond Fees' },
-                  { id: 'total-cost-examples', title: 'Total Cost Examples' },
-                  { id: 'payment-options', title: 'Payment Options Available' },
-                  { id: 'what-affects-bail', title: 'What Affects Your Bail Amount?' },
-                  { id: 'faqs', title: 'Frequently Asked Questions' },
-                ]}
-              />
-            </AnimatedSection>
+                <TableOfContents 
+                  items={[
+                    { id: 'bail-bond-premium', title: 'Bail Bond Premium (10%)' },
+                    { id: 'state-fees', title: 'State Bail Bond Fees' },
+                    { id: 'total-cost-examples', title: 'Total Cost Examples' },
+                    { id: 'payment-options', title: 'Payment Options Available' },
+                    { id: 'what-affects-bail', title: 'What Affects Your Bail Amount?' },
+                    { id: 'faqs', title: 'Frequently Asked Questions' },
+                  ]}
+                />
+              </AnimatedSection>
+            </div>
+          </section>
+
+          <Section>
 
             {/* 10% Premium */}
             <AnimatedSection delay={0.1}>

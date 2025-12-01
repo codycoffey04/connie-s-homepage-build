@@ -20,6 +20,7 @@ import {
   getCherokeeCourthouseSchema,
   getSpeakableSchema
 } from "@/lib/schemaUtils";
+import cherokeeJailHeroBg from "@/assets/cherokee-jail-hero-bg.jpg";
 
 const faqs = [
   {
@@ -93,50 +94,59 @@ const CherokeeCountyJailGuide = () => {
         <Navigation />
         <StickyCallButton />
 
-        {/* Breadcrumb */}
-        <div className="container mx-auto px-4 pt-28 pb-8">
-          <nav className="text-sm text-gray-500">
-            <a href="/" className="hover:text-brand-red transition-colors">Home</a>
-            <span className="mx-2">/</span>
-            <a href="/bail-bonds-guide" className="hover:text-brand-red transition-colors">Bail Bonds Guide</a>
-            <span className="mx-2">/</span>
-            <span className="text-gray-900 font-semibold">Cherokee County Jail Guide</span>
-          </nav>
-        </div>
-
         {/* Hero Section */}
-        <AnimatedSection className="container mx-auto px-4 pb-16">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight mb-8">
-            Cherokee County Jail Bail Guide
-          </h1>
-          <p className="text-xl text-gray-700 leading-relaxed max-w-4xl mb-8">
-            When someone is arrested in Cherokee County, Alabama, they're taken to the Cherokee County Detention Center in Centre. Here's everything you need to know about posting bail and getting your loved one released.
-          </p>
+        <section 
+          className="relative min-h-[70vh] flex items-center text-white bg-cover bg-center"
+          style={{ backgroundImage: `url(${cherokeeJailHeroBg})` }}
+        >
+          {/* Dark overlay */}
+          <div className="absolute inset-0 bg-black/60" />
           
-          {/* Reading Meta */}
-          <ReadingMeta 
-            author="Toni"
-            licenseNumber="S0345"
-            readingTime={6}
-          />
+          {/* Content */}
+          <div className="relative z-10 container mx-auto px-4 md:px-6 max-w-6xl py-20 md:py-32">
+            {/* Breadcrumb */}
+            <nav className="text-sm mb-8">
+              <a href="/" className="text-gray-400 hover:text-white transition-colors">Home</a>
+              <span className="mx-2 text-gray-600">/</span>
+              <a href="/bail-bonds-guide" className="text-gray-400 hover:text-white transition-colors">Bail Bonds Guide</a>
+              <span className="mx-2 text-gray-600">/</span>
+              <span className="text-white font-medium">Cherokee County Jail Guide</span>
+            </nav>
 
-          {/* Answer Box */}
-          <AnswerBox 
-            question="How do I post bail at Cherokee County Jail?"
-            answer="Call Connie's Bail Bonding 24/7 at 256-601-2041, 256-630-2824, or 256-440-0822. Provide the inmate's name and charges. We post bonds at Cherokee County Detention Center (110 Cedar Bluff Road, Centre, AL). Release typically takes 2-10 hours. Located about 30 minutes from Fort Payne. Costs 10% premium plus state fees."
-          />
+            <AnimatedSection>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight mb-8">
+                Cherokee County Jail Bail Guide
+              </h1>
+              <p className="text-xl text-gray-300 leading-relaxed max-w-4xl mb-8">
+                When someone is arrested in Cherokee County, Alabama, they're taken to the Cherokee County Detention Center in Centre. Here's everything you need to know about posting bail and getting your loved one released.
+              </p>
+              
+              {/* Reading Meta */}
+              <ReadingMeta 
+                author="Toni"
+                licenseNumber="S0345"
+                readingTime={6}
+              />
 
-          <TableOfContents 
-            items={[
-              { id: 'facility-information', title: 'Facility Information' },
-              { id: 'how-to-post-bail', title: 'How to Post Bail' },
-              { id: 'release-times', title: 'Release Times' },
-              { id: 'types-of-bonds', title: 'Types of Bonds Accepted' },
-              { id: 'courthouse-information', title: 'Courthouse Information' },
-              { id: 'faqs', title: 'Frequently Asked Questions' },
-            ]}
-          />
-        </AnimatedSection>
+              {/* Answer Box */}
+              <AnswerBox 
+                question="How do I post bail at Cherokee County Jail?"
+                answer="Call Connie's Bail Bonding 24/7 at 256-601-2041, 256-630-2824, or 256-440-0822. Provide the inmate's name and charges. We post bonds at Cherokee County Detention Center (110 Cedar Bluff Road, Centre, AL). Release typically takes 2-10 hours. Located about 30 minutes from Fort Payne. Costs 10% premium plus state fees."
+              />
+
+              <TableOfContents 
+                items={[
+                  { id: 'facility-information', title: 'Facility Information' },
+                  { id: 'how-to-post-bail', title: 'How to Post Bail' },
+                  { id: 'release-times', title: 'Release Times' },
+                  { id: 'types-of-bonds', title: 'Types of Bonds Accepted' },
+                  { id: 'courthouse-information', title: 'Courthouse Information' },
+                  { id: 'faqs', title: 'Frequently Asked Questions' },
+                ]}
+              />
+            </AnimatedSection>
+          </div>
+        </section>
 
         {/* Facility Information */}
         <AnimatedSection className="bg-gray-50 py-16">

@@ -28,6 +28,7 @@ import {
   getLocalBusinessSchema,
   getCustomHowToSchema,
 } from "@/lib/schemaUtils";
+import afterArrestHeroBg from "@/assets/after-arrest-hero-bg.jpg";
 
 const WhatHappensAfterArrest = () => {
   const breadcrumbs = [
@@ -120,65 +121,74 @@ const WhatHappensAfterArrest = () => {
       <StickyCallButton />
 
       {/* Hero Section */}
-      <Section className="bg-black text-white border-t-4 border-brand-red">
-        <Breadcrumb className="mb-8">
-          <BreadcrumbList>
-            {breadcrumbs.map((crumb, index) => (
-              <span key={crumb.url} className="contents">
-                <BreadcrumbItem>
-                  {index === breadcrumbs.length - 1 ? (
-                    <BreadcrumbPage className="text-white">
-                      {crumb.name}
-                    </BreadcrumbPage>
-                  ) : (
-                    <BreadcrumbLink
-                      href={crumb.url}
-                      className="text-gray-400 hover:text-white"
-                    >
-                      {crumb.name}
-                    </BreadcrumbLink>
-                  )}
-                </BreadcrumbItem>
-                {index < breadcrumbs.length - 1 && (
-                  <BreadcrumbSeparator className="text-gray-600" />
-                )}
-              </span>
-            ))}
-          </BreadcrumbList>
-        </Breadcrumb>
-
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight mb-6">
-          What Happens After an Arrest in Alabama
-        </h1>
-        <p className="text-xl md:text-2xl text-gray-300 max-w-4xl leading-relaxed mb-6">
-          When someone you care about is arrested, you're left wondering what's happening to them. Understanding the process helps you take the right steps to get them released as quickly as possible. Here's exactly what happens from the moment of arrest through release.
-        </p>
+      <section 
+        className="relative min-h-[70vh] flex items-center text-white bg-cover bg-center"
+        style={{ backgroundImage: `url(${afterArrestHeroBg})` }}
+      >
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/60" />
         
-        {/* Reading Meta */}
-        <div className="mb-8">
-          <ReadingMeta 
-            author="Toni"
-            licenseNumber="S0345"
-            readingTime={7}
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-4 md:px-6 max-w-6xl py-20 md:py-32">
+          <Breadcrumb className="mb-8">
+            <BreadcrumbList>
+              {breadcrumbs.map((crumb, index) => (
+                <span key={crumb.url} className="contents">
+                  <BreadcrumbItem>
+                    {index === breadcrumbs.length - 1 ? (
+                      <BreadcrumbPage className="text-white">
+                        {crumb.name}
+                      </BreadcrumbPage>
+                    ) : (
+                      <BreadcrumbLink
+                        href={crumb.url}
+                        className="text-gray-400 hover:text-white"
+                      >
+                        {crumb.name}
+                      </BreadcrumbLink>
+                    )}
+                  </BreadcrumbItem>
+                  {index < breadcrumbs.length - 1 && (
+                    <BreadcrumbSeparator className="text-gray-600" />
+                  )}
+                </span>
+              ))}
+            </BreadcrumbList>
+          </Breadcrumb>
+
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight mb-6">
+            What Happens After an Arrest in Alabama
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl leading-relaxed mb-6">
+            When someone you care about is arrested, you're left wondering what's happening to them. Understanding the process helps you take the right steps to get them released as quickly as possible. Here's exactly what happens from the moment of arrest through release.
+          </p>
+          
+          {/* Reading Meta */}
+          <div className="mb-8">
+            <ReadingMeta 
+              author="Toni"
+              licenseNumber="S0345"
+              readingTime={7}
+            />
+          </div>
+
+          {/* Answer Box */}
+          <AnswerBox 
+            question="What happens after someone is arrested in Alabama?"
+            answer="After arrest, they're transported to jail for booking (1-3 hours): photograph, fingerprints, background check, property collected. Bail is set either immediately via schedule or by judge within 24-72 hours. Once bail is posted through a bondsman (10% + fees), release processing takes 2-10 hours depending on the facility."
+          />
+
+          <TableOfContents 
+            items={[
+              { id: 'the-arrest', title: 'The Arrest' },
+              { id: 'booking-process', title: 'Booking Process' },
+              { id: 'bail-determination', title: 'Bail Determination' },
+              { id: 'time-in-holding', title: 'Time in Holding Cell' },
+              { id: 'faqs', title: 'Frequently Asked Questions' },
+            ]}
           />
         </div>
-
-        {/* Answer Box */}
-        <AnswerBox 
-          question="What happens after someone is arrested in Alabama?"
-          answer="After arrest, they're transported to jail for booking (1-3 hours): photograph, fingerprints, background check, property collected. Bail is set either immediately via schedule or by judge within 24-72 hours. Once bail is posted through a bondsman (10% + fees), release processing takes 2-10 hours depending on the facility."
-        />
-
-        <TableOfContents 
-          items={[
-            { id: 'the-arrest', title: 'The Arrest' },
-            { id: 'booking-process', title: 'Booking Process' },
-            { id: 'bail-determination', title: 'Bail Determination' },
-            { id: 'time-in-holding', title: 'Time in Holding Cell' },
-            { id: 'faqs', title: 'Frequently Asked Questions' },
-          ]}
-        />
-      </Section>
+      </section>
 
       {/* The Arrest */}
       <Section>
