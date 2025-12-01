@@ -13,7 +13,7 @@ interface BreadcrumbProps {
 export const Breadcrumb = ({ items }: BreadcrumbProps) => {
   return (
     <nav aria-label="Breadcrumb" className="mb-8">
-      <ol className="flex items-center gap-2 text-sm text-muted-foreground">
+      <ol className="flex items-center gap-2 text-sm text-muted-foreground [text-shadow:_0_1px_4px_rgba(0,0,0,0.6)]">
         <li>
           <Link 
             to="/" 
