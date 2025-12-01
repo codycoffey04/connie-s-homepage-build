@@ -18,8 +18,8 @@ export const AnimatedImage = ({
   delay = 0, 
   scale = false,
   className = "",
-  width,
-  height,
+  width = 800,
+  height = 600,
   fetchPriority = "auto",
   loading = "lazy",
 }: AnimatedImageProps) => {
