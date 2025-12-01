@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ReactNode } from "react";
+import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 interface AnimatedSectionProps {
   children: ReactNode;
@@ -14,6 +15,12 @@ export const AnimatedSection = ({
   delay = 0,
   duration = 0.6 
 }: AnimatedSectionProps) => {
+  const prefersReducedMotion = useReducedMotion();
+
+  if (prefersReducedMotion) {
+    return <div className={className}>{children}</div>;
+  }
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}

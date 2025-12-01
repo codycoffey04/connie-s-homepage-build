@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 interface AnimatedImageProps {
   src: string;
@@ -23,6 +24,22 @@ export const AnimatedImage = ({
   fetchPriority = "auto",
   loading = "lazy",
 }: AnimatedImageProps) => {
+  const prefersReducedMotion = useReducedMotion();
+
+  if (prefersReducedMotion) {
+    return (
+      <img
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        className={className}
+        loading={loading}
+        fetchPriority={fetchPriority}
+      />
+    );
+  }
+
   return (
     <motion.img
       src={src}
