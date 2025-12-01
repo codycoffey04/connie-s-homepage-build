@@ -34,7 +34,7 @@ export const GuideHero = ({
             {title}
           </h1>
           
-          <p className="text-lg md:text-xl text-white leading-relaxed max-w-4xl mb-8 [text-shadow:_0_2px_4px_rgba(0,0,0,0.9),_0_4px_12px_rgba(0,0,0,0.7)]">
+          <p className="text-lg md:text-xl text-white font-semibold leading-relaxed max-w-4xl mb-8 [text-shadow:_0_2px_4px_rgba(0,0,0,0.9),_0_4px_12px_rgba(0,0,0,0.7)]">
             {description}
           </p>
           
