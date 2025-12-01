@@ -257,7 +257,7 @@ const Pisgah = () => {
       </Section>
 
       {/* How to Get to Our Office from Pisgah */}
-      <Section className="bg-muted py-16">
+      <Section className="bg-muted">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-black mb-8 text-center uppercase">
             How to Get to Our Office from Pisgah
@@ -308,7 +308,7 @@ const Pisgah = () => {
       </Section>
 
       {/* Local Law Enforcement & Court Information */}
-      <Section className="bg-gradient-to-b from-muted to-white py-16">
+      <Section className="bg-gradient-to-b from-muted to-white">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-black mb-8 text-center uppercase">
             Local Information for <span className="text-brand-red">Pisgah Residents</span>
