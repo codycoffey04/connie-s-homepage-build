@@ -1,12 +1,16 @@
+import { Link } from "react-router-dom";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { StickyCallButton } from "@/components/StickyCallButton";
 import { SEO } from "@/components/SEO";
+import { Section } from "@/components/Section";
 import { AnimatedSection } from "@/components/AnimatedSection";
+import { AnimatedCard } from "@/components/AnimatedCard";
 import { AnswerBox } from "@/components/AnswerBox";
 import { StatisticBox } from "@/components/StatisticBox";
 import { ReadingMeta } from "@/components/ReadingMeta";
 import { TableOfContents } from "@/components/TableOfContents";
+import { GuideHero } from "@/components/GuideHero";
 import { Card, CardContent } from "@/components/ui/card";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Phone, MapPin, Clock, Building, Scale, DollarSign, Users, ArrowRight, ChevronDown } from "lucide-react";
@@ -46,21 +50,23 @@ const faqs = [
   }
 ];
 
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Bail Bonds Guide", url: "/bail-bonds-guide" },
+  { name: "DeKalb County Jail Guide", url: "/bail-bonds-guide/dekalb-county-jail-guide" }
+];
+
 const schemas = [
   getArticleSchema(
     "DeKalb County Jail Bail Guide",
-    "How to post bail at DeKalb County Detention Center in Fort Payne, AL. Facility address, visiting hours, bail process, release times, and what to expect.",
+    "How to post bail at DeKalb County Detention Center in Fort Payne, AL. Facility address, bail process, release times, and what to expect when bailing someone out.",
     "/bail-bonds-guide/dekalb-county-jail-guide"
   ),
   getFAQSchema(faqs),
   getDeKalbCountyJailSchema(),
   getDeKalbCountyCourthouseSchema(),
   getSpeakableSchema(),
-  getBreadcrumbSchema([
-    { name: "Home", url: "/" },
-    { name: "Bail Bonds Guide", url: "/bail-bonds-guide" },
-    { name: "DeKalb County Jail Guide", url: "/bail-bonds-guide/dekalb-county-jail-guide" }
-  ]),
+  getBreadcrumbSchema(breadcrumbs),
   getLocalBusinessSchema()
 ];
 
@@ -87,412 +93,627 @@ const DeKalbCountyJailGuide = () => {
     <>
       <SEO
         title="DeKalb County Jail Bail Guide | Fort Payne, AL | Connie's Bail Bonding"
-        description="How to post bail at DeKalb County Detention Center in Fort Payne, AL. Facility address, visiting hours, bail process, release times, and what to expect."
+        description="How to post bail at DeKalb County Detention Center in Fort Payne, AL. Facility address, bail process, release times, and what to expect when bailing someone out."
         canonical="/bail-bonds-guide/dekalb-county-jail-guide"
         schema={schemas}
       />
-      <div className="min-h-screen bg-white">
-        <Navigation />
-        <StickyCallButton />
+      <Navigation />
+      <StickyCallButton />
 
-        {/* Hero Section */}
-      <section 
-        className="relative flex items-center text-white bg-cover bg-center"
-        style={{ backgroundImage: `url(${dekalbJailHeroBg})` }}
-      >
-          {/* Dark overlay */}
-          <div className="absolute inset-0 bg-black/60" />
-          
-          {/* Content */}
-          <div className="relative z-10 container mx-auto px-4 md:px-6 max-w-6xl py-20 md:py-32">
-            {/* Breadcrumb */}
-            <nav className="text-sm mb-8">
-              <a href="/" className="text-gray-400 hover:text-white transition-colors">Home</a>
-              <span className="mx-2 text-gray-600">/</span>
-              <a href="/bail-bonds-guide" className="text-gray-400 hover:text-white transition-colors">Bail Bonds Guide</a>
-              <span className="mx-2 text-gray-600">/</span>
-              <span className="text-white font-medium">DeKalb County Jail Guide</span>
-            </nav>
+      <GuideHero 
+        backgroundImage={dekalbJailHeroBg}
+        title="DeKalb County Jail Bail Guide"
+        description="When someone is arrested in DeKalb County, Alabama, they're taken to the DeKalb County Detention Center in Fort Payne. Here's everything you need to know about posting bail and getting your loved one released."
+        breadcrumbs={breadcrumbs}
+      />
 
-            <AnimatedSection>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight mb-8">
-                DeKalb County Jail Bail Guide
-              </h1>
-              <p className="text-xl text-gray-300 leading-relaxed max-w-4xl mb-8">
-                If someone you care about has been arrested and taken to DeKalb County Detention Center, you need answers fast. This guide covers everything you need to know about posting bail at DeKalb County Jail—from facility information to the bail process and what to expect for release times.
-              </p>
-              
-              {/* Reading Meta */}
-              <ReadingMeta 
-                author="Connie"
-                licenseNumber="B0092"
-                readingTime={6}
-              />
+      <Section className="bg-white">
+        <div className="max-w-6xl mx-auto">
+          <ReadingMeta 
+            author="Richard"
+            licenseNumber="S0334"
+            readingTime={5}
+          />
 
-              {/* Answer Box */}
-              <AnswerBox 
-                question="How do I post bail at DeKalb County Jail?"
-                answer="Call Connie's Bail Bonding 24/7. Provide the inmate's name and charges. We post the bond at DeKalb County Detention Center (2801 Jordan Road SW, Fort Payne). Release typically takes 2-8 hours. The jail is located next to our office for fast service. Bail costs 10% premium plus state fees."
-              />
-              
-              <StatisticBox 
-                statistic="DeKalb County Jail processes ~2,500 bookings annually"
-                context="As the primary detention facility for DeKalb County, this jail serves Fort Payne and surrounding cities."
-                citation="Estimated county operational data"
-              />
+          <AnswerBox 
+            question="How do I post bail at DeKalb County Jail?"
+            answer="Call Connie's Bail Bonding 24/7 at 256-601-2041, 256-630-2824, or 256-440-0822. Provide the inmate's name and charges. We post bonds at DeKalb County Detention Center (300 Grand Avenue SW, Fort Payne, AL 35967). Release typically takes 2-8 hours. Located next to our office. Costs 10% premium plus state fees."
+          />
 
-              <TableOfContents 
-                items={[
-                  { id: 'facility-information', title: 'Facility Information' },
-                  { id: 'how-to-post-bail', title: 'How to Post Bail' },
-                  { id: 'release-times', title: 'Release Times' },
-                  { id: 'types-of-bonds', title: 'Types of Bonds Accepted' },
-                  { id: 'courthouse-information', title: 'Courthouse Information' },
-                  { id: 'faqs', title: 'Frequently Asked Questions' },
-                ]}
-              />
-            </AnimatedSection>
-          </div>
-        </section>
+          <TableOfContents 
+            items={[
+              { id: 'facility-information', title: 'Facility Information' },
+              { id: 'how-to-post-bail', title: 'How to Post Bail' },
+              { id: 'release-times', title: 'Release Times' },
+              { id: 'types-of-bonds', title: 'Types of Bonds Accepted' },
+              { id: 'courthouse-information', title: 'Courthouse Information' },
+              { id: 'cities-served', title: 'Cities & Areas Served' },
+              { id: 'faqs', title: 'Frequently Asked Questions' },
+            ]}
+          />
+        </div>
+      </Section>
 
-        {/* Facility Information */}
-        <AnimatedSection className="bg-gray-50 py-16">
-          <div className="container mx-auto px-4">
-            <h2 id="facility-information" className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-8">Facility Information</h2>
-            <Card className="border-2 border-gray-200 bg-white max-w-3xl">
+      {/* Facility Information */}
+      <Section>
+        <div className="max-w-5xl mx-auto">
+          <AnimatedSection>
+            <div className="flex items-center gap-4 mb-6">
+              <Building className="h-12 w-12 text-brand-red" />
+              <h2 id="facility-information" className="text-4xl font-black uppercase tracking-tight">
+                DeKalb County Detention Center
+              </h2>
+            </div>
+
+            <Card className="border-2 border-gray-200">
               <CardContent className="p-8">
-                <div className="flex items-center gap-3 mb-6">
-                  <Building className="h-8 w-8 text-brand-red" />
-                  <h3 className="text-2xl font-bold uppercase">DeKalb County Detention Center</h3>
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <div className="flex items-start gap-3 mb-4">
+                      <MapPin className="h-6 w-6 text-brand-red shrink-0" />
+                      <div>
+                        <h3 className="text-xl font-bold mb-1">Address</h3>
+                        <p className="text-gray-700">
+                          300 Grand Avenue SW<br />
+                          Fort Payne, AL 35967
+                        </p>
+                        <a 
+                          href="https://www.google.com/maps/place/300+Grand+Avenue+SW,+Fort+Payne,+AL+35967"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-brand-red hover:underline mt-2 inline-block"
+                        >
+                          Get Directions →
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="flex items-start gap-3 mb-4">
+                      <Phone className="h-6 w-6 text-brand-red shrink-0" />
+                      <div>
+                        <h3 className="text-xl font-bold mb-1">Phone</h3>
+                        <a href="tel:2568453801" className="text-gray-700 hover:text-brand-red">
+                          (256) 845-3801
+                        </a>
+                        <p className="text-gray-600 text-sm mt-1">Main jail phone line</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Clock className="h-6 w-6 text-brand-red shrink-0" />
+                      <div>
+                        <h3 className="text-xl font-bold mb-1">Bail Bond Hours</h3>
+                        <p className="text-gray-700">24/7 — Anytime, Any Day</p>
+                        <p className="text-gray-600 text-sm mt-1">Jail accepts bonds around the clock</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div className="space-y-4 mb-6">
-                  <div className="flex items-start gap-3">
-                    <MapPin className="h-5 w-5 text-brand-red mt-1 shrink-0" />
-                    <div>
-                      <strong className="block">Address:</strong>
-                      <span className="text-gray-700">2801 Jordan Road SW, Fort Payne, AL 35967</span>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <Phone className="h-5 w-5 text-brand-red mt-1 shrink-0" />
-                    <div>
-                      <strong className="block">Phone:</strong>
-                      <a href="tel:256-845-3801" className="text-brand-red hover:underline">(256) 845-3801</a>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <Clock className="h-5 w-5 text-brand-red mt-1 shrink-0" />
-                    <div>
-                      <strong className="block">Hours:</strong>
-                      <span className="text-gray-700">24/7 (jail operations)</span>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <Clock className="h-5 w-5 text-brand-red mt-1 shrink-0" />
-                    <div>
-                      <strong className="block">Lobby Hours for Bail:</strong>
-                      <span className="text-gray-700">24 hours (bondsmen can post bail anytime)</span>
-                    </div>
-                  </div>
+
+                <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500 mt-6">
+                  <p className="text-lg font-semibold text-blue-900">
+                    Connie's Bail Bonding is located at <strong>2700 Jordan Rd SW</strong>, directly across from the DeKalb County Detention Center. We're the closest bondsman to the jail—ready to post bail immediately.
+                  </p>
                 </div>
-                <a
-                  href="https://www.google.com/maps/dir/?api=1&destination=2801+Jordan+Road+SW,+Fort+Payne,+AL+35967"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-brand-red text-white px-6 py-3 font-bold uppercase hover:bg-red-700 transition-colors"
-                >
-                  <MapPin className="h-5 w-5" />
-                  Get Directions
-                </a>
               </CardContent>
             </Card>
-          </div>
-        </AnimatedSection>
+          </AnimatedSection>
+        </div>
+      </Section>
 
-        {/* How to Post Bail */}
-        <AnimatedSection className="py-16">
-          <div className="container mx-auto px-4">
-            <h2 id="how-to-post-bail" className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-8">
+      {/* How to Post Bail */}
+      <Section variant="muted">
+        <div className="max-w-5xl mx-auto">
+          <AnimatedSection>
+            <h2 id="how-to-post-bail" className="text-4xl font-black uppercase tracking-tight mb-8">
               How to Post Bail at DeKalb County Jail
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl">
-              {[
-                {
-                  number: "1",
-                  title: "Confirm the Arrest",
-                  description: "Call the jail at (256) 845-3801 or check the online inmate roster to confirm the person is in custody and get their booking number. You'll need the defendant's full legal name and date of birth."
-                },
-                {
-                  number: "2",
-                  title: "Find Out the Bail Amount",
-                  description: "The jail staff can tell you the bail amount once it's been set. For common offenses, bail may be set immediately via a bail schedule. For more serious charges, the defendant may need to see a judge first (typically within 24-48 hours)."
-                },
-                {
-                  number: "3",
-                  title: "Contact a Bail Bondsman",
-                  description: "Call Connie's Bail Bonding at (256) 601-2041. We're available 24/7 and can start the paperwork immediately. Have ready: defendant's full name and DOB, booking number, bail amount, and your payment method."
-                },
-                {
-                  number: "4",
-                  title: "Complete Paperwork & Pay",
-                  description: "You'll sign the bail bond agreement (as the indemnitor/cosigner) and pay the premium (10% of bail) plus state fees. This can often be done over the phone or we can meet you at the jail."
-                },
-                {
-                  number: "5",
-                  title: "Bond is Posted",
-                  description: "We deliver the bond paperwork to the jail. Once the jail verifies and accepts the bond, they begin processing the defendant's release."
-                },
-                {
-                  number: "6",
-                  title: "Defendant Released",
-                  description: "Release times at DeKalb County Jail typically range from 2-8 hours after the bond is posted, depending on how busy the facility is and time of day."
-                }
-              ].map((step) => (
-                <Card key={step.number} className="border-2 border-gray-200 hover:border-brand-red transition-all hover:shadow-lg">
-                  <CardContent className="p-6">
-                    <div className="flex items-center gap-4 mb-4">
-                      <div className="h-12 w-12 rounded-full bg-brand-red text-white flex items-center justify-center text-2xl font-black shrink-0">
-                        {step.number}
-                      </div>
-                      <h3 className="text-xl font-bold uppercase">{step.title}</h3>
+
+            <StatisticBox 
+              statistic="2-8 hours is the typical release time after bail is posted"
+              context="DeKalb County Jail processes releases 24/7, but timing varies based on workload."
+              citation="Local operational data"
+            />
+
+            <div className="space-y-6">
+              <Card className="border-2 border-gray-200">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-brand-red text-white flex items-center justify-center text-xl font-black">
+                      1
                     </div>
-                    <p className="text-gray-700 leading-relaxed">{step.description}</p>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold uppercase tracking-tight mb-3">Call Us 24/7</h3>
+                      <p className="text-gray-700 mb-4">
+                        Contact Connie's Bail Bonding anytime. We're available around the clock including nights, weekends, and holidays.
+                      </p>
+                      <div className="flex flex-wrap gap-4">
+                        <a href={`tel:${phoneNumbers.richard.number.replace(/[^0-9]/g, "")}`} className="flex items-center gap-2 text-brand-red hover:underline font-semibold">
+                          <Phone className="w-4 h-4" />
+                          {phoneNumbers.richard.number} (Richard)
+                        </a>
+                        <a href={`tel:${phoneNumbers.connie.number.replace(/[^0-9]/g, "")}`} className="flex items-center gap-2 text-brand-red hover:underline font-semibold">
+                          <Phone className="w-4 h-4" />
+                          {phoneNumbers.connie.number} (Connie)
+                        </a>
+                        <a href={`tel:${phoneNumbers.toni.number.replace(/[^0-9]/g, "")}`} className="flex items-center gap-2 text-brand-red hover:underline font-semibold">
+                          <Phone className="w-4 h-4" />
+                          {phoneNumbers.toni.number} (Toni)
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 border-gray-200">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-brand-red text-white flex items-center justify-center text-xl font-black">
+                      2
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold uppercase tracking-tight mb-3">Provide Basic Information</h3>
+                      <p className="text-gray-700 mb-3">We'll need:</p>
+                      <ul className="space-y-2">
+                        <li className="flex items-start gap-2">
+                          <span className="text-brand-red mt-1">•</span>
+                          <span className="text-gray-700">The defendant's full legal name</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-brand-red mt-1">•</span>
+                          <span className="text-gray-700">Date of birth (if known)</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-brand-red mt-1">•</span>
+                          <span className="text-gray-700">Charges (if known)</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-brand-red mt-1">•</span>
+                          <span className="text-gray-700">Your contact information</span>
+                        </li>
+                      </ul>
+                      <p className="text-gray-600 text-sm mt-3">
+                        If you don't have all the details, that's okay—we can help you find out.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 border-gray-200">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-brand-red text-white flex items-center justify-center text-xl font-black">
+                      3
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold uppercase tracking-tight mb-3">Complete Paperwork & Payment</h3>
+                      <p className="text-gray-700 mb-3">
+                        We'll explain the costs (10% premium + state fees) and review the bail bond agreement. Payment options include:
+                      </p>
+                      <ul className="space-y-2">
+                        <li className="flex items-start gap-2">
+                          <span className="text-brand-red mt-1">•</span>
+                          <span className="text-gray-700">Cash</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-brand-red mt-1">•</span>
+                          <span className="text-gray-700">Credit/Debit cards</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-brand-red mt-1">•</span>
+                          <span className="text-gray-700">Payment plans (for qualifying clients)</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 border-gray-200">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-brand-red text-white flex items-center justify-center text-xl font-black">
+                      4
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold uppercase tracking-tight mb-3">We Post the Bond</h3>
+                      <p className="text-gray-700">
+                        We electronically submit the bond to DeKalb County Jail. Because we're located directly across the street, we can also hand-deliver paperwork if needed for faster processing.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 border-gray-200">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-brand-red text-white flex items-center justify-center text-xl font-black">
+                      5
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold uppercase tracking-tight mb-3">Jail Processes Release</h3>
+                      <p className="text-gray-700 mb-3">
+                        Once the jail receives and verifies the bond, they begin release processing. This includes:
+                      </p>
+                      <ul className="space-y-2">
+                        <li className="flex items-start gap-2">
+                          <span className="text-brand-red mt-1">•</span>
+                          <span className="text-gray-700">Confirming there are no other holds or warrants</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-brand-red mt-1">•</span>
+                          <span className="text-gray-700">Completing discharge paperwork</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-brand-red mt-1">•</span>
+                          <span className="text-gray-700">Returning personal property</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-brand-red mt-1">•</span>
+                          <span className="text-gray-700">Providing court date information</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 border-gray-200">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-brand-red text-white flex items-center justify-center text-xl font-black">
+                      6
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold uppercase tracking-tight mb-3">Defendant is Released</h3>
+                      <p className="text-gray-700">
+                        Your loved one walks out the front door. We'll make sure you know the court date and requirements to avoid any issues.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </AnimatedSection>
+        </div>
+      </Section>
+
+      {/* Release Times */}
+      <Section>
+        <div className="max-w-5xl mx-auto">
+          <AnimatedSection>
+            <h2 id="release-times" className="text-4xl font-black uppercase tracking-tight mb-8">
+              How Long Does Release Take?
+            </h2>
+
+            <Card className="border-2 border-gray-200">
+              <CardContent className="p-8">
+                <p className="text-xl mb-6">
+                  After we post the bond, DeKalb County Jail typically releases defendants within <strong className="text-brand-red">2-8 hours</strong>.
+                </p>
+
+                <div className="bg-gray-50 p-6 rounded-lg mb-6">
+                  <h3 className="text-2xl font-bold mb-4">Factors affecting release time:</h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-2">
+                      <span className="text-brand-red font-bold mt-1">•</span>
+                      <span className="text-gray-700"><strong>Time of day</strong> — Late nights and early mornings are slower due to reduced staff</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-brand-red font-bold mt-1">•</span>
+                      <span className="text-gray-700"><strong>Jail volume</strong> — Busy times (weekend nights) mean more inmates being processed</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-brand-red font-bold mt-1">•</span>
+                      <span className="text-gray-700"><strong>Outstanding warrants</strong> — If there's a hold from another jurisdiction, release will be delayed</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-brand-red font-bold mt-1">•</span>
+                      <span className="text-gray-700"><strong>Bond verification</strong> — Jail staff verify bond paperwork and confirm no other issues</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
+                  <p className="text-lg">
+                    <strong className="text-blue-900">Alabama law requires "prompt release"</strong> once bail is posted properly. While 2-8 hours is typical at DeKalb County, it can occasionally be faster or slower based on circumstances beyond our control.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </AnimatedSection>
+        </div>
+      </Section>
+
+      {/* Types of Bonds */}
+      <Section variant="muted">
+        <div className="max-w-5xl mx-auto">
+          <AnimatedSection>
+            <h2 id="types-of-bonds" className="text-4xl font-black uppercase tracking-tight mb-8">
+              Types of Bonds Accepted at DeKalb County Jail
+            </h2>
+
+            <div className="space-y-6">
+              <Card className="border-2 border-gray-200">
+                <CardContent className="p-6">
+                  <h3 className="text-2xl font-bold uppercase tracking-tight mb-4 text-brand-red">
+                    Surety Bonds (Bail Bondsman)
+                  </h3>
+                  <p className="text-gray-700 mb-3">
+                    <strong>Most common option.</strong> You pay a licensed bail bondsman 10% of the total bail amount as a premium (plus state fees), and the bondsman posts the full bond with the court.
+                  </p>
+                  <p className="text-gray-700">
+                    <strong>Example:</strong> If bail is $10,000, you pay approximately $1,385 (10% + fees) to Connie's, and we post the full $10,000 bond.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 border-gray-200">
+                <CardContent className="p-6">
+                  <h3 className="text-2xl font-bold uppercase tracking-tight mb-4 text-brand-red">
+                    Cash Bonds
+                  </h3>
+                  <p className="text-gray-700 mb-3">
+                    Pay the full bail amount directly to the court in cash or money order. This is refunded when the case concludes (minus any court fees), assuming all court appearances are made.
+                  </p>
+                  <p className="text-gray-600 text-sm">
+                    <strong>Note:</strong> Most people don't have thousands in cash available, making surety bonds the practical choice.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 border-gray-200">
+                <CardContent className="p-6">
+                  <h3 className="text-2xl font-bold uppercase tracking-tight mb-4 text-brand-red">
+                    Property Bonds
+                  </h3>
+                  <p className="text-gray-700">
+                    Real estate equity can be pledged as collateral directly to the court. This requires a complex legal process, title verification, and can take several days—generally not practical for immediate release.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </AnimatedSection>
+        </div>
+      </Section>
+
+      {/* Courthouse Information */}
+      <Section>
+        <div className="max-w-5xl mx-auto">
+          <AnimatedSection>
+            <div className="flex items-center gap-4 mb-6">
+              <Scale className="h-12 w-12 text-brand-red" />
+              <h2 id="courthouse-information" className="text-4xl font-black uppercase tracking-tight">
+                DeKalb County Courthouse
+              </h2>
+            </div>
+
+            <Card className="border-2 border-gray-200">
+              <CardContent className="p-8">
+                <p className="text-xl mb-6">
+                  After release, the defendant must appear at the DeKalb County Courthouse for all scheduled court dates.
+                </p>
+
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <div className="flex items-start gap-3 mb-4">
+                      <MapPin className="h-6 w-6 text-brand-red shrink-0" />
+                      <div>
+                        <h3 className="text-xl font-bold mb-1">Address</h3>
+                        <p className="text-gray-700">
+                          300 Grand Avenue SW<br />
+                          Fort Payne, AL 35967
+                        </p>
+                        <a 
+                          href="https://www.google.com/maps/place/300+Grand+Avenue+SW,+Fort+Payne,+AL+35967"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-brand-red hover:underline mt-2 inline-block"
+                        >
+                          Get Directions →
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="flex items-start gap-3">
+                      <Phone className="h-6 w-6 text-brand-red shrink-0" />
+                      <div>
+                        <h3 className="text-xl font-bold mb-1">Phone</h3>
+                        <a href="tel:2568455700" className="text-gray-700 hover:text-brand-red">
+                          (256) 845-5700
+                        </a>
+                        <p className="text-gray-600 text-sm mt-1">Circuit Clerk's Office</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-red-50 p-6 rounded-lg border-l-4 border-red-500 mt-6">
+                  <p className="text-lg font-semibold text-red-900">
+                    <strong>Missing a court date will result in bond forfeiture</strong>, a warrant for arrest, and additional charges. Mark all court dates on your calendar immediately.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </AnimatedSection>
+        </div>
+      </Section>
+
+      {/* Cities Served */}
+      <Section variant="muted">
+        <div className="max-w-5xl mx-auto">
+          <AnimatedSection>
+            <h2 id="cities-served" className="text-4xl font-black uppercase tracking-tight mb-8">
+              DeKalb County Cities & Areas We Serve
+            </h2>
+
+            <p className="text-xl mb-8">
+              Connie's Bail Bonding serves all of DeKalb County. If the arrest happened anywhere in DeKalb County, the defendant goes to the Fort Payne jail, and we can post bail immediately.
+            </p>
+
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              {['Fort Payne', 'Rainsville', 'Henagar', 'Fyffe', 'Pisgah', 'Valley Head', 'Ider', 'Geraldine', 'Collinsville', 'Mentone', 'Sylvania', 'Crossville'].map((city) => (
+                <Card key={city} className="border-2 border-gray-200">
+                  <CardContent className="p-4 text-center">
+                    <p className="font-bold text-lg">{city}</p>
                   </CardContent>
                 </Card>
               ))}
             </div>
-          </div>
-        </AnimatedSection>
+          </AnimatedSection>
+        </div>
+      </Section>
 
-        {/* Release Times */}
-        <AnimatedSection className="bg-gray-50 py-16">
-          <div className="container mx-auto px-4">
-            <h2 id="release-times" className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-8">
-              Release Times at DeKalb County Jail
-            </h2>
-            <div className="max-w-4xl">
-              <p className="text-xl text-gray-700 mb-6">
-                How long does it take to get out of DeKalb County Jail after bail is posted?
-              </p>
-              <div className="bg-white border-l-4 border-brand-red p-6 mb-6">
-                <p className="text-2xl font-bold text-brand-red mb-2">Typical release time: 2-8 hours</p>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold uppercase mb-4">Factors affecting release time:</h3>
-                <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-start gap-3">
-                    <Clock className="h-5 w-5 text-brand-red mt-1 shrink-0" />
-                    <span><strong>Time of day:</strong> Daytime releases (8am-5pm) are often faster due to full staffing</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <Clock className="h-5 w-5 text-brand-red mt-1 shrink-0" />
-                    <span><strong>Day of week:</strong> Weekends and holidays may have slower processing</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <Users className="h-5 w-5 text-brand-red mt-1 shrink-0" />
-                    <span><strong>Jail volume:</strong> Busy booking periods (weekend nights) can delay releases</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <Scale className="h-5 w-5 text-brand-red mt-1 shrink-0" />
-                    <span><strong>Paperwork accuracy:</strong> Errors on bond documents cause delays</span>
-                  </li>
-                </ul>
-              </div>
-              <p className="text-gray-700 mt-6 italic">
-                Alabama law requires jails to release defendants promptly once proper bail is posted (Ala. Code § 15-13-107). If release is taking significantly longer than 8 hours with no explanation, contact your bondsman to follow up with the jail.
-              </p>
-            </div>
-          </div>
-        </AnimatedSection>
-
-        {/* Types of Bonds */}
-        <AnimatedSection className="py-16">
-          <div className="container mx-auto px-4">
-            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-8">
-              Types of Bonds Accepted
-            </h2>
-            <div className="max-w-4xl">
-              <p className="text-xl text-gray-700 mb-8">
-                DeKalb County Detention Center accepts:
-              </p>
-              <div className="space-y-4">
-                <div className="bg-white border-2 border-gray-200 p-6">
-                  <h3 className="text-xl font-bold uppercase mb-2 flex items-center gap-2">
-                    <DollarSign className="h-6 w-6 text-brand-red" />
-                    Surety Bonds
-                  </h3>
-                  <p className="text-gray-700">Posted by a licensed bail bondsman (most common)</p>
-                </div>
-                <div className="bg-white border-2 border-gray-200 p-6">
-                  <h3 className="text-xl font-bold uppercase mb-2 flex items-center gap-2">
-                    <DollarSign className="h-6 w-6 text-brand-red" />
-                    Cash Bonds
-                  </h3>
-                  <p className="text-gray-700">Full bail amount paid directly to the jail</p>
-                </div>
-                <div className="bg-white border-2 border-gray-200 p-6">
-                  <h3 className="text-xl font-bold uppercase mb-2 flex items-center gap-2">
-                    <Building className="h-6 w-6 text-brand-red" />
-                    Property Bonds
-                  </h3>
-                  <p className="text-gray-700">Real estate used as collateral (requires court approval and additional paperwork)</p>
-                </div>
-              </div>
-              <p className="text-gray-700 mt-6 italic">
-                Using a licensed bondsman is the fastest option. Cash bonds require the full amount upfront and property bonds involve a longer approval process.
-              </p>
-            </div>
-          </div>
-        </AnimatedSection>
-
-        {/* Courthouse Information */}
-        <AnimatedSection className="bg-gray-50 py-16">
-          <div className="container mx-auto px-4">
-            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-8">
-              DeKalb County Courthouse Information
-            </h2>
-            <Card className="border-2 border-gray-200 bg-white max-w-3xl">
-              <CardContent className="p-8">
-                <div className="flex items-center gap-3 mb-6">
-                  <Scale className="h-8 w-8 text-brand-red" />
-                  <h3 className="text-2xl font-bold uppercase">DeKalb County Courthouse</h3>
-                </div>
-                <div className="space-y-4 mb-6">
-                  <div className="flex items-start gap-3">
-                    <MapPin className="h-5 w-5 text-brand-red mt-1 shrink-0" />
-                    <div>
-                      <strong className="block">Address:</strong>
-                      <span className="text-gray-700">300 Grand Avenue SW, Fort Payne, AL 35967</span>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <Phone className="h-5 w-5 text-brand-red mt-1 shrink-0" />
-                    <div>
-                      <strong className="block">Phone:</strong>
-                      <a href="tel:256-845-8500" className="text-brand-red hover:underline">(256) 845-8500</a>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <Clock className="h-5 w-5 text-brand-red mt-1 shrink-0" />
-                    <div>
-                      <strong className="block">Hours:</strong>
-                      <span className="text-gray-700">Monday-Friday, 8:00 AM - 4:30 PM</span>
-                    </div>
-                  </div>
-                </div>
-                <p className="text-gray-700 italic">
-                  This is where the defendant's court appearances will take place. Missing a court date here triggers bond forfeiture—make sure the defendant knows ALL scheduled dates.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </AnimatedSection>
-
-        {/* Cities Served */}
-        <AnimatedSection className="py-16">
-          <div className="container mx-auto px-4">
-            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-8">
-              Cities & Areas We Serve in DeKalb County
-            </h2>
-            <div className="max-w-4xl">
-              <p className="text-xl text-gray-700 mb-6">
-                Connie's Bail Bonding serves all of DeKalb County, including:
-              </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                Fort Payne • Rainsville • Henagar • Fyffe • Valley Head • Pisgah • Collinsville • Crossville • Geraldine • Hammondville • Ider • Mentone • Powell • Shiloh • Sylvania
-              </p>
-              <p className="text-gray-700 mt-6 italic">
-                No matter where the arrest occurred in DeKalb County, the defendant is typically taken to the DeKalb County Detention Center in Fort Payne.
-              </p>
-            </div>
-          </div>
-        </AnimatedSection>
-
-        {/* FAQ Section */}
-        <AnimatedSection className="bg-gray-50 py-16">
-          <div className="container mx-auto px-4">
-            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-8">
+      {/* FAQs */}
+      <Section>
+        <div className="max-w-4xl mx-auto">
+          <AnimatedSection>
+            <h2 id="faqs" className="text-4xl font-black uppercase tracking-tight mb-8 text-center">
               Frequently Asked Questions
             </h2>
-            <div className="max-w-4xl bg-white border-2 border-gray-200 divide-y divide-gray-200">
+
+            <div>
               {faqs.map((faq, index) => (
                 <FAQItem key={index} question={faq.question} answer={faq.answer} />
               ))}
             </div>
-          </div>
-        </AnimatedSection>
+          </AnimatedSection>
+        </div>
+      </Section>
 
-        {/* Emergency CTA */}
-        <AnimatedSection className="bg-black border-t-4 border-brand-red py-16">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight text-white mb-4">
-              Need to Post Bail at DeKalb County Jail?
+      {/* Emergency CTA */}
+      <Section variant="primary">
+        <div className="max-w-5xl mx-auto text-center">
+          <AnimatedSection>
+            <h2 className="text-4xl font-black uppercase tracking-tight mb-6">
+              Need to Post Bail Right Now?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              We're located in Fort Payne and can be at the jail within minutes. Call now—we answer 24/7.
+            <p className="text-xl mb-8">
+              We're available 24/7 to post bail at DeKalb County Jail. Call anytime—we answer every call.
             </p>
-            <div className="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto">
-              {Object.values(phoneNumbers).map((contact) => (
-                <a
-                  key={contact.number}
-                  href={`tel:${contact.number.replace(/[^0-9]/g, '')}`}
-                  className="bg-brand-red text-white px-6 py-4 font-black uppercase hover:bg-red-700 transition-colors flex items-center justify-center gap-2"
-                >
-                  <Phone className="h-5 w-5" />
-                  <div className="text-left">
-                    <div className="text-sm">{contact.name}</div>
-                    <div className="text-lg">{contact.number}</div>
-                  </div>
-                </a>
-              ))}
-            </div>
-          </div>
-        </AnimatedSection>
 
-        {/* Related Guides */}
-        <AnimatedSection className="py-16">
-          <div className="container mx-auto px-4">
-            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <a
+                href={`tel:${phoneNumbers.richard.number.replace(/[^0-9]/g, "")}`}
+                className="group flex items-center justify-between p-6 bg-white border-2 border-black hover:border-brand-red hover:bg-black transition-all duration-300"
+              >
+                <div className="flex-1">
+                  <div className="text-sm font-bold text-gray-600 uppercase tracking-wide mb-1 group-hover:text-white transition-colors">
+                    {phoneNumbers.richard.name}
+                  </div>
+                  <div className="text-xl md:text-2xl font-black text-black group-hover:text-white transition-colors">
+                    {phoneNumbers.richard.number}
+                  </div>
+                </div>
+                <Phone className="w-8 h-8 text-brand-red group-hover:text-white transition-colors" />
+              </a>
+
+              <a
+                href={`tel:${phoneNumbers.connie.number.replace(/[^0-9]/g, "")}`}
+                className="group flex items-center justify-between p-6 bg-white border-2 border-black hover:border-brand-red hover:bg-black transition-all duration-300"
+              >
+                <div className="flex-1">
+                  <div className="text-sm font-bold text-gray-600 uppercase tracking-wide mb-1 group-hover:text-white transition-colors">
+                    {phoneNumbers.connie.name}
+                  </div>
+                  <div className="text-xl md:text-2xl font-black text-black group-hover:text-white transition-colors">
+                    {phoneNumbers.connie.number}
+                  </div>
+                </div>
+                <Phone className="w-8 h-8 text-brand-red group-hover:text-white transition-colors" />
+              </a>
+
+              <a
+                href={`tel:${phoneNumbers.toni.number.replace(/[^0-9]/g, "")}`}
+                className="group flex items-center justify-between p-6 bg-white border-2 border-black hover:border-brand-red hover:bg-black transition-all duration-300"
+              >
+                <div className="flex-1">
+                  <div className="text-sm font-bold text-gray-600 uppercase tracking-wide mb-1 group-hover:text-white transition-colors">
+                    {phoneNumbers.toni.name}
+                  </div>
+                  <div className="text-xl md:text-2xl font-black text-black group-hover:text-white transition-colors">
+                    {phoneNumbers.toni.number}
+                  </div>
+                </div>
+                <Phone className="w-8 h-8 text-brand-red group-hover:text-white transition-colors" />
+              </a>
+            </div>
+          </AnimatedSection>
+        </div>
+      </Section>
+
+      {/* Related Guides */}
+      <Section>
+        <div className="max-w-6xl mx-auto">
+          <AnimatedSection>
+            <h2 className="text-4xl font-black uppercase tracking-tight mb-8 text-center">
               Related Guides
             </h2>
-            <div className="grid md:grid-cols-3 gap-6 max-w-6xl">
-              {[
-                {
-                  title: "How Bail Works in Alabama",
-                  description: "Step-by-step guide to the Alabama bail process",
-                  link: "/bail-bonds-guide/how-bail-works-alabama"
-                },
-                {
-                  title: "Bail Costs & Fees Explained",
-                  description: "Complete breakdown of what you'll pay",
-                  link: "/bail-bonds-guide/bail-costs-alabama"
-                },
-                {
-                  title: "Cherokee County Jail Guide",
-                  description: "How to post bail at Cherokee County Detention Center",
-                  link: "/bail-bonds-guide/cherokee-county-jail-guide"
-                }
-              ].map((guide) => (
-                <Card key={guide.link} className="border-2 border-gray-200 hover:border-brand-red transition-all hover:shadow-lg">
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <Link to="/bail-bonds-guide/how-bail-works-alabama" className="group">
+                <Card className="h-full border-2 border-gray-200 hover:border-brand-red hover:shadow-lg transition-all duration-300">
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-bold uppercase mb-3">{guide.title}</h3>
-                    <p className="text-gray-700 mb-4">{guide.description}</p>
-                    <a
-                      href={guide.link}
-                      className="inline-flex items-center gap-2 text-brand-red font-bold uppercase hover:underline"
-                    >
+                    <Scale className="h-12 w-12 text-brand-red mb-4" />
+                    <h3 className="text-xl font-bold uppercase tracking-tight mb-3 group-hover:text-brand-red transition-colors">
+                      How Bail Works in Alabama
+                    </h3>
+                    <p className="text-gray-700 mb-4">
+                      Learn the step-by-step bail process from arrest to release.
+                    </p>
+                    <span className="inline-flex items-center gap-2 text-brand-red font-semibold group-hover:gap-3 transition-all">
                       Read Guide
-                      <ArrowRight className="h-4 w-4" />
-                    </a>
+                      <ArrowRight className="w-4 h-4" />
+                    </span>
                   </CardContent>
                 </Card>
-              ))}
-            </div>
-          </div>
-        </AnimatedSection>
+              </Link>
 
-        <Footer />
-      </div>
+              <Link to="/bail-bonds-guide/bail-costs-alabama" className="group">
+                <Card className="h-full border-2 border-gray-200 hover:border-brand-red hover:shadow-lg transition-all duration-300">
+                  <CardContent className="p-6">
+                    <DollarSign className="h-12 w-12 text-brand-red mb-4" />
+                    <h3 className="text-xl font-bold uppercase tracking-tight mb-3 group-hover:text-brand-red transition-colors">
+                      Bail Costs & Fees
+                    </h3>
+                    <p className="text-gray-700 mb-4">
+                      Understand the 10% premium, state fees, and what you'll actually pay.
+                    </p>
+                    <span className="inline-flex items-center gap-2 text-brand-red font-semibold group-hover:gap-3 transition-all">
+                      Read Guide
+                      <ArrowRight className="w-4 h-4" />
+                    </span>
+                  </CardContent>
+                </Card>
+              </Link>
+
+              <Link to="/bail-bonds-guide/cosigner-responsibilities" className="group">
+                <Card className="h-full border-2 border-gray-200 hover:border-brand-red hover:shadow-lg transition-all duration-300">
+                  <CardContent className="p-6">
+                    <Users className="h-12 w-12 text-brand-red mb-4" />
+                    <h3 className="text-xl font-bold uppercase tracking-tight mb-3 group-hover:text-brand-red transition-colors">
+                      Cosigner Responsibilities
+                    </h3>
+                    <p className="text-gray-700 mb-4">
+                      What you're agreeing to when you cosign a bail bond.
+                    </p>
+                    <span className="inline-flex items-center gap-2 text-brand-red font-semibold group-hover:gap-3 transition-all">
+                      Read Guide
+                      <ArrowRight className="w-4 h-4" />
+                    </span>
+                  </CardContent>
+                </Card>
+              </Link>
+            </div>
+          </AnimatedSection>
+        </div>
+      </Section>
+
+      <Footer />
     </>
   );
 };

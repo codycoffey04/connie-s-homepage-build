@@ -11,6 +11,7 @@ import { AnswerBox } from "@/components/AnswerBox";
 import { StatisticBox } from "@/components/StatisticBox";
 import { ReadingMeta } from "@/components/ReadingMeta";
 import { TableOfContents } from "@/components/TableOfContents";
+import { GuideHero } from "@/components/GuideHero";
 import { Card, CardContent } from "@/components/ui/card";
 import { Scale, DollarSign, Building, Users, Phone, CheckCircle, XCircle, ArrowRight } from "lucide-react";
 import { phoneNumbers } from "@/lib/cityUtils";
@@ -147,69 +148,45 @@ const HowBailWorksAlabama = () => {
         canonical="/bail-bonds-guide/how-bail-works-alabama"
         schema={schemas}
       />
-      <div className="min-h-screen flex flex-col bg-white">
-        <Navigation />
-        <StickyCallButton />
-        
-        <main className="flex-grow pt-20">
-          {/* Hero Section */}
-      <section 
-        className="relative flex items-center text-white bg-cover bg-center"
-        style={{ backgroundImage: `url(${howBailWorksHeroBg})` }}
-      >
-            {/* Dark overlay */}
-            <div className="absolute inset-0 bg-black/60" />
-            
-            {/* Content */}
-            <div className="relative z-10 container mx-auto px-4 md:px-6 max-w-6xl py-20 md:py-32">
-              {/* Breadcrumb */}
-              <nav className="text-sm mb-8">
-                <a href="/" className="text-gray-400 hover:text-white transition-colors">Home</a>
-                <span className="mx-2 text-gray-600">/</span>
-                <a href="/bail-bonds-guide" className="text-gray-400 hover:text-white transition-colors">Bail Bonds Guide</a>
-                <span className="mx-2 text-gray-600">/</span>
-                <span className="text-white font-medium">How Bail Works in Alabama</span>
-              </nav>
+      <Navigation />
+      <StickyCallButton />
+      
+      <GuideHero 
+        backgroundImage={howBailWorksHeroBg}
+        title="How Bail Works in Alabama"
+        description="When someone is arrested in Alabama, bail is the process that allows them to be released from jail while awaiting trial. Understanding how bail works helps you act quickly and make informed decisions during a stressful time. Here's everything you need to know about the Alabama bail process."
+        breadcrumbs={breadcrumbs}
+      />
 
-              {/* Hero */}
-              <AnimatedSection>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight mb-6">
-                  How Bail Works in Alabama
-                </h1>
-                <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-4xl mb-8">
-                  When someone is arrested in Alabama, bail is the process that allows them to be released from jail while awaiting trial. Understanding how bail works helps you act quickly and make informed decisions during a stressful time. Here's everything you need to know about the Alabama bail process.
-                </p>
-                
-                {/* Reading Meta */}
-                <ReadingMeta 
-                  author="Connie"
-                  licenseNumber="B0092"
-                  readingTime={8}
-                />
+      <Section className="bg-white">
+        <div className="max-w-6xl mx-auto">
+          <ReadingMeta 
+            author="Connie"
+            licenseNumber="B0092"
+            readingTime={8}
+          />
 
-                {/* Answer Box */}
-                <AnswerBox 
-                  question="How does bail work in Alabama?"
-                  answer="After arrest and booking (1-3 hours), a judge sets bail based on charges and risk factors. You can pay 10% through a bail bondsman plus state fees, or pay the full amount in cash to the court. Once posted, the jail processes release (typically 2-8 hours). The defendant must appear at all court dates or the bail is forfeited."
-                  source="Alabama Code § 15-13-106"
-                />
+          <AnswerBox 
+            question="How does bail work in Alabama?"
+            answer="After arrest and booking (1-3 hours), a judge sets bail based on charges and risk factors. You can pay 10% through a bail bondsman plus state fees, or pay the full amount in cash to the court. Once posted, the jail processes release (typically 2-8 hours). The defendant must appear at all court dates or the bail is forfeited."
+            source="Alabama Code § 15-13-106"
+          />
 
-                <TableOfContents 
-                  items={[
-                    { id: 'what-is-bail', title: 'What Is Bail?' },
-                    { id: 'the-alabama-bail-process', title: 'The Alabama Bail Process Step-by-Step' },
-                    { id: 'types-of-bail', title: 'Types of Bail in Alabama' },
-                    { id: 'who-sets-bail', title: 'Who Sets Bail in Alabama?' },
-                    { id: 'how-long-does-bail-take', title: 'How Long Does Bail Take?' },
-                    { id: 'what-alabama-law-says', title: 'What Alabama Law Says' },
-                    { id: 'faqs', title: 'Frequently Asked Questions' },
-                  ]}
-                />
-              </AnimatedSection>
-            </div>
-          </section>
+          <TableOfContents 
+            items={[
+              { id: 'what-is-bail', title: 'What Is Bail?' },
+              { id: 'the-alabama-bail-process', title: 'The Alabama Bail Process Step-by-Step' },
+              { id: 'types-of-bail', title: 'Types of Bail in Alabama' },
+              { id: 'who-sets-bail', title: 'Who Sets Bail in Alabama?' },
+              { id: 'how-long-does-bail-take', title: 'How Long Does Bail Take?' },
+              { id: 'what-alabama-law-says', title: 'What Alabama Law Says' },
+              { id: 'faqs', title: 'Frequently Asked Questions' },
+            ]}
+          />
+        </div>
+      </Section>
 
-          <Section>
+      <Section>
 
             {/* What Is Bail */}
             <AnimatedSection delay={0.1}>
@@ -493,12 +470,10 @@ const HowBailWorksAlabama = () => {
               </div>
             </AnimatedSection>
           </Section>
-        </main>
 
-        <Footer />
-      </div>
-    </>
-  );
-};
+          <Footer />
+        </>
+      );
+    };
 
-export default HowBailWorksAlabama;
+    export default HowBailWorksAlabama;
