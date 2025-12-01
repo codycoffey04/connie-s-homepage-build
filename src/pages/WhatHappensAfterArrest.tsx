@@ -23,6 +23,7 @@ import { phoneNumbers } from "@/lib/cityUtils";
 import {
   getArticleSchema,
   getFAQSchema,
+  getSpeakableSchema,
   getBreadcrumbSchema,
   getLocalBusinessSchema,
   getCustomHowToSchema,
@@ -102,6 +103,7 @@ const WhatHappensAfterArrest = () => {
       "The complete process from arrest through release on bail",
       howToSteps
     ),
+    getSpeakableSchema(),
     getBreadcrumbSchema(breadcrumbs),
     getLocalBusinessSchema(),
   ];

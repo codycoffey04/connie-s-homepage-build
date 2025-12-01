@@ -14,7 +14,7 @@ import { TableOfContents } from "@/components/TableOfContents";
 import { Card, CardContent } from "@/components/ui/card";
 import { Scale, Users, CreditCard, Phone, ShieldCheck, ArrowRight, AlertCircle, CheckCircle } from "lucide-react";
 import { phoneNumbers } from "@/lib/cityUtils";
-import { getArticleSchema, getFAQSchema, getBreadcrumbSchema, getLocalBusinessSchema } from "@/lib/schemaUtils";
+import { getArticleSchema, getFAQSchema, getSpeakableSchema, getBreadcrumbSchema, getLocalBusinessSchema } from "@/lib/schemaUtils";
 
 const BailCostsAlabama = () => {
   const faqs = [
@@ -74,6 +74,7 @@ const BailCostsAlabama = () => {
       "/bail-bonds-guide/bail-costs-alabama"
     ),
     getFAQSchema(faqs),
+    getSpeakableSchema(),
     getBreadcrumbSchema(breadcrumbs),
     getLocalBusinessSchema()
   ];

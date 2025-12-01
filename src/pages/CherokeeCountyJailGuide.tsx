@@ -17,7 +17,8 @@ import {
   getBreadcrumbSchema, 
   getLocalBusinessSchema,
   getCherokeeCountyJailSchema,
-  getCherokeeCourthouseSchema
+  getCherokeeCourthouseSchema,
+  getSpeakableSchema
 } from "@/lib/schemaUtils";
 
 const faqs = [
@@ -52,6 +53,7 @@ const schemas = [
   getFAQSchema(faqs),
   getCherokeeCountyJailSchema(),
   getCherokeeCourthouseSchema(),
+  getSpeakableSchema(),
   getBreadcrumbSchema([
     { name: "Home", url: "/" },
     { name: "Bail Bonds Guide", url: "/bail-bonds-guide" },
