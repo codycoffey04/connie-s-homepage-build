@@ -218,6 +218,20 @@ const About = () => {
         </div>
       </Section>
 
+      {/* Mid-Page CTA */}
+      <div className="bg-primary py-6">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-primary-foreground font-bold text-lg mb-2">Need Immediate Help?</p>
+          <a 
+            href="tel:2566012041"
+            className="inline-flex items-center gap-2 text-primary-foreground text-2xl font-black hover:text-primary-foreground/90 transition-colors"
+          >
+            <Phone className="w-6 h-6" />
+            256-601-2041
+          </a>
+        </div>
+      </div>
+
       {/* Professional Licensing & Compliance Section */}
       <Section variant="muted">
         <div className="max-w-4xl mx-auto">
