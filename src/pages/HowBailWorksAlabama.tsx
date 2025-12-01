@@ -153,10 +153,10 @@ const HowBailWorksAlabama = () => {
         
         <main className="flex-grow pt-20">
           {/* Hero Section */}
-          <section 
-            className="relative min-h-[70vh] flex items-center text-white bg-cover bg-center"
-            style={{ backgroundImage: `url(${howBailWorksHeroBg})` }}
-          >
+      <section 
+        className="relative flex items-center text-white bg-cover bg-center"
+        style={{ backgroundImage: `url(${howBailWorksHeroBg})` }}
+      >
             {/* Dark overlay */}
             <div className="absolute inset-0 bg-black/60" />
             

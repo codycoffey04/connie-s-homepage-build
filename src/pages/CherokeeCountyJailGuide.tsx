@@ -95,10 +95,10 @@ const CherokeeCountyJailGuide = () => {
         <StickyCallButton />
 
         {/* Hero Section */}
-        <section 
-          className="relative min-h-[70vh] flex items-center text-white bg-cover bg-center"
-          style={{ backgroundImage: `url(${cherokeeJailHeroBg})` }}
-        >
+      <section 
+        className="relative flex items-center text-white bg-cover bg-center"
+        style={{ backgroundImage: `url(${cherokeeJailHeroBg})` }}
+      >
           {/* Dark overlay */}
           <div className="absolute inset-0 bg-black/60" />
           
