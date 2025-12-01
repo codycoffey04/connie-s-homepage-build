@@ -568,6 +568,16 @@ const Pisgah = () => {
             <TestimonialCard key={index} quote={testimonial} />
           ))}
         </div>
+        <div className="text-center mt-8">
+          <a 
+            href="https://www.google.com/maps/search/Connie's+Bail+Bonding" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-bold"
+          >
+            Read All Reviews on Google →
+          </a>
+        </div>
       </Section>
 
       {/* Final CTA */}
