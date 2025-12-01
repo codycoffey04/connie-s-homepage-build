@@ -249,16 +249,10 @@ const FortPayne = () => {
           <div className="grid md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
               <Card key={index} className="border-border/50 shadow-sm hover:shadow-md transition-shadow bg-white/95">
-                <CardHeader>
-                  <div className="flex items-start gap-4">
-                    <feature.icon className="w-6 h-6 text-primary mt-1" />
-                    <CardTitle className="text-xl">{feature.title}</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-foreground/80 leading-relaxed">
-                    {feature.description}
-                  </p>
+                <CardContent className="p-6">
+                  <feature.icon className="w-12 h-12 text-primary mb-4" />
+                  <h3 className="text-xl font-bold mb-3 text-foreground">{feature.title}</h3>
+                  <p className="text-foreground/80 leading-relaxed">{feature.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -279,21 +273,12 @@ const FortPayne = () => {
             </h2>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          <div className="max-w-4xl mx-auto space-y-8">
             {howBailWorks.map((item, index) => (
-              <Card key={index} className="border-border/50 bg-white/95">
-                <CardHeader>
-                  <CardTitle className="text-lg flex items-center gap-2">
-                    <MapPin className="w-5 h-5 text-primary" />
-                    {item.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-foreground/80">
-                    {item.description}
-                  </p>
-                </CardContent>
-              </Card>
+              <div key={index} className="bg-white/95 p-6 rounded-lg border border-border/50 shadow-sm">
+                <h3 className="text-xl font-bold mb-3 text-primary">{item.title}</h3>
+                <p className="text-foreground/80 leading-relaxed">{item.description}</p>
+              </div>
             ))}
           </div>
         </AnimatedSection>
