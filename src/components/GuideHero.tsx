@@ -24,19 +24,17 @@ export const GuideHero = ({
       className="relative flex items-center text-white bg-cover bg-center"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/10" />
       
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 md:px-6 max-w-6xl py-20 md:py-32">
         <AnimatedSection>
           <Breadcrumb items={breadcrumbs} />
           
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight mb-6 [text-shadow:_0_2px_12px_rgba(0,0,0,0.8)]">
             {title}
           </h1>
           
-          <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-4xl mb-8">
+          <p className="text-lg md:text-xl text-white leading-relaxed max-w-4xl mb-8 [text-shadow:_0_1px_8px_rgba(0,0,0,0.7)]">
             {description}
           </p>
           
