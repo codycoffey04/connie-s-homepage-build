@@ -219,7 +219,7 @@ const FortPayne = () => {
       {/* Trust Section */}
       <Section className="bg-muted py-16">
         <div className="max-w-4xl mx-auto text-center space-y-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-navy-deep">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
             Fort Payne's Trusted Bail Bond Agency
           </h2>
           <div className="text-lg text-foreground/80 space-y-4 text-left md:text-center">
@@ -251,7 +251,7 @@ const FortPayne = () => {
               <Card key={index} className="border-border/50 shadow-sm hover:shadow-md transition-shadow bg-white/95">
                 <CardHeader>
                   <div className="flex items-start gap-4">
-                    <feature.icon className="w-6 h-6 text-teal mt-1" />
+                    <feature.icon className="w-6 h-6 text-primary mt-1" />
                     <CardTitle className="text-xl">{feature.title}</CardTitle>
                   </div>
                 </CardHeader>
@@ -284,7 +284,7 @@ const FortPayne = () => {
               <Card key={index} className="border-border/50 bg-white/95">
                 <CardHeader>
                   <CardTitle className="text-lg flex items-center gap-2">
-                    <MapPin className="w-5 h-5 text-teal" />
+                    <MapPin className="w-5 h-5 text-primary" />
                     {item.title}
                   </CardTitle>
                 </CardHeader>

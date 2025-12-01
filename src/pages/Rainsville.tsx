@@ -153,6 +153,7 @@ const Rainsville = () => {
             { name: "Rainsville", url: "/rainsville" }
           ])
         ]}
+        reviews={testimonials}
       />
       <Navigation />
       <StickyCallButton />
