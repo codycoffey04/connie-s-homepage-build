@@ -21,11 +21,11 @@ export const GuideHero = ({
 }: GuideHeroProps) => {
   return (
     <section 
-      className="relative min-h-[70vh] flex items-center text-white bg-cover bg-center"
+      className="relative flex items-center text-white bg-cover bg-center"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/60" />
+      <div className="absolute inset-0 bg-black/40" />
       
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 md:px-6 max-w-6xl py-20 md:py-32">
