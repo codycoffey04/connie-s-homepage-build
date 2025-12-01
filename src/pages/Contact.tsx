@@ -11,7 +11,7 @@ import { FAQList } from "@/components/FAQItem";
 import { phoneNumbers } from "@/lib/cityUtils";
 import { StickyCallButton } from "@/components/StickyCallButton";
 import { SEO } from "@/components/SEO";
-import { getLocalBusinessSchema, getBreadcrumbSchema, getFAQSchema } from "@/lib/schemaUtils";
+import { getLocalBusinessSchema, getBreadcrumbSchema, getFAQSchema, getSpeakableSchema } from "@/lib/schemaUtils";
 import contactHeroBg from "@/assets/contact-hero-bg.jpg";
 
 const serviceAreas = {
@@ -85,6 +85,7 @@ const Contact = () => {
         schema={[
           getLocalBusinessSchema(),
           getFAQSchema(contactFaqs),
+          getSpeakableSchema(),
           getBreadcrumbSchema([
             { name: "Home", url: "/" },
             { name: "Contact", url: "/contact" }

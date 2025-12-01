@@ -23,6 +23,7 @@ import { phoneNumbers } from "@/lib/cityUtils";
 import {
   getArticleSchema,
   getFAQSchema,
+  getSpeakableSchema,
   getBreadcrumbSchema,
   getLocalBusinessSchema,
   getCustomHowToSchema,
@@ -98,6 +99,7 @@ const BondForfeitureProcess = () => {
       "What happens when a defendant fails to appear in court and bond forfeiture begins",
       howToSteps
     ),
+    getSpeakableSchema(),
     getBreadcrumbSchema(breadcrumbs),
     getLocalBusinessSchema(),
   ];

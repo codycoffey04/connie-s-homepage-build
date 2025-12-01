@@ -14,7 +14,7 @@ import { TableOfContents } from "@/components/TableOfContents";
 import { Card, CardContent } from "@/components/ui/card";
 import { Scale, DollarSign, Building, Users, Phone, CheckCircle, XCircle, ArrowRight } from "lucide-react";
 import { phoneNumbers } from "@/lib/cityUtils";
-import { getArticleSchema, getFAQSchema, getCustomHowToSchema, getBreadcrumbSchema, getLocalBusinessSchema } from "@/lib/schemaUtils";
+import { getArticleSchema, getFAQSchema, getCustomHowToSchema, getSpeakableSchema, getBreadcrumbSchema, getLocalBusinessSchema } from "@/lib/schemaUtils";
 
 const HowBailWorksAlabama = () => {
   const bailProcessSteps = [
@@ -133,6 +133,7 @@ const HowBailWorksAlabama = () => {
       "Step-by-step guide to the Alabama bail process from arrest to release",
       bailProcessSteps
     ),
+    getSpeakableSchema(),
     getBreadcrumbSchema(breadcrumbs),
     getLocalBusinessSchema()
   ];

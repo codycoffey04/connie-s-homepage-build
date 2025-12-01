@@ -90,6 +90,7 @@ const About = () => {
         title="About Us | Family-Owned Bail Bond Service Since 2019"
         description="Meet Connie, Toni, and Richard - licensed Alabama bail bond agents serving DeKalb & Cherokee Counties with compassion and professionalism 24/7."
         canonical="/about"
+        reviews={testimonials}
         schema={[
           getLocalBusinessSchema(),
           getSpeakableSchema(),
@@ -98,7 +99,6 @@ const About = () => {
             { name: "About", url: "/about" }
           ])
         ]}
-        reviews={testimonials}
       />
       <Navigation />
       <StickyCallButton />

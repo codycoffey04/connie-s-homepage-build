@@ -15,6 +15,7 @@ import { phoneNumbers } from "@/lib/cityUtils";
 import { 
   getArticleSchema, 
   getFAQSchema, 
+  getSpeakableSchema,
   getBreadcrumbSchema, 
   getLocalBusinessSchema 
 } from "@/lib/schemaUtils";
@@ -49,6 +50,7 @@ const schemas = [
     "/bail-bonds-guide/cosigner-responsibilities"
   ),
   getFAQSchema(faqs),
+  getSpeakableSchema(),
   getBreadcrumbSchema([
     { name: "Home", url: "/" },
     { name: "Bail Bonds Guide", url: "/bail-bonds-guide" },

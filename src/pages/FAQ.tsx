@@ -5,7 +5,7 @@ import { HeroCTA } from "@/components/HeroCTA";
 import { FAQList } from "@/components/FAQItem";
 import { StickyCallButton } from "@/components/StickyCallButton";
 import { SEO } from "@/components/SEO";
-import { getLocalBusinessSchema, getBreadcrumbSchema, getFAQSchema } from "@/lib/schemaUtils";
+import { getLocalBusinessSchema, getBreadcrumbSchema, getFAQSchema, getSpeakableSchema } from "@/lib/schemaUtils";
 import scalesJustice from "@/assets/scales-justice.jpg";
 
 const generalFaqs = [
@@ -166,6 +166,7 @@ const FAQ = () => {
         schema={[
           getLocalBusinessSchema(),
           getFAQSchema(allFaqs),
+          getSpeakableSchema(),
           getBreadcrumbSchema([
             { name: "Home", url: "/" },
             { name: "FAQ", url: "/faq" }

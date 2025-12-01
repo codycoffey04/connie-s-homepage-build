@@ -10,7 +10,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Phone, ArrowRight, Scale, DollarSign, Building, Users, FileText, Clock, CreditCard, AlertTriangle, ShieldAlert } from "lucide-react";
 import { phoneNumbers } from "@/lib/cityUtils";
-import { getLocalBusinessSchema, getBreadcrumbSchema, getFAQSchema, getWebPageSchema, getItemListSchema } from "@/lib/schemaUtils";
+import { getLocalBusinessSchema, getBreadcrumbSchema, getFAQSchema, getWebPageSchema, getItemListSchema, getSpeakableSchema } from "@/lib/schemaUtils";
 
 const BailBondsGuide = () => {
   // Guide cards data
@@ -116,6 +116,7 @@ const BailBondsGuide = () => {
       ]
     ),
     getFAQSchema(guideFaqs),
+    getSpeakableSchema(),
     getItemListSchema(guideCards),
     getBreadcrumbSchema([
       { name: "Home", url: "/" },

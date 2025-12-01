@@ -21,6 +21,7 @@ import { phoneNumbers } from "@/lib/cityUtils";
 import {
   getArticleSchema,
   getFAQSchema,
+  getSpeakableSchema,
   getBreadcrumbSchema,
   getLocalBusinessSchema,
 } from "@/lib/schemaUtils";
@@ -67,6 +68,7 @@ const BailBondScams = () => {
       "/bail-bonds-guide/bail-bond-scams"
     ),
     getFAQSchema(faqs),
+    getSpeakableSchema(),
     getBreadcrumbSchema(breadcrumbs),
     getLocalBusinessSchema(),
   ];
