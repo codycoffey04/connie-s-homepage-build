@@ -139,7 +139,7 @@ const About = () => {
       {/* Our Story Section */}
       <Section variant="muted">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Our Story</h2>
+          <h2 className="text-3xl md:text-4xl font-black text-foreground mb-6 uppercase tracking-tight">Our Story</h2>
           <div className="prose prose-lg max-w-none text-foreground/90 space-y-4">
             <p>
               Connie's Bail Bonding was founded in 2019 to serve Northeast Alabama families with honesty, compassion, and professionalism. We saw too many people facing one of the worst nights of their lives—confused, scared, and not knowing where to turn. We started this business to be the calm, trustworthy voice on the other end of the phone at 2 AM.
@@ -157,7 +157,7 @@ const About = () => {
       {/* Meet Our Team Section */}
       <Section>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-10 text-center">Meet Our Team</h2>
+          <h2 className="text-3xl md:text-4xl font-black text-foreground mb-10 text-center uppercase tracking-tight">Meet Our Team</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {teamMembers.map((member) => (
               <Card key={member.name} className="border-border/50 shadow-sm hover:shadow-md transition-shadow">
@@ -178,7 +178,7 @@ const About = () => {
       {/* Our Values Section */}
       <Section variant="muted">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-10 text-center">Our Values</h2>
+          <h2 className="text-3xl md:text-4xl font-black text-foreground mb-10 text-center uppercase tracking-tight">Our Values</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {values.map((value) => {
               const Icon = value.icon;
@@ -201,7 +201,7 @@ const About = () => {
       {/* Our Credentials Section */}
       <Section>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-10 text-center">Our Credentials</h2>
+          <h2 className="text-3xl md:text-4xl font-black text-foreground mb-10 text-center uppercase tracking-tight">Our Credentials</h2>
           <div className="space-y-6">
             {credentials.map((credential, index) => {
               const Icon = credential.icon;
@@ -221,7 +221,7 @@ const About = () => {
       {/* Professional Licensing & Compliance Section */}
       <Section variant="muted">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-10 text-center">
+          <h2 className="text-3xl md:text-4xl font-black text-foreground mb-10 text-center uppercase tracking-tight">
             Professional Licensing & Compliance
           </h2>
           
@@ -341,7 +341,7 @@ const About = () => {
       {/* Why Families Choose Us Section */}
       <Section variant="muted">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-10 text-center">Why Families Choose Us</h2>
+          <h2 className="text-3xl md:text-4xl font-black text-foreground mb-10 text-center uppercase tracking-tight">Why Families Choose Us</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             {testimonials.map((quote, index) => (
               <TestimonialCard key={index} quote={quote} />

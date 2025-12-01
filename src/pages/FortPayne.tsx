@@ -219,7 +219,7 @@ const FortPayne = () => {
       {/* Trust Section */}
       <Section className="bg-muted py-16">
         <div className="max-w-4xl mx-auto text-center space-y-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+          <h2 className="text-3xl md:text-4xl font-black text-foreground uppercase tracking-tight">
             Fort Payne's Trusted Bail Bond Agency
           </h2>
           <div className="text-lg text-foreground/80 space-y-4 text-left md:text-center">
@@ -241,7 +241,7 @@ const FortPayne = () => {
         <div className="absolute inset-0 bg-black/70" />
         <AnimatedSection className="relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-black text-white mb-4 uppercase tracking-tight">
               Why Choose Connie's for Fort Payne Bail Bonds?
             </h2>
           </div>
@@ -274,7 +274,7 @@ const FortPayne = () => {
         <div className="absolute inset-0 bg-black/75" />
         <AnimatedSection className="relative z-10" delay={0.2}>
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-black text-white mb-4 uppercase tracking-tight">
               How Bail Works in Fort Payne
             </h2>
           </div>
