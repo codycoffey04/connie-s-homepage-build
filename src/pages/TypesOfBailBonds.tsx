@@ -84,7 +84,7 @@ const TypesOfBailBonds = () => {
 
       {/* Hero Section */}
       <section 
-        className="relative min-h-[70vh] flex items-center text-white bg-cover bg-center"
+        className="relative flex items-center text-white bg-cover bg-center"
         style={{ backgroundImage: `url(${typesBailBondsHeroBg})` }}
       >
         {/* Dark overlay */}
