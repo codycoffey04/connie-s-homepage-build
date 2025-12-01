@@ -16,7 +16,7 @@ export const Section = ({ children, className, id, variant = "default", style }:
       style={style}
       className={cn(
         "w-full py-12 md:py-20",
-        variant === "muted" && "bg-light-gray",
+        variant === "muted" && "bg-muted",
         variant === "primary" && "bg-primary/5",
         className
       )}
