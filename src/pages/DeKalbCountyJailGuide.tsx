@@ -158,7 +158,7 @@ const DeKalbCountyJailGuide = () => {
                     <MapPin className="h-5 w-5 text-brand-red mt-1 shrink-0" />
                     <div>
                       <strong className="block">Address:</strong>
-                      <span className="text-gray-700">2801 Jordan Road SW, Fort Payne, AL 35968</span>
+                      <span className="text-gray-700">2801 Jordan Road SW, Fort Payne, AL 35967</span>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -184,7 +184,7 @@ const DeKalbCountyJailGuide = () => {
                   </div>
                 </div>
                 <a
-                  href="https://www.google.com/maps/dir/?api=1&destination=2801+Jordan+Road+SW,+Fort+Payne,+AL+35968"
+                  href="https://www.google.com/maps/dir/?api=1&destination=2801+Jordan+Road+SW,+Fort+Payne,+AL+35967"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-brand-red text-white px-6 py-3 font-bold uppercase hover:bg-red-700 transition-colors"
