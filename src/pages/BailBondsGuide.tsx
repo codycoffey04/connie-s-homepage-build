@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Phone, ArrowRight, Scale, DollarSign, Building, Users, FileText, Clock, CreditCard, AlertTriangle, ShieldAlert } from "lucide-react";
 import { phoneNumbers } from "@/lib/cityUtils";
 import { getLocalBusinessSchema, getBreadcrumbSchema, getFAQSchema, getWebPageSchema, getItemListSchema, getSpeakableSchema } from "@/lib/schemaUtils";
+import bailGuideHeroBg from "@/assets/bail-guide-hero-bg.jpg";
 
 const BailBondsGuide = () => {
   // Guide cards data
@@ -136,8 +137,15 @@ const BailBondsGuide = () => {
       <StickyCallButton />
 
       {/* Hero Section */}
-      <section className="relative bg-black text-white py-20 md:py-32">
-        <div className="container mx-auto px-4 md:px-6 max-w-6xl">
+      <section 
+        className="relative min-h-[70vh] flex items-center text-white bg-cover bg-center"
+        style={{ backgroundImage: `url(${bailGuideHeroBg})` }}
+      >
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/60" />
+        
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-4 md:px-6 max-w-6xl py-20 md:py-32">
           <AnimatedSection>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight mb-6">
               Alabama Bail Bonds Guide
