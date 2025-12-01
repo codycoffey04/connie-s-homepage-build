@@ -21,6 +21,7 @@ import {
   getDeKalbCountyCourthouseSchema,
   getSpeakableSchema
 } from "@/lib/schemaUtils";
+import dekalbJailHeroBg from "@/assets/dekalb-jail-hero-bg.jpg";
 
 const faqs = [
   {
@@ -94,56 +95,65 @@ const DeKalbCountyJailGuide = () => {
         <Navigation />
         <StickyCallButton />
 
-        {/* Breadcrumb */}
-        <div className="container mx-auto px-4 pt-28 pb-8">
-          <nav className="text-sm text-gray-500">
-            <a href="/" className="hover:text-brand-red transition-colors">Home</a>
-            <span className="mx-2">/</span>
-            <a href="/bail-bonds-guide" className="hover:text-brand-red transition-colors">Bail Bonds Guide</a>
-            <span className="mx-2">/</span>
-            <span className="text-gray-900 font-semibold">DeKalb County Jail Guide</span>
-          </nav>
-        </div>
-
         {/* Hero Section */}
-        <AnimatedSection className="container mx-auto px-4 pb-16">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight mb-8">
-            DeKalb County Jail Bail Guide
-          </h1>
-          <p className="text-xl text-gray-700 leading-relaxed max-w-4xl mb-8">
-            If someone you care about has been arrested and taken to DeKalb County Detention Center, you need answers fast. This guide covers everything you need to know about posting bail at DeKalb County Jail—from facility information to the bail process and what to expect for release times.
-          </p>
+        <section 
+          className="relative min-h-[70vh] flex items-center text-white bg-cover bg-center"
+          style={{ backgroundImage: `url(${dekalbJailHeroBg})` }}
+        >
+          {/* Dark overlay */}
+          <div className="absolute inset-0 bg-black/60" />
           
-          {/* Reading Meta */}
-          <ReadingMeta 
-            author="Connie"
-            licenseNumber="B0092"
-            readingTime={6}
-          />
+          {/* Content */}
+          <div className="relative z-10 container mx-auto px-4 md:px-6 max-w-6xl py-20 md:py-32">
+            {/* Breadcrumb */}
+            <nav className="text-sm mb-8">
+              <a href="/" className="text-gray-400 hover:text-white transition-colors">Home</a>
+              <span className="mx-2 text-gray-600">/</span>
+              <a href="/bail-bonds-guide" className="text-gray-400 hover:text-white transition-colors">Bail Bonds Guide</a>
+              <span className="mx-2 text-gray-600">/</span>
+              <span className="text-white font-medium">DeKalb County Jail Guide</span>
+            </nav>
 
-          {/* Answer Box */}
-          <AnswerBox 
-            question="How do I post bail at DeKalb County Jail?"
-            answer="Call Connie's Bail Bonding 24/7. Provide the inmate's name and charges. We post the bond at DeKalb County Detention Center (2801 Jordan Road SW, Fort Payne). Release typically takes 2-8 hours. The jail is located next to our office for fast service. Bail costs 10% premium plus state fees."
-          />
-          
-          <StatisticBox 
-            statistic="DeKalb County Jail processes ~2,500 bookings annually"
-            context="As the primary detention facility for DeKalb County, this jail serves Fort Payne and surrounding cities."
-            citation="Estimated county operational data"
-          />
+            <AnimatedSection>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight mb-8">
+                DeKalb County Jail Bail Guide
+              </h1>
+              <p className="text-xl text-gray-300 leading-relaxed max-w-4xl mb-8">
+                If someone you care about has been arrested and taken to DeKalb County Detention Center, you need answers fast. This guide covers everything you need to know about posting bail at DeKalb County Jail—from facility information to the bail process and what to expect for release times.
+              </p>
+              
+              {/* Reading Meta */}
+              <ReadingMeta 
+                author="Connie"
+                licenseNumber="B0092"
+                readingTime={6}
+              />
 
-          <TableOfContents 
-            items={[
-              { id: 'facility-information', title: 'Facility Information' },
-              { id: 'how-to-post-bail', title: 'How to Post Bail' },
-              { id: 'release-times', title: 'Release Times' },
-              { id: 'types-of-bonds', title: 'Types of Bonds Accepted' },
-              { id: 'courthouse-information', title: 'Courthouse Information' },
-              { id: 'faqs', title: 'Frequently Asked Questions' },
-            ]}
-          />
-        </AnimatedSection>
+              {/* Answer Box */}
+              <AnswerBox 
+                question="How do I post bail at DeKalb County Jail?"
+                answer="Call Connie's Bail Bonding 24/7. Provide the inmate's name and charges. We post the bond at DeKalb County Detention Center (2801 Jordan Road SW, Fort Payne). Release typically takes 2-8 hours. The jail is located next to our office for fast service. Bail costs 10% premium plus state fees."
+              />
+              
+              <StatisticBox 
+                statistic="DeKalb County Jail processes ~2,500 bookings annually"
+                context="As the primary detention facility for DeKalb County, this jail serves Fort Payne and surrounding cities."
+                citation="Estimated county operational data"
+              />
+
+              <TableOfContents 
+                items={[
+                  { id: 'facility-information', title: 'Facility Information' },
+                  { id: 'how-to-post-bail', title: 'How to Post Bail' },
+                  { id: 'release-times', title: 'Release Times' },
+                  { id: 'types-of-bonds', title: 'Types of Bonds Accepted' },
+                  { id: 'courthouse-information', title: 'Courthouse Information' },
+                  { id: 'faqs', title: 'Frequently Asked Questions' },
+                ]}
+              />
+            </AnimatedSection>
+          </div>
+        </section>
 
         {/* Facility Information */}
         <AnimatedSection className="bg-gray-50 py-16">

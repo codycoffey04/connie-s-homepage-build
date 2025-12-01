@@ -25,6 +25,7 @@ import {
   getBreadcrumbSchema,
   getLocalBusinessSchema,
 } from "@/lib/schemaUtils";
+import bailScamsHeroBg from "@/assets/bail-scams-hero-bg.jpg";
 
 const BailBondScams = () => {
   const breadcrumbs = [
@@ -128,55 +129,64 @@ const BailBondScams = () => {
       <StickyCallButton />
 
       {/* Hero Section */}
-      <Section className="bg-black text-white border-t-4 border-brand-red">
-        <Breadcrumb className="mb-8">
-          <BreadcrumbList>
-            {breadcrumbs.map((crumb, index) => (
-              <span key={crumb.url} className="contents">
-                <BreadcrumbItem>
-                  {index === breadcrumbs.length - 1 ? (
-                    <BreadcrumbPage className="text-white">
-                      {crumb.name}
-                    </BreadcrumbPage>
-                  ) : (
-                    <BreadcrumbLink
-                      href={crumb.url}
-                      className="text-gray-400 hover:text-white"
-                    >
-                      {crumb.name}
-                    </BreadcrumbLink>
-                  )}
-                </BreadcrumbItem>
-                {index < breadcrumbs.length - 1 && (
-                  <BreadcrumbSeparator className="text-gray-600" />
-                )}
-              </span>
-            ))}
-          </BreadcrumbList>
-        </Breadcrumb>
-
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight mb-6">
-          How to Avoid Bail Bond Scams in Alabama
-        </h1>
-        <p className="text-xl md:text-2xl text-gray-300 max-w-4xl leading-relaxed mb-6">
-          When you're desperate to bail out a loved one, scammers see an opportunity. Unlicensed operators and outright fraudsters prey on families in crisis. Knowing the warning signs protects you from losing money to criminals instead of helping your family.
-        </p>
+      <section 
+        className="relative min-h-[70vh] flex items-center text-white bg-cover bg-center"
+        style={{ backgroundImage: `url(${bailScamsHeroBg})` }}
+      >
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/60" />
         
-        {/* Reading Meta */}
-        <div className="mb-8">
-          <ReadingMeta 
-            author="Connie"
-            licenseNumber="B0092"
-            readingTime={9}
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-4 md:px-6 max-w-6xl py-20 md:py-32">
+          <Breadcrumb className="mb-8">
+            <BreadcrumbList>
+              {breadcrumbs.map((crumb, index) => (
+                <span key={crumb.url} className="contents">
+                  <BreadcrumbItem>
+                    {index === breadcrumbs.length - 1 ? (
+                      <BreadcrumbPage className="text-white">
+                        {crumb.name}
+                      </BreadcrumbPage>
+                    ) : (
+                      <BreadcrumbLink
+                        href={crumb.url}
+                        className="text-gray-400 hover:text-white"
+                      >
+                        {crumb.name}
+                      </BreadcrumbLink>
+                    )}
+                  </BreadcrumbItem>
+                  {index < breadcrumbs.length - 1 && (
+                    <BreadcrumbSeparator className="text-gray-600" />
+                  )}
+                </span>
+              ))}
+            </BreadcrumbList>
+          </Breadcrumb>
+
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight mb-6">
+            How to Avoid Bail Bond Scams in Alabama
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl leading-relaxed mb-6">
+            When you're desperate to bail out a loved one, scammers see an opportunity. Unlicensed operators and outright fraudsters prey on families in crisis. Knowing the warning signs protects you from losing money to criminals instead of helping your family.
+          </p>
+          
+          {/* Reading Meta */}
+          <div className="mb-8">
+            <ReadingMeta 
+              author="Connie"
+              licenseNumber="B0092"
+              readingTime={9}
+            />
+          </div>
+
+          {/* Answer Box */}
+          <AnswerBox 
+            question="How do I avoid bail bond scams in Alabama?"
+            answer="Verify the bondsman's license with the APBB (www.apbb.alabama.gov). Red flags include: no license shown, fees below 10%, upfront 'processing fees', payment via wire/gift cards/crypto, no written contracts, unsolicited phone calls claiming a family member is in jail. Always verify bail information directly with the jail before sending money."
           />
         </div>
-
-        {/* Answer Box */}
-        <AnswerBox 
-          question="How do I avoid bail bond scams in Alabama?"
-          answer="Verify the bondsman's license with the APBB (www.apbb.alabama.gov). Red flags include: no license shown, fees below 10%, upfront 'processing fees', payment via wire/gift cards/crypto, no written contracts, unsolicited phone calls claiming a family member is in jail. Always verify bail information directly with the jail before sending money."
-        />
-      </Section>
+      </section>
 
       {/* Common Scams */}
       <Section>

@@ -19,6 +19,7 @@ import {
   getBreadcrumbSchema, 
   getLocalBusinessSchema 
 } from "@/lib/schemaUtils";
+import cosignerHeroBg from "@/assets/cosigner-hero-bg.jpg";
 
 const faqs = [
   {
@@ -90,51 +91,60 @@ const CosignerResponsibilities = () => {
         <Navigation />
         <StickyCallButton />
 
-        {/* Breadcrumb */}
-        <div className="container mx-auto px-4 pt-28 pb-8">
-          <nav className="text-sm text-gray-500">
-            <a href="/" className="hover:text-brand-red transition-colors">Home</a>
-            <span className="mx-2">/</span>
-            <a href="/bail-bonds-guide" className="hover:text-brand-red transition-colors">Bail Bonds Guide</a>
-            <span className="mx-2">/</span>
-            <span className="text-gray-900 font-semibold">Cosigner Responsibilities</span>
-          </nav>
-        </div>
-
         {/* Hero Section */}
-        <AnimatedSection className="container mx-auto px-4 pb-16">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight mb-8">
-            Bail Bond Cosigner Responsibilities in Alabama
-          </h1>
-          <p className="text-xl text-gray-700 leading-relaxed max-w-4xl mb-8">
-            Cosigning a bail bond is a serious legal and financial commitment. Before you sign, you need to understand exactly what you're agreeing to. This guide explains your responsibilities, your risks, and what happens if things go wrong.
-          </p>
+        <section 
+          className="relative min-h-[70vh] flex items-center text-white bg-cover bg-center"
+          style={{ backgroundImage: `url(${cosignerHeroBg})` }}
+        >
+          {/* Dark overlay */}
+          <div className="absolute inset-0 bg-black/60" />
           
-          {/* Reading Meta */}
-          <ReadingMeta 
-            author="Richard"
-            licenseNumber="S0334"
-            readingTime={10}
-          />
+          {/* Content */}
+          <div className="relative z-10 container mx-auto px-4 md:px-6 max-w-6xl py-20 md:py-32">
+            {/* Breadcrumb */}
+            <nav className="text-sm mb-8">
+              <a href="/" className="text-gray-400 hover:text-white transition-colors">Home</a>
+              <span className="mx-2 text-gray-600">/</span>
+              <a href="/bail-bonds-guide" className="text-gray-400 hover:text-white transition-colors">Bail Bonds Guide</a>
+              <span className="mx-2 text-gray-600">/</span>
+              <span className="text-white font-medium">Cosigner Responsibilities</span>
+            </nav>
 
-          {/* Answer Box */}
-          <AnswerBox 
-            question="What are cosigner responsibilities for a bail bond?"
-            answer="As a cosigner (indemnitor), you guarantee two things: (1) the defendant will appear at all court dates, and (2) you will pay the full bail amount if they don't. You face financial liability including wage garnishment (up to 25% of disposable income), loss of collateral, and civil lawsuits if the defendant skips court."
-            source="Alabama indemnity agreement law"
-          />
+            <AnimatedSection>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight mb-8">
+                Bail Bond Cosigner Responsibilities in Alabama
+              </h1>
+              <p className="text-xl text-gray-300 leading-relaxed max-w-4xl mb-8">
+                Cosigning a bail bond is a serious legal and financial commitment. Before you sign, you need to understand exactly what you're agreeing to. This guide explains your responsibilities, your risks, and what happens if things go wrong.
+              </p>
+              
+              {/* Reading Meta */}
+              <ReadingMeta 
+                author="Richard"
+                licenseNumber="S0334"
+                readingTime={10}
+              />
 
-          <TableOfContents 
-            items={[
-              { id: 'what-is-cosigner', title: 'What Is a Cosigner?' },
-              { id: 'legal-obligations', title: 'Legal Obligations' },
-              { id: 'financial-risks', title: 'Financial Risks' },
-              { id: 'collateral-requirements', title: 'Collateral Requirements' },
-              { id: 'if-defendant-misses-court', title: 'If Defendant Misses Court' },
-              { id: 'faqs', title: 'Frequently Asked Questions' },
-            ]}
-          />
-        </AnimatedSection>
+              {/* Answer Box */}
+              <AnswerBox 
+                question="What are cosigner responsibilities for a bail bond?"
+                answer="As a cosigner (indemnitor), you guarantee two things: (1) the defendant will appear at all court dates, and (2) you will pay the full bail amount if they don't. You face financial liability including wage garnishment (up to 25% of disposable income), loss of collateral, and civil lawsuits if the defendant skips court."
+                source="Alabama indemnity agreement law"
+              />
+
+              <TableOfContents 
+                items={[
+                  { id: 'what-is-cosigner', title: 'What Is a Cosigner?' },
+                  { id: 'legal-obligations', title: 'Legal Obligations' },
+                  { id: 'financial-risks', title: 'Financial Risks' },
+                  { id: 'collateral-requirements', title: 'Collateral Requirements' },
+                  { id: 'if-defendant-misses-court', title: 'If Defendant Misses Court' },
+                  { id: 'faqs', title: 'Frequently Asked Questions' },
+                ]}
+              />
+            </AnimatedSection>
+          </div>
+        </section>
 
         {/* What Is a Cosigner */}
         <AnimatedSection className="bg-gray-50 py-16">

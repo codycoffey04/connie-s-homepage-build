@@ -28,6 +28,7 @@ import {
   getLocalBusinessSchema,
   getCustomHowToSchema,
 } from "@/lib/schemaUtils";
+import bondForfeitureHeroBg from "@/assets/bond-forfeiture-hero-bg.jpg";
 
 const BondForfeitureProcess = () => {
   const breadcrumbs = [
@@ -116,66 +117,75 @@ const BondForfeitureProcess = () => {
       <StickyCallButton />
 
       {/* Hero Section */}
-      <Section className="bg-black text-white border-t-4 border-brand-red">
-        <Breadcrumb className="mb-8">
-          <BreadcrumbList>
-            {breadcrumbs.map((crumb, index) => (
-              <span key={crumb.url} className="contents">
-                <BreadcrumbItem>
-                  {index === breadcrumbs.length - 1 ? (
-                    <BreadcrumbPage className="text-white">
-                      {crumb.name}
-                    </BreadcrumbPage>
-                  ) : (
-                    <BreadcrumbLink
-                      href={crumb.url}
-                      className="text-gray-400 hover:text-white"
-                    >
-                      {crumb.name}
-                    </BreadcrumbLink>
-                  )}
-                </BreadcrumbItem>
-                {index < breadcrumbs.length - 1 && (
-                  <BreadcrumbSeparator className="text-gray-600" />
-                )}
-              </span>
-            ))}
-          </BreadcrumbList>
-        </Breadcrumb>
-
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight mb-6">
-          Bond Forfeiture Process in Alabama
-        </h1>
-        <p className="text-xl md:text-2xl text-gray-300 max-w-4xl leading-relaxed mb-6">
-          Bond forfeiture happens when a defendant fails to appear in court as required. It's the worst-case scenario for everyone involved—the defendant, the cosigner, and the bail bondsman. Understanding the process helps you know what to expect and how to potentially minimize the damage.
-        </p>
+      <section 
+        className="relative min-h-[70vh] flex items-center text-white bg-cover bg-center"
+        style={{ backgroundImage: `url(${bondForfeitureHeroBg})` }}
+      >
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/60" />
         
-        {/* Reading Meta */}
-        <div className="mb-8">
-          <ReadingMeta 
-            author="Richard"
-            licenseNumber="S0334"
-            readingTime={8}
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-4 md:px-6 max-w-6xl py-20 md:py-32">
+          <Breadcrumb className="mb-8">
+            <BreadcrumbList>
+              {breadcrumbs.map((crumb, index) => (
+                <span key={crumb.url} className="contents">
+                  <BreadcrumbItem>
+                    {index === breadcrumbs.length - 1 ? (
+                      <BreadcrumbPage className="text-white">
+                        {crumb.name}
+                      </BreadcrumbPage>
+                    ) : (
+                      <BreadcrumbLink
+                        href={crumb.url}
+                        className="text-gray-400 hover:text-white"
+                      >
+                        {crumb.name}
+                      </BreadcrumbLink>
+                    )}
+                  </BreadcrumbItem>
+                  {index < breadcrumbs.length - 1 && (
+                    <BreadcrumbSeparator className="text-gray-600" />
+                  )}
+                </span>
+              ))}
+            </BreadcrumbList>
+          </Breadcrumb>
+
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight mb-6">
+            Bond Forfeiture Process in Alabama
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl leading-relaxed mb-6">
+            Bond forfeiture happens when a defendant fails to appear in court as required. It's the worst-case scenario for everyone involved—the defendant, the cosigner, and the bail bondsman. Understanding the process helps you know what to expect and how to potentially minimize the damage.
+          </p>
+          
+          {/* Reading Meta */}
+          <div className="mb-8">
+            <ReadingMeta 
+              author="Richard"
+              licenseNumber="S0334"
+              readingTime={8}
+            />
+          </div>
+
+          {/* Answer Box */}
+          <AnswerBox 
+            question="What is bond forfeiture in Alabama?"
+            answer="Bond forfeiture occurs when a defendant fails to appear in court. The court issues a bench warrant and conditional forfeiture notice. Alabama law provides approximately 90 days for the bondsman to locate and return the defendant. If unsuccessful, the bond becomes final—the bondsman pays the full bail to the court and pursues the cosigner for reimbursement."
+            source="Ala. Code § 15-13-131"
+          />
+
+          <TableOfContents 
+            items={[
+              { id: 'what-triggers-forfeiture', title: 'What Triggers Forfeiture?' },
+              { id: 'forfeiture-timeline', title: 'Bond Forfeiture Timeline' },
+              { id: 'grace-period', title: '90-Day Grace Period' },
+              { id: 'sufficient-cause', title: 'What Is "Sufficient Cause"?' },
+              { id: 'faqs', title: 'Frequently Asked Questions' },
+            ]}
           />
         </div>
-
-        {/* Answer Box */}
-        <AnswerBox 
-          question="What is bond forfeiture in Alabama?"
-          answer="Bond forfeiture occurs when a defendant fails to appear in court. The court issues a bench warrant and conditional forfeiture notice. Alabama law provides approximately 90 days for the bondsman to locate and return the defendant. If unsuccessful, the bond becomes final—the bondsman pays the full bail to the court and pursues the cosigner for reimbursement."
-          source="Ala. Code § 15-13-131"
-        />
-
-        <TableOfContents 
-          items={[
-            { id: 'what-triggers-forfeiture', title: 'What Triggers Forfeiture?' },
-            { id: 'forfeiture-timeline', title: 'Bond Forfeiture Timeline' },
-            { id: 'grace-period', title: '90-Day Grace Period' },
-            { id: 'sufficient-cause', title: 'What Is "Sufficient Cause"?' },
-            { id: 'faqs', title: 'Frequently Asked Questions' },
-          ]}
-        />
-      </Section>
+      </section>
 
       {/* What Triggers Forfeiture */}
       <Section>
