@@ -10,15 +10,15 @@ export const Footer = () => {
           <div>
             <h3 className="text-white font-black text-lg mb-6 uppercase tracking-tight">Contact Us</h3>
             <div className="space-y-4 text-white/90">
-              <a href="tel:256-601-2041" className="flex items-center gap-2 hover:text-white transition-colors">
+              <a href="tel:2566012041" className="flex items-center gap-2 hover:text-white transition-colors">
                 <Phone className="h-4 w-4 text-brand-red" />
                 <span>Richard: 256-601-2041</span>
               </a>
-              <a href="tel:256-630-2824" className="flex items-center gap-2 hover:text-white transition-colors">
+              <a href="tel:2566302824" className="flex items-center gap-2 hover:text-white transition-colors">
                 <Phone className="h-4 w-4 text-brand-red" />
                 <span>Connie: 256-630-2824</span>
               </a>
-              <a href="tel:256-440-0822" className="flex items-center gap-2 hover:text-white transition-colors">
+              <a href="tel:2564400822" className="flex items-center gap-2 hover:text-white transition-colors">
                 <Phone className="h-4 w-4 text-brand-red" />
                 <span>Toni: 256-440-0822</span>
               </a>

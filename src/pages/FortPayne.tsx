@@ -500,7 +500,7 @@ const FortPayne = () => {
       {/* Nearby Cities */}
       <Section className="bg-white">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-navy-deep mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             We Also Serve Nearby Areas
           </h2>
           <p className="text-lg text-foreground/80">
@@ -511,12 +511,12 @@ const FortPayne = () => {
         <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
           {nearbyCities.map((city) => (
             <Link key={city.slug} to={`/${city.slug}`}>
-              <Card className="border-border/50 hover:shadow-lg transition-all hover:border-teal cursor-pointer h-full">
+              <Card className="border-border/50 hover:shadow-lg transition-all hover:border-brand-red cursor-pointer h-full">
                 <CardContent className="p-6 flex items-center justify-between">
                   <span className="text-lg font-semibold text-foreground">
                     {city.name} Bail Bonds
                   </span>
-                  <ChevronRight className="w-5 h-5 text-teal" />
+                  <ChevronRight className="w-5 h-5 text-brand-red" />
                 </CardContent>
               </Card>
             </Link>
@@ -527,7 +527,7 @@ const FortPayne = () => {
       {/* Process Steps */}
       <Section className="bg-muted">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-navy-deep mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             What to Expect When You Call Us
           </h2>
         </div>
@@ -536,7 +536,7 @@ const FortPayne = () => {
           {processSteps.map((step, index) => (
             <Card key={index} className="border-border/50 text-center hover:shadow-md transition-shadow">
               <CardContent className="p-6">
-                <div className="w-12 h-12 rounded-full bg-navy-deep text-white font-bold text-xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 rounded-full bg-brand-red text-white font-bold text-xl flex items-center justify-center mx-auto mb-4">
                   {step.number}
                 </div>
                 <h3 className="font-bold text-lg mb-2 text-foreground">{step.title}</h3>
@@ -551,7 +551,7 @@ const FortPayne = () => {
           <Card className="border-border/50 shadow-md">
             <CardHeader className="text-center">
               <CardTitle className="text-2xl flex items-center justify-center gap-2">
-                <DollarSign className="w-6 h-6 text-teal" />
+                <DollarSign className="w-6 h-6 text-brand-red" />
                 How Much Does It Cost?
               </CardTitle>
             </CardHeader>
@@ -561,15 +561,15 @@ const FortPayne = () => {
               </p>
               <ul className="space-y-2 text-foreground/80">
                 <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-teal" />
+                  <CheckCircle2 className="w-4 h-4 text-brand-red" />
                   $1,000 bail = $100 fee
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-teal" />
+                  <CheckCircle2 className="w-4 h-4 text-brand-red" />
                   $5,000 bail = $500 fee
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-teal" />
+                  <CheckCircle2 className="w-4 h-4 text-brand-red" />
                   $10,000 bail = $1,000 fee
                 </li>
               </ul>
@@ -584,7 +584,7 @@ const FortPayne = () => {
       {/* Testimonials */}
       <Section className="bg-white py-16">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-navy-deep mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             What Fort Payne Families Are Saying
           </h2>
         </div>
@@ -600,7 +600,7 @@ const FortPayne = () => {
       <Section className="bg-muted py-16">
         <div className="text-center space-y-8">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-navy-deep">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
               Need Fort Payne Bail Bonds Now?
             </h2>
             <p className="text-xl text-foreground/70">

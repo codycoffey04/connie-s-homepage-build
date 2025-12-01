@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { StickyCallButton } from "@/components/StickyCallButton";
@@ -455,7 +456,7 @@ const HowBailWorksAlabama = () => {
                   const Icon = guide.icon;
                   return (
                     <AnimatedCard key={index} index={index}>
-                      <a href={guide.url} className="block h-full">
+                      <Link to={guide.url} className="block h-full">
                         <Card className="h-full border-2 border-gray-200 hover:border-brand-red hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
                           <CardContent className="p-6">
                             <Icon className="w-12 h-12 text-brand-red mb-4" />
@@ -470,7 +471,7 @@ const HowBailWorksAlabama = () => {
                             </span>
                           </CardContent>
                         </Card>
-                      </a>
+                      </Link>
                     </AnimatedCard>
                   );
                 })}
