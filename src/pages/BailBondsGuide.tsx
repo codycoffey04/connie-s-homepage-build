@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { StickyCallButton } from "@/components/StickyCallButton";
@@ -174,7 +175,7 @@ const BailBondsGuide = () => {
               const Icon = guide.icon;
               return (
                 <AnimatedCard key={index} index={index}>
-                  <a href={guide.url}>
+                  <Link to={guide.url}>
                     <Card className="h-full border-2 border-border/30 hover:border-brand-red hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-white">
                       <CardContent className="p-6">
                         <div className="flex items-start gap-4">
@@ -198,7 +199,7 @@ const BailBondsGuide = () => {
                         </div>
                       </CardContent>
                     </Card>
-                  </a>
+                  </Link>
                 </AnimatedCard>
               );
             })}
