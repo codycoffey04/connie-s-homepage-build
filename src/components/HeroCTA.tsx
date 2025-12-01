@@ -14,7 +14,7 @@ export const HeroCTA = ({ variant = "single", phoneNumber, className = "" }: Her
 
   if (variant === "team") {
     return (
-      <div className={`grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto ${className}`}>
+      <div className={`grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-4 max-w-4xl mx-auto ${className}`}>
         <PhoneButton name="Richard" number={phoneNumbers.richard.number} variant="primary" />
         <PhoneButton name="Connie" number={phoneNumbers.connie.number} variant="primary" />
         <PhoneButton name="Toni" number={phoneNumbers.toni.number} variant="primary" />

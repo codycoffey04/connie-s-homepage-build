@@ -463,7 +463,7 @@ const Index = () => {
       {/* Payment Methods & Credentials */}
       <Section className="bg-white py-16">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
             {/* Payment Methods */}
             <div className="bg-white p-8 rounded-lg shadow-lg border-2 border-border overflow-hidden">
               <div className="relative h-48 mb-6 -mx-8 -mt-8">
