@@ -149,7 +149,7 @@ const HowBailWorksAlabama = () => {
         <StickyCallButton />
         
         <main className="flex-grow pt-20">
-          <Section className="py-12">
+          <Section>
             {/* Breadcrumb */}
             <nav className="text-sm text-gray-500 mb-8">
               <a href="/" className="hover:text-brand-red transition-colors">Home</a>

@@ -217,7 +217,7 @@ const FortPayne = () => {
       <QuickAnswers city="Fort Payne" county="DeKalb County" releaseTime="1-8 Hours" />
 
       {/* Trust Section */}
-      <Section className="bg-muted py-16">
+      <Section className="bg-muted">
         <div className="max-w-4xl mx-auto text-center space-y-6">
           <h2 className="text-3xl md:text-4xl font-black text-foreground uppercase tracking-tight">
             Fort Payne's Trusted Bail Bond Agency
@@ -235,7 +235,7 @@ const FortPayne = () => {
 
       {/* Why Choose Us */}
       <Section 
-        className="relative bg-cover bg-center py-16"
+        className="relative bg-cover bg-center"
         style={{ backgroundImage: `url(${supportHands})` }}
       >
         <div className="absolute inset-0 bg-black/70" />
@@ -262,7 +262,7 @@ const FortPayne = () => {
 
       {/* How Bail Works in Fort Payne */}
       <Section 
-        className="relative bg-cover bg-center py-16"
+        className="relative bg-cover bg-center"
         style={{ backgroundImage: `url(${legalGavel})` }}
       >
         <div className="absolute inset-0 bg-black/75" />
@@ -285,7 +285,7 @@ const FortPayne = () => {
       </Section>
 
       {/* Office Location Map */}
-      <Section className="bg-white py-16">
+      <Section className="bg-white">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-black mb-8 text-center uppercase">
             Our Fort Payne Office Location
@@ -334,7 +334,7 @@ const FortPayne = () => {
       </Section>
 
       {/* Local Law Enforcement & Court Information */}
-      <Section className="bg-gradient-to-b from-white to-muted py-16">
+      <Section className="bg-gradient-to-b from-white to-muted">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-black mb-8 text-center uppercase">
             Local Information for <span className="text-brand-red">Fort Payne Residents</span>
@@ -418,7 +418,7 @@ const FortPayne = () => {
       </Section>
 
       {/* Services */}
-      <Section className="bg-white py-16">
+      <Section className="bg-white">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-navy-deep mb-4">
             Services for Fort Payne Residents
@@ -466,7 +466,7 @@ const FortPayne = () => {
       </Section>
 
       {/* Neighborhoods */}
-      <Section className="bg-muted py-16">
+      <Section className="bg-muted">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-navy-deep mb-4">
             Fort Payne Neighborhoods We Serve
@@ -498,7 +498,7 @@ const FortPayne = () => {
       </Section>
 
       {/* Nearby Cities */}
-      <Section className="bg-white py-16">
+      <Section className="bg-white">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-navy-deep mb-4">
             We Also Serve Nearby Areas
@@ -525,7 +525,7 @@ const FortPayne = () => {
       </Section>
 
       {/* Process Steps */}
-      <Section className="bg-muted py-16">
+      <Section className="bg-muted">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-navy-deep mb-4">
             What to Expect When You Call Us

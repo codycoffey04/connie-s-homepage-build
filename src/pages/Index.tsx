@@ -302,7 +302,7 @@ const Index = () => {
 
 
       {/* How Our Bail Process Works */}
-      <Section className="bg-white py-24">
+      <Section className="bg-white">
         <div className="grid md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto mb-16">
           <div>
             <h2 className="text-4xl md:text-5xl font-black mb-6 text-black uppercase tracking-tight">

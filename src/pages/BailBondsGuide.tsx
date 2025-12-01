@@ -161,7 +161,7 @@ const BailBondsGuide = () => {
       </section>
 
       {/* Guide Categories Grid */}
-      <section className="py-16 md:py-24 bg-gray-50">
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6 max-w-6xl">
           <AnimatedSection>
             <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-12 text-center">
@@ -207,7 +207,7 @@ const BailBondsGuide = () => {
       </section>
 
       {/* Common Questions Section */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4 md:px-6 max-w-4xl">
           <AnimatedSection>
             <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-12 text-center">
