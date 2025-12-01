@@ -128,7 +128,7 @@ const Contact = () => {
       {/* Office Location with Interactive Map */}
       <Section variant="muted">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
+          <h2 className="text-3xl md:text-4xl font-black text-center mb-8 uppercase tracking-tight">
             Our Office Location
           </h2>
           
@@ -225,7 +225,7 @@ const Contact = () => {
       {/* Service Area */}
       <Section>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">Service Area</h2>
+          <h2 className="text-3xl md:text-4xl font-black text-center mb-8 uppercase tracking-tight">Service Area</h2>
           <p className="text-center text-lg text-foreground/80 mb-8">
             We serve all of DeKalb County and Cherokee County in Northeast Alabama.
           </p>
@@ -270,7 +270,7 @@ const Contact = () => {
           <Card className="border-2 border-primary">
             <CardContent className="text-center py-8 space-y-4">
               <Clock className="w-12 h-12 text-primary mx-auto" />
-              <h2 className="text-3xl font-bold">Hours</h2>
+              <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight">Hours</h2>
               <p className="text-2xl font-semibold text-primary">
                 Open 24 hours a day, 7 days a week, 365 days a year.
               </p>
@@ -285,7 +285,7 @@ const Contact = () => {
       {/* What to Have Ready */}
       <Section variant="muted">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
+          <h2 className="text-3xl md:text-4xl font-black text-center mb-8 uppercase tracking-tight">
             What to Have Ready When You Call
           </h2>
           <p className="text-center text-lg text-foreground/80 mb-8">
@@ -313,7 +313,7 @@ const Contact = () => {
       {/* Key Jail and Courthouse Locations with Interactive Maps */}
       <Section>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-black text-center mb-12 uppercase tracking-tight">
             Key Jail and Courthouse Locations
           </h2>
           

@@ -194,7 +194,7 @@ const ValleyHead = () => {
       {/* Trust Section */}
       <Section variant="muted">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
+          <h2 className="text-3xl md:text-4xl font-black mb-6 text-foreground uppercase tracking-tight">
             Valley Head's Trusted Bail Bond Service
           </h2>
           <p className="text-lg text-foreground/80 leading-relaxed">
@@ -217,7 +217,7 @@ const ValleyHead = () => {
       >
         <div className="absolute inset-0 bg-black/70 z-0" />
         <AnimatedSection className="relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-white">
+          <h2 className="text-3xl md:text-4xl font-black mb-12 text-center text-white uppercase tracking-tight">
             Why Choose Connie's for Valley Head Bail Bonds?
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
@@ -246,7 +246,7 @@ const ValleyHead = () => {
       >
         <div className="absolute inset-0 bg-black/60 z-0" />
         <AnimatedSection className="relative z-10" delay={0.2}>
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-white">
+          <h2 className="text-3xl md:text-4xl font-black mb-12 text-center text-white uppercase tracking-tight">
             How Bail Works for Valley Head Residents
           </h2>
           <div className="max-w-4xl mx-auto space-y-8">
