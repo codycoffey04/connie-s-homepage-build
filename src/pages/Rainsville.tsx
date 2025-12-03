@@ -130,6 +130,22 @@ const Rainsville = () => {
     {
       question: "Where do Rainsville arrestees go?",
       answer: "Anyone arrested in Rainsville—whether by Rainsville Police or DeKalb County Sheriff—is transported to the DeKalb County Detention Center in Fort Payne at 2801 Jordan Rd SW. All bail bonds are posted at the DeKalb County Courthouse."
+    },
+    {
+      question: "What do I need to have ready when calling about a Rainsville arrest?",
+      answer: "You should have the defendant's full legal name and date of birth at minimum. Knowing the charges helps us estimate bail costs before it's officially set. Since Rainsville arrests are processed through DeKalb County Jail in Fort Payne, you'll want to confirm they've completed booking before we can post bail—this typically takes 1-3 hours after arrest. Have your ID available and know how you plan to pay the premium. If you're calling from work or have limited availability, let us know your schedule so we can coordinate timing. Our team—Richard, Connie, and Toni—is available 24/7, so call whenever you have the information. We'll verify everything with the jail and tell you exactly what the total cost will be before you commit to anything. The more details you provide upfront, the faster we can get your loved one released."
+    },
+    {
+      question: "What are the requirements to be a cosigner for a Rainsville bail bond?",
+      answer: "A cosigner must be a legal adult with valid identification and sufficient financial stability to guarantee the bond. You're signing a legally binding contract agreeing to ensure the defendant appears at all court dates and to pay the full bail amount if they don't. For larger bonds, we may require collateral such as a vehicle title, real estate equity, or other valuable assets. You should have stable employment or income, as we need confidence you can cover the obligation if necessary. Being a cosigner isn't just a favor—you're putting your finances on the line. Before signing, honestly assess whether you trust this person to attend every court hearing. If you have any doubts about their reliability, it's okay to say no. We'll explain all your obligations clearly before you sign anything, and you can ask as many questions as you need."
+    },
+    {
+      question: "How does the bail process work on weekends and holidays for Rainsville residents?",
+      answer: "The process works exactly the same on weekends and holidays as any other day—we're available 24/7/365 with no exceptions. DeKalb County Jail operates around the clock and accepts bonds at any hour, so there's no waiting until Monday to get someone released. When you call, one of our licensed agents will answer personally, not a voicemail or answering service. Since Rainsville is only about 10 minutes from our Fort Payne office and the jail, we can have the bond posted quickly regardless of when the arrest happens. Release processing at the jail may take slightly longer during overnight hours or holidays due to reduced staffing, but the bond itself gets posted immediately. Whether it's Christmas morning or 3 AM on a Sunday, call 256-601-2041 and we'll start the process right away. Many of our clients are surprised to reach a real person at odd hours—that's what 24/7 service actually means."
+    },
+    {
+      question: "What happens if the person I bailed out in Rainsville skips their court date?",
+      answer: "If they miss court, a warrant is issued immediately and the bond enters forfeiture. You, as the cosigner, become liable for the entire bail amount. We have approximately 90 days under Alabama law to locate and return the defendant to custody before the forfeiture becomes final. During this period, expect us to contact you—we'll need any information you have about where they might be. If they're found and returned within the grace period, the court can set aside the forfeiture, saving you from the full financial consequences. If they're not found, you'll owe the full bail amount plus any recovery costs we incurred. The bond company can pursue wage garnishment, seize pledged collateral, and file civil lawsuits to recover the money. This is serious—before you cosign for anyone, make absolutely sure they'll show up to court. If at any point you believe they might run, contact us immediately."
     }
   ];
 

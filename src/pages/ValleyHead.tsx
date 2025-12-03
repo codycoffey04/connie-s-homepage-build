@@ -130,6 +130,22 @@ const ValleyHead = () => {
     {
       question: "Where do Valley Head arrestees go?",
       answer: "Anyone arrested in Valley Head—whether by local law enforcement or DeKalb County Sheriff—is transported to the DeKalb County Detention Center in Fort Payne at 2801 Jordan Rd SW. All bail bonds are posted at the DeKalb County Courthouse."
+    },
+    {
+      question: "Does Connie's Bail Bonding serve Valley Head or just the larger DeKalb County cities?",
+      answer: "Yes, we fully serve Valley Head and every community in DeKalb County. Valley Head is approximately 15-20 minutes from our office at 2700 Jordan Rd SW in Fort Payne, located right next to DeKalb County Jail. When someone is arrested in Valley Head, they're transported to DeKalb County Jail for booking and processing—the same jail that's steps from our office. This means we can post bond faster than any bondsman traveling from elsewhere. We've helped Valley Head families for years and treat every call with the same urgency regardless of which town you're calling from. Small communities sometimes worry they'll be a lower priority, but that's never the case with us. Call Richard at 256-601-2041, Connie at 256-630-2824, or Toni at 256-440-0822 any time of day or night and we'll get started immediately."
+    },
+    {
+      question: "What information should I gather before calling about a Valley Head arrest?",
+      answer: "Have the defendant's full legal name and date of birth ready—these are essential for locating them in the jail system. If you know the charges, that helps us estimate bail before it's officially set. The approximate time of arrest is useful because Valley Head arrests require transport to DeKalb County Jail in Fort Payne, and booking takes 1-3 hours after arrival. You'll need your own valid identification since you'll sign as the cosigner, and know how you plan to pay the premium. Don't wait until you have every detail perfect—call us with whatever information you have. We can contact the jail directly to verify everything, check if booking is complete, and confirm the exact bail amount. We'll explain the total cost before you commit to anything. Many callers are stressed and uncertain, which is completely understandable. We'll guide you through each step patiently and answer every question you have."
+    },
+    {
+      question: "What are my responsibilities if I cosign for someone arrested in Valley Head?",
+      answer: "As a cosigner, you're making a legally binding guarantee that the defendant will appear at every court date at DeKalb County Courthouse in Fort Payne. If they fail to appear, you become financially liable for the entire bail amount—not just the 10% premium you paid upfront. On a $20,000 bond, missing court means you could owe the full $20,000 plus any recovery costs incurred while locating the defendant. Alabama law permits wage garnishment of up to 25% of your disposable income to satisfy this debt. Any collateral you pledged, such as a vehicle title or property deed, can be seized and sold. Before signing, honestly assess whether you trust this person to fulfill their court obligations. Stay in regular contact with them after release, remind them of upcoming court dates, and attend hearings with them if possible. If you ever suspect they might flee, contact us immediately—we may be able to surrender them before a missed court date triggers forfeiture."
+    },
+    {
+      question: "Can I bail someone out from Valley Head on weekends or holidays?",
+      answer: "Absolutely. We operate 24 hours a day, 7 days a week, 365 days a year with zero exceptions. Christmas morning, New Year's Eve, 4 AM on a Sunday—it doesn't matter. When you call, you'll speak directly with Richard, Connie, or Toni, not a voicemail or answering service. DeKalb County Jail accepts bonds around the clock, so there's no waiting for business hours to post bail. Since our office is right next to the jail, we can deliver the bond within minutes of completing your paperwork and payment. Release processing at the jail might be slightly slower during overnight hours or holidays due to reduced staffing, but the bond itself is posted immediately. Many Valley Head families have been surprised and relieved to get help at odd hours. Arrests happen at inconvenient times, and we built our business around being available when you actually need us. Call 256-601-2041 anytime."
     }
   ];
 

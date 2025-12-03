@@ -126,6 +126,22 @@ const Pisgah = () => {
     {
       question: "Where do Pisgah arrestees go?",
       answer: "Anyone arrested in Pisgah—whether by local law enforcement or DeKalb County Sheriff—is transported to the DeKalb County Detention Center in Fort Payne at 2801 Jordan Rd SW. All bail bonds are posted at the DeKalb County Courthouse."
+    },
+    {
+      question: "Do you provide bail bond services all the way out to Pisgah?",
+      answer: "Yes, we serve Pisgah and every corner of DeKalb County. Pisgah is about 20-25 minutes from our office, but that distance doesn't affect our service because all DeKalb County arrests are processed at the same jail in Fort Payne—right next door to us at 2700 Jordan Rd SW. When someone from Pisgah is arrested, they're transported to DeKalb County Jail for booking. Once you call us, we can have the bond posted within minutes since we're literally steps away. We've helped Pisgah families many times and understand that rural communities sometimes feel overlooked by businesses based in larger towns. That's not how we operate. Every call gets the same urgent attention, whether you're in Fort Payne or the farthest reaches of the county. Call Richard at 256-601-2041, Connie at 256-630-2824, or Toni at 256-440-0822."
+    },
+    {
+      question: "What information do I need when calling about someone arrested in Pisgah?",
+      answer: "Start with the defendant's full legal name and date of birth—this is essential for locating them in the jail system. If you know the charges and approximate arrest time, share that too, but don't wait until you have every detail. Pisgah arrests require transport to DeKalb County Jail in Fort Payne, so there may be a delay between arrest and booking completion. We can check the jail's system to see if they've arrived and been processed. You'll also need your own valid ID for signing the cosigner agreement and a payment method ready. When you call, we'll explain exactly what the total cost will be before you commit—no surprises. Many families call us feeling overwhelmed and unsure of what to do. That's normal, and we'll patiently walk you through everything. The most important step is making that first call; we handle the rest."
+    },
+    {
+      question: "What are my obligations as a cosigner for someone from Pisgah?",
+      answer: "You're legally guaranteeing the defendant will appear at all court hearings at DeKalb County Courthouse in Fort Payne. If they miss any court date, you become responsible for the entire bail amount, not just the 10% premium you already paid. For example, on a $15,000 bond, you'd owe the full $15,000 if they skip. Alabama law allows creditors to garnish up to 25% of your wages to collect this debt. Any collateral you pledged—vehicle titles, property, valuables—can be seized and sold. Before signing, ask yourself: Do I trust this person completely? Will they show up to every hearing? Can I afford the full bail amount if they run? You should maintain regular contact with the defendant, remind them of court dates, and report any concerning behavior to us immediately. If you ever believe they might flee, contact us before they miss court—we may be able to surrender them and end your liability."
+    },
+    {
+      question: "How does bailing someone out work on nights and weekends for Pisgah residents?",
+      answer: "The process is identical to any other time—we're available 24/7/365 without exception. When you call at midnight or on a holiday, a real person answers: Richard, Connie, or Toni. DeKalb County Jail accepts bonds around the clock, so there's no waiting for Monday or regular business hours. After your call, we complete the paperwork and payment, then walk the bond next door to the jail immediately. The fact that you're in Pisgah doesn't add any delay since all the action happens at the jail in Fort Payne anyway. Release processing might take slightly longer during overnight hours due to reduced jail staffing, but the bond is posted right away. Many Pisgah families have been relieved to discover they can get help at 3 AM on a Sunday just as easily as noon on a Tuesday. Don't hesitate to call us anytime at 256-601-2041—we're here when you need us."
     }
   ];
 

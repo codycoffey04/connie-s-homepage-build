@@ -126,6 +126,22 @@ const Henagar = () => {
     {
       question: "Where do Henagar arrestees go?",
       answer: "Anyone arrested in Henagar—whether by Henagar Police or DeKalb County Sheriff—is transported to the DeKalb County Detention Center in Fort Payne at 2801 Jordan Rd SW. All bail bonds are posted at the DeKalb County Courthouse."
+    },
+    {
+      question: "Do you actually serve Henagar or just the bigger cities in DeKalb County?",
+      answer: "Yes, we fully serve Henagar and all of DeKalb County with the same fast, professional service we provide to Fort Payne residents. Henagar is only about 15 minutes from our office at 2700 Jordan Rd SW in Fort Payne, right next to the DeKalb County Jail where all county arrests are processed. Whether someone is arrested in Henagar for a traffic violation or a more serious charge, they're transported to DeKalb County Jail for booking. This actually works in your favor—we're steps away from the jail and can post bond immediately once you call. We've helped many Henagar families over the years and understand the community. Distance is never a barrier to getting your loved one released. Call Richard at 256-601-2041, Connie at 256-630-2824, or Toni at 256-440-0822 anytime day or night."
+    },
+    {
+      question: "What information should I have ready when I call about someone arrested in Henagar?",
+      answer: "Have the defendant's full legal name and date of birth ready—this is essential for us to locate them in the system. If you know what they were arrested for and approximately when, that helps us estimate the bail amount before it's officially set. You'll also need your own valid ID since you'll be signing as the cosigner, and know your payment method. Don't worry if you don't have every detail; we can contact DeKalb County Jail directly to verify information. Since Henagar arrests go to the same jail that's right next to our office, we can confirm details within minutes. It's better to call with partial information than to wait—we'll walk you through everything and tell you exactly what the total cost will be before you make any decisions. The sooner you call, the sooner we can start the release process."
+    },
+    {
+      question: "What are my responsibilities if I cosign a bail bond for someone from Henagar?",
+      answer: "As a cosigner, you're legally guaranteeing that the defendant will appear at every scheduled court date at the DeKalb County Courthouse in Fort Payne. If they fail to appear, you become financially responsible for the entire bail amount—not just the 10% premium you paid. This means if bail was $10,000 and they skip court, you could owe the full $10,000 plus any recovery costs. Alabama law allows wage garnishment of up to 25% of your disposable income to collect this debt. Any collateral you pledged—a car title, property deed, or other assets—can be seized and sold. Before signing, honestly evaluate whether you trust this person completely. You should stay in regular contact with them, remind them of court dates, and ensure they understand the consequences of missing court. If you ever suspect they might flee, contact us immediately—we may be able to surrender them before a court date is missed."
+    },
+    {
+      question: "Can I bail someone out of jail on a weekend or holiday if they were arrested in Henagar?",
+      answer: "Absolutely. We operate 24 hours a day, 7 days a week, 365 days a year with no exceptions. Arrests don't wait for business hours, and neither do we. Whether it's Thanksgiving, Christmas morning, or 2 AM on a Saturday, one of our licensed agents—Richard, Connie, or Toni—will answer your call personally. DeKalb County Jail accepts bonds around the clock, so there's no delay in posting once you've completed the paperwork and payment. Since our office is right next to the jail, we can have the bond delivered within minutes of finishing with you. Release processing at the jail might take slightly longer during overnight hours due to reduced staffing, but the bond gets posted immediately regardless. Many families are relieved to discover they don't have to wait until Monday to help their loved one. Call us anytime at 256-601-2041 and we'll get started right away."
     }
   ];
 

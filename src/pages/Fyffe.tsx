@@ -128,6 +128,22 @@ const Fyffe = () => {
     {
       question: "Where do Fyffe arrestees go?",
       answer: "Anyone arrested in Fyffe—whether by Fyffe Police or DeKalb County Sheriff—is transported to the DeKalb County Detention Center in Fort Payne at 2801 Jordan Rd SW. All bail bonds are posted at the DeKalb County Courthouse."
+    },
+    {
+      question: "Does Connie's Bail Bonding serve Fyffe, or do I need to find someone closer?",
+      answer: "We absolutely serve Fyffe and all of DeKalb County. Fyffe is approximately 12-15 minutes from our office at 2700 Jordan Rd SW in Fort Payne, which is located right next to DeKalb County Jail. Here's what matters: no matter where in DeKalb County someone is arrested—Fyffe, Rainsville, Henagar, or anywhere else—they're processed through the same jail in Fort Payne. Our location next door to that jail means we can post bond faster than any bondsman driving in from elsewhere. We've served Fyffe families for years and provide the same immediate, personal service to every community in the county. When you call Richard at 256-601-2041, Connie at 256-630-2824, or Toni at 256-440-0822, you're talking to local agents who know the system and the people. We're not a distant call center—we're your neighbors."
+    },
+    {
+      question: "What do I need to know before calling about a Fyffe arrest?",
+      answer: "Gather as much information as possible: the defendant's full legal name, date of birth, and what they were arrested for. Knowing the approximate time of arrest helps us determine if booking is complete—this process typically takes 1-3 hours after arrival at DeKalb County Jail. Have your own ID available since you'll need to sign as the cosigner, and decide on a payment method. Don't wait until you have everything perfect; call us with whatever information you have and we'll fill in the gaps. We can contact the jail directly to verify details, check if bail has been set, and confirm the exact amount. We'll explain the total cost—including the 10% premium and state fees—before you commit to anything. Many people are anxious and uncertain when they call us, and that's completely normal. We'll guide you through every step patiently and answer all your questions."
+    },
+    {
+      question: "What happens after someone misses court if I bailed them out in Fyffe?",
+      answer: "The moment they miss court, a bench warrant is issued for their arrest and the bond goes into forfeiture. As the cosigner, your financial liability kicks in immediately. Under Alabama law, we have approximately 90 days to locate the defendant and return them to custody before the forfeiture becomes final. During this grace period, we'll contact you for any information about their whereabouts—where they work, who their friends are, places they might go. If the defendant is found and returned within 90 days, the court may set aside the forfeiture and you avoid the full financial hit. If they're not found, you owe the entire bail amount plus recovery costs. The bonding company can garnish your wages, seize your collateral, and sue you in civil court. This is why choosing to cosign should never be taken lightly. Before you sign, make certain this person will honor their court obligations."
+    },
+    {
+      question: "Can someone from out of state bail out a Fyffe resident?",
+      answer: "Yes, we work with out-of-state cosigners regularly and can handle the entire process remotely. You'll need to provide valid identification and sign the indemnity agreement, both of which can be done electronically or via fax. Payment is simple with credit or debit cards processed over the phone. Once the paperwork and payment are complete, we physically walk the bond next door to DeKalb County Jail and post it immediately. You don't need to be present in Alabama for any part of this process. We'll keep you updated on the release status so you know when your loved one is out, even though you're hundreds of miles away. The defendant will be released through normal jail processing, typically within 1-8 hours after the bond is posted. Call us at 256-601-2041 any time—distance is never a barrier to getting someone released."
     }
   ];
 
