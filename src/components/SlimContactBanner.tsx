@@ -1,5 +1,6 @@
 import { Phone } from "lucide-react";
 import { phoneNumbers } from "@/lib/cityUtils";
+import { trackPhoneClick } from "@/lib/analytics";
 
 interface SlimContactBannerProps {
   className?: string;
@@ -17,7 +18,8 @@ export const SlimContactBanner = ({ className = "" }: SlimContactBannerProps) =>
             {Object.entries(phoneNumbers).map(([key, { name, number }]) => (
               <a 
                 key={key}
-                href={`tel:${number.replace(/[^0-9]/g, "")}`} 
+                href={`tel:${number.replace(/[^0-9]/g, "")}`}
+                onClick={() => trackPhoneClick(name, number)}
                 className="text-white hover:text-brand-red transition-colors font-bold flex items-center gap-2"
               >
                 <Phone className="w-4 h-4" />

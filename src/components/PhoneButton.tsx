@@ -1,5 +1,6 @@
 import { Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { trackPhoneClick } from "@/lib/analytics";
 
 interface PhoneButtonProps {
   name: string;
@@ -14,6 +15,7 @@ export const PhoneButton = ({ name, number, variant = "primary", className }: Ph
   return (
     <a
       href={`tel:${formattedNumber}`}
+      onClick={() => trackPhoneClick(name, number)}
       className={cn(
         "group flex items-center justify-between p-6 bg-white border-2 border-black hover:border-brand-red hover:bg-black hover:shadow-xl hover:-translate-y-1 active:scale-95 transition-all duration-300",
         className
