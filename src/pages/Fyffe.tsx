@@ -217,9 +217,9 @@ const Fyffe = () => {
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
-              <Card key={index} className="border-border/50 shadow-sm hover:shadow-md transition-shadow bg-white/95">
+              <Card key={index} className="group border-border/50 shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-primary/30 transition-all duration-300 bg-white/95">
                 <CardContent className="p-6">
-                  <feature.icon className="w-12 h-12 text-primary mb-4" />
+                  <feature.icon className="w-12 h-12 text-primary mb-4 group-hover:scale-110 transition-transform duration-300" />
                   <h3 className="text-xl font-bold mb-3 text-foreground">{feature.title}</h3>
                   <p className="text-foreground/80 leading-relaxed">{feature.description}</p>
                 </CardContent>
@@ -241,8 +241,8 @@ const Fyffe = () => {
           </h2>
           <div className="max-w-4xl mx-auto space-y-8">
             {bailProcess.map((step, index) => (
-              <div key={index} className="bg-white/95 p-6 rounded-lg border border-border/50 shadow-sm">
-                <h3 className="text-xl font-bold mb-3 text-primary">{step.title}</h3>
+              <div key={index} className="group bg-white/95 p-6 rounded-lg border border-border/50 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-primary/30 transition-all duration-300">
+                <h3 className="text-xl font-bold mb-3 text-primary group-hover:text-primary/80 transition-colors">{step.title}</h3>
                 <p className="text-foreground/80 leading-relaxed">{step.description}</p>
               </div>
             ))}

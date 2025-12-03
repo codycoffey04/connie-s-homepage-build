@@ -247,16 +247,16 @@ const Index = () => {
           {/* Stats Bar */}
           <div className="bg-brand-red/5 rounded-lg p-6 mb-12">
             <div className="grid md:grid-cols-3 gap-6 text-center">
-              <div>
-                <div className="text-3xl font-black text-brand-red mb-1">6+</div>
+              <div className="group p-4 rounded-lg hover:bg-brand-red/10 transition-all duration-300 cursor-default">
+                <div className="text-3xl font-black text-brand-red mb-1 group-hover:scale-110 transition-transform duration-300">6+</div>
                 <div className="text-sm font-semibold text-foreground/70">Years Serving Alabama</div>
               </div>
-              <div>
-                <div className="text-3xl font-black text-brand-red mb-1">1,000+</div>
+              <div className="group p-4 rounded-lg hover:bg-brand-red/10 transition-all duration-300 cursor-default">
+                <div className="text-3xl font-black text-brand-red mb-1 group-hover:scale-110 transition-transform duration-300">1,000+</div>
                 <div className="text-sm font-semibold text-foreground/70">Families Helped</div>
               </div>
-              <div>
-                <div className="text-3xl font-black text-brand-red mb-1">24/7</div>
+              <div className="group p-4 rounded-lg hover:bg-brand-red/10 transition-all duration-300 cursor-default">
+                <div className="text-3xl font-black text-brand-red mb-1 group-hover:scale-110 transition-transform duration-300">24/7</div>
                 <div className="text-sm font-semibold text-foreground/70">Available Every Day</div>
               </div>
             </div>
@@ -270,9 +270,9 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {whyChooseChecklist.map((item, index) => (
               <AnimatedCard key={index} index={index}>
-                <div className="flex items-start gap-4 p-6 bg-muted/30 rounded-lg">
+                <div className="group flex items-start gap-4 p-6 bg-muted/30 rounded-lg border border-transparent hover:border-primary/30 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-default">
                   <div className="flex-shrink-0">
-                    <div className="w-8 h-8 rounded-full bg-brand-red flex items-center justify-center">
+                    <div className="w-8 h-8 rounded-full bg-brand-red flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       <Check className="h-5 w-5 text-white" />
                     </div>
                   </div>
@@ -352,8 +352,8 @@ const Index = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
           {processSteps.map((step, index) => (
-            <div key={index} className="text-center group">
-              <div className="w-24 h-24 bg-brand-red text-white font-black text-4xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+            <div key={index} className="text-center group p-6 rounded-lg hover:bg-muted/50 transition-all duration-300">
+              <div className="w-24 h-24 bg-brand-red text-white font-black text-4xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:shadow-xl transition-all duration-300">
                 {step.number}
               </div>
               <h3 className="text-xl font-black mb-4 text-black uppercase">

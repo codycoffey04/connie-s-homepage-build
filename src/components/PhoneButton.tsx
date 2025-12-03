@@ -15,7 +15,7 @@ export const PhoneButton = ({ name, number, variant = "primary", className }: Ph
     <a
       href={`tel:${formattedNumber}`}
       className={cn(
-        "group flex items-center justify-between p-6 bg-white border-2 border-black hover:border-brand-red hover:bg-black transition-all duration-300",
+        "group flex items-center justify-between p-6 bg-white border-2 border-black hover:border-brand-red hover:bg-black hover:shadow-xl hover:-translate-y-1 active:scale-95 transition-all duration-300",
         className
       )}
     >
@@ -27,7 +27,7 @@ export const PhoneButton = ({ name, number, variant = "primary", className }: Ph
           {number}
         </div>
       </div>
-      <Phone className="w-8 h-8 text-brand-red group-hover:text-white transition-colors" />
+      <Phone className="w-8 h-8 text-brand-red group-hover:text-white group-hover:scale-110 transition-all duration-300" />
     </a>
   );
 };

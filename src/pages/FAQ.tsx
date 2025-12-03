@@ -213,37 +213,37 @@ const FAQ = () => {
           <nav className="flex flex-wrap justify-center gap-4">
             <a 
               href="#general" 
-              className="px-4 py-2 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors text-sm font-semibold"
+              className="px-4 py-2 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 hover:scale-105 hover:shadow-lg active:scale-95 transition-all duration-200 text-sm font-semibold"
             >
               General Questions
             </a>
             <a 
               href="#process" 
-              className="px-4 py-2 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors text-sm font-semibold"
+              className="px-4 py-2 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 hover:scale-105 hover:shadow-lg active:scale-95 transition-all duration-200 text-sm font-semibold"
             >
               The Process
             </a>
             <a 
               href="#local" 
-              className="px-4 py-2 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors text-sm font-semibold"
+              className="px-4 py-2 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 hover:scale-105 hover:shadow-lg active:scale-95 transition-all duration-200 text-sm font-semibold"
             >
               Local Info
             </a>
             <a 
               href="#payment" 
-              className="px-4 py-2 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors text-sm font-semibold"
+              className="px-4 py-2 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 hover:scale-105 hover:shadow-lg active:scale-95 transition-all duration-200 text-sm font-semibold"
             >
               Payment & Costs
             </a>
             <a 
               href="#legal" 
-              className="px-4 py-2 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors text-sm font-semibold"
+              className="px-4 py-2 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 hover:scale-105 hover:shadow-lg active:scale-95 transition-all duration-200 text-sm font-semibold"
             >
               Legal & Compliance
             </a>
             <a 
               href="#charges" 
-              className="px-4 py-2 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors text-sm font-semibold"
+              className="px-4 py-2 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 hover:scale-105 hover:shadow-lg active:scale-95 transition-all duration-200 text-sm font-semibold"
             >
               By Charge Type
             </a>
