@@ -153,6 +153,22 @@ const FortPayne = () => {
     {
       question: "Where is your Fort Payne office located?",
       answer: "Our office is at 2700 Jordan Rd SW, Fort Payne, AL 35967—right next door to the DeKalb County Detention Center. This allows us to meet clients quickly and post bonds immediately, which is why our release times are often faster than other bail bond companies."
+    },
+    {
+      question: "What information do I need when I call about bailing someone out in Fort Payne?",
+      answer: "You'll need the defendant's full legal name, date of birth, and the jail where they're being held. Having the bail amount ready speeds things up significantly, though we can look this up for you by contacting DeKalb County Jail directly. If you know the charges and booking number, that's helpful but not required. You should also have your own identification ready since you'll be signing as the cosigner, and know what payment method you plan to use. When you call Richard at 256-601-2041, Connie at 256-630-2824, or Toni at 256-440-0822, we'll walk you through everything step by step. Since our office is right next to the jail on Jordan Road, we can verify details quickly and get the process moving within minutes of your call."
+    },
+    {
+      question: "What happens if the person I bailed out misses their court date in Fort Payne?",
+      answer: "The bond immediately goes into forfeiture, and a bench warrant is issued for the defendant's arrest. As the cosigner, you become financially responsible for the full bail amount—not just the 10% premium you already paid. Alabama law provides a grace period of approximately 90 days for the defendant to be located and returned to custody. During this time, we'll work aggressively to find them, and we'll contact you for any information about their whereabouts. If the defendant is returned within the grace period, the court may set aside the forfeiture. If not, you could face wage garnishment up to 25% of your disposable income, seizure of any collateral you pledged, and civil lawsuits. This is why we stress the importance of staying in contact with whoever you bail out and ensuring they understand every court date."
+    },
+    {
+      question: "Can I bail someone out of DeKalb County Jail if I live out of state?",
+      answer: "Yes, you can bail someone out of DeKalb County Jail from anywhere in the country. We handle out-of-state cosigners regularly and can complete most paperwork electronically or over the phone. You'll need to provide valid identification, sign the indemnity agreement, and arrange payment—all of which can be done remotely. We accept credit cards and debit cards, making it easy to pay from a distance. Once the paperwork and payment are complete, we physically post the bond at DeKalb County Jail since our office is located right next door at 2700 Jordan Rd SW. The defendant will be released through normal processing, typically within 1-8 hours. We'll keep you updated throughout the process so you know exactly when your loved one is released, even if you're hundreds of miles away."
+    },
+    {
+      question: "What if bail hasn't been set yet for someone arrested in Fort Payne?",
+      answer: "If bail hasn't been set, the defendant must wait for a judge or magistrate to determine the amount. For common misdemeanors, DeKalb County often uses a bail schedule that allows bail to be set immediately during booking. However, for felonies or more serious charges, the defendant typically must appear before a judge within 24-48 hours of arrest, sometimes up to 72 hours over weekends. While waiting, we recommend calling us anyway—we can monitor the case, contact the jail for updates, and have all paperwork prepared so we're ready to post the moment bail is determined. This preparation saves valuable time. You can also have an attorney request a bail hearing to potentially expedite the process or argue for a lower amount. Call us at 256-601-2041 and we'll explain exactly what to expect based on the specific charges."
     }
   ];
 
