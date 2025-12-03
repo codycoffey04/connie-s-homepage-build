@@ -5,6 +5,10 @@
 [build.environment]
   NODE_VERSION = "20"
 
+# Use Ubuntu 22.04 build image (required - Ubuntu 14.04 is no longer supported)
+[build.image]
+  name = "ubuntu-22.04"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
