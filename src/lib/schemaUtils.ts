@@ -491,7 +491,7 @@ export const getArticleSchema = (
   description: string,
   url: string,
   datePublished: string = "2024-01-15",
-  dateModified: string = "2025-12-01",
+  dateModified: string = "2024-12-03",
   authorName: "Connie" | "Richard" | "Toni" = "Connie"
 ) => ({
   "@context": "https://schema.org",
