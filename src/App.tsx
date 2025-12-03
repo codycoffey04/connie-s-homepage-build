@@ -30,6 +30,8 @@ const TypesOfBailBonds = lazy(() => import("./pages/TypesOfBailBonds"));
 const BondForfeitureProcess = lazy(() => import("./pages/BondForfeitureProcess"));
 const WhatHappensAfterArrest = lazy(() => import("./pages/WhatHappensAfterArrest"));
 const BailBondScams = lazy(() => import("./pages/BailBondScams"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const TermsOfService = lazy(() => import("./pages/TermsOfService"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -65,6 +67,8 @@ const App = () => (
               <Route path="/bail-bonds-guide/bond-forfeiture-process" element={<BondForfeitureProcess />} />
               <Route path="/bail-bonds-guide/what-happens-after-arrest" element={<WhatHappensAfterArrest />} />
               <Route path="/bail-bonds-guide/bail-bond-scams" element={<BailBondScams />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="/terms-of-service" element={<TermsOfService />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
