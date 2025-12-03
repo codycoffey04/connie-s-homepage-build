@@ -90,10 +90,8 @@ const FortPayne = () => {
   const neighborhoods = [
     "Pine Ridge",
     "Fisher Crossroads",
-    "Pumpkin Center",
     "Adamsburg",
     "Dogtown",
-    "Collbran",
     "Douglas",
     "Terrapin Hills"
   ];
