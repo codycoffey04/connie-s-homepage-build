@@ -51,6 +51,13 @@
   </head>
 
   <body>
+    <!-- Hidden Netlify form for form detection -->
+    <form name="bonding-lead" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="tel" name="phone" />
+      <textarea name="message"></textarea>
+    </form>
+    
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

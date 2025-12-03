@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Section } from "@/components/Section";
 import { HeroCTA } from "@/components/HeroCTA";
 import { FAQList } from "@/components/FAQItem";
+import { MidPageCTA } from "@/components/MidPageCTA";
 import { StickyCallButton } from "@/components/StickyCallButton";
 import { SEO } from "@/components/SEO";
 import { getOrganizationSchema, getBreadcrumbSchema, getFAQSchema, getSpeakableSchema } from "@/lib/schemaUtils";
@@ -270,6 +271,12 @@ const FAQ = () => {
           <FAQList faqs={processFaqs} />
         </div>
       </Section>
+
+      {/* Mid-Page CTA */}
+      <MidPageCTA 
+        headline="Questions About Your Situation?"
+        subtext="Every case is different. Call us for personalized guidance."
+      />
 
       {/* Local Questions */}
       <Section variant="muted" id="local">

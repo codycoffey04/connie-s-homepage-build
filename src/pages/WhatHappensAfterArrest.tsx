@@ -5,6 +5,7 @@ import { Section } from "@/components/Section";
 import { PhoneButton } from "@/components/PhoneButton";
 import { StickyCallButton } from "@/components/StickyCallButton";
 import { FAQList } from "@/components/FAQItem";
+import { MidPageCTA } from "@/components/MidPageCTA";
 import { AnswerBox } from "@/components/AnswerBox";
 import { StatisticBox } from "@/components/StatisticBox";
 import { ReadingMeta } from "@/components/ReadingMeta";
@@ -720,6 +721,12 @@ const WhatHappensAfterArrest = () => {
           </p>
         </div>
       </Section>
+
+      {/* Mid-Page CTA */}
+      <MidPageCTA 
+        headline="Someone You Know Just Got Arrested?"
+        subtext="We can start the bail process right now—call 24/7."
+      />
 
       {/* FAQ Section */}
       <Section>

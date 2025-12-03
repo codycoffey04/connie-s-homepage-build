@@ -5,6 +5,7 @@ import { StickyCallButton } from "@/components/StickyCallButton";
 import { Section } from "@/components/Section";
 import { SEO } from "@/components/SEO";
 import { FAQList } from "@/components/FAQItem";
+import { MidPageCTA } from "@/components/MidPageCTA";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { AnimatedCard } from "@/components/AnimatedCard";
 import { AnswerBox } from "@/components/AnswerBox";
@@ -371,6 +372,12 @@ const HowBailWorksAlabama = () => {
                 Alabama also requires bail bondsmen to be licensed through the Alabama Professional Bail Bonding Board (APBB). Always verify your bondsman is licensed.
               </p>
             </AnimatedSection>
+
+            {/* Mid-Page CTA */}
+            <MidPageCTA 
+              headline="Have Questions About Bail?"
+              subtext="Every case is different. Get personalized answers from a licensed agent."
+            />
 
             {/* FAQ */}
             <AnimatedSection delay={0.7}>
