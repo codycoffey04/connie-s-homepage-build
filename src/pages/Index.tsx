@@ -188,10 +188,13 @@ const Index = () => {
         <div className="relative container mx-auto px-4 md:px-6 max-w-7xl z-10 pb-32 md:pb-24">
           {/* Main Content - Centered */}
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 text-white uppercase tracking-tighter leading-none">
-              Fast.<br />
-              Fair.<br />
-              <span className="text-brand-red">24/7.</span>
+            <h1 className="font-black mb-6 uppercase tracking-tighter leading-none">
+              <span className="block text-4xl md:text-5xl lg:text-6xl text-white mb-2">
+                Fast. Fair.
+              </span>
+              <span className="block text-6xl md:text-8xl lg:text-9xl text-brand-red">
+                24/7.
+              </span>
             </h1>
             
             <p className="text-2xl md:text-3xl mb-8 text-white font-bold">
