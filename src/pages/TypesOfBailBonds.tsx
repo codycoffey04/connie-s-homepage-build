@@ -19,6 +19,7 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { Scale, DollarSign, Building, Users, FileText, CheckCircle, XCircle, ArrowRight, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 import { phoneNumbers } from "@/lib/cityUtils";
 import {
   getArticleSchema,
@@ -652,12 +653,12 @@ const TypesOfBailBonds = () => {
                 <p className="text-gray-600 mb-4">
                   Understanding Alabama's bail system, how it works, and what to expect.
                 </p>
-                <a
-                  href="/bail-bonds-guide/how-bail-works-alabama"
+                <Link
+                  to="/bail-bonds-guide/how-bail-works-alabama"
                   className="text-brand-red font-bold inline-flex items-center gap-2 hover:gap-3 transition-all"
                 >
                   Read Guide <ArrowRight className="h-5 w-5" />
-                </a>
+                </Link>
               </CardContent>
             </Card>
 
@@ -668,12 +669,12 @@ const TypesOfBailBonds = () => {
                 <p className="text-gray-600 mb-4">
                   Complete breakdown of bail bond costs, premiums, and fees in Alabama.
                 </p>
-                <a
-                  href="/bail-bonds-guide/bail-costs-alabama"
+                <Link
+                  to="/bail-bonds-guide/bail-costs-alabama"
                   className="text-brand-red font-bold inline-flex items-center gap-2 hover:gap-3 transition-all"
                 >
                   Read Guide <ArrowRight className="h-5 w-5" />
-                </a>
+                </Link>
               </CardContent>
             </Card>
 
@@ -684,12 +685,12 @@ const TypesOfBailBonds = () => {
                 <p className="text-gray-600 mb-4">
                   What does it mean to cosign a bail bond? Know your legal obligations.
                 </p>
-                <a
-                  href="/bail-bonds-guide/cosigner-responsibilities"
+                <Link
+                  to="/bail-bonds-guide/cosigner-responsibilities"
                   className="text-brand-red font-bold inline-flex items-center gap-2 hover:gap-3 transition-all"
                 >
                   Read Guide <ArrowRight className="h-5 w-5" />
-                </a>
+                </Link>
               </CardContent>
             </Card>
           </div>

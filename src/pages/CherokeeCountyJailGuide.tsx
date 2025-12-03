@@ -9,6 +9,7 @@ import { TableOfContents } from "@/components/TableOfContents";
 import { Card, CardContent } from "@/components/ui/card";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Phone, MapPin, Clock, Building, Scale, DollarSign, Users, ArrowRight, ChevronDown } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import { phoneNumbers } from "@/lib/cityUtils";
 import { 
@@ -170,7 +171,7 @@ const CherokeeCountyJailGuide = () => {
                     <Phone className="h-5 w-5 text-brand-red mt-1 shrink-0" />
                     <div>
                       <strong className="block">Phone:</strong>
-                      <a href="tel:256-927-3365" className="text-brand-red hover:underline">(256) 927-3365</a>
+                      <a href="tel:2569273365" className="text-brand-red hover:underline">(256) 927-3365</a>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -365,7 +366,7 @@ const CherokeeCountyJailGuide = () => {
                     <Phone className="h-5 w-5 text-brand-red mt-1 shrink-0" />
                     <div>
                       <strong className="block">Circuit Clerk Phone:</strong>
-                      <a href="tel:256-927-3637" className="text-brand-red hover:underline">(256) 927-3637</a>
+                      <a href="tel:2569273637" className="text-brand-red hover:underline">(256) 927-3637</a>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -473,13 +474,13 @@ const CherokeeCountyJailGuide = () => {
                   <CardContent className="p-6">
                     <h3 className="text-xl font-bold uppercase mb-3">{guide.title}</h3>
                     <p className="text-gray-700 mb-4">{guide.description}</p>
-                    <a
-                      href={guide.link}
+                    <Link
+                      to={guide.link}
                       className="inline-flex items-center gap-2 text-brand-red font-bold uppercase hover:underline"
                     >
                       Read Guide
                       <ArrowRight className="h-4 w-4" />
-                    </a>
+                    </Link>
                   </CardContent>
                 </Card>
               ))}

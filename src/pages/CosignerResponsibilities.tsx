@@ -10,6 +10,7 @@ import { TableOfContents } from "@/components/TableOfContents";
 import { Card, CardContent } from "@/components/ui/card";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Phone, Users, AlertTriangle, ShieldCheck, Scale, DollarSign, ArrowRight, ChevronDown, XCircle, CheckCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import { phoneNumbers } from "@/lib/cityUtils";
 import { 
@@ -616,13 +617,13 @@ const CosignerResponsibilities = () => {
                   <CardContent className="p-6">
                     <h3 className="text-xl font-bold uppercase mb-3">{guide.title}</h3>
                     <p className="text-gray-700 mb-4">{guide.description}</p>
-                    <a
-                      href={guide.link}
+                    <Link
+                      to={guide.link}
                       className="inline-flex items-center gap-2 text-brand-red font-bold uppercase hover:underline"
                     >
                       Read Guide
                       <ArrowRight className="h-4 w-4" />
-                    </a>
+                    </Link>
                   </CardContent>
                 </Card>
               ))}
