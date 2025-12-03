@@ -450,6 +450,8 @@ const FortPayne = () => {
                   src={paymentMethods} 
                   alt="Payment methods accepted - credit cards and cash" 
                   className="w-32 h-32 rounded-lg object-cover shadow-lg"
+                  width={128}
+                  height={128}
                 />
                 <div>
                   <h3 className="text-xl font-bold mb-2">Flexible Payment Options</h3>

@@ -291,6 +291,8 @@ const Index = () => {
             src={supportHands} 
             alt="Hands reaching out in support representing compassionate bail bond service" 
             className="w-full h-full object-cover"
+            width={1920}
+            height={1280}
           />
           <div className="absolute inset-0 bg-black/70"></div>
         </div>
