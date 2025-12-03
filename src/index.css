@@ -108,6 +108,10 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground antialiased;
     font-feature-settings: "kern" 1;
@@ -133,5 +137,32 @@ All colors MUST be HSL.
 
   p {
     @apply leading-relaxed;
+  }
+}
+
+/* Hover effect utilities for interactive cards */
+@layer components {
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-primary/30;
+  }
+
+  .card-hover-lift {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-2;
+  }
+
+  .icon-hover {
+    @apply transition-transform duration-300 group-hover:scale-110;
+  }
+
+  .icon-hover-rotate {
+    @apply transition-transform duration-300 group-hover:rotate-12;
+  }
+
+  .btn-press {
+    @apply active:scale-95 transition-transform duration-150;
+  }
+
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2;
   }
 }

@@ -268,9 +268,9 @@ const Contact = () => {
       {/* Hours */}
       <Section variant="primary">
         <div className="max-w-3xl mx-auto">
-          <Card className="border-2 border-primary">
+          <Card className="group border-2 border-primary hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
             <CardContent className="text-center py-8 space-y-4">
-              <Clock className="w-12 h-12 text-primary mx-auto" />
+              <Clock className="w-12 h-12 text-primary mx-auto group-hover:scale-110 transition-transform duration-300" />
               <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight">Hours</h2>
               <p className="text-2xl font-semibold text-primary">
                 Open 24 hours a day, 7 days a week, 365 days a year.
@@ -295,8 +295,8 @@ const Contact = () => {
           
           <div className="space-y-4 max-w-3xl mx-auto">
             {readyInfo.map((item, index) => (
-              <div key={index} className="flex gap-4 items-start bg-card p-4 rounded-lg border">
-                <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+              <div key={index} className="group flex gap-4 items-start bg-card p-4 rounded-lg border hover:border-primary/30 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300" />
                 <div>
                   <p className="font-semibold text-lg">{item.text}</p>
                   {item.subtext && <p className="text-foreground/70">{item.subtext}</p>}

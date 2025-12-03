@@ -206,8 +206,8 @@ const About = () => {
             {credentials.map((credential, index) => {
               const Icon = credential.icon;
               return (
-                <div key={index} className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                <div key={index} className="group flex items-start gap-4 p-4 rounded-lg hover:bg-muted/50 hover:shadow-md transition-all duration-300">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
                     <Icon className="w-5 h-5 text-primary" />
                   </div>
                   <p className="text-foreground/90 leading-relaxed pt-2">{credential.text}</p>
@@ -292,9 +292,9 @@ const About = () => {
               </h4>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {/* Connie */}
-                <div className="text-center p-4 bg-primary/5 rounded-lg border border-primary/10">
+                <div className="group text-center p-4 bg-primary/5 rounded-lg border border-primary/10 hover:border-primary/30 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
                   <h5 className="font-bold text-lg text-foreground mb-2">Connie</h5>
-                  <div className="inline-flex items-center justify-center px-3 py-1 bg-primary/10 rounded-full mb-3">
+                  <div className="inline-flex items-center justify-center px-3 py-1 bg-primary/10 rounded-full mb-3 group-hover:bg-primary/20 transition-colors">
                     <span className="text-sm font-semibold text-primary">APBB #B0092</span>
                   </div>
                   <a 
@@ -308,9 +308,9 @@ const About = () => {
                 </div>
 
                 {/* Richard */}
-                <div className="text-center p-4 bg-primary/5 rounded-lg border border-primary/10">
+                <div className="group text-center p-4 bg-primary/5 rounded-lg border border-primary/10 hover:border-primary/30 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
                   <h5 className="font-bold text-lg text-foreground mb-2">Richard</h5>
-                  <div className="inline-flex items-center justify-center px-3 py-1 bg-primary/10 rounded-full mb-3">
+                  <div className="inline-flex items-center justify-center px-3 py-1 bg-primary/10 rounded-full mb-3 group-hover:bg-primary/20 transition-colors">
                     <span className="text-sm font-semibold text-primary">APBB #S0334</span>
                   </div>
                   <a 
@@ -324,9 +324,9 @@ const About = () => {
                 </div>
 
                 {/* Toni */}
-                <div className="text-center p-4 bg-primary/5 rounded-lg border border-primary/10">
+                <div className="group text-center p-4 bg-primary/5 rounded-lg border border-primary/10 hover:border-primary/30 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
                   <h5 className="font-bold text-lg text-foreground mb-2">Toni</h5>
-                  <div className="inline-flex items-center justify-center px-3 py-1 bg-primary/10 rounded-full mb-3">
+                  <div className="inline-flex items-center justify-center px-3 py-1 bg-primary/10 rounded-full mb-3 group-hover:bg-primary/20 transition-colors">
                     <span className="text-sm font-semibold text-primary">APBB #S0345</span>
                   </div>
                   <a 

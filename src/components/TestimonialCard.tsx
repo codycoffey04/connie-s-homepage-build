@@ -6,9 +6,9 @@ interface TestimonialCardProps {
 
 export const TestimonialCard = ({ quote }: TestimonialCardProps) => {
   return (
-    <div className="bg-white rounded-xl border border-border/30 shadow-md p-8 relative">
+    <div className="group bg-white rounded-xl border border-border/30 shadow-md p-8 relative hover:shadow-xl hover:-translate-y-1 hover:border-primary/30 transition-all duration-300">
       {/* Large quote mark */}
-      <div className="absolute top-6 left-6 text-brand-red/20">
+      <div className="absolute top-6 left-6 text-brand-red/20 group-hover:text-brand-red/30 transition-colors">
         <Quote className="w-12 h-12" />
       </div>
       
