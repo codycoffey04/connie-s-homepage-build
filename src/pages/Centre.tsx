@@ -166,7 +166,7 @@ const Centre = () => {
         
         <div className="relative container mx-auto px-4 md:px-6 max-w-7xl z-10 pb-32 md:pb-24">
           {/* Main Content - Left Aligned */}
-          <div className="max-w-3xl">
+          <div className="max-w-3xl mx-auto">
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 text-white uppercase tracking-wide leading-none">
               <span style={{ textShadow: '2px 2px 8px rgba(0, 0, 0, 0.7)' }}>Centre</span>
               <br />
