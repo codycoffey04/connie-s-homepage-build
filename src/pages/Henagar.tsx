@@ -148,8 +148,8 @@ const Henagar = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Henagar Bail Bonds | 24/7 Service | DeKalb County, AL"
-        description="Fast 24/7 bail bonds serving Henagar, AL and DeKalb County. Licensed Alabama agents. Call 256-601-2041. Family-owned, transparent pricing."
+        title="Henagar Bail Bonds | 24/7 DeKalb County AL"
+        description="24/7 bail bonds serving Henagar and DeKalb County. Licensed Alabama agents, transparent pricing. Call 256-601-2041 now. Family-owned since 2019."
         canonical="/henagar"
         city="Henagar"
         geo={{

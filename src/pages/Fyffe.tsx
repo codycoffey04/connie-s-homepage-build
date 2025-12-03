@@ -150,8 +150,8 @@ const Fyffe = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Fyffe Bail Bonds | 24/7 Service | DeKalb County, AL"
-        description="Fast 24/7 bail bonds serving Fyffe, AL and DeKalb County. Licensed agents near you. Call 256-601-2041 now. Transparent pricing, no hidden fees."
+        title="Fyffe Bail Bonds | 24/7 DeKalb County AL"
+        description="24/7 bail bonds serving Fyffe, AL and DeKalb County. Licensed agents ready to help. Call 256-601-2041 now. Transparent pricing, no hidden fees."
         canonical="/fyffe"
         city="Fyffe"
         geo={{

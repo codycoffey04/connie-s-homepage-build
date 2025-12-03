@@ -129,8 +129,8 @@ const BailBondsGuide = () => {
   return (
     <>
       <SEO 
-        title="Alabama Bail Bonds Guide | DeKalb & Cherokee County"
-        description="Free bail bonds guide for DeKalb & Cherokee Counties, AL. Learn how bail works, costs & fees, cosigner responsibilities, and what to expect. 24/7 help available."
+        title="Alabama Bail Bonds Guide | Free Resources"
+        description="Free bail bonds guide for DeKalb & Cherokee Counties. Learn how bail works, costs, cosigner duties, and what to expect. 24/7 help: 256-601-2041."
         canonical="/bail-bonds-guide"
         schema={schemas}
       />

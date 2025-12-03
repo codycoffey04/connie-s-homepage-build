@@ -85,7 +85,7 @@ const BailCostsAlabama = () => {
   return (
     <>
       <SEO
-        title="Bail Bond Costs in Alabama | Fees Explained | Connie's Bail Bonding"
+        title="Bail Bond Costs in Alabama | Fees Explained"
         description="How much does a bail bond cost in Alabama? Learn about the 10% premium, state-mandated fees, payment plans, and exactly what you'll pay to bail someone out."
         canonical="/bail-bonds-guide/bail-costs-alabama"
         schema={schemas}

@@ -114,7 +114,7 @@ const WhatHappensAfterArrest = () => {
   return (
     <>
       <SEO
-        title="What Happens After Arrest in Alabama | The Booking & Bail Process"
+        title="What Happens After Arrest in Alabama"
         description="What happens when someone is arrested in Alabama? Learn about booking, bail hearings, release timelines, and what your loved one is experiencing in jail."
         canonical="/bail-bonds-guide/what-happens-after-arrest"
         schema={schemas}

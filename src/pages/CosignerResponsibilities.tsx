@@ -84,8 +84,8 @@ const CosignerResponsibilities = () => {
   return (
     <>
       <SEO
-        title="Bail Bond Cosigner Responsibilities in Alabama | What You Need to Know"
-        description="What does it mean to cosign a bail bond in Alabama? Understand your legal obligations, financial liability, collateral risks, and what happens if the defendant skips court."
+        title="Bail Bond Cosigner Responsibilities | Alabama"
+        description="What does it mean to cosign a bail bond? Understand your legal obligations, financial liability, collateral risks, and what happens if they skip court."
         canonical="/bail-bonds-guide/cosigner-responsibilities"
         schema={schemas}
       />

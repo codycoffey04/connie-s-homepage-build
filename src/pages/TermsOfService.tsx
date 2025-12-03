@@ -39,13 +39,22 @@ const TermsOfService = () => {
         <title>Terms of Service | Connie's Bail Bonding</title>
         <meta name="description" content="Terms and conditions for using Connie's Bail Bonding website and services. Serving DeKalb and Cherokee Counties, Alabama." />
         <link rel="canonical" href="https://connies-bailbonds.com/terms-of-service" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta property="og:type" content="website" />
         <meta property="og:title" content="Terms of Service | Connie's Bail Bonding" />
         <meta property="og:description" content="Terms and conditions for using Connie's Bail Bonding website and services." />
         <meta property="og:url" content="https://connies-bailbonds.com/terms-of-service" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary" />
+        <meta property="og:image" content="https://connies-bailbonds.com/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Terms of Service - Professional bail bond services" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:site_name" content="Connie's Bail Bonding" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Terms of Service | Connie's Bail Bonding" />
         <meta name="twitter:description" content="Terms and conditions for using Connie's Bail Bonding website and services." />
+        <meta name="twitter:image" content="https://connies-bailbonds.com/og-image.png" />
+        <meta name="twitter:image:alt" content="Terms of Service - Professional bail bond services" />
         <script type="application/ld+json">{JSON.stringify(schema)}</script>
       </Helmet>
 

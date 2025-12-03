@@ -93,8 +93,8 @@ const DeKalbCountyJailGuide = () => {
   return (
     <>
       <SEO
-        title="DeKalb County Jail Bail Guide | Fort Payne, AL | Connie's Bail Bonding"
-        description="How to post bail at DeKalb County Detention Center in Fort Payne, AL. Facility address, bail process, release times, and what to expect when bailing someone out."
+        title="DeKalb County Jail Bail Guide | Fort Payne"
+        description="How to post bail at DeKalb County Detention Center in Fort Payne. Address, bail process, release times, and what to expect. Call 256-601-2041."
         canonical="/bail-bonds-guide/dekalb-county-jail-guide"
         schema={schemas}
       />

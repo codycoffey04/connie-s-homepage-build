@@ -152,8 +152,8 @@ const ValleyHead = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Valley Head Bail Bonds | 24/7 Service | DeKalb County, AL"
-        description="Fast 24/7 bail bonds serving Valley Head, AL and DeKalb County. Licensed agents ready to help your family. Call 256-601-2041 now."
+        title="Valley Head Bail Bonds | 24/7 DeKalb County"
+        description="24/7 bail bonds serving Valley Head, AL and DeKalb County. Licensed agents ready to help your family. Call 256-601-2041 now. Fast jail release."
         canonical="/valley-head"
         city="Valley Head"
         geo={{

@@ -87,8 +87,8 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="About Us | Family-Owned Bail Bond Service Since 2019"
-        description="Meet Connie, Toni, and Richard - licensed Alabama bail bond agents serving DeKalb & Cherokee Counties with compassion and professionalism 24/7."
+        title="About Us | Licensed Bail Agents Since 2019"
+        description="Meet Connie, Toni, and Richard—licensed Alabama bail bond agents serving DeKalb & Cherokee Counties 24/7 with compassion and professionalism."
         canonical="/about"
         reviews={testimonials}
         schema={[

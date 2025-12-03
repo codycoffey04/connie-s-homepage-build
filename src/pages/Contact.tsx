@@ -80,8 +80,8 @@ const Contact = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title="Contact Us | 24/7 Bail Bonds | Fort Payne, AL"
-        description="Contact Connie's Bail Bonding 24/7. Call Richard 256-601-2041, Connie 256-630-2824, or Toni 256-440-0822. Located at 2700 Jordan Rd SW, Fort Payne."
+        title="Contact Us | 24/7 Bail Bonds Fort Payne AL"
+        description="Call Connie's Bail Bonding 24/7. Richard 256-601-2041, Connie 256-630-2824, Toni 256-440-0822. Office at 2700 Jordan Rd SW, Fort Payne, AL."
         canonical="/contact"
         schema={[
           getOrganizationSchema(),

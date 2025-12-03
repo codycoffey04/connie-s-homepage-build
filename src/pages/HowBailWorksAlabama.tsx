@@ -144,8 +144,8 @@ const HowBailWorksAlabama = () => {
   return (
     <>
       <SEO
-        title="How Bail Works in Alabama | Step-by-Step Guide | Connie's Bail Bonding"
-        description="Learn exactly how bail works in Alabama. From arrest to release, understand the bail process, types of bail, who sets bail amounts, and how to get someone out of jail fast."
+        title="How Bail Works in Alabama | Step-by-Step"
+        description="Learn how bail works in Alabama from arrest to release. Understand bail types, who sets amounts, and how to get someone out of jail fast. 24/7 help."
         canonical="/bail-bonds-guide/how-bail-works-alabama"
         schema={schemas}
       />

@@ -110,7 +110,7 @@ const BondForfeitureProcess = () => {
   return (
     <>
       <SEO
-        title="Bond Forfeiture in Alabama | What Happens If You Miss Court"
+        title="Bond Forfeiture in Alabama | Missed Court?"
         description="What happens when a defendant misses court in Alabama? Learn about the bond forfeiture process, the 90-day grace period, and what it means for cosigners."
         canonical="/bail-bonds-guide/bond-forfeiture-process"
         schema={schemas}

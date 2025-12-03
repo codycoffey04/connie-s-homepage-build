@@ -39,13 +39,22 @@ const PrivacyPolicy = () => {
         <title>Privacy Policy | Connie's Bail Bonding</title>
         <meta name="description" content="Learn how Connie's Bail Bonding collects, uses, and protects your personal information. Serving DeKalb and Cherokee Counties, Alabama." />
         <link rel="canonical" href="https://connies-bailbonds.com/privacy-policy" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta property="og:type" content="website" />
         <meta property="og:title" content="Privacy Policy | Connie's Bail Bonding" />
         <meta property="og:description" content="Learn how Connie's Bail Bonding collects, uses, and protects your personal information." />
         <meta property="og:url" content="https://connies-bailbonds.com/privacy-policy" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary" />
+        <meta property="og:image" content="https://connies-bailbonds.com/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Privacy Policy - Professional bail bond services" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:site_name" content="Connie's Bail Bonding" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Privacy Policy | Connie's Bail Bonding" />
         <meta name="twitter:description" content="Learn how Connie's Bail Bonding collects, uses, and protects your personal information." />
+        <meta name="twitter:image" content="https://connies-bailbonds.com/og-image.png" />
+        <meta name="twitter:image:alt" content="Privacy Policy - Professional bail bond services" />
         <script type="application/ld+json">{JSON.stringify(schema)}</script>
       </Helmet>
 

@@ -122,8 +122,8 @@ const BailBondScams = () => {
   return (
     <>
       <SEO
-        title="How to Avoid Bail Bond Scams in Alabama | Protect Yourself"
-        description="Protect yourself from bail bond scams in Alabama. Learn the warning signs of unlicensed bondsmen, common scams, and how to verify a legitimate bail bond company."
+        title="Bail Bond Scams in Alabama | How to Avoid"
+        description="Protect yourself from bail bond scams. Learn warning signs of unlicensed bondsmen, common scams, and how to verify a legitimate company in Alabama."
         canonical="/bail-bonds-guide/bail-bond-scams"
         schema={schemas}
       />

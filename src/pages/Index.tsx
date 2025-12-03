@@ -159,7 +159,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="24/7 Bail Bonds Fort Payne, AL | DeKalb & Cherokee County"
+        title="24/7 Bail Bonds Fort Payne | DeKalb County AL"
         description="Fast, confidential 24/7 bail bonds in Fort Payne, Rainsville, Henagar & DeKalb County AL. Licensed agents Richard, Connie & Toni. Call 256-601-2041 now."
         canonical="/"
         reviews={testimonials}

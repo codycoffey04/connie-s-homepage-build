@@ -148,8 +148,8 @@ const Pisgah = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Pisgah Bail Bonds | 24/7 Service | DeKalb County, AL"
-        description="Fast 24/7 bail bonds serving Pisgah, AL and DeKalb County. Licensed agents available now. Call 256-601-2041. Compassionate, professional service."
+        title="Pisgah Bail Bonds | 24/7 DeKalb County AL"
+        description="24/7 bail bonds serving Pisgah, AL and all of DeKalb County. Licensed agents available now. Call 256-601-2041. Compassionate, professional service."
         canonical="/pisgah"
         city="Pisgah"
         geo={{

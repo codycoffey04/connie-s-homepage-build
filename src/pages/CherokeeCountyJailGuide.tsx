@@ -87,7 +87,7 @@ const CherokeeCountyJailGuide = () => {
   return (
     <>
       <SEO
-        title="Cherokee County Jail Bail Guide | Centre, AL | Connie's Bail Bonding"
+        title="Cherokee County Jail Bail Guide | Centre AL"
         description="How to post bail at Cherokee County Detention Center in Centre, AL. Facility address, bail process, release times, and what to expect when bailing someone out."
         canonical="/bail-bonds-guide/cherokee-county-jail-guide"
         schema={schemas}

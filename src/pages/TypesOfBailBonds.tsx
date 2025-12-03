@@ -76,8 +76,8 @@ const TypesOfBailBonds = () => {
   return (
     <>
       <SEO
-        title="Types of Bail Bonds in Alabama | Cash, Surety, Property Bonds Explained"
-        description="Learn about the different types of bail bonds in Alabama: cash bonds, surety bonds, property bonds, and ROR. Understand which option is right for your situation."
+        title="Types of Bail Bonds in Alabama | Explained"
+        description="Learn about bail bond types in Alabama: cash bonds, surety bonds, property bonds, and ROR release. Find out which option fits your situation."
         canonical="/bail-bonds-guide/types-of-bail-bonds"
         schema={schemas}
       />

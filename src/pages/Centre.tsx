@@ -150,8 +150,8 @@ const Centre = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Centre Bail Bonds | 24/7 Service | Cherokee County, AL"
-        description="Fast 24/7 bail bonds serving Centre, AL and Cherokee County. Licensed agents who know the local system. Call 256-601-2041 now."
+        title="Centre Bail Bonds | 24/7 Cherokee County AL"
+        description="24/7 bail bonds serving Centre, AL and Cherokee County. Licensed agents who know the local court system. Call 256-601-2041 now. Fast release."
         canonical="/centre"
         city="Centre"
         geo={{

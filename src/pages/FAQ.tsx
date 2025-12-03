@@ -161,7 +161,7 @@ const FAQ = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Bail Bonds FAQ | Common Questions Answered"
+        title="Bail Bonds FAQ | Questions Answered 24/7"
         description="Get answers to frequently asked questions about bail bonds in Alabama. Learn about costs, the process, payment options, and more from licensed agents."
         canonical="/faq"
         schema={[

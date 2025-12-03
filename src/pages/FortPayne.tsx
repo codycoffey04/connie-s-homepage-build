@@ -175,8 +175,8 @@ const FortPayne = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Fort Payne Bail Bonds | 24/7 Service | DeKalb County, AL"
-        description="Fast 24/7 bail bonds in Fort Payne, AL. Licensed agents next to DeKalb County Detention Center. Call Richard 256-601-2041. No hidden fees."
+        title="Fort Payne Bail Bonds | 24/7 DeKalb County"
+        description="24/7 bail bonds in Fort Payne, AL. Licensed agents located next to DeKalb County Detention Center. Call Richard at 256-601-2041. No hidden fees."
         canonical="/fort-payne"
         city="Fort Payne"
         geo={{
