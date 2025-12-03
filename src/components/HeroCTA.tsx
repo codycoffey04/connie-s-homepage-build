@@ -23,17 +23,17 @@ export const HeroCTA = ({ variant = "single", phoneNumber, className = "" }: Her
   }
 
   return (
-    <div className={`flex flex-row gap-3 md:gap-4 ${className}`}>
+    <div className={`flex flex-col sm:flex-row gap-3 md:gap-4 justify-center ${className}`}>
       <a 
         href={`tel:${formattedNumber}`}
-        className="inline-flex items-center justify-center px-4 py-4 md:px-8 md:py-5 bg-brand-red text-white font-black text-base md:text-xl uppercase tracking-wide hover:bg-red-600 transition-all duration-200 shadow-2xl hover:shadow-red-500/50 hover:scale-105"
+        className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-4 md:px-8 md:py-5 bg-brand-red text-white font-black text-base md:text-xl uppercase tracking-wide hover:bg-red-600 transition-all duration-200 shadow-2xl hover:shadow-red-500/50 hover:scale-105"
       >
         <Phone className="mr-2 md:mr-3 h-5 w-5 md:h-6 md:w-6" />
         Call Now
       </a>
       <a 
         href={`sms:${formattedNumber}`}
-        className="inline-flex items-center justify-center px-4 py-4 md:px-8 md:py-5 bg-white text-black font-bold text-base md:text-xl uppercase tracking-wide hover:bg-gray-100 transition-all duration-200"
+        className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-4 md:px-8 md:py-5 bg-white text-black font-bold text-base md:text-xl uppercase tracking-wide hover:bg-gray-100 transition-all duration-200 shadow-lg hover:scale-105"
       >
         <MessageSquare className="mr-2 md:mr-3 h-5 w-5 md:h-6 md:w-6" />
         Text Us

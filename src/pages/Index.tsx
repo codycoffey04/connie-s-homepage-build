@@ -183,26 +183,50 @@ const Index = () => {
         style={{ backgroundImage: `url(${heroBg})` }}
       >
         {/* Subtle dark overlay for image contrast */}
-        <div className="absolute inset-0 bg-black/40" />
+        <div 
+          className="absolute inset-0"
+          style={{ background: 'radial-gradient(ellipse at center, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0.4) 100%)' }}
+        />
         
         <div className="relative container mx-auto px-4 md:px-6 max-w-7xl z-10 pb-32 md:pb-24">
           {/* Main Content - Centered */}
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="font-black mb-6 uppercase tracking-tighter leading-none">
-              <span className="block text-4xl md:text-5xl lg:text-6xl text-white mb-2">
-                Fast. Fair.
+            <h1 className="font-black mb-8 uppercase leading-none tracking-wide">
+              <span 
+                className="block text-4xl md:text-6xl lg:text-7xl text-white mb-1"
+                style={{ textShadow: '2px 2px 8px rgba(0, 0, 0, 0.7)' }}
+              >
+                Fast.
               </span>
-              <span className="block text-6xl md:text-8xl lg:text-9xl text-brand-red">
+              <span 
+                className="block text-4xl md:text-6xl lg:text-7xl text-white mb-1"
+                style={{ textShadow: '2px 2px 8px rgba(0, 0, 0, 0.7)' }}
+              >
+                Fair.
+              </span>
+              <span 
+                className="block text-5xl md:text-7xl lg:text-8xl text-brand-red"
+                style={{ textShadow: '2px 2px 8px rgba(0, 0, 0, 0.7)' }}
+              >
                 24/7.
               </span>
             </h1>
             
-            <p className="text-2xl md:text-3xl mb-8 text-white font-bold">
+            {/* Decorative divider */}
+            <div className="w-24 h-1 bg-brand-red mx-auto mb-6" />
+            
+            <p 
+              className="text-xl md:text-2xl lg:text-3xl mb-8 text-white font-semibold"
+              style={{ textShadow: '1px 1px 4px rgba(0, 0, 0, 0.6)' }}
+            >
               Northeast Alabama's Most Trusted Bail Bond Service
             </p>
             
-            <p className="text-lg md:text-xl mb-10 text-white max-w-xl mx-auto">
-              Family-owned. Licensed agents. Serving DeKalb & Cherokee Counties since 2019.
+            <p 
+              className="text-base md:text-lg mb-12 text-white/90 max-w-2xl mx-auto font-medium tracking-wide"
+              style={{ textShadow: '1px 1px 3px rgba(0, 0, 0, 0.5)' }}
+            >
+              Family-Owned&nbsp;&nbsp;|&nbsp;&nbsp;Licensed Agents&nbsp;&nbsp;|&nbsp;&nbsp;Serving DeKalb &amp; Cherokee Counties Since 2019
             </p>
             
             {/* Primary CTA - Centered Buttons */}
