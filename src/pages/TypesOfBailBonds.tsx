@@ -226,7 +226,7 @@ const TypesOfBailBonds = () => {
                 <p>Those with available cash who are confident the defendant will appear and want to avoid the non-refundable bondsman premium.</p>
               </div>
 
-              <div className="mt-6 p-6 bg-blue-50 rounded-lg border-l-4 border-blue-500">
+              <div className="mt-6 p-6 bg-primary/10 rounded-lg border-l-4 border-primary">
                 <p className="font-bold mb-2">Example:</p>
                 <p>Bail is $5,000. You pay $5,000 to the court. Case concludes 6 months later with defendant appearing at all hearings. Court returns $5,000 (minus ~$50 in court fees).</p>
               </div>

@@ -238,8 +238,8 @@ const WhatHappensAfterArrest = () => {
                 </ul>
               </div>
 
-              <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
-                <h3 className="text-xl font-bold text-blue-900 mb-2">Important:</h3>
+              <div className="bg-primary/10 p-6 rounded-lg border-l-4 border-primary">
+                <h3 className="text-xl font-bold text-foreground mb-2">Important:</h3>
                 <p className="text-lg">
                   The arrested person should remain calm, not resist, and avoid saying anything beyond basic identifying information until they have an attorney.
                 </p>
@@ -311,8 +311,8 @@ const WhatHappensAfterArrest = () => {
                 </ol>
               </div>
 
-              <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
-                <h3 className="text-xl font-bold text-blue-900 mb-3">How long does booking take?</h3>
+              <div className="bg-primary/10 p-6 rounded-lg border-l-4 border-primary">
+                <h3 className="text-xl font-bold text-foreground mb-3">How long does booking take?</h3>
                 <p className="text-lg">
                   Typically 1-3 hours, but can be longer if the jail is busy (weekend nights especially) or if there are issues with identification or warrants.
                 </p>
@@ -449,8 +449,8 @@ const WhatHappensAfterArrest = () => {
               </div>
 
               <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
-                  <h3 className="text-xl font-bold text-blue-900 mb-3">Can you contact them?</h3>
+                <div className="bg-primary/10 p-6 rounded-lg border-l-4 border-primary">
+                  <h3 className="text-xl font-bold text-foreground mb-3">Can you contact them?</h3>
                   <p className="text-lg">
                     The defendant can usually make phone calls once booking is complete. Calls from jail require the recipient to accept charges or use a prepaid jail phone system. They may call you to arrange bail.
                   </p>
@@ -580,15 +580,15 @@ const WhatHappensAfterArrest = () => {
                 </ul>
               </div>
 
-              <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
-                <h3 className="text-xl font-bold text-blue-900 mb-3">How long does release take?</h3>
+              <div className="bg-primary/10 p-6 rounded-lg border-l-4 border-primary">
+                <h3 className="text-xl font-bold text-foreground mb-3">How long does release take?</h3>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-700 font-bold">•</span>
+                    <span className="text-primary font-bold">•</span>
                     <span><strong>DeKalb County Jail:</strong> Typically 2-8 hours</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-700 font-bold">•</span>
+                    <span className="text-primary font-bold">•</span>
                     <span><strong>Cherokee County Jail:</strong> Typically 2-10 hours</span>
                   </li>
                 </ul>
@@ -613,23 +613,23 @@ const WhatHappensAfterArrest = () => {
               </p>
 
               <div className="grid md:grid-cols-2 gap-6 mb-6">
-                <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
-                  <h3 className="text-2xl font-bold text-blue-900 mb-4">Immediate priorities:</h3>
+                <div className="bg-primary/10 p-6 rounded-lg border-l-4 border-primary">
+                  <h3 className="text-2xl font-bold text-foreground mb-4">Immediate priorities:</h3>
                   <ol className="space-y-2">
                     <li className="flex items-start gap-3">
-                      <span className="text-blue-700 font-bold">1.</span>
+                      <span className="text-primary font-bold">1.</span>
                       <span>Get court date information (should be provided at release)</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-blue-700 font-bold">2.</span>
+                      <span className="text-primary font-bold">2.</span>
                       <span>Contact an attorney if they don't have one</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-blue-700 font-bold">3.</span>
+                      <span className="text-primary font-bold">3.</span>
                       <span>Understand bail conditions (travel restrictions, check-ins, etc.)</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-blue-700 font-bold">4.</span>
+                      <span className="text-primary font-bold">4.</span>
                       <span>Stay in contact with cosigner and bondsman</span>
                     </li>
                   </ol>

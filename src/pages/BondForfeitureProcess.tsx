@@ -312,8 +312,8 @@ const BondForfeitureProcess = () => {
                 </ul>
               </div>
 
-              <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500 mb-6">
-                <h3 className="text-2xl font-bold text-blue-900 mb-3">Why cooperation matters:</h3>
+              <div className="bg-primary/10 p-6 rounded-lg border-l-4 border-primary mb-6">
+                <h3 className="text-2xl font-bold text-foreground mb-3">Why cooperation matters:</h3>
                 <p className="text-lg">
                   If you help locate the defendant and they're returned to custody within the grace period, the forfeiture can be set aside. You may still owe some fees, but you avoid liability for the full bail amount.
                 </p>
@@ -480,19 +480,19 @@ const BondForfeitureProcess = () => {
               <p className="text-xl mb-6">Prevention is everything. Here's how to minimize forfeiture risk:</p>
 
               <div className="space-y-6">
-                <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
-                  <h3 className="text-2xl font-bold text-blue-900 mb-4">Before signing:</h3>
+                <div className="bg-primary/10 p-6 rounded-lg border-l-4 border-primary">
+                  <h3 className="text-2xl font-bold text-foreground mb-4">Before signing:</h3>
                   <ul className="space-y-2">
                     <li className="flex items-start gap-2">
-                      <span className="text-blue-600 font-bold">•</span>
+                      <span className="text-primary font-bold">•</span>
                       <span>Only cosign for someone you genuinely trust</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-blue-600 font-bold">•</span>
+                      <span className="text-primary font-bold">•</span>
                       <span>Assess their reliability—have they skipped before?</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-blue-600 font-bold">•</span>
+                      <span className="text-primary font-bold">•</span>
                       <span>Make sure they have stable housing and ties to the area</span>
                     </li>
                   </ul>
