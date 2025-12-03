@@ -19,6 +19,7 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { Clock, Building, Users, Phone, CheckCircle, ArrowRight, Scale, FileText } from "lucide-react";
+import { Link } from "react-router-dom";
 import { phoneNumbers } from "@/lib/cityUtils";
 import {
   getArticleSchema,
@@ -771,12 +772,12 @@ const WhatHappensAfterArrest = () => {
                 <p className="text-gray-600 mb-4">
                   Understanding Alabama's bail system, how it works, and what to expect.
                 </p>
-                <a
-                  href="/bail-bonds-guide/how-bail-works-alabama"
+                <Link
+                  to="/bail-bonds-guide/how-bail-works-alabama"
                   className="text-brand-red font-bold inline-flex items-center gap-2 hover:gap-3 transition-all"
                 >
                   Read Guide <ArrowRight className="h-5 w-5" />
-                </a>
+                </Link>
               </CardContent>
             </Card>
 
@@ -787,12 +788,12 @@ const WhatHappensAfterArrest = () => {
                 <p className="text-gray-600 mb-4">
                   How to post bail at DeKalb County Detention Center in Fort Payne, AL.
                 </p>
-                <a
-                  href="/bail-bonds-guide/dekalb-county-jail-guide"
+                <Link
+                  to="/bail-bonds-guide/dekalb-county-jail-guide"
                   className="text-brand-red font-bold inline-flex items-center gap-2 hover:gap-3 transition-all"
                 >
                   Read Guide <ArrowRight className="h-5 w-5" />
-                </a>
+                </Link>
               </CardContent>
             </Card>
 
@@ -803,12 +804,12 @@ const WhatHappensAfterArrest = () => {
                 <p className="text-gray-600 mb-4">
                   How to post bail at Cherokee County Detention Center in Centre, AL.
                 </p>
-                <a
-                  href="/bail-bonds-guide/cherokee-county-jail-guide"
+                <Link
+                  to="/bail-bonds-guide/cherokee-county-jail-guide"
                   className="text-brand-red font-bold inline-flex items-center gap-2 hover:gap-3 transition-all"
                 >
                   Read Guide <ArrowRight className="h-5 w-5" />
-                </a>
+                </Link>
               </CardContent>
             </Card>
           </div>
