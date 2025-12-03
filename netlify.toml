@@ -1,9 +1,5 @@
-[build]
-  command = "npm install && npm run build"
-  publish = "dist"
-
-[build.environment]
-  NODE_VERSION = "20"
+# Build settings are configured in Netlify UI
+# This file only handles redirects for SPA routing
 
 [[redirects]]
   from = "/*"
