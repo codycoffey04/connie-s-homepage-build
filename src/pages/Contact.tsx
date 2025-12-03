@@ -6,6 +6,7 @@ import { Section } from "@/components/Section";
 import { PhoneButton } from "@/components/PhoneButton";
 import { HeroCTA } from "@/components/HeroCTA";
 import { SlimContactBanner } from "@/components/SlimContactBanner";
+import { ContactForm } from "@/components/ContactForm";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { FAQList } from "@/components/FAQItem";
 import { phoneNumbers } from "@/lib/cityUtils";
@@ -308,6 +309,67 @@ const Contact = () => {
           <p className="text-center text-foreground/70 italic mt-6">
             Don't worry if you don't have all the details—we'll help you figure everything out.
           </p>
+        </div>
+      </Section>
+
+      {/* Contact Form Section */}
+      <Section>
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-black text-center mb-4 uppercase tracking-tight">
+            Can't Call Right Now?
+          </h2>
+          <p className="text-center text-lg text-foreground/80 mb-8">
+            Leave your information and we'll reach out as soon as possible.
+          </p>
+          
+          <div className="grid md:grid-cols-2 gap-8 items-start">
+            <ContactForm />
+            
+            <div className="space-y-6">
+              <Card className="bg-primary/5 border-2 border-primary/20">
+                <CardContent className="pt-6 space-y-4">
+                  <h3 className="font-bold text-xl flex items-center gap-2">
+                    <Phone className="w-5 h-5 text-primary" />
+                    Calling Is Faster
+                  </h3>
+                  <p className="text-foreground/80">
+                    If this is urgent, please call us directly. We answer 24/7—even at 3 AM on holidays.
+                  </p>
+                  <a 
+                    href="tel:2566012041"
+                    className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-bold hover:bg-primary/90 transition-colors"
+                  >
+                    <Phone className="w-5 h-5" />
+                    256-601-2041
+                  </a>
+                </CardContent>
+              </Card>
+              
+              <Card>
+                <CardContent className="pt-6 space-y-3">
+                  <h3 className="font-bold text-lg">Why Contact Us?</h3>
+                  <ul className="space-y-2 text-foreground/80">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <span>Free consultation—no obligation</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <span>Get bail amounts and process info</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <span>Payment plan options available</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <span>Licensed agents respond quickly</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
         </div>
       </Section>
 

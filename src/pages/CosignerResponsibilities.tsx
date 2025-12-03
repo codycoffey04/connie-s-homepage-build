@@ -2,6 +2,7 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { StickyCallButton } from "@/components/StickyCallButton";
 import { SEO } from "@/components/SEO";
+import { MidPageCTA } from "@/components/MidPageCTA";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { AnswerBox } from "@/components/AnswerBox";
 import { StatisticBox } from "@/components/StatisticBox";
@@ -547,6 +548,12 @@ const CosignerResponsibilities = () => {
             </div>
           </div>
         </AnimatedSection>
+
+        {/* Mid-Page CTA */}
+        <MidPageCTA 
+          headline="Have Questions About Cosigning?"
+          subtext="We'll explain everything clearly before you sign anything."
+        />
 
         {/* FAQ Section */}
         <AnimatedSection className="bg-gray-50 py-16">

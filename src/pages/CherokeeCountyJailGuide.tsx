@@ -2,6 +2,7 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { StickyCallButton } from "@/components/StickyCallButton";
 import { SEO } from "@/components/SEO";
+import { MidPageCTA } from "@/components/MidPageCTA";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { AnswerBox } from "@/components/AnswerBox";
 import { ReadingMeta } from "@/components/ReadingMeta";
@@ -404,6 +405,12 @@ const CherokeeCountyJailGuide = () => {
             </div>
           </div>
         </AnimatedSection>
+
+        {/* Mid-Page CTA */}
+        <MidPageCTA 
+          headline="Need Help With Cherokee County Jail?"
+          subtext="We serve Centre and all of Cherokee County 24/7."
+        />
 
         {/* FAQ Section */}
         <AnimatedSection className="bg-gray-50 py-16">

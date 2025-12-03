@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { StickyCallButton } from "@/components/StickyCallButton";
+import { MidPageCTA } from "@/components/MidPageCTA";
 import { SEO } from "@/components/SEO";
 import { FAQList } from "@/components/FAQItem";
 import { AnimatedCard } from "@/components/AnimatedCard";
@@ -215,6 +216,12 @@ const BailBondsGuide = () => {
           </div>
         </div>
       </section>
+
+      {/* Mid-Page CTA */}
+      <MidPageCTA 
+        headline="Ready to Get Started?"
+        subtext="Our guides are helpful, but sometimes you just need to talk to someone."
+      />
 
       {/* Common Questions Section */}
       <section className="py-16 bg-white">

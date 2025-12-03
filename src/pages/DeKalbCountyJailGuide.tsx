@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer";
 import { StickyCallButton } from "@/components/StickyCallButton";
 import { SEO } from "@/components/SEO";
 import { Section } from "@/components/Section";
+import { MidPageCTA } from "@/components/MidPageCTA";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { AnimatedCard } from "@/components/AnimatedCard";
 import { AnswerBox } from "@/components/AnswerBox";
@@ -567,6 +568,12 @@ const DeKalbCountyJailGuide = () => {
           </AnimatedSection>
         </div>
       </Section>
+
+      {/* Mid-Page CTA */}
+      <MidPageCTA 
+        headline="Need Help With DeKalb County Jail?"
+        subtext="We're located right next door—we can be there in minutes."
+      />
 
       {/* FAQs */}
       <Section>

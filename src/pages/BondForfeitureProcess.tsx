@@ -5,6 +5,7 @@ import { Section } from "@/components/Section";
 import { PhoneButton } from "@/components/PhoneButton";
 import { StickyCallButton } from "@/components/StickyCallButton";
 import { FAQList } from "@/components/FAQItem";
+import { MidPageCTA } from "@/components/MidPageCTA";
 import { AnswerBox } from "@/components/AnswerBox";
 import { StatisticBox } from "@/components/StatisticBox";
 import { ReadingMeta } from "@/components/ReadingMeta";
@@ -595,6 +596,12 @@ const BondForfeitureProcess = () => {
           </Card>
         </div>
       </Section>
+
+      {/* Mid-Page CTA */}
+      <MidPageCTA 
+        headline="Facing Bond Forfeiture?"
+        subtext="Call us immediately—we may be able to help resolve the situation."
+      />
 
       {/* FAQ Section */}
       <Section variant="muted">

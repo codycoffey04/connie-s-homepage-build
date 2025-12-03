@@ -5,6 +5,7 @@ import { Section } from "@/components/Section";
 import { PhoneButton } from "@/components/PhoneButton";
 import { StickyCallButton } from "@/components/StickyCallButton";
 import { FAQList } from "@/components/FAQItem";
+import { MidPageCTA } from "@/components/MidPageCTA";
 import { AnswerBox } from "@/components/AnswerBox";
 import { StatisticBox } from "@/components/StatisticBox";
 import { ReadingMeta } from "@/components/ReadingMeta";
@@ -601,6 +602,12 @@ const TypesOfBailBonds = () => {
           </p>
         </div>
       </Section>
+
+      {/* Mid-Page CTA */}
+      <MidPageCTA 
+        headline="Not Sure Which Bond Type Is Right?"
+        subtext="We'll explain your options clearly—no pressure, no jargon."
+      />
 
       {/* FAQ Section */}
       <Section>

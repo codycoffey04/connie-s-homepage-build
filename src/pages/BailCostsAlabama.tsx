@@ -5,6 +5,7 @@ import { StickyCallButton } from "@/components/StickyCallButton";
 import { Section } from "@/components/Section";
 import { SEO } from "@/components/SEO";
 import { FAQList } from "@/components/FAQItem";
+import { MidPageCTA } from "@/components/MidPageCTA";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { AnimatedCard } from "@/components/AnimatedCard";
 import { AnswerBox } from "@/components/AnswerBox";
@@ -440,6 +441,12 @@ const BailCostsAlabama = () => {
                 ))}
               </div>
             </AnimatedSection>
+
+            {/* Mid-Page CTA */}
+            <MidPageCTA 
+              headline="Need a Quick Cost Estimate?"
+              subtext="Tell us the bail amount and we'll calculate your total cost instantly."
+            />
 
             {/* FAQ */}
             <AnimatedSection delay={0.9}>
