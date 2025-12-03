@@ -301,29 +301,29 @@ const BailBondScams = () => {
                 Alabama requires all bail bond agents to be licensed through the Alabama Professional Bail Bonding Board (APBB).
               </p>
 
-              <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500 mb-6">
-                <h3 className="text-2xl font-bold text-blue-900 mb-4">To verify a license:</h3>
+              <div className="bg-primary/10 p-6 rounded-lg border-l-4 border-primary mb-6">
+                <h3 className="text-2xl font-bold text-foreground mb-4">To verify a license:</h3>
                 <ol className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <span className="text-blue-700 font-black text-xl">1.</span>
+                    <span className="text-primary font-black text-xl">1.</span>
                     <div>
                       <strong>Ask to see their license</strong> — Licensed bondsmen must carry their license and show it upon request (Ala. Admin. Code r. 153-X-3-.04)
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-blue-700 font-black text-xl">2.</span>
+                    <span className="text-primary font-black text-xl">2.</span>
                     <div>
                       <strong>Check the APBB online database</strong> — Visit www.apbb.alabama.gov and use the Licensee Search tool
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-blue-700 font-black text-xl">3.</span>
+                    <span className="text-primary font-black text-xl">3.</span>
                     <div>
                       <strong>Confirm the company name matches</strong> — The license should show the individual agent AND their company
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-blue-700 font-black text-xl">4.</span>
+                    <span className="text-primary font-black text-xl">4.</span>
                     <div>
                       <strong>Note the license number</strong> — Legitimate agents have a state-issued license number
                     </div>

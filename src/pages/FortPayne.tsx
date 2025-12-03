@@ -421,7 +421,7 @@ const FortPayne = () => {
       {/* Services */}
       <Section className="bg-white">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-navy-deep mb-4">
+          <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight text-foreground mb-4">
             Services for Fort Payne Residents
           </h2>
         </div>
@@ -444,7 +444,7 @@ const FortPayne = () => {
               <ul className="grid md:grid-cols-2 gap-4">
                 {services.map((service, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-teal mt-0.5 flex-shrink-0" />
+                    <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                     <span className="text-foreground/90">{service}</span>
                   </li>
                 ))}
@@ -469,7 +469,7 @@ const FortPayne = () => {
       {/* Neighborhoods */}
       <Section className="bg-muted">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-navy-deep mb-4">
+          <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight text-foreground mb-4">
             Fort Payne Neighborhoods We Serve
           </h2>
           <p className="text-lg text-foreground/80 max-w-3xl mx-auto">
