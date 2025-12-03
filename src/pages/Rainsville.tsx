@@ -24,13 +24,15 @@ import {
 import { phoneNumbers } from "@/lib/cityUtils";
 import { StickyCallButton } from "@/components/StickyCallButton";
 import { SEO } from "@/components/SEO";
-import { getLocalBusinessSchema, getBreadcrumbSchema, getSpeakableSchema, getFAQSchema, getCityServiceAreaSchema } from "@/lib/schemaUtils";
+import { getOrganizationSchema, getBreadcrumbSchema, getSpeakableSchema, getFAQSchema, getPlaceSchema } from "@/lib/schemaUtils";
+import { getCityBySlug } from "@/lib/cityUtils";
 import rainsvilleHeroBg from "@/assets/rainsville-hero-bg.jpg";
 import clockImage from "@/assets/24-7-clock.jpg";
 import legalGavel from "@/assets/legal-gavel.jpg";
 import scalesJustice from "@/assets/scales-justice.jpg";
 
 const Rainsville = () => {
+  const cityData = getCityBySlug('rainsville')!;
   const features = [
     {
       icon: Shield,
@@ -144,8 +146,8 @@ const Rainsville = () => {
           position: "34.4871;-85.8447"
         }}
         schema={[
-          getLocalBusinessSchema("Rainsville"),
-          getCityServiceAreaSchema("Rainsville"),
+          getOrganizationSchema(),
+          getPlaceSchema(cityData),
           getSpeakableSchema(),
           getFAQSchema(faqs),
           getBreadcrumbSchema([

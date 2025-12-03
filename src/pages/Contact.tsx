@@ -11,7 +11,7 @@ import { FAQList } from "@/components/FAQItem";
 import { phoneNumbers } from "@/lib/cityUtils";
 import { StickyCallButton } from "@/components/StickyCallButton";
 import { SEO } from "@/components/SEO";
-import { getLocalBusinessSchema, getBreadcrumbSchema, getFAQSchema, getSpeakableSchema } from "@/lib/schemaUtils";
+import { getOrganizationSchema, getBreadcrumbSchema, getFAQSchema, getSpeakableSchema } from "@/lib/schemaUtils";
 import contactHeroBg from "@/assets/contact-hero-bg.jpg";
 
 const serviceAreas = {
@@ -83,7 +83,7 @@ const Contact = () => {
         description="Contact Connie's Bail Bonding 24/7. Call Richard 256-601-2041, Connie 256-630-2824, or Toni 256-440-0822. Located at 2700 Jordan Rd SW, Fort Payne."
         canonical="/contact"
         schema={[
-          getLocalBusinessSchema(),
+          getOrganizationSchema(),
           getFAQSchema(contactFaqs),
           getSpeakableSchema(),
           getBreadcrumbSchema([

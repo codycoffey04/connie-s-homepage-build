@@ -15,7 +15,7 @@ import { SEO } from "@/components/SEO";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { AnimatedImage } from "@/components/AnimatedImage";
 import { AnimatedCard } from "@/components/AnimatedCard";
-import { getLocalBusinessSchema, getBreadcrumbSchema, getServiceSchema, getHowToSchema, getSpeakableSchema, getWebSiteSchema } from "@/lib/schemaUtils";
+import { getOrganizationSchema, getBreadcrumbSchema, getServiceSchema, getHowToSchema, getSpeakableSchema, getWebSiteSchema } from "@/lib/schemaUtils";
 import { 
   Clock, 
   Zap, 
@@ -164,7 +164,7 @@ const Index = () => {
         canonical="/"
         reviews={testimonials}
         schema={[
-          getLocalBusinessSchema(),
+          getOrganizationSchema(),
           getWebSiteSchema(),
           getServiceSchema(),
           getHowToSchema(),

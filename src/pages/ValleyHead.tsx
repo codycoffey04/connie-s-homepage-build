@@ -24,13 +24,15 @@ import {
 import { phoneNumbers } from "@/lib/cityUtils";
 import { StickyCallButton } from "@/components/StickyCallButton";
 import { SEO } from "@/components/SEO";
-import { getLocalBusinessSchema, getBreadcrumbSchema, getSpeakableSchema, getFAQSchema, getCityServiceAreaSchema } from "@/lib/schemaUtils";
+import { getOrganizationSchema, getBreadcrumbSchema, getSpeakableSchema, getFAQSchema, getPlaceSchema } from "@/lib/schemaUtils";
+import { getCityBySlug } from "@/lib/cityUtils";
 import valleyHeadHeroBg from "@/assets/valleyhead-hero-bg.jpg";
 import clockImage from "@/assets/24-7-clock.jpg";
 import legalGavel from "@/assets/legal-gavel.jpg";
 import scalesJustice from "@/assets/scales-justice.jpg";
 
 const ValleyHead = () => {
+  const cityData = getCityBySlug('valley-head')!;
   const features = [
     {
       icon: Shield,
@@ -144,8 +146,8 @@ const ValleyHead = () => {
           position: "34.5684;-85.6133"
         }}
         schema={[
-          getLocalBusinessSchema("Valley Head"),
-          getCityServiceAreaSchema("Valley Head"),
+          getOrganizationSchema(),
+          getPlaceSchema(cityData),
           getSpeakableSchema(),
           getFAQSchema(faqs),
           getBreadcrumbSchema([

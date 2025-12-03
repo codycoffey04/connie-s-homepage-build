@@ -20,7 +20,7 @@ import {
   getArticleSchema, 
   getFAQSchema, 
   getBreadcrumbSchema, 
-  getLocalBusinessSchema,
+  getOrganizationSchema,
   getDeKalbCountyJailSchema,
   getDeKalbCountyCourthouseSchema,
   getSpeakableSchema
@@ -67,7 +67,7 @@ const schemas = [
   getDeKalbCountyCourthouseSchema(),
   getSpeakableSchema(),
   getBreadcrumbSchema(breadcrumbs),
-  getLocalBusinessSchema()
+  getOrganizationSchema()
 ];
 
 const FAQItem = ({ question, answer }: { question: string; answer: string }) => {

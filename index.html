@@ -28,22 +28,16 @@
       gtag('config', 'G-CW21KP1EWW');
     </script>
     
-    <!-- Organization Schema -->
+    <!-- Organization Schema (minimal @id version - full schema injected dynamically) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
+      "@type": ["Organization", "LocalBusiness", "BailBondService"],
+      "@id": "https://connies-bailbonds.com/#organization",
       "name": "Connie's Bail Bonding",
-      "legalName": "Connie's Bail Bonding, LLC",
       "url": "https://connies-bailbonds.com",
-      "logo": "https://conniesbailbonding.com/og-image.jpg",
-      "description": "Licensed bail bond service serving DeKalb and Cherokee Counties in Alabama. Family-owned since 2019.",
-      "foundingDate": "2019",
-      "founder": {
-        "@type": "Person",
-        "name": "Connie",
-        "jobTitle": "Owner & Licensed Bail Agent"
-      },
+      "logo": "https://connies-bailbonds.com/og-image.jpg",
+      "telephone": "+1-256-601-2041",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "2700 Jordan Rd SW",
@@ -51,60 +45,7 @@
         "addressRegion": "AL",
         "postalCode": "35967",
         "addressCountry": "US"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "34.444389",
-        "longitude": "-85.719772"
-      },
-      "areaServed": [
-        {
-          "@type": "State",
-          "name": "Alabama"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "DeKalb County"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Cherokee County"
-        }
-      ],
-      "contactPoint": [
-        {
-          "@type": "ContactPoint",
-          "telephone": "+1-256-601-2041",
-          "contactType": "customer service",
-          "name": "Richard",
-          "areaServed": ["DeKalb County, Alabama", "Cherokee County, Alabama"],
-          "availableLanguage": "English",
-          "hoursAvailable": {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-            "opens": "00:00",
-            "closes": "23:59"
-          }
-        },
-        {
-          "@type": "ContactPoint",
-          "telephone": "+1-256-630-2824",
-          "contactType": "customer service",
-          "name": "Connie",
-          "availableLanguage": "English"
-        },
-        {
-          "@type": "ContactPoint",
-          "telephone": "+1-256-440-0822",
-          "contactType": "customer service",
-          "name": "Toni",
-          "availableLanguage": "English"
-        }
-      ],
-      "sameAs": [
-        "https://www.facebook.com/conniesbailbonding",
-        "https://www.google.com/maps/place/Connie's+Bail+Bonding"
-      ]
+      }
     }
     </script>
   </head>

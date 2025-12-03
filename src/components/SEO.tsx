@@ -6,7 +6,7 @@ interface SEOProps {
   description: string;
   canonical?: string;
   ogImage?: string;
-  schema?: object[];
+  schema?: object | object[];
   city?: string;
   reviews?: string[];
   geo?: {
@@ -18,24 +18,55 @@ interface SEOProps {
 
 export const SEO = ({ title, description, canonical, ogImage, schema, city, reviews, geo }: SEOProps) => {
   const fullTitle = `${title} | Connie's Bail Bonding`;
-  
-  // City-specific OG images
+  const siteUrl = 'https://connies-bailbonds.com';
+
   const getCityOGImage = () => {
     if (ogImage) return ogImage;
     if (city) {
       const citySlug = city.toLowerCase().replace(/\s+/g, '-');
-      return `https://connies-bailbonds.com/og-${citySlug}.jpg`;
+      return `${siteUrl}/og-${citySlug}.jpg`;
     }
-    return 'https://connies-bailbonds.com/og-image.jpg';
+    return `${siteUrl}/og-image.jpg`;
   };
-  
+
   const defaultImage = getCityOGImage();
-  const siteUrl = 'https://connies-bailbonds.com';
   const canonicalUrl = canonical ? `${siteUrl}${canonical}` : siteUrl;
+
+  // Combine all schemas into @graph array
+  const buildSchemaGraph = () => {
+    const graphItems: object[] = [];
+    
+    if (schema) {
+      if (Array.isArray(schema)) {
+        graphItems.push(...schema);
+      } else {
+        graphItems.push(schema);
+      }
+    }
+    
+    if (reviews && reviews.length > 0) {
+      graphItems.push(...getReviewSchema(reviews));
+    }
+    
+    if (graphItems.length === 0) return null;
+    
+    return {
+      "@context": "https://schema.org",
+      "@graph": graphItems.map(item => {
+        // Remove @context from individual items since it's at graph level
+        const { "@context": _, ...rest } = item as { "@context"?: string };
+        return rest;
+      })
+    };
+  };
+
+  const schemaGraph = buildSchemaGraph();
 
   return (
     <Helmet>
       <title>{fullTitle}</title>
+      
+      {/* Primary Meta */}
       <meta name="description" content={description} />
       <link rel="canonical" href={canonicalUrl} />
       
@@ -68,23 +99,16 @@ export const SEO = ({ title, description, canonical, ogImage, schema, city, revi
           <meta name="geo.placename" content={geo.placename} />
           <meta name="geo.region" content={geo.region} />
           <meta name="geo.position" content={geo.position} />
-          <meta name="ICBM" content={geo.position} />
+          <meta name="ICBM" content={geo.position.replace(';', ', ')} />
         </>
       )}
       
-      {/* Structured Data */}
-      {schema && schema.map((schemaItem, index) => (
-        <script key={index} type="application/ld+json">
-          {JSON.stringify(schemaItem)}
+      {/* Combined Schema Graph */}
+      {schemaGraph && (
+        <script type="application/ld+json">
+          {JSON.stringify(schemaGraph)}
         </script>
-      ))}
-      
-      {/* Review Schema */}
-      {reviews && reviews.length > 0 && getReviewSchema(reviews).map((reviewSchema, index) => (
-        <script key={`review-${index}`} type="application/ld+json">
-          {JSON.stringify(reviewSchema)}
-        </script>
-      ))}
+      )}
     </Helmet>
   );
 };

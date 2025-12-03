@@ -25,7 +25,7 @@ import {
   getFAQSchema,
   getSpeakableSchema,
   getBreadcrumbSchema,
-  getLocalBusinessSchema,
+  getOrganizationSchema,
   getCustomHowToSchema,
 } from "@/lib/schemaUtils";
 import afterArrestHeroBg from "@/assets/after-arrest-hero-bg.jpg";
@@ -106,7 +106,7 @@ const WhatHappensAfterArrest = () => {
     ),
     getSpeakableSchema(),
     getBreadcrumbSchema(breadcrumbs),
-    getLocalBusinessSchema(),
+    getOrganizationSchema(),
   ];
 
   return (
