@@ -1,5 +1,6 @@
 import { Phone } from "lucide-react";
 import { phoneNumbers } from "@/lib/cityUtils";
+import { trackPhoneClick } from "@/lib/analytics";
 
 interface MidPageCTAProps {
   headline?: string;
@@ -21,6 +22,7 @@ export const MidPageCTA = ({
         </p>
         <a 
           href={`tel:${phoneNumbers.richard.number.replace(/[^0-9]/g, "")}`}
+          onClick={() => trackPhoneClick("Richard", phoneNumbers.richard.number)}
           className="inline-flex items-center gap-3 bg-brand-red hover:bg-red-600 text-white font-black text-lg md:text-xl uppercase tracking-wide px-8 py-4 transition-all duration-200 hover:scale-105 active:scale-95"
         >
           <Phone className="w-6 h-6" />
