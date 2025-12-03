@@ -23,7 +23,7 @@ import {
   getFAQSchema,
   getSpeakableSchema,
   getBreadcrumbSchema,
-  getLocalBusinessSchema,
+  getOrganizationSchema,
 } from "@/lib/schemaUtils";
 import bailScamsHeroBg from "@/assets/bail-scams-hero-bg.jpg";
 
@@ -71,7 +71,7 @@ const BailBondScams = () => {
     getFAQSchema(faqs),
     getSpeakableSchema(),
     getBreadcrumbSchema(breadcrumbs),
-    getLocalBusinessSchema(),
+    getOrganizationSchema(),
   ];
 
   const scams = [

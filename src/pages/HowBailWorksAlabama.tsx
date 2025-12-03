@@ -15,7 +15,7 @@ import { GuideHero } from "@/components/GuideHero";
 import { Card, CardContent } from "@/components/ui/card";
 import { Scale, DollarSign, Building, Users, Phone, CheckCircle, XCircle, ArrowRight } from "lucide-react";
 import { phoneNumbers } from "@/lib/cityUtils";
-import { getArticleSchema, getFAQSchema, getCustomHowToSchema, getSpeakableSchema, getBreadcrumbSchema, getLocalBusinessSchema } from "@/lib/schemaUtils";
+import { getArticleSchema, getFAQSchema, getCustomHowToSchema, getSpeakableSchema, getBreadcrumbSchema, getOrganizationSchema } from "@/lib/schemaUtils";
 import howBailWorksHeroBg from "@/assets/how-bail-works-hero-bg.jpg";
 
 const HowBailWorksAlabama = () => {
@@ -137,7 +137,7 @@ const HowBailWorksAlabama = () => {
     ),
     getSpeakableSchema(),
     getBreadcrumbSchema(breadcrumbs),
-    getLocalBusinessSchema()
+    getOrganizationSchema()
   ];
 
   return (

@@ -24,13 +24,15 @@ import {
 import { phoneNumbers } from "@/lib/cityUtils";
 import { StickyCallButton } from "@/components/StickyCallButton";
 import { SEO } from "@/components/SEO";
-import { getLocalBusinessSchema, getBreadcrumbSchema, getSpeakableSchema, getFAQSchema, getCityServiceAreaSchema } from "@/lib/schemaUtils";
+import { getOrganizationSchema, getBreadcrumbSchema, getSpeakableSchema, getFAQSchema, getPlaceSchema } from "@/lib/schemaUtils";
+import { getCityBySlug } from "@/lib/cityUtils";
 import centreHeroBg from "@/assets/centre-hero-bg.jpg";
 import freedomHandcuffs from "@/assets/freedom-handcuffs.jpg";
 import legalGavel from "@/assets/legal-gavel.jpg";
 import scalesJustice from "@/assets/scales-justice.jpg";
 
 const Centre = () => {
+  const cityData = getCityBySlug('centre')!;
   const features = [
     {
       icon: Shield,
@@ -142,8 +144,8 @@ const Centre = () => {
           position: "34.1518;-85.6788"
         }}
         schema={[
-          getLocalBusinessSchema("Centre"),
-          getCityServiceAreaSchema("Centre"),
+          getOrganizationSchema(),
+          getPlaceSchema(cityData),
           getSpeakableSchema(),
           getFAQSchema(faqs),
           getBreadcrumbSchema([

@@ -25,7 +25,7 @@ import {
   getFAQSchema,
   getSpeakableSchema,
   getBreadcrumbSchema,
-  getLocalBusinessSchema,
+  getOrganizationSchema,
   getCustomHowToSchema,
 } from "@/lib/schemaUtils";
 import bondForfeitureHeroBg from "@/assets/bond-forfeiture-hero-bg.jpg";
@@ -102,7 +102,7 @@ const BondForfeitureProcess = () => {
     ),
     getSpeakableSchema(),
     getBreadcrumbSchema(breadcrumbs),
-    getLocalBusinessSchema(),
+    getOrganizationSchema(),
   ];
 
   return (

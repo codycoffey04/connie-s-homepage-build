@@ -15,7 +15,7 @@ import {
   getArticleSchema, 
   getFAQSchema, 
   getBreadcrumbSchema, 
-  getLocalBusinessSchema,
+  getOrganizationSchema,
   getCherokeeCountyJailSchema,
   getCherokeeCourthouseSchema,
   getSpeakableSchema
@@ -60,7 +60,7 @@ const schemas = [
     { name: "Bail Bonds Guide", url: "/bail-bonds-guide" },
     { name: "Cherokee County Jail Guide", url: "/bail-bonds-guide/cherokee-county-jail-guide" }
   ]),
-  getLocalBusinessSchema()
+  getOrganizationSchema()
 ];
 
 const FAQItem = ({ question, answer }: { question: string; answer: string }) => {

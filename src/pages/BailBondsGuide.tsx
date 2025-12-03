@@ -10,7 +10,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Phone, ArrowRight, Scale, DollarSign, Building, Users, FileText, Clock, CreditCard, AlertTriangle, ShieldAlert } from "lucide-react";
 import { phoneNumbers } from "@/lib/cityUtils";
-import { getLocalBusinessSchema, getBreadcrumbSchema, getFAQSchema, getWebPageSchema, getItemListSchema, getSpeakableSchema } from "@/lib/schemaUtils";
+import { getOrganizationSchema, getBreadcrumbSchema, getFAQSchema, getWebPageSchema, getItemListSchema, getSpeakableSchema } from "@/lib/schemaUtils";
 import bailGuideHeroBg from "@/assets/bail-guide-hero-bg.jpg";
 
 const BailBondsGuide = () => {
@@ -107,7 +107,7 @@ const BailBondsGuide = () => {
 
   // Schema data
   const schemas = [
-    getLocalBusinessSchema(),
+    getOrganizationSchema(),
     getWebPageSchema(
       "Alabama Bail Bonds Guide",
       "Comprehensive guide to bail bonds in DeKalb and Cherokee Counties, Alabama. Learn about bail costs, the bail process, cosigner responsibilities, and more.",

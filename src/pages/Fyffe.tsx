@@ -24,13 +24,15 @@ import {
 import { phoneNumbers } from "@/lib/cityUtils";
 import { StickyCallButton } from "@/components/StickyCallButton";
 import { SEO } from "@/components/SEO";
-import { getLocalBusinessSchema, getBreadcrumbSchema, getSpeakableSchema, getFAQSchema, getCityServiceAreaSchema } from "@/lib/schemaUtils";
+import { getOrganizationSchema, getBreadcrumbSchema, getSpeakableSchema, getFAQSchema, getPlaceSchema } from "@/lib/schemaUtils";
+import { getCityBySlug } from "@/lib/cityUtils";
 import fyffeHeroBg from "@/assets/fyffe-hero-bg.jpg";
 import freedomHandcuffs from "@/assets/freedom-handcuffs.jpg";
 import legalGavel from "@/assets/legal-gavel.jpg";
 import scalesJustice from "@/assets/scales-justice.jpg";
 
 const Fyffe = () => {
+  const cityData = getCityBySlug('fyffe')!;
   const features = [
     {
       icon: MapPin,
@@ -142,8 +144,8 @@ const Fyffe = () => {
           position: "34.4476;-85.9053"
         }}
         schema={[
-          getLocalBusinessSchema("Fyffe"),
-          getCityServiceAreaSchema("Fyffe"),
+          getOrganizationSchema(),
+          getPlaceSchema(cityData),
           getSpeakableSchema(),
           getFAQSchema(faqs),
           getBreadcrumbSchema([

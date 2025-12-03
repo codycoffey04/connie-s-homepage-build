@@ -24,13 +24,15 @@ import {
 import { phoneNumbers } from "@/lib/cityUtils";
 import { StickyCallButton } from "@/components/StickyCallButton";
 import { SEO } from "@/components/SEO";
-import { getLocalBusinessSchema, getBreadcrumbSchema, getSpeakableSchema, getFAQSchema, getCityServiceAreaSchema } from "@/lib/schemaUtils";
+import { getOrganizationSchema, getBreadcrumbSchema, getSpeakableSchema, getFAQSchema, getPlaceSchema } from "@/lib/schemaUtils";
+import { getCityBySlug } from "@/lib/cityUtils";
 import henagarHeroBg from "@/assets/henagar-hero-bg.jpg";
 import supportHands from "@/assets/support-hands.jpg";
 import legalGavel from "@/assets/legal-gavel.jpg";
 import paymentMethods from "@/assets/payment-methods.jpg";
 
 const Henagar = () => {
+  const cityData = getCityBySlug('henagar')!;
   const features = [
     {
       icon: MapPin,
@@ -140,8 +142,8 @@ const Henagar = () => {
           position: "34.6370;-85.7758"
         }}
         schema={[
-          getLocalBusinessSchema("Henagar"),
-          getCityServiceAreaSchema("Henagar"),
+          getOrganizationSchema(),
+          getPlaceSchema(cityData),
           getSpeakableSchema(),
           getFAQSchema(faqs),
           getBreadcrumbSchema([

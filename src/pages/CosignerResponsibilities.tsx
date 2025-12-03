@@ -17,7 +17,7 @@ import {
   getFAQSchema, 
   getSpeakableSchema,
   getBreadcrumbSchema, 
-  getLocalBusinessSchema 
+  getOrganizationSchema 
 } from "@/lib/schemaUtils";
 import cosignerHeroBg from "@/assets/cosigner-hero-bg.jpg";
 
@@ -57,7 +57,7 @@ const schemas = [
     { name: "Bail Bonds Guide", url: "/bail-bonds-guide" },
     { name: "Cosigner Responsibilities", url: "/bail-bonds-guide/cosigner-responsibilities" }
   ]),
-  getLocalBusinessSchema()
+  getOrganizationSchema()
 ];
 
 const FAQItem = ({ question, answer }: { question: string; answer: string }) => {

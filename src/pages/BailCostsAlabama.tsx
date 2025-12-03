@@ -15,7 +15,7 @@ import { GuideHero } from "@/components/GuideHero";
 import { Card, CardContent } from "@/components/ui/card";
 import { Scale, Users, CreditCard, Phone, ShieldCheck, ArrowRight, AlertCircle, CheckCircle } from "lucide-react";
 import { phoneNumbers } from "@/lib/cityUtils";
-import { getArticleSchema, getFAQSchema, getSpeakableSchema, getBreadcrumbSchema, getLocalBusinessSchema } from "@/lib/schemaUtils";
+import { getArticleSchema, getFAQSchema, getSpeakableSchema, getBreadcrumbSchema, getOrganizationSchema } from "@/lib/schemaUtils";
 import bailCostsHeroBg from "@/assets/bail-costs-hero-bg.jpg";
 
 const BailCostsAlabama = () => {
@@ -78,7 +78,7 @@ const BailCostsAlabama = () => {
     getFAQSchema(faqs),
     getSpeakableSchema(),
     getBreadcrumbSchema(breadcrumbs),
-    getLocalBusinessSchema()
+    getOrganizationSchema()
   ];
 
   return (

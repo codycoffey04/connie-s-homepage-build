@@ -25,7 +25,7 @@ import {
   getFAQSchema,
   getSpeakableSchema,
   getBreadcrumbSchema,
-  getLocalBusinessSchema,
+  getOrganizationSchema,
 } from "@/lib/schemaUtils";
 import typesBailBondsHeroBg from "@/assets/types-bail-bonds-hero-bg.jpg";
 
@@ -68,7 +68,7 @@ const TypesOfBailBonds = () => {
     getFAQSchema(faqs),
     getSpeakableSchema(),
     getBreadcrumbSchema(breadcrumbs),
-    getLocalBusinessSchema(),
+    getOrganizationSchema(),
   ];
 
   return (

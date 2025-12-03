@@ -26,13 +26,15 @@ import {
 import { phoneNumbers } from "@/lib/cityUtils";
 import { StickyCallButton } from "@/components/StickyCallButton";
 import { SEO } from "@/components/SEO";
-import { getLocalBusinessSchema, getBreadcrumbSchema, getSpeakableSchema, getFAQSchema, getCityServiceAreaSchema } from "@/lib/schemaUtils";
+import { getOrganizationSchema, getBreadcrumbSchema, getSpeakableSchema, getFAQSchema, getPlaceSchema } from "@/lib/schemaUtils";
+import { getCityBySlug } from "@/lib/cityUtils";
 import fortPayneHeroBg from "@/assets/hero-bg.jpg";
 import supportHands from "@/assets/support-hands.jpg";
 import legalGavel from "@/assets/legal-gavel.jpg";
 import paymentMethods from "@/assets/payment-methods.jpg";
 
 const FortPayne = () => {
+  const cityData = getCityBySlug('fort-payne')!;
   const features = [
     {
       icon: MapPin,
@@ -167,8 +169,8 @@ const FortPayne = () => {
           position: "34.444389;-85.719772"
         }}
         schema={[
-          getLocalBusinessSchema("Fort Payne"),
-          getCityServiceAreaSchema("Fort Payne"),
+          getOrganizationSchema(),
+          getPlaceSchema(cityData),
           getSpeakableSchema(),
           getFAQSchema(faqs),
           getBreadcrumbSchema([

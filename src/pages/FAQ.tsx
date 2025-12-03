@@ -5,7 +5,7 @@ import { HeroCTA } from "@/components/HeroCTA";
 import { FAQList } from "@/components/FAQItem";
 import { StickyCallButton } from "@/components/StickyCallButton";
 import { SEO } from "@/components/SEO";
-import { getLocalBusinessSchema, getBreadcrumbSchema, getFAQSchema, getSpeakableSchema } from "@/lib/schemaUtils";
+import { getOrganizationSchema, getBreadcrumbSchema, getFAQSchema, getSpeakableSchema } from "@/lib/schemaUtils";
 import scalesJustice from "@/assets/scales-justice.jpg";
 
 const generalFaqs = [
@@ -164,7 +164,7 @@ const FAQ = () => {
         description="Get answers to frequently asked questions about bail bonds in Alabama. Learn about costs, the process, payment options, and more from licensed agents."
         canonical="/faq"
         schema={[
-          getLocalBusinessSchema(),
+          getOrganizationSchema(),
           getFAQSchema(allFaqs),
           getSpeakableSchema(),
           getBreadcrumbSchema([

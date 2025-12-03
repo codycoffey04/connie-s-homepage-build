@@ -24,13 +24,15 @@ import {
 import { phoneNumbers } from "@/lib/cityUtils";
 import { StickyCallButton } from "@/components/StickyCallButton";
 import { SEO } from "@/components/SEO";
-import { getLocalBusinessSchema, getBreadcrumbSchema, getSpeakableSchema, getFAQSchema, getCityServiceAreaSchema } from "@/lib/schemaUtils";
+import { getOrganizationSchema, getBreadcrumbSchema, getSpeakableSchema, getFAQSchema, getPlaceSchema } from "@/lib/schemaUtils";
+import { getCityBySlug } from "@/lib/cityUtils";
 import pisgahHeroBg from "@/assets/pisgah-hero-bg.jpg";
 import supportHands from "@/assets/support-hands.jpg";
 import legalGavel from "@/assets/legal-gavel.jpg";
 import paymentMethods from "@/assets/payment-methods.jpg";
 
 const Pisgah = () => {
+  const cityData = getCityBySlug('pisgah')!;
   const features = [
     {
       icon: Shield,
@@ -140,8 +142,8 @@ const Pisgah = () => {
           position: "34.6838;-85.8411"
         }}
         schema={[
-          getLocalBusinessSchema("Pisgah"),
-          getCityServiceAreaSchema("Pisgah"),
+          getOrganizationSchema(),
+          getPlaceSchema(cityData),
           getSpeakableSchema(),
           getFAQSchema(faqs),
           getBreadcrumbSchema([
