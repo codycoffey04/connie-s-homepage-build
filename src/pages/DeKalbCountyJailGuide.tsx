@@ -190,8 +190,8 @@ const DeKalbCountyJailGuide = () => {
                   </div>
                 </div>
 
-                <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500 mt-6">
-                  <p className="text-lg font-semibold text-blue-900">
+                <div className="bg-primary/10 p-6 rounded-lg border-l-4 border-primary mt-6">
+                  <p className="text-lg font-semibold text-foreground">
                     Connie's Bail Bonding is located at <strong>2700 Jordan Rd SW</strong>, directly across from the DeKalb County Detention Center. We're the closest bondsman to the jail—ready to post bail immediately.
                   </p>
                 </div>
@@ -417,9 +417,9 @@ const DeKalbCountyJailGuide = () => {
                   </ul>
                 </div>
 
-                <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
+                <div className="bg-primary/10 p-6 rounded-lg border-l-4 border-primary">
                   <p className="text-lg">
-                    <strong className="text-blue-900">Alabama law requires "prompt release"</strong> once bail is posted properly. While 2-8 hours is typical at DeKalb County, it can occasionally be faster or slower based on circumstances beyond our control.
+                    <strong className="text-foreground">Alabama law requires "prompt release"</strong> once bail is posted properly. While 2-8 hours is typical at DeKalb County, it can occasionally be faster or slower based on circumstances beyond our control.
                   </p>
                 </div>
               </CardContent>

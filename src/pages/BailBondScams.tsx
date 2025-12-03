@@ -462,8 +462,8 @@ const BailBondScams = () => {
                 </li>
               </ol>
 
-              <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500 mt-6">
-                <h3 className="text-xl font-bold text-blue-900 mb-2">APBB Complaint Contact:</h3>
+              <div className="bg-primary/10 p-6 rounded-lg border-l-4 border-primary mt-6">
+                <h3 className="text-xl font-bold text-foreground mb-2">APBB Complaint Contact:</h3>
                 <p className="text-lg">
                   Alabama Professional Bail Bonding Board<br />
                   www.apbb.alabama.gov
