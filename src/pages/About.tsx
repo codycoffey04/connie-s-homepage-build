@@ -114,17 +114,17 @@ const About = () => {
         <div className="relative container mx-auto px-4 md:px-6 max-w-7xl z-10 pb-32 md:pb-24">
           {/* Main Content - Left Aligned */}
           <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 text-white uppercase tracking-tighter leading-none">
-              About<br />
-              Connie's<br />
-              <span className="text-brand-red">Bail Bonding</span>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 text-white uppercase tracking-wide leading-none">
+              <span style={{ textShadow: '2px 2px 8px rgba(0, 0, 0, 0.7)' }}>About</span><br />
+              <span style={{ textShadow: '2px 2px 8px rgba(0, 0, 0, 0.7)' }}>Connie's</span><br />
+              <span className="text-brand-red" style={{ textShadow: '2px 2px 8px rgba(0, 0, 0, 0.7)' }}>Bail Bonding</span>
             </h1>
             
-            <p className="text-2xl md:text-3xl mb-8 text-white font-bold">
+            <p className="text-2xl md:text-3xl mb-8 text-white font-bold" style={{ textShadow: '1px 1px 4px rgba(0, 0, 0, 0.6)' }}>
               Family-Owned & Operated Since 2019
             </p>
             
-            <p className="text-lg md:text-xl mb-10 text-white/90 max-w-xl">
+            <p className="text-lg md:text-xl mb-10 text-white/90 max-w-xl" style={{ textShadow: '1px 1px 3px rgba(0, 0, 0, 0.5)' }}>
               Meet Connie, Toni, and Richard — licensed Alabama bail bond agents serving DeKalb & Cherokee Counties with compassion and professionalism.
             </p>
             
