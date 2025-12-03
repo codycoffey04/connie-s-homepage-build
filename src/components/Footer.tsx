@@ -5,7 +5,7 @@ export const Footer = () => {
   return (
     <footer className="bg-black border-t-4 border-brand-red text-white py-16">
       <div className="container mx-auto px-4 md:px-6 max-w-7xl">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12 mb-12">
           {/* Contact Us */}
           <div>
             <h3 className="text-white font-black text-lg mb-6 uppercase tracking-tight">Contact Us</h3>
@@ -63,6 +63,19 @@ export const Footer = () => {
               </Link>
               <Link to="/bail-bonds-guide" className="block text-white/90 hover:text-white transition-colors">
                 Bail Guide
+              </Link>
+            </div>
+          </div>
+
+          {/* Legal */}
+          <div>
+            <h3 className="text-white font-black text-lg mb-6 uppercase tracking-tight">Legal</h3>
+            <div className="space-y-3">
+              <Link to="/privacy-policy" className="block text-white/90 hover:text-white transition-colors">
+                Privacy Policy
+              </Link>
+              <Link to="/terms-of-service" className="block text-white/90 hover:text-white transition-colors">
+                Terms of Service
               </Link>
             </div>
           </div>
