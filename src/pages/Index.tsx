@@ -186,8 +186,8 @@ const Index = () => {
         <div className="absolute inset-0 bg-black/40" />
         
         <div className="relative container mx-auto px-4 md:px-6 max-w-7xl z-10 pb-32 md:pb-24">
-          {/* Main Content - Left Aligned, Bold */}
-          <div className="max-w-3xl">
+          {/* Main Content - Centered */}
+          <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 text-white uppercase tracking-tighter leading-none">
               Fast.<br />
               Fair.<br />
@@ -195,15 +195,15 @@ const Index = () => {
             </h1>
             
             <p className="text-2xl md:text-3xl mb-8 text-white font-bold">
-              Alabama's Most Trusted Bail Bond Service
+              Northeast Alabama's Most Trusted Bail Bond Service
             </p>
             
-            <p className="text-lg md:text-xl mb-10 text-white max-w-xl">
+            <p className="text-lg md:text-xl mb-10 text-white max-w-xl mx-auto">
               Family-owned. Licensed agents. Serving DeKalb & Cherokee Counties since 2019.
             </p>
             
-            {/* Primary CTA - Single Bold Button */}
-            <HeroCTA className="mb-12" />
+            {/* Primary CTA - Centered Buttons */}
+            <HeroCTA className="mb-12 justify-center" />
           </div>
         </div>
         
