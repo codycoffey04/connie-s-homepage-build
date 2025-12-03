@@ -22,8 +22,8 @@ export const getOrganizationSchema = () => ({
   "description": "Licensed 24/7 bail bond service serving DeKalb and Cherokee Counties in Northeast Alabama. Family-owned since 2019, we provide fast, compassionate bail bond services with flexible payment plans.",
   "slogan": "24/7 Bail Bonds — We Answer When You Call",
   "url": SITE_URL,
-  "logo": `${SITE_URL}/og-image.jpg`,
-  "image": `${SITE_URL}/og-image.jpg`,
+  "logo": `${SITE_URL}/og-image.png`,
+  "image": `${SITE_URL}/og-image.png`,
   
   // Founding & Leadership
   "foundingDate": "2019",
@@ -505,7 +505,7 @@ export const getArticleSchema = (
     "name": "Connie's Bail Bonding",
     "logo": {
       "@type": "ImageObject",
-      "url": `${SITE_URL}/og-image.jpg`
+      "url": `${SITE_URL}/og-image.png`
     }
   },
   "datePublished": datePublished,
