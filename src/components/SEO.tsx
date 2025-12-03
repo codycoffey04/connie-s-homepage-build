@@ -26,7 +26,7 @@ export const SEO = ({ title, description, canonical, ogImage, schema, city, revi
       const citySlug = city.toLowerCase().replace(/\s+/g, '-');
       return `${siteUrl}/og-${citySlug}.jpg`;
     }
-    return `${siteUrl}/og-image.jpg`;
+    return `${siteUrl}/og-image.png`;
   };
 
   const defaultImage = getCityOGImage();
