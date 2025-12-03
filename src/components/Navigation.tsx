@@ -29,7 +29,7 @@ export const Navigation = () => {
       <div className="container mx-auto px-4 md:px-6 max-w-7xl">
         <div className="flex h-20 items-center justify-between">
           <Link to="/" className="flex items-center">
-            <h1 className="text-2xl md:text-3xl font-black text-white uppercase tracking-tight hover:text-brand-red transition-colors whitespace-nowrap">
+            <h1 className="text-2xl md:text-3xl font-black text-white uppercase tracking-tight hover:text-brand-red transition-colors sm:whitespace-nowrap">
               CONNIE'S BAIL BONDING
             </h1>
           </Link>
