@@ -304,6 +304,7 @@ export const getServiceSchema = () => ({
 export const getBreadcrumbSchema = (items: { name: string; url: string }[]) => ({
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
+  "name": "Breadcrumb",
   "itemListElement": items.map((item, index) => ({
     "@type": "ListItem",
     "position": index + 1,
@@ -489,6 +490,7 @@ export const getAuthorSchema = (authorName: "Connie" | "Richard" | "Toni" = "Con
   return {
     "@type": "Person",
     "name": authors[authorName].name,
+    "url": `${SITE_URL}/about`,
     "jobTitle": authors[authorName].title,
     "worksFor": {
       "@type": "BailBondService",
@@ -507,14 +509,20 @@ export const getArticleSchema = (
   headline: string,
   description: string,
   url: string,
-  datePublished: string = "2024-01-15",
-  dateModified: string = "2024-12-03",
+  datePublished: string = "2024-01-15T00:00:00-06:00",
+  dateModified: string = "2024-12-03T00:00:00-06:00",
   authorName: "Connie" | "Richard" | "Toni" = "Connie"
 ) => ({
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": headline,
   "description": description,
+  "image": {
+    "@type": "ImageObject",
+    "url": `${SITE_URL}/og-image.png`,
+    "width": 1200,
+    "height": 630
+  },
   "author": getAuthorSchema(authorName),
   "publisher": {
     "@type": "Organization",
