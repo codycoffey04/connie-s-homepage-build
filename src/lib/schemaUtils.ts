@@ -315,6 +315,7 @@ export const getBreadcrumbSchema = (items: { name: string; url: string }[]) => (
 export const getFAQSchema = (faqs: { question: string; answer: string }[]) => ({
   "@context": "https://schema.org",
   "@type": "FAQPage",
+  "name": "Frequently Asked Questions",
   "mainEntity": faqs.map(faq => ({
     "@type": "Question",
     "name": faq.question,
@@ -439,9 +440,25 @@ export const getItemListSchema = (items: { name: string; description: string; ur
     "position": index + 1,
     "item": {
       "@type": "Article",
-      "name": item.name,
+      "headline": item.name,
       "description": item.description,
-      "url": `${SITE_URL}${item.url}`
+      "url": `${SITE_URL}${item.url}`,
+      "author": getAuthorSchema("Connie"),
+      "publisher": {
+        "@type": "Organization",
+        "@id": ORG_ID,
+        "name": "Connie's Bail Bonding",
+        "logo": {
+          "@type": "ImageObject",
+          "url": `${SITE_URL}/og-image.png`
+        }
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": `${SITE_URL}/og-image.png`
+      },
+      "datePublished": "2024-01-15",
+      "dateModified": "2024-12-03"
     }
   }))
 });
@@ -539,7 +556,6 @@ export const getWebSiteSchema = () => ({
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "Connie's Bail Bonding",
-  "url": SITE_URL,
   "description": "24/7 bail bond services in Fort Payne, DeKalb County, and Cherokee County, Alabama",
   "potentialAction": {
     "@type": "SearchAction",

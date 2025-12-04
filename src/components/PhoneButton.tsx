@@ -5,11 +5,10 @@ import { trackPhoneClick } from "@/lib/analytics";
 interface PhoneButtonProps {
   name: string;
   number: string;
-  variant?: "primary" | "secondary";
   className?: string;
 }
 
-export const PhoneButton = ({ name, number, variant = "primary", className }: PhoneButtonProps) => {
+export const PhoneButton = ({ name, number, className }: PhoneButtonProps) => {
   const formattedNumber = number.replace(/[^0-9]/g, "");
   
   return (

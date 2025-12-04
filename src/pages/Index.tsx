@@ -168,10 +168,7 @@ const Index = () => {
           getWebSiteSchema(),
           getServiceSchema(),
           getHowToSchema(),
-          getSpeakableSchema(),
-          getBreadcrumbSchema([
-            { name: "Home", url: "/" }
-          ])
+          getSpeakableSchema()
         ]}
       />
       <Navigation />

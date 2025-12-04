@@ -20,7 +20,7 @@ export const ContactForm = () => {
       const response = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData as any).toString(),
+        body: new URLSearchParams(formData as unknown as Record<string, string>).toString(),
       });
 
       if (response.ok) {
@@ -32,7 +32,7 @@ export const ContactForm = () => {
       } else {
         throw new Error("Form submission failed");
       }
-    } catch (error) {
+    } catch (_error) {
       toast({
         title: "Error",
         description: "Something went wrong. Please call us instead.",

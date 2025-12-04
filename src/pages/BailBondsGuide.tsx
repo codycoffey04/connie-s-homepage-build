@@ -11,7 +11,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Phone, ArrowRight, Scale, DollarSign, Building, Users, FileText, Clock, CreditCard, AlertTriangle, ShieldAlert } from "lucide-react";
 import { phoneNumbers } from "@/lib/cityUtils";
-import { getOrganizationSchema, getBreadcrumbSchema, getFAQSchema, getWebPageSchema, getItemListSchema, getSpeakableSchema } from "@/lib/schemaUtils";
+import { getOrganizationSchema, getFAQSchema, getWebPageSchema, getItemListSchema, getSpeakableSchema } from "@/lib/schemaUtils";
 import bailGuideHeroBg from "@/assets/bail-guide-hero-bg.jpg";
 
 const BailBondsGuide = () => {
@@ -119,11 +119,7 @@ const BailBondsGuide = () => {
     ),
     getFAQSchema(guideFaqs),
     getSpeakableSchema(),
-    getItemListSchema(guideCards),
-    getBreadcrumbSchema([
-      { name: "Home", url: "/" },
-      { name: "Bail Bonds Guide", url: "/bail-bonds-guide" }
-    ])
+    getItemListSchema(guideCards)
   ];
 
   return (

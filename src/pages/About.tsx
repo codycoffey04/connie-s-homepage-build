@@ -11,7 +11,6 @@ import { Footer } from "@/components/Footer";
 import { StickyCallButton } from "@/components/StickyCallButton";
 import { SEO } from "@/components/SEO";
 import { getOrganizationSchema, getBreadcrumbSchema, getSpeakableSchema } from "@/lib/schemaUtils";
-import { phoneNumbers } from "@/lib/cityUtils";
 import aboutHeroBg from "@/assets/about-hero-bg.jpg";
 
 const About = () => {
