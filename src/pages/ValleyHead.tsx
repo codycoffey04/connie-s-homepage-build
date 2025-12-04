@@ -165,7 +165,7 @@ const ValleyHead = () => {
           getOrganizationSchema(),
           getPlaceSchema(cityData),
           getSpeakableSchema(),
-          getFAQSchema(faqs),
+          getFAQSchema(faqs, "/valley-head"),
           getBreadcrumbSchema([
             { name: "Home", url: "/" },
             { name: "Valley Head", url: "/valley-head" }

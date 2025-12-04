@@ -161,7 +161,7 @@ const Henagar = () => {
           getOrganizationSchema(),
           getPlaceSchema(cityData),
           getSpeakableSchema(),
-          getFAQSchema(faqs),
+          getFAQSchema(faqs, "/henagar"),
           getBreadcrumbSchema([
             { name: "Home", url: "/" },
             { name: "Henagar", url: "/henagar" }

@@ -163,7 +163,7 @@ const Fyffe = () => {
           getOrganizationSchema(),
           getPlaceSchema(cityData),
           getSpeakableSchema(),
-          getFAQSchema(faqs),
+          getFAQSchema(faqs, "/fyffe"),
           getBreadcrumbSchema([
             { name: "Home", url: "/" },
             { name: "Fyffe", url: "/fyffe" }

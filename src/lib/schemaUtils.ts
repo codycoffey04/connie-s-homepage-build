@@ -195,6 +195,7 @@ export const getPlaceSchema = (city: CityData) => ({
   
   "name": `${city.name}, ${city.state}`,
   "description": `${city.name} is a community of approximately ${parseInt(city.population).toLocaleString()} residents in ${city.county} County, Alabama. Connie's Bail Bonding provides 24/7 bail bond services to ${city.name} and surrounding areas.`,
+  "url": `${SITE_URL}/${city.slug}`,
   
   "address": {
     "@type": "PostalAddress",
@@ -313,10 +314,11 @@ export const getBreadcrumbSchema = (items: { name: string; url: string }[]) => (
   }))
 });
 
-export const getFAQSchema = (faqs: { question: string; answer: string }[]) => ({
+export const getFAQSchema = (faqs: { question: string; answer: string }[], pageUrl?: string) => ({
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "name": "Frequently Asked Questions",
+  ...(pageUrl && { "url": `${SITE_URL}${pageUrl}` }),
   "mainEntity": faqs.map(faq => ({
     "@type": "Question",
     "name": faq.question,

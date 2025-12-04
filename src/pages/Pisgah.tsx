@@ -161,7 +161,7 @@ const Pisgah = () => {
           getOrganizationSchema(),
           getPlaceSchema(cityData),
           getSpeakableSchema(),
-          getFAQSchema(faqs),
+          getFAQSchema(faqs, "/pisgah"),
           getBreadcrumbSchema([
             { name: "Home", url: "/" },
             { name: "Pisgah", url: "/pisgah" }

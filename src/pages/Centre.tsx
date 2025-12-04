@@ -163,7 +163,7 @@ const Centre = () => {
           getOrganizationSchema(),
           getPlaceSchema(cityData),
           getSpeakableSchema(),
-          getFAQSchema(faqs),
+          getFAQSchema(faqs, "/centre"),
           getBreadcrumbSchema([
             { name: "Home", url: "/" },
             { name: "Centre", url: "/centre" }

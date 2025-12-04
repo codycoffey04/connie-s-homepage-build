@@ -7,8 +7,6 @@ import { SlimContactBanner } from "@/components/SlimContactBanner";
 import { QuickAnswers } from "@/components/QuickAnswers";
 import { Section } from "@/components/Section";
 import { AnimatedSection } from "@/components/AnimatedSection";
-import { AnimatedImage } from "@/components/AnimatedImage";
-import { AnimatedCard } from "@/components/AnimatedCard";
 import { TestimonialCard } from "@/components/TestimonialCard";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -188,7 +186,7 @@ const FortPayne = () => {
           getOrganizationSchema(),
           getPlaceSchema(cityData),
           getSpeakableSchema(),
-          getFAQSchema(faqs),
+          getFAQSchema(faqs, "/fort-payne"),
           getBreadcrumbSchema([
             { name: "Home", url: "/" },
             { name: "Fort Payne", url: "/fort-payne" }
@@ -641,17 +639,14 @@ const FortPayne = () => {
             <PhoneButton 
               name={phoneNumbers.richard.name}
               number={phoneNumbers.richard.number}
-              variant="secondary"
             />
             <PhoneButton 
               name={phoneNumbers.connie.name}
               number={phoneNumbers.connie.number}
-              variant="secondary"
             />
             <PhoneButton 
               name={phoneNumbers.toni.name}
               number={phoneNumbers.toni.number}
-              variant="secondary"
             />
           </div>
 

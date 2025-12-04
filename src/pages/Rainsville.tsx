@@ -165,7 +165,7 @@ const Rainsville = () => {
           getOrganizationSchema(),
           getPlaceSchema(cityData),
           getSpeakableSchema(),
-          getFAQSchema(faqs),
+          getFAQSchema(faqs, "/rainsville"),
           getBreadcrumbSchema([
             { name: "Home", url: "/" },
             { name: "Rainsville", url: "/rainsville" }
