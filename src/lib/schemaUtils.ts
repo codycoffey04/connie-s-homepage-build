@@ -566,6 +566,7 @@ export const getWebSiteSchema = () => ({
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "Connie's Bail Bonding",
+  "url": SITE_URL,
   "description": "24/7 bail bond services in Fort Payne, DeKalb County, and Cherokee County, Alabama",
   "potentialAction": {
     "@type": "SearchAction",
