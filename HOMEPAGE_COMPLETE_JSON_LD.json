@@ -1,0 +1,521 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "https://connies-bailbonds.com/#organization",
+      "@type": ["Organization", "LocalBusiness", "BailBondService"],
+      "name": "Connie's Bail Bonding",
+      "legalName": "Connie's Bail Bonding, LLC",
+      "alternateName": ["Connies Bail Bonds", "Connie's Bail Bonds Fort Payne"],
+      "description": "Licensed 24/7 bail bond service serving DeKalb and Cherokee Counties in Northeast Alabama. Family-owned since 2019, we provide fast, compassionate bail bond services with flexible payment plans.",
+      "slogan": "24/7 Bail Bonds — We Answer When You Call",
+      "url": "https://connies-bailbonds.com",
+      "logo": "https://connies-bailbonds.com/og-image.png",
+      "image": "https://connies-bailbonds.com/og-image.png",
+      "foundingDate": "2019",
+      "founder": {
+        "@type": "Person",
+        "name": "Connie",
+        "jobTitle": "Owner & Licensed Bail Agent",
+        "description": "Licensed bail bond agent serving Northeast Alabama families since 2019. APBB License #B0092.",
+        "hasCredential": {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "Professional License",
+          "name": "Alabama Professional Bail Bondsman License #B0092",
+          "url": "https://apbb.alabama.gov/licensee/B0092"
+        }
+      },
+      "knowsAbout": [
+        "Alabama Bail Bond Law",
+        "DeKalb County Bail Bonds",
+        "Cherokee County Bail Bonds",
+        "Surety Bonds",
+        "Cash Bonds",
+        "Property Bonds",
+        "Felony Bail Bonds",
+        "Misdemeanor Bail Bonds",
+        "24/7 Emergency Bail Services",
+        "Bail Bond Payment Plans",
+        "Bond Forfeiture Process",
+        "Alabama Court System",
+        "Jail Release Process",
+        "Cosigner Responsibilities",
+        "Bail Bond Indemnitor Requirements"
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "Professional License",
+          "name": "APBB License #B0092 (Connie)",
+          "url": "https://apbb.alabama.gov/licensee/B0092"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "Professional License",
+          "name": "APBB License #S0334 (Richard)",
+          "url": "https://apbb.alabama.gov/licensee/S0334"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "Professional License",
+          "name": "APBB License #S0345 (Toni)",
+          "url": "https://apbb.alabama.gov/licensee/S0345"
+        }
+      ],
+      "awards": [
+        "4.9 Star Google Rating (150+ Reviews)",
+        "A+ BBB Rating",
+        "Licensed by Alabama Professional Bail Bondsman Board"
+      ],
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "name": "Alabama Bail Bondsman Association"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "150",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2700 Jordan Rd SW",
+        "addressLocality": "Fort Payne",
+        "addressRegion": "AL",
+        "postalCode": "35967",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "34.444389",
+        "longitude": "-85.719772"
+      },
+      "areaServed": [
+        {
+          "@type": "Place",
+          "@id": "https://connies-bailbonds.com/fort-payne#place"
+        },
+        {
+          "@type": "Place",
+          "@id": "https://connies-bailbonds.com/rainsville#place"
+        },
+        {
+          "@type": "Place",
+          "@id": "https://connies-bailbonds.com/henagar#place"
+        },
+        {
+          "@type": "Place",
+          "@id": "https://connies-bailbonds.com/fyffe#place"
+        },
+        {
+          "@type": "Place",
+          "@id": "https://connies-bailbonds.com/valley-head#place"
+        },
+        {
+          "@type": "Place",
+          "@id": "https://connies-bailbonds.com/pisgah#place"
+        },
+        {
+          "@type": "Place",
+          "@id": "https://connies-bailbonds.com/centre#place"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "@id": "https://connies-bailbonds.com/#service"
+      },
+      "telephone": "+1-256-601-2041",
+      "email": "info@connies-bailbonds.com",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-256-601-2041",
+          "contactType": "customer service",
+          "name": "Richard",
+          "availableLanguage": "English",
+          "areaServed": "US-AL",
+          "hoursAvailable": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "00:00",
+            "closes": "23:59"
+          }
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-256-630-2824",
+          "contactType": "customer service",
+          "name": "Connie",
+          "availableLanguage": "English"
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-256-440-0822",
+          "contactType": "customer service",
+          "name": "Toni",
+          "availableLanguage": "English"
+        }
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "priceRange": "10% of bail amount (Alabama state law)",
+      "paymentAccepted": ["Cash", "Credit Card", "Debit Card", "Payment Plans"],
+      "currenciesAccepted": "USD",
+      "sameAs": [
+        "https://www.facebook.com/conniesbailbonding",
+        "https://www.google.com/maps/place/Connie's+Bail+Bonding"
+      ]
+    },
+    {
+      "@id": "https://connies-bailbonds.com/#service",
+      "@type": "Service",
+      "name": "24/7 Bail Bond Services",
+      "description": "Licensed bail bond services available 24 hours a day, 7 days a week across DeKalb and Cherokee Counties, Alabama.",
+      "serviceType": "Bail Bond Service",
+      "provider": {
+        "@type": "BailBondService",
+        "@id": "https://connies-bailbonds.com/#organization"
+      },
+      "areaServed": [
+        {
+          "@type": "Place",
+          "@id": "https://connies-bailbonds.com/fort-payne#place"
+        },
+        {
+          "@type": "Place",
+          "@id": "https://connies-bailbonds.com/rainsville#place"
+        },
+        {
+          "@type": "Place",
+          "@id": "https://connies-bailbonds.com/henagar#place"
+        },
+        {
+          "@type": "Place",
+          "@id": "https://connies-bailbonds.com/fyffe#place"
+        },
+        {
+          "@type": "Place",
+          "@id": "https://connies-bailbonds.com/valley-head#place"
+        },
+        {
+          "@type": "Place",
+          "@id": "https://connies-bailbonds.com/pisgah#place"
+        },
+        {
+          "@type": "Place",
+          "@id": "https://connies-bailbonds.com/centre#place"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Bail Bond Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "24/7 Emergency Bail Bonds",
+              "description": "Immediate bail bond services available around the clock, any day of the year"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Misdemeanor Bail Bonds",
+              "description": "Bail bonds for misdemeanor charges including DUI, theft, and assault"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Felony Bail Bonds",
+              "description": "Bail bonds for felony charges with flexible payment options"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Payment Plans",
+              "description": "Flexible payment arrangements for families who need help covering the bond premium"
+            }
+          }
+        ]
+      },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://connies-bailbonds.com",
+        "servicePhone": "+1-256-601-2041",
+        "availableLanguage": "English"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "name": "Connie's Bail Bonding",
+      "description": "24/7 bail bond services in Fort Payne, DeKalb County, and Cherokee County, Alabama",
+      "url": "https://connies-bailbonds.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://connies-bailbonds.com/bail-bonds-guide?search={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://connies-bailbonds.com/#organization"
+      }
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Get a Bail Bond in Alabama",
+      "description": "Step-by-step guide to getting a bail bond in Fort Payne and DeKalb County, Alabama",
+      "totalTime": "PT2H",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Call Us Immediately",
+          "text": "Contact Connie's Bail Bonding at 256-601-2041, 256-630-2824, or 256-440-0822. We answer 24/7/365.",
+          "url": "https://connies-bailbonds.com/#call"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Provide Information",
+          "text": "Tell us the inmate's name, jail location, and charges. We'll look up their bail amount and explain the process.",
+          "url": "https://connies-bailbonds.com/#information"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Complete Paperwork",
+          "text": "We'll meet you to complete the simple paperwork. Bring a valid ID and discuss payment options including flexible payment plans.",
+          "url": "https://connies-bailbonds.com/#paperwork"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Post Bond & Release",
+          "text": "We post the bond at the jail. Release typically takes 1-8 hours in Fort Payne, 2-8 hours in other DeKalb County cities.",
+          "url": "https://connies-bailbonds.com/#release"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "name": "Connie's Bail Bonding - 24/7 Bail Bonds",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".quick-answers",
+          ".contact-info",
+          ".how-it-works",
+          ".service-area"
+        ],
+        "xpath": [
+          "/html/head/title",
+          "/html/head/meta[@name='description']/@content"
+        ]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "name": "Breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://connies-bailbonds.com/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "name": "Frequently Asked Questions",
+      "url": "https://connies-bailbonds.com/",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does a bail bond cost in Alabama?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Alabama law sets bail bond fees at 10% of the total bail amount. This is non-negotiable by law—every licensed bondsman charges the same rate. For example, if bail is set at $5,000, the bond fee is $500. We charge no additional administrative fees."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to get released?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Typical release time is 2–8 hours after we post the bond, depending on how busy the jail is. Weekend and holiday releases may take slightly longer due to reduced staff. We stay in communication with you throughout the process."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you really answer calls 24/7?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Connie, Toni, or Richard will answer your call at any time—even at 3 AM on Christmas morning. We're a family business, and we answer our own phones. No call centers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I can't afford the full 10% upfront?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We offer flexible payment plans for families who need help. We accept credit cards and can work out arrangements that fit your budget. Call us and we'll discuss your options—there's no pressure, just honest guidance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where are you located?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our office is at 2700 Jordan Rd SW, Fort Payne, AL 35967—right next to the DeKalb County Detention Center. This allows us to meet clients quickly and post bonds immediately."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What counties do you serve?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We serve DeKalb County (Fort Payne, Rainsville, Henagar, Fyffe, Valley Head, Pisgah) and Cherokee County (Centre). If your loved one is arrested anywhere in these counties, we can help."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What information do I need to provide when calling?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We'll need the defendant's full name, which jail they're in (DeKalb County Detention Center or Cherokee County Detention Center), and the charge if you know it. We can look up the bail amount and explain the entire process over the phone."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use a credit card to pay for bail?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we accept all major credit cards, debit cards, and cash. We also offer flexible payment plans for families who need help covering the bond premium. Call us to discuss your payment options."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if the defendant doesn't show up for court?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If the defendant misses court, the bond goes into forfeiture. As the cosigner, you become liable for the full bail amount. We work with families to locate defendants and get them back to court, but it's critical that defendants attend all court dates."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you serve other counties besides DeKalb and Cherokee?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We primarily serve DeKalb County and Cherokee County, Alabama. If your loved one is arrested in a different county, we can refer you to a trusted bondsman in that area. Call us and we'll help you find the right assistance."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Review",
+      "itemReviewed": {
+        "@type": "BailBondService",
+        "@id": "https://connies-bailbonds.com/#organization"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Verified Customer 1"
+      },
+      "reviewBody": "Connie answered immediately at 2 AM and had my son out within 4 hours. Professional, kind, and transparent about all costs. Highly recommend.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Google"
+      },
+      "datePublished": "2024-06-15"
+    },
+    {
+      "@type": "Review",
+      "itemReviewed": {
+        "@type": "BailBondService",
+        "@id": "https://connies-bailbonds.com/#organization"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Verified Customer 2"
+      },
+      "reviewBody": "Connie's Bail Bonding went above and beyond to make sure I could make bail and get out of jail. After spending 5 days in there…it was a horrific and life altering experience. Connie's Bail Bonding is the only place I will ever use should I need a bonding agency… I can't thank them enough. 5 stars from me.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Google"
+      },
+      "datePublished": "2024-05-20"
+    },
+    {
+      "@type": "Review",
+      "itemReviewed": {
+        "@type": "BailBondService",
+        "@id": "https://connies-bailbonds.com/#organization"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Verified Customer 3"
+      },
+      "reviewBody": "Toni is awesome. She was able to explain the process easily and she handled everything in a professional way. I highly recommend this bail bonds. Thank you for being understanding and professional. ❤️",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Google"
+      },
+      "datePublished": "2024-04-10"
+    },
+    {
+      "@type": "Review",
+      "itemReviewed": {
+        "@type": "BailBondService",
+        "@id": "https://connies-bailbonds.com/#organization"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Verified Customer 4"
+      },
+      "reviewBody": "I literally felt like family in the way they treated me.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Google"
+      },
+      "datePublished": "2024-03-25"
+    }
+  ]
+}
+

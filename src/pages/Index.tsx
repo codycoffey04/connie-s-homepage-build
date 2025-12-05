@@ -15,7 +15,7 @@ import { SEO } from "@/components/SEO";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { AnimatedImage } from "@/components/AnimatedImage";
 import { AnimatedCard } from "@/components/AnimatedCard";
-import { getOrganizationSchema, getBreadcrumbSchema, getServiceSchema, getHowToSchema, getSpeakableSchema, getWebSiteSchema } from "@/lib/schemaUtils";
+import { getOrganizationSchema, getBreadcrumbSchema, getServiceSchema, getHowToSchema, getSpeakableSchema, getWebSiteSchema, getFAQSchema } from "@/lib/schemaUtils";
 import { 
   Clock, 
   Zap, 
@@ -134,6 +134,22 @@ const Index = () => {
     {
       question: "What counties do you serve?",
       answer: "We serve DeKalb County (Fort Payne, Rainsville, Henagar, Fyffe, Valley Head, Pisgah) and Cherokee County (Centre). If your loved one is arrested anywhere in these counties, we can help."
+    },
+    {
+      question: "What information do I need to provide when calling?",
+      answer: "We'll need the defendant's full name, which jail they're in (DeKalb County Detention Center or Cherokee County Detention Center), and the charge if you know it. We can look up the bail amount and explain the entire process over the phone."
+    },
+    {
+      question: "Can I use a credit card to pay for bail?",
+      answer: "Yes, we accept all major credit cards, debit cards, and cash. We also offer flexible payment plans for families who need help covering the bond premium. Call us to discuss your payment options."
+    },
+    {
+      question: "What happens if the defendant doesn't show up for court?",
+      answer: "If the defendant misses court, the bond goes into forfeiture. As the cosigner, you become liable for the full bail amount. We work with families to locate defendants and get them back to court, but it's critical that defendants attend all court dates."
+    },
+    {
+      question: "Do you serve other counties besides DeKalb and Cherokee?",
+      answer: "We primarily serve DeKalb County and Cherokee County, Alabama. If your loved one is arrested in a different county, we can refer you to a trusted bondsman in that area. Call us and we'll help you find the right assistance."
     }
   ];
 
@@ -168,7 +184,9 @@ const Index = () => {
           getWebSiteSchema(),
           getServiceSchema(),
           getHowToSchema(),
-          getSpeakableSchema()
+          getSpeakableSchema(),
+          getFAQSchema(faqs, "/"),
+          getBreadcrumbSchema([{ name: "Home", url: "/" }])
         ]}
       />
       <Navigation />
