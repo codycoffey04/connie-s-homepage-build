@@ -502,8 +502,8 @@ export const getItemListSchema = (items: { name: string; description: string; ur
         "@type": "ImageObject",
         "url": `${SITE_URL}/og-image.png`
       },
-      "datePublished": "2024-01-15",
-      "dateModified": "2024-12-03"
+      "datePublished": "2024-01-15T00:00:00-06:00",
+      "dateModified": "2024-12-06T00:00:00-06:00"
     }
   }))
 });
