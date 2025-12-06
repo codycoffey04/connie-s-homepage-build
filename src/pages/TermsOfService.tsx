@@ -24,8 +24,8 @@ const TermsOfService = () => {
     "mainEntity": {
       "@type": "Article",
       "headline": "Terms of Service",
-      "datePublished": "2025-12-03",
-      "dateModified": "2025-12-03",
+      "datePublished": "2025-12-03T00:00:00-06:00",
+      "dateModified": "2025-12-06T00:00:00-06:00",
       "author": {
         "@type": "Organization",
         "name": "Connie's Bail Bonding, LLC"

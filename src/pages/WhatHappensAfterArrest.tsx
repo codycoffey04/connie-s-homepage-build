@@ -7,7 +7,7 @@ import { StickyCallButton } from "@/components/StickyCallButton";
 import { FAQList } from "@/components/FAQItem";
 import { MidPageCTA } from "@/components/MidPageCTA";
 import { AnswerBox } from "@/components/AnswerBox";
-import { StatisticBox } from "@/components/StatisticBox";
+
 import { ReadingMeta } from "@/components/ReadingMeta";
 import { TableOfContents } from "@/components/TableOfContents";
 import { Card, CardContent } from "@/components/ui/card";
