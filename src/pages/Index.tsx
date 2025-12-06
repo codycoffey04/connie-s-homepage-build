@@ -9,7 +9,6 @@ import { Section } from "@/components/Section";
 import { TestimonialCard } from "@/components/TestimonialCard";
 import { GoogleReviewsWidget } from "@/components/GoogleReviewsWidget";
 import { FAQList } from "@/components/FAQItem";
-import { Card, CardContent } from "@/components/ui/card";
 import { StickyCallButton } from "@/components/StickyCallButton";
 import { SEO } from "@/components/SEO";
 import { AnimatedSection } from "@/components/AnimatedSection";
@@ -18,7 +17,6 @@ import { AnimatedCard } from "@/components/AnimatedCard";
 import { getOrganizationSchema, getBreadcrumbSchema, getServiceSchema, getHowToSchema, getSpeakableSchema, getWebSiteSchema, getFAQSchema } from "@/lib/schemaUtils";
 import { 
   Clock, 
-  Zap, 
   DollarSign, 
   Users, 
   CreditCard, 
@@ -26,15 +24,12 @@ import {
   MapPin,
   Star,
   Check,
-  Phone,
-  BookOpen,
   ArrowRight,
   Building,
   Scale
 } from "lucide-react";
-import { phoneNumbers, cities } from "@/lib/cityUtils";
+import { phoneNumbers } from "@/lib/cityUtils";
 import heroBg from "@/assets/hero-bg.jpg";
-import freedomHandcuffs from "@/assets/freedom-handcuffs.jpg";
 import supportHands from "@/assets/support-hands.jpg";
 import legalGavel from "@/assets/legal-gavel.jpg";
 import scalesJustice from "@/assets/scales-justice.jpg";
@@ -42,20 +37,6 @@ import alabamaMap from "@/assets/alabama-map.jpg";
 import paymentMethods from "@/assets/payment-methods.jpg";
 
 const Index = () => {
-
-  const whyChooseList = [
-    "Available 24/7 - We Answer Every Call Personally",
-    "Licensed Alabama Bail Bond Agents",
-    "Family-Owned & Operated Since 2019",
-    "Located Next to DeKalb County Detention Center",
-    "Fast Release - Usually 2-8 Hours",
-    "Transparent Pricing - Only State-Required 10%",
-    "No Hidden Fees - Ever",
-    "Payment Plans Available",
-    "Credit Cards Accepted",
-    "Five-Star Google Reviews"
-  ];
-
   const whyChooseChecklist = [
     "Available 24/7 - We Answer Every Call Personally",
     "Licensed Alabama Bail Bond Agents",
