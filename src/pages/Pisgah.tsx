@@ -20,7 +20,7 @@ import {
 import { phoneNumbers } from "@/lib/cityUtils";
 import { StickyCallButton } from "@/components/StickyCallButton";
 import { SEO } from "@/components/SEO";
-import { getOrganizationSchema, getBreadcrumbSchema, getSpeakableSchema, getFAQSchema, getPlaceSchema } from "@/lib/schemaUtils";
+import { getOrganizationSchema, getBreadcrumbSchema, getCityWebPageSchema, getFAQSchema, getPlaceSchema } from "@/lib/schemaUtils";
 import { getCityBySlug } from "@/lib/cityUtils";
 import pisgahHeroBg from "@/assets/pisgah-hero-bg.jpg";
 import supportHands from "@/assets/support-hands.jpg";
@@ -156,7 +156,11 @@ const Pisgah = () => {
         schema={[
           getOrganizationSchema(),
           getPlaceSchema(cityData),
-          getSpeakableSchema(),
+          getCityWebPageSchema(
+            "Pisgah Bail Bonds | 24/7 DeKalb County AL",
+            "24/7 bail bonds serving Pisgah, AL and all of DeKalb County. Licensed agents available now. Call 256-601-2041. Compassionate, professional service.",
+            "/pisgah"
+          ),
           getFAQSchema(faqs, "/pisgah"),
           getBreadcrumbSchema([
             { name: "Home", url: "/" },

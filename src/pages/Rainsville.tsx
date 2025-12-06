@@ -20,7 +20,7 @@ import {
 import { phoneNumbers } from "@/lib/cityUtils";
 import { StickyCallButton } from "@/components/StickyCallButton";
 import { SEO } from "@/components/SEO";
-import { getOrganizationSchema, getBreadcrumbSchema, getSpeakableSchema, getFAQSchema, getPlaceSchema } from "@/lib/schemaUtils";
+import { getOrganizationSchema, getBreadcrumbSchema, getCityWebPageSchema, getFAQSchema, getPlaceSchema } from "@/lib/schemaUtils";
 import { getCityBySlug } from "@/lib/cityUtils";
 import rainsvilleHeroBg from "@/assets/rainsville-hero-bg.jpg";
 import clockImage from "@/assets/24-7-clock.jpg";
@@ -160,7 +160,11 @@ const Rainsville = () => {
         schema={[
           getOrganizationSchema(),
           getPlaceSchema(cityData),
-          getSpeakableSchema(),
+          getCityWebPageSchema(
+            "Rainsville Bail Bonds | 24/7 DeKalb County",
+            "24/7 bail bonds serving Rainsville, AL and DeKalb County. Licensed agents ready to help. Call 256-601-2041 now. Payment plans available.",
+            "/rainsville"
+          ),
           getFAQSchema(faqs, "/rainsville"),
           getBreadcrumbSchema([
             { name: "Home", url: "/" },

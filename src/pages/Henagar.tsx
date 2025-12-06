@@ -20,7 +20,7 @@ import {
 import { phoneNumbers } from "@/lib/cityUtils";
 import { StickyCallButton } from "@/components/StickyCallButton";
 import { SEO } from "@/components/SEO";
-import { getOrganizationSchema, getBreadcrumbSchema, getSpeakableSchema, getFAQSchema, getPlaceSchema } from "@/lib/schemaUtils";
+import { getOrganizationSchema, getBreadcrumbSchema, getCityWebPageSchema, getFAQSchema, getPlaceSchema } from "@/lib/schemaUtils";
 import { getCityBySlug } from "@/lib/cityUtils";
 import henagarHeroBg from "@/assets/henagar-hero-bg.jpg";
 import supportHands from "@/assets/support-hands.jpg";
@@ -156,7 +156,11 @@ const Henagar = () => {
         schema={[
           getOrganizationSchema(),
           getPlaceSchema(cityData),
-          getSpeakableSchema(),
+          getCityWebPageSchema(
+            "Henagar Bail Bonds | 24/7 DeKalb County AL",
+            "24/7 bail bonds serving Henagar and DeKalb County. Licensed Alabama agents, transparent pricing. Call 256-601-2041 now. Family-owned since 2019.",
+            "/henagar"
+          ),
           getFAQSchema(faqs, "/henagar"),
           getBreadcrumbSchema([
             { name: "Home", url: "/" },

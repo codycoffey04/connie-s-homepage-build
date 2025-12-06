@@ -20,7 +20,7 @@ import {
 import { phoneNumbers } from "@/lib/cityUtils";
 import { StickyCallButton } from "@/components/StickyCallButton";
 import { SEO } from "@/components/SEO";
-import { getOrganizationSchema, getBreadcrumbSchema, getSpeakableSchema, getFAQSchema, getPlaceSchema } from "@/lib/schemaUtils";
+import { getOrganizationSchema, getBreadcrumbSchema, getCityWebPageSchema, getFAQSchema, getPlaceSchema } from "@/lib/schemaUtils";
 import { getCityBySlug } from "@/lib/cityUtils";
 import fyffeHeroBg from "@/assets/fyffe-hero-bg.jpg";
 import freedomHandcuffs from "@/assets/freedom-handcuffs.jpg";
@@ -158,7 +158,11 @@ const Fyffe = () => {
         schema={[
           getOrganizationSchema(),
           getPlaceSchema(cityData),
-          getSpeakableSchema(),
+          getCityWebPageSchema(
+            "Fyffe Bail Bonds | 24/7 DeKalb County AL",
+            "24/7 bail bonds serving Fyffe, AL and DeKalb County. Licensed agents ready to help. Call 256-601-2041 now. Transparent pricing, no hidden fees.",
+            "/fyffe"
+          ),
           getFAQSchema(faqs, "/fyffe"),
           getBreadcrumbSchema([
             { name: "Home", url: "/" },

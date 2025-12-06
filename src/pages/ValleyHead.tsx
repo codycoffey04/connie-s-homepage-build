@@ -20,7 +20,7 @@ import {
 import { phoneNumbers } from "@/lib/cityUtils";
 import { StickyCallButton } from "@/components/StickyCallButton";
 import { SEO } from "@/components/SEO";
-import { getOrganizationSchema, getBreadcrumbSchema, getSpeakableSchema, getFAQSchema, getPlaceSchema } from "@/lib/schemaUtils";
+import { getOrganizationSchema, getBreadcrumbSchema, getCityWebPageSchema, getFAQSchema, getPlaceSchema } from "@/lib/schemaUtils";
 import { getCityBySlug } from "@/lib/cityUtils";
 import valleyHeadHeroBg from "@/assets/valleyhead-hero-bg.jpg";
 import clockImage from "@/assets/24-7-clock.jpg";
@@ -160,7 +160,11 @@ const ValleyHead = () => {
         schema={[
           getOrganizationSchema(),
           getPlaceSchema(cityData),
-          getSpeakableSchema(),
+          getCityWebPageSchema(
+            "Valley Head Bail Bonds | 24/7 DeKalb County",
+            "24/7 bail bonds serving Valley Head, AL and DeKalb County. Licensed agents ready to help your family. Call 256-601-2041 now. Fast jail release.",
+            "/valley-head"
+          ),
           getFAQSchema(faqs, "/valley-head"),
           getBreadcrumbSchema([
             { name: "Home", url: "/" },

@@ -20,7 +20,7 @@ import {
 import { phoneNumbers } from "@/lib/cityUtils";
 import { StickyCallButton } from "@/components/StickyCallButton";
 import { SEO } from "@/components/SEO";
-import { getOrganizationSchema, getBreadcrumbSchema, getSpeakableSchema, getFAQSchema, getPlaceSchema } from "@/lib/schemaUtils";
+import { getOrganizationSchema, getBreadcrumbSchema, getCityWebPageSchema, getFAQSchema, getPlaceSchema } from "@/lib/schemaUtils";
 import { getCityBySlug } from "@/lib/cityUtils";
 import centreHeroBg from "@/assets/centre-hero-bg.jpg";
 import freedomHandcuffs from "@/assets/freedom-handcuffs.jpg";
@@ -158,7 +158,11 @@ const Centre = () => {
         schema={[
           getOrganizationSchema(),
           getPlaceSchema(cityData),
-          getSpeakableSchema(),
+          getCityWebPageSchema(
+            "Centre Bail Bonds | 24/7 Cherokee County AL",
+            "24/7 bail bonds serving Centre, AL and Cherokee County. Licensed agents who know the local court system. Call 256-601-2041 now. Fast release.",
+            "/centre"
+          ),
           getFAQSchema(faqs, "/centre"),
           getBreadcrumbSchema([
             { name: "Home", url: "/" },
