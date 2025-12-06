@@ -420,6 +420,27 @@ export const getSpeakableSchema = () => ({
   }
 });
 
+export const getAboutPageSchema = (name: string, description: string) => ({
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": name,
+  "description": description,
+  "url": `${SITE_URL}/about`,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      ".quick-answers",
+      ".contact-info",
+      ".how-it-works",
+      ".service-area"
+    ],
+    "xpath": [
+      "/html/head/title",
+      "/html/head/meta[@name='description']/@content"
+    ]
+  }
+});
+
 export const getWebPageSchema = (name: string, description: string, breadcrumbs: { name: string; url: string }[]) => ({
   "@context": "https://schema.org",
   "@type": "WebPage",

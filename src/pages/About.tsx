@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 import { Footer } from "@/components/Footer";
 import { StickyCallButton } from "@/components/StickyCallButton";
 import { SEO } from "@/components/SEO";
-import { getOrganizationSchema, getBreadcrumbSchema, getSpeakableSchema } from "@/lib/schemaUtils";
+import { getOrganizationSchema, getBreadcrumbSchema, getAboutPageSchema } from "@/lib/schemaUtils";
 import aboutHeroBg from "@/assets/about-hero-bg.jpg";
 
 const About = () => {
@@ -92,7 +92,10 @@ const About = () => {
         reviews={testimonials}
         schema={[
           getOrganizationSchema(),
-          getSpeakableSchema(),
+          getAboutPageSchema(
+            "About Us | Licensed Bail Agents Since 2019",
+            "Meet Connie, Toni, and Richard—licensed Alabama bail bond agents serving DeKalb & Cherokee Counties 24/7 with compassion and professionalism."
+          ),
           getBreadcrumbSchema([
             { name: "Home", url: "/" },
             { name: "About", url: "/about" }

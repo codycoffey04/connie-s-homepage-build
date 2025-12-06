@@ -1,0 +1,303 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "https://connies-bailbonds.com/#organization",
+      "@type": ["Organization", "LocalBusiness", "BailBondService"],
+      "name": "Connie's Bail Bonding",
+      "legalName": "Connie's Bail Bonding, LLC",
+      "alternateName": ["Connies Bail Bonds", "Connie's Bail Bonds Fort Payne"],
+      "description": "Licensed 24/7 bail bond service serving DeKalb and Cherokee Counties in Northeast Alabama. Family-owned since 2019, we provide fast, compassionate bail bond services with flexible payment plans.",
+      "slogan": "24/7 Bail Bonds — We Answer When You Call",
+      "url": "https://connies-bailbonds.com",
+      "logo": "https://connies-bailbonds.com/og-image.png",
+      "image": "https://connies-bailbonds.com/og-image.png",
+      "foundingDate": "2019",
+      "founder": {
+        "@type": "Person",
+        "name": "Connie",
+        "jobTitle": "Owner & Licensed Bail Agent",
+        "description": "Licensed bail bond agent serving Northeast Alabama families since 2019. APBB License #B0092.",
+        "hasCredential": {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "Professional License",
+          "name": "Alabama Professional Bail Bondsman License #B0092",
+          "url": "https://apbb.alabama.gov/licensee/B0092"
+        }
+      },
+      "knowsAbout": [
+        "Alabama Bail Bond Law",
+        "DeKalb County Bail Bonds",
+        "Cherokee County Bail Bonds",
+        "Surety Bonds",
+        "Cash Bonds",
+        "Property Bonds",
+        "Felony Bail Bonds",
+        "Misdemeanor Bail Bonds",
+        "24/7 Emergency Bail Services",
+        "Bail Bond Payment Plans",
+        "Bond Forfeiture Process",
+        "Alabama Court System",
+        "Jail Release Process",
+        "Cosigner Responsibilities",
+        "Bail Bond Indemnitor Requirements"
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "Professional License",
+          "name": "APBB License #B0092 (Connie)",
+          "url": "https://apbb.alabama.gov/licensee/B0092"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "Professional License",
+          "name": "APBB License #S0334 (Richard)",
+          "url": "https://apbb.alabama.gov/licensee/S0334"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "Professional License",
+          "name": "APBB License #S0345 (Toni)",
+          "url": "https://apbb.alabama.gov/licensee/S0345"
+        }
+      ],
+      "awards": [
+        "4.9 Star Google Rating (150+ Reviews)",
+        "A+ BBB Rating",
+        "Licensed by Alabama Professional Bail Bondsman Board"
+      ],
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "name": "Alabama Bail Bondsman Association"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "150",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2700 Jordan Rd SW",
+        "addressLocality": "Fort Payne",
+        "addressRegion": "AL",
+        "postalCode": "35967",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "34.444389",
+        "longitude": "-85.719772"
+      },
+      "areaServed": [
+        {
+          "@type": "Place",
+          "@id": "https://connies-bailbonds.com/fort-payne#place"
+        },
+        {
+          "@type": "Place",
+          "@id": "https://connies-bailbonds.com/rainsville#place"
+        },
+        {
+          "@type": "Place",
+          "@id": "https://connies-bailbonds.com/henagar#place"
+        },
+        {
+          "@type": "Place",
+          "@id": "https://connies-bailbonds.com/fyffe#place"
+        },
+        {
+          "@type": "Place",
+          "@id": "https://connies-bailbonds.com/valley-head#place"
+        },
+        {
+          "@type": "Place",
+          "@id": "https://connies-bailbonds.com/pisgah#place"
+        },
+        {
+          "@type": "Place",
+          "@id": "https://connies-bailbonds.com/centre#place"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "@id": "https://connies-bailbonds.com/#service"
+      },
+      "telephone": "+1-256-601-2041",
+      "email": "info@connies-bailbonds.com",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-256-601-2041",
+          "contactType": "customer service",
+          "name": "Richard",
+          "availableLanguage": "English",
+          "areaServed": "US-AL",
+          "hoursAvailable": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "00:00",
+            "closes": "23:59"
+          }
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-256-630-2824",
+          "contactType": "customer service",
+          "name": "Connie",
+          "availableLanguage": "English"
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-256-440-0822",
+          "contactType": "customer service",
+          "name": "Toni",
+          "availableLanguage": "English"
+        }
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "priceRange": "10% of bail amount (Alabama state law)",
+      "paymentAccepted": ["Cash", "Credit Card", "Debit Card", "Payment Plans"],
+      "currenciesAccepted": "USD",
+      "sameAs": [
+        "https://www.facebook.com/conniesbailbonding",
+        "https://www.google.com/maps/place/Connie's+Bail+Bonding"
+      ]
+    },
+    {
+      "@type": "AboutPage",
+      "name": "About Us | Licensed Bail Agents Since 2019",
+      "description": "Meet Connie, Toni, and Richard—licensed Alabama bail bond agents serving DeKalb & Cherokee Counties 24/7 with compassion and professionalism.",
+      "url": "https://connies-bailbonds.com/about",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".quick-answers",
+          ".contact-info",
+          ".how-it-works",
+          ".service-area"
+        ],
+        "xpath": [
+          "/html/head/title",
+          "/html/head/meta[@name='description']/@content"
+        ]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "name": "Breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://connies-bailbonds.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About",
+          "item": "https://connies-bailbonds.com/about"
+        }
+      ]
+    },
+    {
+      "@type": "Review",
+      "itemReviewed": {
+        "@type": "BailBondService",
+        "@id": "https://connies-bailbonds.com/#organization"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Verified Customer 1"
+      },
+      "reviewBody": "Connie's Bail Bonding went above and beyond to make sure I could make bail and get out of jail. After spending 5 days in there…it was a horrific and life altering experience. Connie's Bail Bonding is the only place I will ever use should I need a bonding agency… I can't thank them enough. 5 stars from me.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Google"
+      },
+      "datePublished": "2024-06-15"
+    },
+    {
+      "@type": "Review",
+      "itemReviewed": {
+        "@type": "BailBondService",
+        "@id": "https://connies-bailbonds.com/#organization"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Verified Customer 2"
+      },
+      "reviewBody": "Toni is awesome. She was able to explain the process easily and she handled everything in a professional way. I highly recommend this bail bonds. Thank you for being understanding and professional. ❤️",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Google"
+      },
+      "datePublished": "2024-05-20"
+    },
+    {
+      "@type": "Review",
+      "itemReviewed": {
+        "@type": "BailBondService",
+        "@id": "https://connies-bailbonds.com/#organization"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Verified Customer 3"
+      },
+      "reviewBody": "I literally felt like family in the way they treated me.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Google"
+      },
+      "datePublished": "2024-04-10"
+    },
+    {
+      "@type": "Review",
+      "itemReviewed": {
+        "@type": "BailBondService",
+        "@id": "https://connies-bailbonds.com/#organization"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Verified Customer 4"
+      },
+      "reviewBody": "Connie answered immediately at 2 AM and had my son out within 4 hours. Professional, kind, and transparent about all costs. Highly recommend.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Google"
+      },
+      "datePublished": "2024-03-25"
+    }
+  ]
+}
+
