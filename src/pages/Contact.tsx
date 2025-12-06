@@ -36,23 +36,6 @@ const readyInfo = [
   { text: "Any questions about cost or the process", subtext: "" }
 ];
 
-const keyLocations = [
-  {
-    county: "DeKalb County",
-    facilities: [
-      { name: "DeKalb County Detention Center", address: "2801 Jordan Rd SW, Fort Payne, AL 35967" },
-      { name: "DeKalb County Courthouse", address: "300 Grand Ave SW, Fort Payne, AL 35967" }
-    ]
-  },
-  {
-    county: "Cherokee County",
-    facilities: [
-      { name: "Cherokee County Detention Center", address: "110 Cedar Bluff Rd, Centre, AL 35960" },
-      { name: "Cherokee County Courthouse", address: "100 Main St, Centre, AL 35960" }
-    ]
-  }
-];
-
 const contactFaqs = [
   {
     question: "How quickly can you get my loved one out?",

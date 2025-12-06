@@ -19,7 +19,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import { Scale, DollarSign, Building, Users, FileText, CheckCircle, XCircle, ArrowRight, Phone } from "lucide-react";
+import { Scale, DollarSign, Building, Users, FileText, CheckCircle, XCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { phoneNumbers } from "@/lib/cityUtils";
 import {

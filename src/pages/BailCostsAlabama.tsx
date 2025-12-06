@@ -14,7 +14,7 @@ import { ReadingMeta } from "@/components/ReadingMeta";
 import { TableOfContents } from "@/components/TableOfContents";
 import { GuideHero } from "@/components/GuideHero";
 import { Card, CardContent } from "@/components/ui/card";
-import { Scale, Users, CreditCard, Phone, ShieldCheck, ArrowRight, AlertCircle, CheckCircle } from "lucide-react";
+import { Scale, Users, CreditCard, Phone, ArrowRight, AlertCircle, CheckCircle } from "lucide-react";
 import { phoneNumbers } from "@/lib/cityUtils";
 import { getArticleSchema, getFAQSchema, getSpeakableSchema, getBreadcrumbSchema, getOrganizationSchema } from "@/lib/schemaUtils";
 import bailCostsHeroBg from "@/assets/bail-costs-hero-bg.jpg";

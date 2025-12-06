@@ -9,7 +9,7 @@ import { AnimatedCard } from "@/components/AnimatedCard";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Phone, ArrowRight, Scale, DollarSign, Building, Users, FileText, Clock, CreditCard, AlertTriangle, ShieldAlert } from "lucide-react";
+import { Phone, ArrowRight, Scale, DollarSign, Building, Users, FileText, Clock, AlertTriangle, ShieldAlert } from "lucide-react";
 import { phoneNumbers } from "@/lib/cityUtils";
 import { getOrganizationSchema, getFAQSchema, getWebPageSchema, getItemListSchema, getSpeakableSchema } from "@/lib/schemaUtils";
 import bailGuideHeroBg from "@/assets/bail-guide-hero-bg.jpg";

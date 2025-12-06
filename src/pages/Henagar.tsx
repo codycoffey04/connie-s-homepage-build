@@ -8,17 +8,13 @@ import { QuickAnswers } from "@/components/QuickAnswers";
 import { Section } from "@/components/Section";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { AnimatedImage } from "@/components/AnimatedImage";
-import { AnimatedCard } from "@/components/AnimatedCard";
 import { TestimonialCard } from "@/components/TestimonialCard";
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import {
   Shield,
   Clock,
   MapPin,
   Heart,
-  Phone,
-  Mail,
   ChevronRight
 } from "lucide-react";
 import { phoneNumbers } from "@/lib/cityUtils";

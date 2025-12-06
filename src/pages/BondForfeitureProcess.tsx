@@ -7,7 +7,6 @@ import { StickyCallButton } from "@/components/StickyCallButton";
 import { FAQList } from "@/components/FAQItem";
 import { MidPageCTA } from "@/components/MidPageCTA";
 import { AnswerBox } from "@/components/AnswerBox";
-import { StatisticBox } from "@/components/StatisticBox";
 import { ReadingMeta } from "@/components/ReadingMeta";
 import { TableOfContents } from "@/components/TableOfContents";
 import { Card, CardContent } from "@/components/ui/card";
@@ -19,7 +18,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import { AlertTriangle, Clock, XCircle, Scale, DollarSign, Phone, ArrowRight, Users } from "lucide-react";
+import { AlertTriangle, Clock, XCircle, Scale, DollarSign, ArrowRight, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 import { phoneNumbers } from "@/lib/cityUtils";
 import {

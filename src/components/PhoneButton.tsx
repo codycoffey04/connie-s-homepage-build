@@ -6,6 +6,7 @@ interface PhoneButtonProps {
   name: string;
   number: string;
   className?: string;
+  variant?: string;
 }
 
 export const PhoneButton = ({ name, number, className }: PhoneButtonProps) => {

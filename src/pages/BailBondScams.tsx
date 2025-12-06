@@ -17,7 +17,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import { ShieldAlert, AlertTriangle, XCircle, CheckCircle, Phone, ArrowRight, ShieldCheck, DollarSign, Scale } from "lucide-react";
+import { ShieldAlert, AlertTriangle, XCircle, CheckCircle, ArrowRight, ShieldCheck, DollarSign, Scale } from "lucide-react";
 import { Link } from "react-router-dom";
 import { phoneNumbers } from "@/lib/cityUtils";
 import {
