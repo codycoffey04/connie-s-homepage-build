@@ -441,6 +441,27 @@ export const getAboutPageSchema = (name: string, description: string) => ({
   }
 });
 
+export const getCityWebPageSchema = (name: string, description: string, url: string) => ({
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": name,
+  "description": description,
+  "url": `${SITE_URL}${url}`,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      ".quick-answers",
+      ".contact-info",
+      ".how-it-works",
+      ".service-area"
+    ],
+    "xpath": [
+      "/html/head/title",
+      "/html/head/meta[@name='description']/@content"
+    ]
+  }
+});
+
 export const getWebPageSchema = (name: string, description: string, breadcrumbs: { name: string; url: string }[]) => ({
   "@context": "https://schema.org",
   "@type": "WebPage",
