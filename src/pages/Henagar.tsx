@@ -59,7 +59,7 @@ const Henagar = () => {
     },
     {
       title: "Where Bonds Are Posted",
-      description: "All bail bonds for Henagar arrests are posted at the DeKalb County Courthouse at 300 Grand Ave SW, Fort Payne, AL 35967. This is about a 15–20 minute drive from Henagar. We handle everything at the courthouse and jail so you don't have to navigate the system alone.",
+      description: "All bail bonds for Henagar arrests are posted at the DeKalb County Courthouse at 300 Grand Ave SW, Fort Payne, AL 35967. This is about a 15–20 minute drive from Henagar. Our DeKalb County bond expertise ensures we handle everything at the courthouse and jail so you don't have to navigate the system alone.",
     },
     {
       title: "Typical Release Time",
@@ -144,7 +144,7 @@ const Henagar = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Henagar Bail Bonds | 24/7 DeKalb County AL"
+        title="Bail Bonds Henagar AL | 24/7 Bail Bondsman | Connie's Bail Bonding"
         description="24/7 bail bonds serving Henagar and DeKalb County. Licensed Alabama agents, transparent pricing. Call 256-601-2041 now. Family-owned since 2019."
         canonical="/henagar"
         city="Henagar"
@@ -157,7 +157,7 @@ const Henagar = () => {
           getOrganizationSchema(),
           getPlaceSchema(cityData),
           getCityWebPageSchema(
-            "Henagar Bail Bonds | 24/7 DeKalb County AL",
+            "Bail Bonds Henagar AL | 24/7 Bail Bondsman | Connie's Bail Bonding",
             "24/7 bail bonds serving Henagar and DeKalb County. Licensed Alabama agents, transparent pricing. Call 256-601-2041 now. Family-owned since 2019.",
             "/henagar"
           ),
@@ -216,7 +216,7 @@ const Henagar = () => {
             <strong className="text-brand-red">Serving Henagar & DeKalb County Since 2019</strong> — If your loved one has been arrested in Henagar, Connie's Bail Bonding is here to help. We've been serving Henagar families since 2019 with fast, compassionate bail bond service that you can count on—24 hours a day, 7 days a week.
           </p>
           <p className="text-lg text-foreground/80 leading-relaxed mt-4">
-            Henagar is part of DeKalb County, which means all arrests are processed through the DeKalb County Detention Center and Courthouse in Fort Payne. We're based right there in Fort Payne, just minutes from Henagar, so we can reach you quickly and get your loved one released as fast as possible.
+            Henagar is part of DeKalb County, which means all arrests are processed through the DeKalb County Detention Center and Courthouse in Fort Payne. As your trusted bail bonds service near me, we're based right there in Fort Payne, just minutes from Henagar, so we can reach you quickly and get your loved one released as fast as possible.
           </p>
         </div>
       </Section>
@@ -456,7 +456,7 @@ const Henagar = () => {
             ))}
           </div>
           <p className="text-center text-foreground/80 mt-8">
-            Whether you're in town or out in the county, we're here to help your family 24/7.
+            Whether you're in town or out in the county, Connie's Bail Bonds is here to help your family 24/7.
           </p>
         </div>
       </Section>
@@ -619,7 +619,7 @@ const Henagar = () => {
             />
           </div>
           <p className="text-lg font-semibold text-foreground/90">
-            We're based nearby in Fort Payne and can reach Henagar or meet you at the jail within minutes.
+            As your local DeKalb County bonding company, we're based nearby in Fort Payne and can reach Henagar or meet you at the jail within minutes.
           </p>
         </div>
       </Section>
