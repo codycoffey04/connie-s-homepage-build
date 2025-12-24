@@ -114,7 +114,7 @@ const WhatHappensAfterArrest = () => {
   return (
     <>
       <SEO
-        title="What Happens After Arrest in Alabama"
+        title="What Happens After an Arrest in Alabama | Connie's Bail Bonding"
         description="What happens when someone is arrested in Alabama? Learn about booking, bail hearings, release timelines, and what your loved one is experiencing in jail."
         canonical="/bail-bonds-guide/what-happens-after-arrest"
         schema={schemas}
@@ -162,7 +162,7 @@ const WhatHappensAfterArrest = () => {
             What Happens After an Arrest in Alabama
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl leading-relaxed mb-6">
-            When someone you care about is arrested, you're left wondering what's happening to them. Understanding the process helps you take the right steps to get them released as quickly as possible. Here's exactly what happens from the moment of arrest through release.
+            When someone you care about is arrested, understanding what happens after arrest alabama helps you take the right steps to get them released as quickly as possible. Here's exactly what happens from the moment of arrest through release.
           </p>
           
           {/* Reading Meta */}
@@ -717,7 +717,7 @@ const WhatHappensAfterArrest = () => {
           </div>
 
           <p className="text-xl text-center mt-8">
-            The biggest variable is whether bail is set immediately or requires a hearing. Once bail is posted, release is usually same-day.
+            The biggest variable is whether bail is set immediately or requires a hearing. Once bail is posted, release is usually same-day. Connie's Bail Bonds is available 24/7 to help navigate this process and get your loved one released quickly.
           </p>
         </div>
       </Section>
