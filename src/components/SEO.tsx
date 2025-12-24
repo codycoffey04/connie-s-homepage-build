@@ -17,7 +17,8 @@ interface SEOProps {
 }
 
 export const SEO = ({ title, description, canonical, ogImage, schema, city, reviews, geo }: SEOProps) => {
-  const fullTitle = `${title} | Connie's Bail Bonding`;
+  // If title already contains brand name, use as-is; otherwise append brand name
+  const fullTitle = title.includes("Connie's Bail") ? title : `${title} | Connie's Bail Bonding`;
   const siteUrl = 'https://connies-bailbonds.com';
 
   const getCityOGImage = () => {

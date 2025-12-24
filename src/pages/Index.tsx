@@ -62,7 +62,7 @@ const Index = () => {
     {
       number: "3",
       title: "We Meet You at the Jail or Courthouse",
-      description: "We come to you—whether that's the DeKalb County Detention Center, Cherokee County Jail, or the courthouse. We'll handle all the paperwork."
+      description: "We come to you—whether that's the DeKalb County Detention Center, Cherokee County Jail, or the courthouse. As your trusted bail bondsman near me, we'll handle all the paperwork."
     },
     {
       number: "4",
@@ -156,7 +156,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="24/7 Bail Bonds Fort Payne | DeKalb County AL"
+        title="Bail Bonds Fort Payne AL | 24/7 Bail Bondsman | Connie's Bail Bonding"
         description="Fast, confidential 24/7 bail bonds in Fort Payne, Rainsville, Henagar & DeKalb County AL. Licensed agents Richard, Connie & Toni. Call 256-601-2041 now."
         canonical="/"
         reviews={testimonials}
@@ -335,7 +335,7 @@ const Index = () => {
               How It <span className="text-brand-red">Works</span>
             </h2>
             <p className="text-lg text-gray-700 mb-8">
-              We've streamlined the bail bond process to get your loved one released as quickly as possible. Here's what happens when you call us.
+              We've streamlined the DeKalb County bail bonds process to get your loved one released as quickly as possible. Here's what happens when you call our experienced DeKalb County bondsman.
             </p>
           </div>
           <div>
@@ -408,7 +408,7 @@ const Index = () => {
               Learn About the Bail Process
             </h2>
             <p className="text-lg text-foreground/80">
-              Free resources to help you understand your options and make informed decisions
+              Free resources from Connie's Bail Bonds to help you understand your options and make informed decisions
             </p>
           </div>
           
@@ -727,7 +727,7 @@ const Index = () => {
               <p>2700 Jordan Rd SW<br />Fort Payne, AL 35967</p>
             </div>
             <p className="text-base text-foreground/80 mt-4 italic">
-              We'll meet you at the DeKalb County Detention Center or Cherokee County Courthouse within minutes. Let us help your family tonight.
+              We'll meet you at the DeKalb County Detention Center or Cherokee County Courthouse within minutes. As your local bail bonds service near me, we're here to help your family tonight.
             </p>
           </div>
         </div>
