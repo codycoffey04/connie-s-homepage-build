@@ -173,7 +173,7 @@ const FortPayne = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Fort Payne Bail Bonds | 24/7 DeKalb County"
+        title="Bail Bonds Fort Payne AL | 24/7 Bail Bondsman | Connie's Bail Bonding"
         description="24/7 bail bonds in Fort Payne, AL. Licensed agents located next to DeKalb County Detention Center. Call Richard at 256-601-2041. No hidden fees."
         canonical="/fort-payne"
         city="Fort Payne"
@@ -186,7 +186,7 @@ const FortPayne = () => {
           getOrganizationSchema(),
           getPlaceSchema(cityData),
           getCityWebPageSchema(
-            "Fort Payne Bail Bonds | 24/7 DeKalb County",
+            "Bail Bonds Fort Payne AL | 24/7 Bail Bondsman | Connie's Bail Bonding",
             "24/7 bail bonds in Fort Payne, AL. Licensed agents located next to DeKalb County Detention Center. Call Richard at 256-601-2041. No hidden fees.",
             "/fort-payne"
           ),
@@ -221,7 +221,7 @@ const FortPayne = () => {
             </p>
             
             <p className="text-lg md:text-xl mb-10 text-white/90 max-w-xl" style={{ textShadow: '1px 1px 3px rgba(0, 0, 0, 0.5)' }}>
-              Fast, licensed bail bond agents serving Fort Payne and DeKalb County. Located right next to the detention center for fastest possible service.
+              Fast, licensed bail bond agent serving Fort Payne and DeKalb County. Located right next to the detention center for fastest possible service.
             </p>
             
             <HeroCTA className="mb-12" />
@@ -246,7 +246,7 @@ const FortPayne = () => {
               <strong className="text-brand-red">Serving Fort Payne & DeKalb County Since 2019</strong> — When someone you love is arrested in Fort Payne, every minute matters. Connie's Bail Bonding is located right here in Fort Payne—at 2700 Jordan Rd SW, right next to the DeKalb County Detention Center. We know the jail staff, the court procedures, and exactly how to get your loved one released quickly.
             </p>
             <p>
-              Since 2019, we've built our reputation on trust and professionalism in the Fort Payne community. Our family team answers calls personally 24/7—no call centers, no delays. Just honest, compassionate help when you need it most.
+              Since 2019, Connie's Bail Bonds has built our reputation on trust and professionalism in the Fort Payne community. Our family team answers calls personally 24/7—no call centers, no delays. Just honest, compassionate help when you need it most.
             </p>
           </div>
         </div>
