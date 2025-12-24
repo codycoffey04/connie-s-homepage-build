@@ -9,6 +9,7 @@ import {
   NavigationMenuItem,
   NavigationMenuList,
   NavigationMenuTrigger,
+  NavigationMenuLink,
 } from "@/components/ui/navigation-menu";
 import { cities, phoneNumbers } from "@/lib/cityUtils";
 
@@ -60,13 +61,14 @@ export const Navigation = () => {
                   <NavigationMenuContent>
                     <div className="grid w-[300px] gap-1 p-2 bg-black border-brand-red border-2">
                       {cities.map((city) => (
-                        <Link
-                          key={city.slug}
-                          to={`/${city.slug}`}
-                          className="block rounded p-3 text-white hover:bg-brand-red hover:text-white transition-colors font-medium"
-                        >
-                          {city.name}
-                        </Link>
+                        <NavigationMenuLink key={city.slug} asChild>
+                          <Link
+                            to={`/${city.slug}`}
+                            className="block rounded p-3 text-white hover:bg-brand-red hover:text-white transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-brand-red focus:ring-offset-2 focus:ring-offset-black"
+                          >
+                            {city.name}
+                          </Link>
+                        </NavigationMenuLink>
                       ))}
                     </div>
                   </NavigationMenuContent>
