@@ -92,7 +92,7 @@ const DeKalbCountyJailGuide = () => {
   return (
     <>
       <SEO
-        title="DeKalb County Jail Bail Guide | Fort Payne"
+        title="DeKalb County Jail Bail Bonds Guide | Connie's Bail Bonding"
         description="How to post bail at DeKalb County Detention Center in Fort Payne. Address, bail process, release times, and what to expect. Call 256-601-2041."
         canonical="/bail-bonds-guide/dekalb-county-jail-guide"
         schema={schemas}
@@ -225,7 +225,7 @@ const DeKalbCountyJailGuide = () => {
                     <div className="flex-1">
                       <h3 className="text-2xl font-bold uppercase tracking-tight mb-3">Call Us 24/7</h3>
                       <p className="text-gray-700 mb-4">
-                        Contact Connie's Bail Bonding anytime. We're available around the clock including nights, weekends, and holidays.
+                        As your bail bondsman near me, contact Connie's Bail Bonding anytime. We're available around the clock including nights, weekends, and holidays.
                       </p>
                       <div className="flex flex-wrap gap-4">
                         <a href={`tel:${phoneNumbers.richard.number.replace(/[^0-9]/g, "")}`} className="flex items-center gap-2 text-brand-red hover:underline font-semibold">
@@ -320,7 +320,7 @@ const DeKalbCountyJailGuide = () => {
                     <div className="flex-1">
                       <h3 className="text-2xl font-bold uppercase tracking-tight mb-3">We Post the Bond</h3>
                       <p className="text-gray-700">
-                        We electronically submit the bond to DeKalb County Jail. Because we're located directly across the street, we can also hand-deliver paperwork if needed for faster processing.
+                        Through our DeKalb County jail bonding services, we electronically submit the bond to DeKalb County Jail. Because we're located directly across the street, we can also hand-deliver paperwork if needed for faster processing.
                       </p>
                     </div>
                   </div>
@@ -446,7 +446,7 @@ const DeKalbCountyJailGuide = () => {
                     <strong>Most common option.</strong> You pay a licensed bail bondsman 10% of the total bail amount as a premium (plus state fees), and the bondsman posts the full bond with the court.
                   </p>
                   <p className="text-gray-700">
-                    <strong>Example:</strong> If bail is $10,000, you pay approximately $1,385 (10% + fees) to Connie's, and we post the full $10,000 bond.
+                    <strong>Example:</strong> If bail is $10,000, you pay approximately $1,385 (10% + fees) to Connie's Bail Bonds, your trusted DeKalb County bonding company, and we post the full $10,000 bond.
                   </p>
                 </CardContent>
               </Card>
@@ -552,7 +552,7 @@ const DeKalbCountyJailGuide = () => {
             </h2>
 
             <p className="text-xl mb-8">
-              Connie's Bail Bonding serves all of DeKalb County. If the arrest happened anywhere in DeKalb County, the defendant goes to the Fort Payne jail, and we can post bail immediately.
+              Connie's Bail Bonds serves all of DeKalb County. If the arrest happened anywhere in DeKalb County, the defendant goes to the Fort Payne AL jail, and we can post bail immediately.
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
