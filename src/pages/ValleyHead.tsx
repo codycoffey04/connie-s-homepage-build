@@ -148,7 +148,7 @@ const ValleyHead = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Valley Head Bail Bonds | 24/7 DeKalb County"
+        title="Bail Bonds Valley Head AL | 24/7 Bail Bondsman | Connie's Bail Bonding"
         description="24/7 bail bonds serving Valley Head, AL and DeKalb County. Licensed agents ready to help your family. Call 256-601-2041 now. Fast jail release."
         canonical="/valley-head"
         city="Valley Head"
@@ -161,7 +161,7 @@ const ValleyHead = () => {
           getOrganizationSchema(),
           getPlaceSchema(cityData),
           getCityWebPageSchema(
-            "Valley Head Bail Bonds | 24/7 DeKalb County",
+            "Bail Bonds Valley Head AL | 24/7 Bail Bondsman | Connie's Bail Bonding",
             "24/7 bail bonds serving Valley Head, AL and DeKalb County. Licensed agents ready to help your family. Call 256-601-2041 now. Fast jail release.",
             "/valley-head"
           ),
@@ -220,7 +220,7 @@ const ValleyHead = () => {
             <strong className="text-brand-red">Serving Valley Head & DeKalb County Since 2019</strong> — If your loved one has been arrested in Valley Head, Connie's Bail Bonding is here to help. We've been serving Valley Head families since 2019 with fast, compassionate bail bond service you can count on—24 hours a day, 7 days a week.
           </p>
           <p className="text-lg text-foreground/80 leading-relaxed mt-4">
-            Valley Head is part of DeKalb County, which means all arrests are processed through the DeKalb County Detention Center and Courthouse in Fort Payne. We're based right there in Fort Payne, so we can meet you at the jail quickly and get your loved one released as fast as possible.
+            Valley Head is part of DeKalb County, which means all arrests are processed through the DeKalb County Detention Center and Courthouse in Fort Payne. For bail bonds DeKalb County residents trust, we're based right there in Fort Payne, so we can meet you at the jail quickly and get your loved one released as fast as possible.
           </p>
         </div>
       </Section>
