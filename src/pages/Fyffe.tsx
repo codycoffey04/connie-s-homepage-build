@@ -33,7 +33,7 @@ const Fyffe = () => {
     {
       icon: MapPin,
       title: "We're Close to Fyffe",
-      description: "Our Fort Payne office at 2700 Jordan Rd SW is just a short drive from Fyffe. When you call us, we can meet you at the DeKalb County Detention Center quickly—no waiting for someone to drive in from hours away.",
+      description: "Our Fort Payne office at 2700 Jordan Rd SW is just a short drive from Fyffe. As your bail bondsman near me, when you call us, we can meet you at the DeKalb County Detention Center quickly—no waiting for someone to drive in from hours away.",
     },
     {
       icon: Shield,
@@ -146,7 +146,7 @@ const Fyffe = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Fyffe Bail Bonds | 24/7 DeKalb County AL"
+        title="Bail Bonds Fyffe AL | 24/7 Bail Bondsman | Connie's Bail Bonding"
         description="24/7 bail bonds serving Fyffe, AL and DeKalb County. Licensed agents ready to help. Call 256-601-2041 now. Transparent pricing, no hidden fees."
         canonical="/fyffe"
         city="Fyffe"
@@ -159,7 +159,7 @@ const Fyffe = () => {
           getOrganizationSchema(),
           getPlaceSchema(cityData),
           getCityWebPageSchema(
-            "Fyffe Bail Bonds | 24/7 DeKalb County AL",
+            "Bail Bonds Fyffe AL | 24/7 Bail Bondsman | Connie's Bail Bonding",
             "24/7 bail bonds serving Fyffe, AL and DeKalb County. Licensed agents ready to help. Call 256-601-2041 now. Transparent pricing, no hidden fees.",
             "/fyffe"
           ),
@@ -218,7 +218,7 @@ const Fyffe = () => {
             <strong className="text-brand-red">Serving Fyffe & DeKalb County Since 2019</strong> — When someone you love is arrested in Fyffe, Connie's Bail Bonding is here to help. We've been serving Fyffe families since 2019 with fast, compassionate bail bond service that you can count on—24 hours a day, 7 days a week.
           </p>
           <p className="text-lg text-foreground/80 leading-relaxed mt-4">
-            Fyffe is part of DeKalb County, which means all arrests are processed through the DeKalb County Detention Center and Courthouse in Fort Payne. We're based right there in Fort Payne, just minutes from Fyffe, so we can meet you at the jail quickly and get your loved one released as fast as possible.
+            Fyffe is part of DeKalb County, which means all arrests are processed through the DeKalb County Detention Center and Courthouse in Fort Payne. For DeKalb County bail bonds you can trust, we're based right there in Fort Payne, just minutes from Fyffe, so we can meet you at the jail quickly and get your loved one released as fast as possible.
           </p>
         </div>
       </Section>
@@ -458,7 +458,7 @@ const Fyffe = () => {
             ))}
           </div>
           <p className="text-center text-foreground/80 mt-8">
-            Whether you're in town or out in the county, we're here to help your family 24/7.
+            Whether you're in town or out in the county, Connie's Bail Bonds is here to help your family 24/7.
           </p>
         </div>
       </Section>
