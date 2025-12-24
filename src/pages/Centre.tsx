@@ -33,12 +33,12 @@ const Centre = () => {
     {
       icon: Shield,
       title: "We Know Cherokee County's System",
-      description: "We work regularly with the Cherokee County Detention Center and Cherokee County Courthouse. We understand the local procedures, know the staff, and can navigate the system efficiently to get your loved one released as fast as possible.",
+      description: "As your trusted bondsman Cherokee County residents rely on, we work regularly with the Cherokee County Detention Center and Cherokee County Courthouse. We understand the local procedures, know the staff, and can navigate the system efficiently to get your loved one released as fast as possible.",
     },
     {
       icon: MapPin,
       title: "Fast Response to Centre",
-      description: "Our Fort Payne office is about 25 minutes from Centre. When you call, we can be at the Cherokee County Jail or Courthouse quickly—ready to post bond and handle all the paperwork for you.",
+      description: "Our Fort Payne office is about 25 minutes from Centre. As your bail bondsman near me, when you call, we can be at the Cherokee County Jail or Courthouse quickly—ready to post bond and handle all the paperwork for you.",
     },
     {
       icon: Heart,
@@ -59,7 +59,7 @@ const Centre = () => {
     },
     {
       title: "Where Bonds Are Posted",
-      description: "Bail bonds for Cherokee County arrests are posted at the Cherokee County Courthouse at 100 Main St, Centre, AL 35960. We meet you there, complete the paperwork, and coordinate with jail staff to expedite the release.",
+      description: "Bail bonds for Cherokee County arrests are posted at the Cherokee County Courthouse at 100 Main St, Centre, AL 35960. Our Cherokee bonding expertise ensures we meet you there, complete the paperwork, and coordinate with jail staff to expedite the release.",
     },
     {
       title: "Typical Release Time",
@@ -146,7 +146,7 @@ const Centre = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Centre Bail Bonds | 24/7 Cherokee County AL"
+        title="Bail Bonds Centre AL | 24/7 Bail Bondsman | Connie's Bail Bonding"
         description="24/7 bail bonds serving Centre, AL and Cherokee County. Licensed agents who know the local court system. Call 256-601-2041 now. Fast release."
         canonical="/centre"
         city="Centre"
@@ -159,7 +159,7 @@ const Centre = () => {
           getOrganizationSchema(),
           getPlaceSchema(cityData),
           getCityWebPageSchema(
-            "Centre Bail Bonds | 24/7 Cherokee County AL",
+            "Bail Bonds Centre AL | 24/7 Bail Bondsman | Connie's Bail Bonding",
             "24/7 bail bonds serving Centre, AL and Cherokee County. Licensed agents who know the local court system. Call 256-601-2041 now. Fast release.",
             "/centre"
           ),
@@ -196,7 +196,7 @@ const Centre = () => {
             </p>
             
             <p className="text-lg md:text-xl mb-10 text-white/90 max-w-xl" style={{ textShadow: '1px 1px 3px rgba(0, 0, 0, 0.5)' }}>
-              Fast, licensed bail bond agents serving Centre and Cherokee County. We know the local system and can get your loved one released quickly.
+              Fast, licensed bail bond agent serving Centre and Cherokee County. We know the local system and can get your loved one released quickly.
             </p>
             
             <HeroCTA className="mb-12" />
@@ -220,10 +220,10 @@ const Centre = () => {
             <strong className="text-brand-red">Serving Centre & Cherokee County Since 2019</strong> — When someone you love is arrested in Centre or anywhere in Cherokee County, Connie's Bail Bonding is ready to help. We serve Centre 24/7 with the same fast, compassionate service we bring to all of Northeast Alabama.
           </p>
           <p className="text-lg text-foreground/80 leading-relaxed mt-4">
-            Centre is the county seat of Cherokee County, which means the Cherokee County Courthouse and Cherokee County Detention Center are both located right here. We know these facilities well, understand the release procedures, and can meet you at either location within minutes to get your loved one out quickly.
+            Centre is the county seat of Cherokee County, which means the Cherokee County Courthouse and Cherokee County Detention Center are both located right here. As an experienced Cherokee County bondsman, we know these facilities well, understand the release procedures, and can meet you at either location within minutes to get your loved one out quickly.
           </p>
           <p className="text-lg text-foreground/80 leading-relaxed mt-4">
-            Since 2019, families across Cherokee County have trusted us because we answer calls immediately, explain everything clearly, and never charge hidden fees.
+            Since 2019, Connie's Bail Bonds has been trusted by families across Cherokee County because we answer calls immediately, explain everything clearly, and never charge hidden fees.
           </p>
         </div>
       </Section>
@@ -597,7 +597,7 @@ const Centre = () => {
               <div>
                 <h3 className="text-xl font-bold mb-2 text-foreground">We'll gather information</h3>
                 <p className="text-foreground/80">
-                  We'll ask for the defendant's name and confirm they're at the Cherokee County Detention Center. We'll explain the 10% bond fee clearly—no surprises.
+                  As your jail bondsman near me, we'll ask for the defendant's name and confirm they're at the Cherokee County Detention Center. We'll explain the 10% bond fee clearly—no surprises.
                 </p>
               </div>
             </div>
