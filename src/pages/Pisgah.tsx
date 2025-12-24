@@ -587,7 +587,7 @@ const Pisgah = () => {
             <TestimonialCard key={index} quote={testimonial} />
           ))}
         </div>
-        <div className="text-center mt-8">
+        <div className="text-center mt-8 space-y-4">
           <a 
             href="https://www.google.com/maps/search/Connie's+Bail+Bonding" 
             target="_blank" 
@@ -596,6 +596,18 @@ const Pisgah = () => {
           >
             Read All Reviews on Google →
           </a>
+          <div className="pt-4 border-t border-border/50">
+            <p className="text-sm text-foreground/70 mb-3">Learn more about the bail process:</p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link to="/bail-bonds-guide/dekalb-county-jail-guide" className="text-primary hover:text-primary/80 transition-colors font-medium">
+                DeKalb County Jail Guide
+              </Link>
+              <span className="text-foreground/30">•</span>
+              <Link to="/bail-bonds-guide/how-bail-works-alabama" className="text-primary hover:text-primary/80 transition-colors font-medium">
+                How Bail Works in Alabama
+              </Link>
+            </div>
+          </div>
         </div>
       </Section>
 
