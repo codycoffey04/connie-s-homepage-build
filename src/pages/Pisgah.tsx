@@ -144,7 +144,7 @@ const Pisgah = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Pisgah Bail Bonds | 24/7 DeKalb County AL"
+        title="Bail Bonds Pisgah AL | 24/7 Bail Bondsman | Connie's Bail Bonding"
         description="24/7 bail bonds serving Pisgah, AL and all of DeKalb County. Licensed agents available now. Call 256-601-2041. Compassionate, professional service."
         canonical="/pisgah"
         city="Pisgah"
@@ -157,7 +157,7 @@ const Pisgah = () => {
           getOrganizationSchema(),
           getPlaceSchema(cityData),
           getCityWebPageSchema(
-            "Pisgah Bail Bonds | 24/7 DeKalb County AL",
+            "Bail Bonds Pisgah AL | 24/7 Bail Bondsman | Connie's Bail Bonding",
             "24/7 bail bonds serving Pisgah, AL and all of DeKalb County. Licensed agents available now. Call 256-601-2041. Compassionate, professional service.",
             "/pisgah"
           ),
@@ -463,7 +463,7 @@ const Pisgah = () => {
             ))}
           </div>
           <p className="text-center text-foreground/80 mt-8">
-            Whether you're near Gorhams Bluff or out in the county, we're here to help your family 24/7.
+            Whether you're near Gorhams Bluff or out in the county, Connie's Bail Bonds is here to help your family 24/7.
           </p>
         </div>
       </Section>
