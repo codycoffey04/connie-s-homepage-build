@@ -59,7 +59,7 @@ const Rainsville = () => {
     },
     {
       title: "Where Bonds Are Posted",
-      description: "All bail bonds for Rainsville arrests are posted at the DeKalb County Courthouse at 300 Grand Ave SW, Fort Payne, AL 35967. This is about a 15-minute drive from Rainsville. We handle everything at the courthouse while you wait with your family.",
+      description: "All bail bonds for Rainsville arrests are posted at the DeKalb County Courthouse at 300 Grand Ave SW, Fort Payne, AL 35967. This is about a 15-minute drive from Rainsville. Our DeKalb bonding expertise ensures we handle everything at the courthouse while you wait with your family.",
     },
     {
       title: "Typical Release Time",
@@ -148,7 +148,7 @@ const Rainsville = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Rainsville Bail Bonds | 24/7 DeKalb County"
+        title="Bail Bonds Rainsville AL | 24/7 Bail Bondsman | Connie's Bail Bonding"
         description="24/7 bail bonds serving Rainsville, AL and DeKalb County. Licensed agents ready to help. Call 256-601-2041 now. Payment plans available."
         canonical="/rainsville"
         city="Rainsville"
@@ -161,7 +161,7 @@ const Rainsville = () => {
           getOrganizationSchema(),
           getPlaceSchema(cityData),
           getCityWebPageSchema(
-            "Rainsville Bail Bonds | 24/7 DeKalb County",
+            "Bail Bonds Rainsville AL | 24/7 Bail Bondsman | Connie's Bail Bonding",
             "24/7 bail bonds serving Rainsville, AL and DeKalb County. Licensed agents ready to help. Call 256-601-2041 now. Payment plans available.",
             "/rainsville"
           ),
@@ -225,10 +225,10 @@ const Rainsville = () => {
             Rainsville's Trusted Bail Bond Service
           </h2>
           <p className="text-lg text-foreground/80 leading-relaxed">
-            <strong className="text-brand-red">Serving Rainsville & DeKalb County Since 2019</strong> — If your loved one has been arrested in Rainsville, you need help fast—and you need someone who understands how DeKalb County's bail system works. Connie's Bail Bonding has been serving Rainsville families since 2019 with the same compassion and professionalism we bring to every client.
+            <strong className="text-brand-red">Serving Rainsville & DeKalb County Since 2019</strong> — If your loved one has been arrested in Rainsville, you need help fast—and you need someone who understands how DeKalb County's bail system works. Connie's Bail Bonds has been serving Rainsville families since 2019 with the same compassion and professionalism we bring to every client.
           </p>
           <p className="text-lg text-foreground/80 leading-relaxed mt-4">
-            Even though Rainsville has some county offices, all arrests in Rainsville are processed through the DeKalb County Detention Center and Courthouse in Fort Payne. We know this system inside and out, and we're based right next to the jail—which means we can meet you there quickly and get your loved one released as fast as possible.
+            Even though Rainsville has some county offices, all arrests in Rainsville are processed through the DeKalb County Detention Center and Courthouse in Fort Payne. We know this system inside and out, and we're based right next to the jail—which means we can meet you there quickly. As your bail bonds service near me, we're here to get your loved one released as fast as possible.
           </p>
         </div>
       </Section>
@@ -306,7 +306,7 @@ const Rainsville = () => {
                   <div className="space-y-3 text-foreground/80">
                     <p><strong>Distance:</strong> 10 miles from Rainsville</p>
                     <p><strong>Route:</strong> Take Highway 35 South to Fort Payne</p>
-                    <p><strong>We're located:</strong> Right next to DeKalb County Detention Center on Jordan Rd</p>
+                    <p><strong>We're located:</strong> Right next to DeKalb County Detention Center on Jordan Rd. Our bonds office near me is convenient for Rainsville residents.</p>
                   </div>
                   
                   <div className="bg-primary/10 border-l-4 border-primary p-4 mt-4">
