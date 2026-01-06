@@ -1,6 +1,3 @@
-# Redirect www to non-www (canonical domain)
-https://www.connies-bailbonds.com/*    https://connies-bailbonds.com/:splat    301
-
-# SPA fallback - must be last (Netlify handles HTTP->HTTPS automatically)
+# SPA fallback - handles all routes (Netlify handles HTTP->HTTPS and www->non-www automatically)
 /*    /index.html   200
 
