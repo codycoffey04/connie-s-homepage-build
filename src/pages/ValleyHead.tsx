@@ -610,6 +610,14 @@ const ValleyHead = () => {
               <Link to="/bail-bonds-guide/how-bail-works-alabama" className="text-primary hover:text-primary/80 transition-colors font-medium">
                 How Bail Works in Alabama
               </Link>
+              <span className="text-foreground/30">•</span>
+              <Link to="/bail-bonds-guide/bail-costs-alabama" className="text-primary hover:text-primary/80 transition-colors font-medium">
+                Bail Costs & Fees
+              </Link>
+              <span className="text-foreground/30">•</span>
+              <Link to="/bail-bonds-guide/cosigner-responsibilities" className="text-primary hover:text-primary/80 transition-colors font-medium">
+                Cosigner Responsibilities
+              </Link>
             </div>
           </div>
         </div>

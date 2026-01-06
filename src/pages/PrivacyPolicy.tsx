@@ -272,11 +272,43 @@ const PrivacyPolicy = () => {
       {/* Related Links */}
       <Section variant="muted">
         <AnimatedSection>
-          <div className="text-center">
-            <p className="text-muted-foreground mb-4">See also:</p>
-            <Link to="/terms-of-service" className="text-primary hover:underline font-semibold">
-              Terms of Service →
-            </Link>
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-black uppercase tracking-tight mb-6 text-center">
+              Related Information
+            </h2>
+            <p className="text-center text-muted-foreground mb-6">
+              Learn more about our services and policies:
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <Link
+                to="/terms-of-service"
+                className="block p-4 bg-card border border-border rounded-lg hover:border-primary hover:shadow-md transition-all text-center"
+              >
+                <h3 className="font-bold text-foreground mb-2">Terms of Service</h3>
+                <p className="text-sm text-foreground/70">Our terms and conditions</p>
+              </Link>
+              <Link
+                to="/contact"
+                className="block p-4 bg-card border border-border rounded-lg hover:border-primary hover:shadow-md transition-all text-center"
+              >
+                <h3 className="font-bold text-foreground mb-2">Contact Us</h3>
+                <p className="text-sm text-foreground/70">Get in touch with our team</p>
+              </Link>
+              <Link
+                to="/about"
+                className="block p-4 bg-card border border-border rounded-lg hover:border-primary hover:shadow-md transition-all text-center"
+              >
+                <h3 className="font-bold text-foreground mb-2">About Us</h3>
+                <p className="text-sm text-foreground/70">Learn about our company</p>
+              </Link>
+              <Link
+                to="/bail-bonds-guide"
+                className="block p-4 bg-card border border-border rounded-lg hover:border-primary hover:shadow-md transition-all text-center"
+              >
+                <h3 className="font-bold text-foreground mb-2">Bail Bonds Guide</h3>
+                <p className="text-sm text-foreground/70">Complete resource library</p>
+              </Link>
+            </div>
           </div>
         </AnimatedSection>
       </Section>

@@ -9,6 +9,14 @@
 [build.image]
   name = "ubuntu-24.04"
 
+# Redirect www to non-www (canonical domain)
+[[redirects]]
+  from = "https://www.connies-bailbonds.com/*"
+  to = "https://connies-bailbonds.com/:splat"
+  status = 301
+  force = true
+
+# SPA fallback - must be last (handles all routes including HTTP->HTTPS)
 [[redirects]]
   from = "/*"
   to = "/index.html"

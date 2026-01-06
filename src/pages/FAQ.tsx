@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Section } from "@/components/Section";
@@ -315,6 +316,62 @@ const FAQ = () => {
             Bail Bonds by Charge Type
           </h2>
           <FAQList faqs={chargeSpecificFaqs} />
+        </div>
+      </Section>
+
+      {/* Learn More Section */}
+      <Section variant="muted">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
+            Learn More About Bail Bonds
+          </h2>
+          <p className="text-center text-foreground/80 mb-8 text-lg">
+            Explore our comprehensive guides for detailed information:
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <Link
+              to="/bail-bonds-guide/how-bail-works-alabama"
+              className="block p-4 bg-card border border-border rounded-lg hover:border-primary hover:shadow-md transition-all"
+            >
+              <h3 className="font-bold text-foreground mb-2">How Bail Works</h3>
+              <p className="text-sm text-foreground/70">Step-by-step guide to the Alabama bail process</p>
+            </Link>
+            <Link
+              to="/bail-bonds-guide/bail-costs-alabama"
+              className="block p-4 bg-card border border-border rounded-lg hover:border-primary hover:shadow-md transition-all"
+            >
+              <h3 className="font-bold text-foreground mb-2">Bail Costs & Fees</h3>
+              <p className="text-sm text-foreground/70">Understand the 10% premium and state fees</p>
+            </Link>
+            <Link
+              to="/bail-bonds-guide/cosigner-responsibilities"
+              className="block p-4 bg-card border border-border rounded-lg hover:border-primary hover:shadow-md transition-all"
+            >
+              <h3 className="font-bold text-foreground mb-2">Cosigner Responsibilities</h3>
+              <p className="text-sm text-foreground/70">What you're agreeing to when you cosign</p>
+            </Link>
+            <Link
+              to="/contact"
+              className="block p-4 bg-card border border-border rounded-lg hover:border-primary hover:shadow-md transition-all"
+            >
+              <h3 className="font-bold text-foreground mb-2">Contact Us</h3>
+              <p className="text-sm text-foreground/70">Get in touch with our team 24/7</p>
+            </Link>
+            <Link
+              to="/about"
+              className="block p-4 bg-card border border-border rounded-lg hover:border-primary hover:shadow-md transition-all"
+            >
+              <h3 className="font-bold text-foreground mb-2">About Us</h3>
+              <p className="text-sm text-foreground/70">Learn about our family-owned service</p>
+            </Link>
+            <Link
+              to="/bail-bonds-guide"
+              className="block p-4 bg-card border border-border rounded-lg hover:border-primary hover:shadow-md transition-all"
+            >
+              <h3 className="font-bold text-foreground mb-2">All Guides</h3>
+              <p className="text-sm text-foreground/70">Browse our complete bail bonds resource library</p>
+            </Link>
+          </div>
         </div>
       </Section>
 

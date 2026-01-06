@@ -519,6 +519,55 @@ const Contact = () => {
         </div>
       </Section>
 
+      {/* Related Resources */}
+      <Section>
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
+            Learn More About Bail Bonds
+          </h2>
+          <p className="text-center text-foreground/80 mb-8 text-lg">
+            Have questions about the bail process? Explore our guides and resources:
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <Link
+              to="/about"
+              className="block p-4 bg-card border border-border rounded-lg hover:border-primary hover:shadow-md transition-all"
+            >
+              <h3 className="font-bold text-foreground mb-2">About Us</h3>
+              <p className="text-sm text-foreground/70">Learn about our family-owned bail bond service</p>
+            </Link>
+            <Link
+              to="/faq"
+              className="block p-4 bg-card border border-border rounded-lg hover:border-primary hover:shadow-md transition-all"
+            >
+              <h3 className="font-bold text-foreground mb-2">FAQ</h3>
+              <p className="text-sm text-foreground/70">Common questions about bail bonds answered</p>
+            </Link>
+            <Link
+              to="/bail-bonds-guide"
+              className="block p-4 bg-card border border-border rounded-lg hover:border-primary hover:shadow-md transition-all"
+            >
+              <h3 className="font-bold text-foreground mb-2">Bail Bonds Guide</h3>
+              <p className="text-sm text-foreground/70">Complete guide to Alabama bail bonds</p>
+            </Link>
+            <Link
+              to="/bail-bonds-guide/how-bail-works-alabama"
+              className="block p-4 bg-card border border-border rounded-lg hover:border-primary hover:shadow-md transition-all"
+            >
+              <h3 className="font-bold text-foreground mb-2">How Bail Works</h3>
+              <p className="text-sm text-foreground/70">Step-by-step guide to the bail process</p>
+            </Link>
+            <Link
+              to="/fort-payne"
+              className="block p-4 bg-card border border-border rounded-lg hover:border-primary hover:shadow-md transition-all"
+            >
+              <h3 className="font-bold text-foreground mb-2">Fort Payne Service</h3>
+              <p className="text-sm text-foreground/70">24/7 bail bonds in Fort Payne, AL</p>
+            </Link>
+          </div>
+        </div>
+      </Section>
+
       {/* Final CTA */}
       <Section variant="primary">
         <div className="max-w-4xl mx-auto text-center space-y-8">

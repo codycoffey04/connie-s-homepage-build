@@ -472,9 +472,19 @@ const CherokeeCountyJailGuide = () => {
                   link: "/bail-bonds-guide/bail-costs-alabama"
                 },
                 {
+                  title: "Cosigner Responsibilities",
+                  description: "What you're agreeing to when you cosign",
+                  link: "/bail-bonds-guide/cosigner-responsibilities"
+                },
+                {
                   title: "DeKalb County Jail Guide",
                   description: "How to post bail at DeKalb County Detention Center",
                   link: "/bail-bonds-guide/dekalb-county-jail-guide"
+                },
+                {
+                  title: "Centre Bail Bonds",
+                  description: "24/7 bail bond service in Centre, AL",
+                  link: "/centre"
                 }
               ].map((guide) => (
                 <Card key={guide.link} className="border-2 border-gray-200 hover:border-brand-red transition-all hover:shadow-lg">

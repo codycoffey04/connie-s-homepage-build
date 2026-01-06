@@ -610,7 +610,7 @@ const CosignerResponsibilities = () => {
                   link: "/bail-bonds-guide/how-bail-works-alabama"
                 },
                 {
-                  title: "What Is Bond Forfeiture?",
+                  title: "Bond Forfeiture Process",
                   description: "Understanding what happens when court is missed",
                   link: "/bail-bonds-guide/bond-forfeiture-process"
                 },
@@ -618,6 +618,16 @@ const CosignerResponsibilities = () => {
                   title: "Bail Costs & Fees Explained",
                   description: "Complete breakdown of what you'll pay",
                   link: "/bail-bonds-guide/bail-costs-alabama"
+                },
+                {
+                  title: "Types of Bail Bonds",
+                  description: "Cash bonds, surety bonds, property bonds explained",
+                  link: "/bail-bonds-guide/types-of-bail-bonds"
+                },
+                {
+                  title: "Contact Us",
+                  description: "Get in touch with our team 24/7",
+                  link: "/contact"
                 }
               ].map((guide) => (
                 <Card key={guide.link} className="border-2 border-gray-200 hover:border-brand-red transition-all hover:shadow-lg">
