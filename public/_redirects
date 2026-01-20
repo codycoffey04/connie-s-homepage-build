@@ -1,5 +1,11 @@
-# Remove trailing slashes (redirect /page/ to /page)
-# Pretty URLs setting handles this in netlify.toml instead
+# Remove trailing slashes for city pages (must come before SPA fallback)
+/fort-payne/    /fort-payne    301
+/rainsville/    /rainsville    301
+/fyffe/         /fyffe         301
+/henagar/       /henagar       301
+/centre/        /centre        301
+/pisgah/        /pisgah        301
+/valley-head/   /valley-head   301
 
 # SPA fallback - handles all routes (Netlify handles HTTP->HTTPS and non-www->www automatically)
 /*    /index.html   200

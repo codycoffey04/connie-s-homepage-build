@@ -9,41 +9,5 @@
 [build.image]
   name = "ubuntu-24.04"
 
-# Trailing slash redirects for city pages
-[[redirects]]
-  from = "/fort-payne/"
-  to = "/fort-payne"
-  status = 301
-
-[[redirects]]
-  from = "/rainsville/"
-  to = "/rainsville"
-  status = 301
-
-[[redirects]]
-  from = "/fyffe/"
-  to = "/fyffe"
-  status = 301
-
-[[redirects]]
-  from = "/henagar/"
-  to = "/henagar"
-  status = 301
-
-[[redirects]]
-  from = "/centre/"
-  to = "/centre"
-  status = 301
-
-[[redirects]]
-  from = "/pisgah/"
-  to = "/pisgah"
-  status = 301
-
-[[redirects]]
-  from = "/valley-head/"
-  to = "/valley-head"
-  status = 301
-
-# Note: SPA fallback is handled in public/_redirects file
+# Note: All redirects are handled in public/_redirects file
 
