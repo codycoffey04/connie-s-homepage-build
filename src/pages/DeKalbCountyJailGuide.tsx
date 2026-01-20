@@ -29,6 +29,10 @@ import dekalbJailHeroBg from "@/assets/dekalb-jail-hero-bg.jpg";
 
 const faqs = [
   {
+    question: "What is the DeKalb County jail bond number?",
+    answer: "For DeKalb County jail bail bonds, call Connie's Bail Bonding at 256-601-2041 (Richard), 256-630-2824 (Connie), or 256-440-0822 (Toni). We're available 24/7. The jail's main number is (256) 845-3801 for inmate information."
+  },
+  {
     question: "How do I find out if someone is in DeKalb County Jail?",
     answer: "Call the jail at (256) 845-3801 or check the DeKalb County Sheriff's Office website for the online inmate roster. You'll need the person's name and date of birth."
   },
@@ -43,6 +47,10 @@ const faqs = [
   {
     question: "What if bail hasn't been set yet?",
     answer: "For more serious charges, the defendant must appear before a judge for bail to be set (usually within 24-48 hours of arrest). We can still prepare paperwork and be ready to post immediately once bail is determined."
+  },
+  {
+    question: "Is there a bondsman near me in Fort Payne AL?",
+    answer: "Yes! Connie's Bail Bonding is located at 2700 Jordan Rd SW in Fort Payne, directly across from the DeKalb County Detention Center. We're the closest bail bondsman to the Fort Payne AL jail and available 24/7."
   },
   {
     question: "Can I visit someone in DeKalb County Jail before posting bail?",
@@ -92,7 +100,7 @@ const DeKalbCountyJailGuide = () => {
   return (
     <>
       <SEO
-        title="DeKalb County Jail Bail Bonds Guide | Connie's Bail Bonding"
+        title="DeKalb County Jail Bail Bonds | Fort Payne AL Bondsman"
         description="How to post bail at DeKalb County Detention Center in Fort Payne. Address, bail process, release times, and what to expect. Call 256-601-2041."
         canonical="/bail-bonds-guide/dekalb-county-jail-guide"
         schema={schemas}
@@ -115,18 +123,24 @@ const DeKalbCountyJailGuide = () => {
             readingTime={5}
           />
 
-          <AnswerBox 
+          <AnswerBox
             question="How do I post bail at DeKalb County Jail?"
             answer="Call Connie's Bail Bonding 24/7 at 256-601-2041, 256-630-2824, or 256-440-0822. Provide the inmate's name and charges. We post bonds at DeKalb County Detention Center (300 Grand Avenue SW, Fort Payne, AL 35967). Release typically takes 2-8 hours. Located next to our office. Costs 10% premium plus state fees."
           />
 
-          <TableOfContents 
+          <AnswerBox
+            question="What is the DeKalb County jail bond number?"
+            answer="For DeKalb County jail bail bonds, call Connie's Bail Bonding at 256-601-2041 (Richard), 256-630-2824 (Connie), or 256-440-0822 (Toni). We're available 24/7 and located directly across from the DeKalb County Detention Center in Fort Payne, AL. The jail's main number is (256) 845-3801."
+          />
+
+          <TableOfContents
             items={[
               { id: 'facility-information', title: 'Facility Information' },
               { id: 'how-to-post-bail', title: 'How to Post Bail' },
               { id: 'release-times', title: 'Release Times' },
               { id: 'types-of-bonds', title: 'Types of Bonds Accepted' },
               { id: 'courthouse-information', title: 'Courthouse Information' },
+              { id: 'dekalb-bonding-companies', title: 'DeKalb County Bonding Companies' },
               { id: 'cities-served', title: 'Cities & Areas Served' },
               { id: 'faqs', title: 'Frequently Asked Questions' },
             ]}
@@ -539,6 +553,65 @@ const DeKalbCountyJailGuide = () => {
                 </div>
               </CardContent>
             </Card>
+          </AnimatedSection>
+        </div>
+      </Section>
+
+      {/* DeKalb Bonding Companies */}
+      <Section>
+        <div className="max-w-5xl mx-auto">
+          <AnimatedSection>
+            <h2 id="dekalb-bonding-companies" className="text-4xl font-black uppercase tracking-tight mb-8">
+              DeKalb County Bonding Companies
+            </h2>
+
+            <p className="text-xl mb-6">
+              When you need a bondsman DeKalb County residents trust, Connie's Bail Bonds is your local DeKalb bonding company with over 30 years of experience.
+            </p>
+
+            <Card className="border-2 border-gray-200 mb-6">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold uppercase tracking-tight mb-4 text-brand-red">
+                  Why Choose Connie's for DeKalb County Bail Bonds?
+                </h3>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-2">
+                      <span className="text-brand-red font-bold mt-1">•</span>
+                      <span className="text-gray-700"><strong>Closest to the jail</strong> — Our office is directly across from DeKalb County Detention Center</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-brand-red font-bold mt-1">•</span>
+                      <span className="text-gray-700"><strong>24/7 availability</strong> — We answer every call, day or night</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-brand-red font-bold mt-1">•</span>
+                      <span className="text-gray-700"><strong>Family-owned</strong> — 30+ years serving DeKalb County families</span>
+                    </li>
+                  </ul>
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-2">
+                      <span className="text-brand-red font-bold mt-1">•</span>
+                      <span className="text-gray-700"><strong>Fast processing</strong> — We know the local system and can expedite your bond</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-brand-red font-bold mt-1">•</span>
+                      <span className="text-gray-700"><strong>Payment plans</strong> — Flexible options for qualifying clients</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-brand-red font-bold mt-1">•</span>
+                      <span className="text-gray-700"><strong>Licensed & insured</strong> — Fully licensed by the State of Alabama</span>
+                    </li>
+                  </ul>
+                </div>
+              </CardContent>
+            </Card>
+
+            <div className="bg-primary/10 p-6 rounded-lg border-l-4 border-primary">
+              <p className="text-lg">
+                <strong>Looking for DeKalb bonding near the jail?</strong> As the top bond company DeKalb County offers, we're located at 2700 Jordan Rd SW in Fort Payne—you can see our office from the jail parking lot. When you need DeKalb County bonding services fast, we're already here.
+              </p>
+            </div>
           </AnimatedSection>
         </div>
       </Section>
