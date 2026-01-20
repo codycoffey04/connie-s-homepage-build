@@ -133,6 +133,10 @@ const FortPayne = () => {
 
   const faqs = [
     {
+      question: "Where can I find bail bonds near me in Fort Payne?",
+      answer: "Connie's Bail Bonds is the closest bail bondsman near me to the DeKalb County Detention Center—our office at 2700 Jordan Rd SW is literally next door to the jail. When you search for bail bonds near me within 5 mi of the Fort Payne jail, we're already here. We provide 24/7 bail bonds service near me for all Fort Payne and DeKalb County arrests. Call 256-601-2041 anytime."
+    },
+    {
       question: "How much does a bail bond cost in Fort Payne?",
       answer: "Alabama law sets bail bond fees at 10% of the total bail amount. This is non-negotiable by law—every licensed bondsman charges the same rate. For example, if bail is set at $5,000, the bond fee is $500. We charge no additional administrative fees."
     },
@@ -246,7 +250,7 @@ const FortPayne = () => {
               <strong className="text-brand-red">Serving Fort Payne & DeKalb County Since 2019</strong> — When someone you love is arrested in Fort Payne, every minute matters. Connie's Bail Bonding is located right here in Fort Payne—at 2700 Jordan Rd SW, right next to the DeKalb County Detention Center. We know the jail staff, the court procedures, and exactly how to get your loved one released quickly.
             </p>
             <p>
-              Since 2019, Connie's Bail Bonds has built our reputation on trust and professionalism in the Fort Payne community. Our family team answers calls personally 24/7—no call centers, no delays. Just honest, compassionate help when you need it most.
+              Since 2019, Connie's Bail Bonds has built our reputation on trust and professionalism in the Fort Payne community. Whether you search for "Connies Bail Bonds" or "Connie Bail Bonds," you'll find the same family-owned business that answers calls personally 24/7—no call centers, no delays. Just honest, compassionate help when you need it most.
             </p>
           </div>
         </div>
@@ -349,6 +353,44 @@ const FortPayne = () => {
               </Card>
             </div>
           </div>
+        </div>
+      </Section>
+
+      {/* Bail Bonds Near Me Section */}
+      <Section className="bg-muted">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-black mb-8 text-center uppercase">
+            <span className="text-brand-red">Bail Bonds Near Me</span> in Fort Payne
+          </h2>
+
+          <Card className="border-2 border-primary/20 mb-6">
+            <CardContent className="p-8">
+              <p className="text-lg mb-6">
+                Searching for "bail bonds near me" or "bail bondsman near me" in Fort Payne? Connie's Bail Bonding is your closest bail bond agent to the DeKalb County Detention Center—our office is literally next door at 2700 Jordan Rd SW.
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-white p-4 rounded-lg">
+                  <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
+                    <MapPin className="w-5 h-5 text-brand-red" />
+                    Bail Bonds Service Near Me
+                  </h3>
+                  <p className="text-foreground/80">
+                    Within 5 minutes of the jail, we provide fast bail bonds service near me for all Fort Payne and DeKalb County arrests. No other bondsman near me can match our response time.
+                  </p>
+                </div>
+                <div className="bg-white p-4 rounded-lg">
+                  <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
+                    <Clock className="w-5 h-5 text-brand-red" />
+                    24/7 Bail Bond Agent
+                  </h3>
+                  <p className="text-foreground/80">
+                    As a licensed bail bond agent serving Fort Payne, we answer every call—day or night. When you need bail bonds near me within 5 mi of the jail, we're already here waiting to help.
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </Section>
 
