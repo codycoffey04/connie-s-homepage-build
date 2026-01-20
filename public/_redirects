@@ -1,3 +1,7 @@
-# SPA fallback - handles all routes (Netlify handles HTTP->HTTPS and www->non-www automatically)
+# Remove trailing slashes (redirect /page/ to /page)
+# Must come before SPA fallback
+/*/ /:splat 301!
+
+# SPA fallback - handles all routes (Netlify handles HTTP->HTTPS and non-www->www automatically)
 /*    /index.html   200
 
