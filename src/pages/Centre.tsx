@@ -106,8 +106,16 @@ const Centre = () => {
 
   const faqs = [
     {
+      question: "Where can I find bail bonds near me in Centre, AL?",
+      answer: "Connie's Bail Bonds provides bail bonds near me services throughout Centre and Cherokee County. We're available 24/7 as your bail bond near me open now option. When you search for bail bondsman near me, bonds bail near me, or jail bondsman near me in Centre, call us at 256-601-2041. We post Cherokee County bail bonds daily and can meet you at the Cherokee County Detention Center or Courthouse within 30 minutes."
+    },
+    {
+      question: "Do you provide Cherokee County bail bonds?",
+      answer: "Yes! Connie's Bail Bonds is your trusted Cherokee bonding company serving Centre and all of Cherokee County. We post Cherokee County jail bail bonds at 110 Cedar Bluff Rd in Centre 24/7. As an experienced bondsman Cherokee County families rely on, we know the local system and can expedite your loved one's release."
+    },
+    {
       question: "How much does a bail bond cost in Centre?",
-      answer: "Alabama law sets bail bond fees at 10% of the total bail amount. This is non-negotiable by law—every licensed bondsman charges the same rate. For example, if bail is set at $5,000, the bond fee is $500. We charge no additional administrative fees."
+      answer: "Alabama law sets bail bond fees at 10% of the total bail amount. This is non-negotiable by law—every licensed bail bond agent charges the same rate. For example, if bail is set at $5,000, the bond fee is $500. We charge no additional administrative fees."
     },
     {
       question: "How long does release take from Cherokee County Jail?",
@@ -217,21 +225,59 @@ const Centre = () => {
             Centre's Trusted Bail Bond Service
           </h2>
           <p className="text-lg text-foreground/80 leading-relaxed">
-            <strong className="text-brand-red">Serving Centre & Cherokee County Since 2019</strong> — When someone you love is arrested in Centre or anywhere in Cherokee County, Connie's Bail Bonding is ready to help. We serve Centre 24/7 with the same fast, compassionate service we bring to all of Northeast Alabama.
+            <strong className="text-brand-red">Serving Centre & Cherokee County Since 2019</strong> — When someone you love is arrested in Centre or anywhere in Cherokee County, Connie's Bail Bonding is ready to help. Whether you search for "Connie's Bail Bonds," "Connie Bail Bonds," or "Connies Bail Bonds," you'll find the same family-owned business serving Centre 24/7 with fast, compassionate service.
           </p>
           <p className="text-lg text-foreground/80 leading-relaxed mt-4">
             Centre is the county seat of Cherokee County, which means the Cherokee County Courthouse and Cherokee County Detention Center are both located right here. As an experienced Cherokee County bondsman, we know these facilities well, understand the release procedures, and can meet you at either location within minutes to get your loved one out quickly.
           </p>
           <p className="text-lg text-foreground/80 leading-relaxed mt-4">
-            Since 2019, Connie's Bail Bonds has been trusted by families across Cherokee County because we answer calls immediately, explain everything clearly, and never charge hidden fees.
+            Since 2019, Connie's Bail Bonds has been the bail bond near me open now that Centre families trust because we answer calls immediately, explain everything clearly, and never charge hidden fees.
           </p>
         </div>
       </Section>
 
+      {/* Cherokee County Bail Bonds Section */}
+      <Section className="bg-white">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-black mb-8 text-center uppercase">
+            <span className="text-brand-red">Cherokee County Bail Bonds</span> & Cherokee Bonding Services
+          </h2>
+
+          <Card className="border-2 border-primary/20 mb-6">
+            <CardContent className="p-8">
+              <p className="text-lg mb-6">
+                Looking for Cherokee County bail bonds or a bondsman Cherokee County families trust? Connie's Bail Bonding provides Cherokee bonding services 24/7 for all arrests at the Cherokee County Detention Center in Centre, AL.
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-muted p-4 rounded-lg">
+                  <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
+                    <MapPin className="w-5 h-5 text-brand-red" />
+                    Cherokee County Jail Bail Bonds
+                  </h3>
+                  <p className="text-foreground/80">
+                    We post Cherokee County jail bail bonds daily at 110 Cedar Bluff Rd, Centre. As your trusted bail bondsman near me, we know the local system and can expedite your loved one's release.
+                  </p>
+                </div>
+                <div className="bg-muted p-4 rounded-lg">
+                  <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
+                    <Clock className="w-5 h-5 text-brand-red" />
+                    Bail Bonds Near Me Open Now
+                  </h3>
+                  <p className="text-foreground/80">
+                    Need bonds bail near me right now? As a jail bondsman near me in Centre, we answer every call—day or night. When you search for bail bond agent near you, Connie's is here.
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </Section>
+
       {/* Why Choose Us */}
-      <Section 
+      <Section
         className="relative overflow-hidden"
-        style={{ 
+        style={{
           backgroundImage: `url(${freedomHandcuffs})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center'
