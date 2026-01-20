@@ -85,7 +85,7 @@ const BailCostsAlabama = () => {
   return (
     <>
       <SEO
-        title="Bail Bond Costs in Alabama | Fees Explained"
+        title="How Much Does a Bail Bond Cost in Alabama | Fees Explained"
         description="How much does a bail bond cost in Alabama? Learn about the 10% premium, state-mandated fees, payment plans, and exactly what you'll pay to bail someone out."
         canonical="/bail-bonds-guide/bail-costs-alabama"
         schema={schemas}
@@ -108,17 +108,24 @@ const BailCostsAlabama = () => {
             readingTime={7}
           />
 
-          <AnswerBox 
+          <AnswerBox
             question="How much does a bail bond cost in Alabama?"
             answer="A bail bond in Alabama costs 10% of the total bail amount (the bondsman's premium) plus state-mandated fees ($35 + 3.5% of bail, with minimums of $100 for misdemeanors and $150 for felonies). For example, a $10,000 bail would cost approximately $1,385 total."
             source="Ala. Code § 12-19-311"
           />
 
-          <TableOfContents 
+          <AnswerBox
+            question="How much do you have to pay a bondsman in Alabama?"
+            answer="You pay a bondsman 10% of the total bail amount as their non-refundable premium, plus Alabama state fees. So for a $5,000 bail, you'd pay the bondsman approximately $500 (premium) + $210 (state fees) = $710 total. The bondsman then posts the full $5,000 bail with the court on your behalf."
+            source="Alabama bail industry standard"
+          />
+
+          <TableOfContents
             items={[
               { id: 'bail-bond-premium', title: 'Bail Bond Premium (10%)' },
               { id: 'state-fees', title: 'State Bail Bond Fees' },
               { id: 'total-cost-examples', title: 'Total Cost Examples' },
+              { id: 'bail-amounts-by-crime', title: 'Bail Amounts by Crime in Alabama' },
               { id: 'payment-options', title: 'Payment Options Available' },
               { id: 'what-affects-bail', title: 'What Affects Your Bail Amount?' },
               { id: 'faqs', title: 'Frequently Asked Questions' },
@@ -270,6 +277,109 @@ const BailCostsAlabama = () => {
               </div>
               <p className="text-base text-gray-600 leading-relaxed max-w-5xl mt-4 italic">
                 Note: Some bondsmen have minimum charges (often $75-$100) regardless of bail amount. State fee caps mean very high bail amounts don't result in proportionally higher state fees.
+              </p>
+            </AnimatedSection>
+
+            {/* Bail Amounts by Crime */}
+            <AnimatedSection delay={0.35}>
+              <h2 id="bail-amounts-by-crime" className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-6 mt-16">
+                Bail Amounts by Crime in Alabama
+              </h2>
+              <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mb-6">
+                Bail amounts in Alabama vary significantly based on the type of charge. Here's what you can typically expect to pay a bondsman for common offenses:
+              </p>
+
+              <h3 className="text-2xl font-bold uppercase tracking-tight mb-4 mt-8">
+                Misdemeanor Bail Bonds Alabama
+              </h3>
+              <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mb-4">
+                Misdemeanor charges generally carry lower bail amounts, making them more affordable to bond out:
+              </p>
+              <div className="overflow-x-auto max-w-5xl mb-8">
+                <table className="w-full border-2 border-gray-300">
+                  <thead>
+                    <tr className="bg-black text-white">
+                      <th className="p-4 text-left font-black uppercase tracking-tight">Misdemeanor Charge</th>
+                      <th className="p-4 text-left font-black uppercase tracking-tight">Typical Bail</th>
+                      <th className="p-4 text-left font-black uppercase tracking-tight">You Pay Bondsman</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="bg-white border-b border-gray-200">
+                      <td className="p-4 font-medium">DUI (1st offense)</td>
+                      <td className="p-4">$500 - $2,500</td>
+                      <td className="p-4 font-bold text-brand-red">$150 - $350</td>
+                    </tr>
+                    <tr className="bg-gray-50 border-b border-gray-200">
+                      <td className="p-4 font-medium">Simple Assault</td>
+                      <td className="p-4">$500 - $1,500</td>
+                      <td className="p-4 font-bold text-brand-red">$150 - $250</td>
+                    </tr>
+                    <tr className="bg-white border-b border-gray-200">
+                      <td className="p-4 font-medium">Petty Theft (under $500)</td>
+                      <td className="p-4">$300 - $1,000</td>
+                      <td className="p-4 font-bold text-brand-red">$130 - $200</td>
+                    </tr>
+                    <tr className="bg-gray-50 border-b border-gray-200">
+                      <td className="p-4 font-medium">Disorderly Conduct</td>
+                      <td className="p-4">$300 - $500</td>
+                      <td className="p-4 font-bold text-brand-red">$130 - $150</td>
+                    </tr>
+                    <tr className="bg-white">
+                      <td className="p-4 font-medium">Marijuana Possession (personal use)</td>
+                      <td className="p-4">$500 - $2,500</td>
+                      <td className="p-4 font-bold text-brand-red">$150 - $350</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h3 className="text-2xl font-bold uppercase tracking-tight mb-4 mt-8">
+                Felony Bail Bonds Alabama
+              </h3>
+              <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mb-4">
+                Felony charges carry significantly higher bail amounts due to the serious nature of the offenses:
+              </p>
+              <div className="overflow-x-auto max-w-5xl mb-6">
+                <table className="w-full border-2 border-gray-300">
+                  <thead>
+                    <tr className="bg-black text-white">
+                      <th className="p-4 text-left font-black uppercase tracking-tight">Felony Charge</th>
+                      <th className="p-4 text-left font-black uppercase tracking-tight">Typical Bail</th>
+                      <th className="p-4 text-left font-black uppercase tracking-tight">You Pay Bondsman</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="bg-white border-b border-gray-200">
+                      <td className="p-4 font-medium">Burglary (3rd degree)</td>
+                      <td className="p-4">$5,000 - $15,000</td>
+                      <td className="p-4 font-bold text-brand-red">$710 - $2,250</td>
+                    </tr>
+                    <tr className="bg-gray-50 border-b border-gray-200">
+                      <td className="p-4 font-medium">Drug Possession with Intent</td>
+                      <td className="p-4">$10,000 - $50,000</td>
+                      <td className="p-4 font-bold text-brand-red">$1,385 - $5,750</td>
+                    </tr>
+                    <tr className="bg-white border-b border-gray-200">
+                      <td className="p-4 font-medium">Aggravated Assault</td>
+                      <td className="p-4">$15,000 - $50,000</td>
+                      <td className="p-4 font-bold text-brand-red">$2,025 - $5,750</td>
+                    </tr>
+                    <tr className="bg-gray-50 border-b border-gray-200">
+                      <td className="p-4 font-medium">Robbery (2nd degree)</td>
+                      <td className="p-4">$25,000 - $75,000</td>
+                      <td className="p-4 font-bold text-brand-red">$3,250 - $8,250</td>
+                    </tr>
+                    <tr className="bg-white">
+                      <td className="p-4 font-medium">Sexual Assault</td>
+                      <td className="p-4">$50,000 - $250,000+</td>
+                      <td className="p-4 font-bold text-brand-red">$5,750 - $25,750+</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-base text-gray-600 leading-relaxed max-w-5xl italic">
+                Note: These are typical ranges. Actual bail amounts vary based on the specific circumstances of each case, prior criminal history, and the judge's discretion.
               </p>
             </AnimatedSection>
 
