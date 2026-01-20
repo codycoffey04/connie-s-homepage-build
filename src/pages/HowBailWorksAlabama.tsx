@@ -179,6 +179,8 @@ const HowBailWorksAlabama = () => {
               { id: 'the-alabama-bail-process', title: 'The Alabama Bail Process Step-by-Step' },
               { id: 'types-of-bail', title: 'Types of Bail in Alabama' },
               { id: 'who-sets-bail', title: 'Who Sets Bail in Alabama?' },
+              { id: 'alabama-bail-schedule', title: 'Alabama Bail Schedule' },
+              { id: 'how-to-post-bail', title: 'How to Post Bail in Alabama' },
               { id: 'how-long-does-bail-take', title: 'How Long Does Bail Take?' },
               { id: 'what-alabama-law-says', title: 'What Alabama Law Says' },
               { id: 'faqs', title: 'Frequently Asked Questions' },
@@ -318,14 +320,85 @@ const HowBailWorksAlabama = () => {
               </ul>
             </AnimatedSection>
 
+            {/* Alabama Bail Schedule */}
+            <AnimatedSection delay={0.45}>
+              <h2 id="alabama-bail-schedule" className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-6 mt-16">
+                Alabama Bail Schedule
+              </h2>
+              <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mb-6">
+                Alabama bond laws allow county jails to use a pre-set bail schedule for common offenses. This Alabama bail schedule lists standard bail amounts by charge type, allowing defendants to post bail immediately without waiting to see a judge.
+              </p>
+              <div className="bg-gray-50 border-l-4 border-brand-red p-6 space-y-3 max-w-4xl mb-6">
+                <p className="text-gray-700"><strong className="text-brand-red">What is a bail schedule?</strong> A list of preset bail amounts for specific charges, set by local courts.</p>
+                <p className="text-gray-700"><strong className="text-brand-red">When does it apply?</strong> For common misdemeanors and some lower-level felonies where risk is predictable.</p>
+                <p className="text-gray-700"><strong className="text-brand-red">Bond schedule Alabama variations:</strong> Each county may have slightly different amounts based on local court rules.</p>
+              </div>
+              <p className="text-lg text-gray-700 leading-relaxed max-w-4xl">
+                For charges not on the Alabama bond schedule, or for more serious offenses, a judge must set bail at an initial hearing. Alabama bonding companies like Connie's Bail Bonds can help you understand the bail amount for any charge and start the bonding process immediately.
+              </p>
+            </AnimatedSection>
+
+            {/* How to Post Bail */}
+            <AnimatedSection delay={0.48}>
+              <h2 id="how-to-post-bail" className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-6 mt-16">
+                How to Post Bail in Alabama
+              </h2>
+              <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mb-6">
+                If you need to post bail for someone in an Alabama jail, here's exactly what to do:
+              </p>
+              <div className="space-y-4 max-w-4xl">
+                <div className="flex items-start gap-4 p-4 bg-gray-50 rounded-lg">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-red text-white flex items-center justify-center font-bold">1</div>
+                  <div>
+                    <p className="font-bold text-gray-900">Get the booking information</p>
+                    <p className="text-gray-700">You'll need the defendant's full legal name, date of birth, booking number (if available), and the charges.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4 p-4 bg-gray-50 rounded-lg">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-red text-white flex items-center justify-center font-bold">2</div>
+                  <div>
+                    <p className="font-bold text-gray-900">Contact a licensed bail bondsman</p>
+                    <p className="text-gray-700">Call Connie's Bail Bonds 24/7. We'll verify the bail amount and explain your options.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4 p-4 bg-gray-50 rounded-lg">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-red text-white flex items-center justify-center font-bold">3</div>
+                  <div>
+                    <p className="font-bold text-gray-900">Complete the paperwork and pay the premium</p>
+                    <p className="text-gray-700">You'll sign the bail bond agreement and pay 10% of the bail amount plus Alabama state fees. Payment plans may be available.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4 p-4 bg-gray-50 rounded-lg">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-red text-white flex items-center justify-center font-bold">4</div>
+                  <div>
+                    <p className="font-bold text-gray-900">Bondsman posts bail with the jail</p>
+                    <p className="text-gray-700">We submit the bond to the detention facility. This typically takes 30 minutes to 2 hours.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4 p-4 bg-gray-50 rounded-lg">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-red text-white flex items-center justify-center font-bold">5</div>
+                  <div>
+                    <p className="font-bold text-gray-900">Wait for release processing</p>
+                    <p className="text-gray-700">The jail processes the release. How long does it take to get a bond in jail? After posting, expect 2-8 hours for release depending on the facility.</p>
+                  </div>
+                </div>
+              </div>
+            </AnimatedSection>
+
             {/* How Long */}
             <AnimatedSection delay={0.5}>
               <h2 id="how-long-does-bail-take" className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-6 mt-16">
                 How Long Does Bail Take?
               </h2>
-              <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mb-6">
-                The timeline from arrest to release varies:
-              </p>
+
+              <AnswerBox
+                question="How long does it take to get a bond in jail?"
+                answer="Once you contact a bail bondsman, the paperwork takes 30 minutes to 2 hours. After the bond is posted with the jail, release processing takes 2-8 hours depending on the facility, time of day, and staffing levels. Total time from your first call to release: typically 3-10 hours."
+                source="DeKalb County operational data"
+              />
+
+              <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mb-6 mt-6">
+                The timeline from arrest to release varies:</p>
               <div className="bg-gray-50 border-l-4 border-brand-red p-6 space-y-3 max-w-4xl">
                 <p className="text-gray-700"><strong className="text-brand-red">Booking:</strong> 1-3 hours after arrest</p>
                 <p className="text-gray-700"><strong className="text-brand-red">Bail set:</strong> May be immediate (bail schedule) or require a hearing (24-72 hours)</p>
