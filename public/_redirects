@@ -1,6 +1,5 @@
 # Remove trailing slashes (redirect /page/ to /page)
-# Must come before SPA fallback
-/*/ /:splat 301!
+# Pretty URLs setting handles this in netlify.toml instead
 
 # SPA fallback - handles all routes (Netlify handles HTTP->HTTPS and non-www->www automatically)
 /*    /index.html   200
