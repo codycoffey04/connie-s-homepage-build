@@ -53,6 +53,10 @@ const faqs = [
     answer: "Yes! Connie's Bail Bonding is located at 2700 Jordan Rd SW in Fort Payne, directly across from the DeKalb County Detention Center. We're the closest bail bondsman to the Fort Payne AL jail and available 24/7."
   },
   {
+    question: "How do I post a DeKalb County bond?",
+    answer: "To post a DeKalb County bond, call Connie's Bail Bonding at 256-601-2041. We handle all bail bonds DeKalb County arrests require. Provide the inmate's name and charges, pay the 10% premium plus Alabama state fees, and we post the bond immediately at the Fort Payne AL jail. Release typically takes 2-8 hours."
+  },
+  {
     question: "Can I visit someone in DeKalb County Jail before posting bail?",
     answer: "The jail has specific visitation schedules and rules. Contact the jail directly at (256) 845-3801 for current visitation policies. Posting bail and getting them released is typically faster than waiting for visitation."
   }
@@ -66,8 +70,8 @@ const breadcrumbs = [
 
 const schemas = [
   getArticleSchema(
-    "DeKalb County Jail Bail Guide",
-    "How to post bail at DeKalb County Detention Center in Fort Payne, AL. Facility address, bail process, release times, and what to expect when bailing someone out.",
+    "DeKalb County Jail Bond Guide",
+    "How to post a DeKalb County bond at the Fort Payne AL jail. Facility address, bail bonds process, release times, and what to expect. Trusted bail bonds DeKalb County Alabama.",
     "/bail-bonds-guide/dekalb-county-jail-guide"
   ),
   getFAQSchema(faqs),
@@ -100,7 +104,7 @@ const DeKalbCountyJailGuide = () => {
   return (
     <>
       <SEO
-        title="DeKalb County Jail Bail Bonds | Fort Payne AL Bondsman"
+        title="DeKalb County Jail Bond | Bail Bonds Fort Payne AL"
         description="How to post bail at DeKalb County Detention Center in Fort Payne. Address, bail process, release times, and what to expect. Call 256-601-2041."
         canonical="/bail-bonds-guide/dekalb-county-jail-guide"
         schema={schemas}
@@ -111,7 +115,7 @@ const DeKalbCountyJailGuide = () => {
       <GuideHero 
         backgroundImage={dekalbJailHeroBg}
         title="DeKalb County Jail Bail Guide"
-        description="When someone is arrested in DeKalb County, Alabama, they're taken to the DeKalb County Detention Center in Fort Payne. Here's everything you need to know about posting bail and getting your loved one released."
+        description="When someone is arrested in DeKalb County, Alabama, they're taken to the DeKalb County Detention Center—the Fort Payne AL jail. Here's everything you need to know about posting a DeKalb County bond and getting your loved one released through bail bonds DeKalb County families trust."
         breadcrumbs={breadcrumbs}
       />
 

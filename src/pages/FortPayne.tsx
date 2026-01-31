@@ -138,7 +138,7 @@ const FortPayne = () => {
     },
     {
       question: "How much does a bail bond cost in Fort Payne?",
-      answer: "Alabama law sets bail bond fees at 10% of the total bail amount. This is non-negotiable by law—every licensed bondsman charges the same rate. For example, if bail is set at $5,000, the bond fee is $500. We charge no additional administrative fees."
+      answer: "Alabama law sets bail bond fees at 10% of the total bail amount. This is non-negotiable by law—every licensed bondsman charges the same rate. For example, if bail is set at $5,000, the bond fee is $500. We charge no additional administrative fees. Looking for affordable bail bonds Fort Payne? We offer payment plans and accept credit cards to make bail more manageable for families."
     },
     {
       question: "How long does release take from DeKalb County Jail?",
@@ -155,6 +155,10 @@ const FortPayne = () => {
     {
       question: "Where is your Fort Payne office located?",
       answer: "Our office is at 2700 Jordan Rd SW, Fort Payne, AL 35967—right next door to the DeKalb County Detention Center. This allows us to meet clients quickly and post bonds immediately, which is why our release times are often faster than other bail bond companies."
+    },
+    {
+      question: "Is Connie's Bail Bonds the same as Connies Bail Bonds?",
+      answer: "Yes! Whether you search for Connie's Bail Bonds, Connies Bail Bonds, or Connie Bail Bonds, you'll find us—the same family-owned bail bondsman Fort Payne Alabama families have trusted since 2019. We're the local bail bond agent located right next to DeKalb County Jail. Call 256-601-2041 for 24 hour bail bonds Fort Payne service."
     },
     {
       question: "What information do I need when I call about bailing someone out in Fort Payne?",
@@ -225,7 +229,7 @@ const FortPayne = () => {
             </p>
             
             <p className="text-lg md:text-xl mb-10 text-white/90 max-w-xl" style={{ textShadow: '1px 1px 3px rgba(0, 0, 0, 0.5)' }}>
-              Fast, licensed bail bond agent serving Fort Payne and DeKalb County. Located right next to the detention center for fastest possible service.
+              Affordable bail bonds Fort Payne families trust. Licensed bail bondsman Fort Payne Alabama, located right next to the detention center for 24 hour bail bonds service.
             </p>
             
             <HeroCTA className="mb-12" />

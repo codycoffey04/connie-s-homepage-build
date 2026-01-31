@@ -126,6 +126,10 @@ const Centre = () => {
       answer: "Yes. Richard, Connie, or Toni will answer your call at any time—even at 3 AM on Christmas morning. We're located about 25 minutes from Centre in Fort Payne, and we regularly serve Cherokee County."
     },
     {
+      question: "Are you the best bail bondsman Centre Alabama has?",
+      answer: "Connie's Bail Bonding has been the trusted bail bondsman Centre Alabama families call since 2019. We provide fast bail bonds Centre AL service with no hidden fees. As your local bondsman Cherokee County and Centre rely on, we know the Cherokee County Detention Center staff and can expedite releases. Call 256-601-2041 for 24/7 service."
+    },
+    {
       question: "What if I can't afford the full 10% upfront?",
       answer: "We offer flexible payment plans for families who need help. We accept credit cards and can work out arrangements that fit your budget. Call us and we'll discuss your options—there's no pressure, just honest guidance."
     },
@@ -204,7 +208,7 @@ const Centre = () => {
             </p>
             
             <p className="text-lg md:text-xl mb-10 text-white/90 max-w-xl" style={{ textShadow: '1px 1px 3px rgba(0, 0, 0, 0.5)' }}>
-              Fast, licensed bail bond agent serving Centre and Cherokee County. We know the local system and can get your loved one released quickly.
+              Licensed bail bondsman Centre Alabama families trust. We provide bail bonds Centre AL 24/7 and know the Cherokee County system to get your loved one released quickly.
             </p>
             
             <HeroCTA className="mb-12" />
